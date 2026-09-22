@@ -5,6 +5,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import SayfaBasligi from '@/components/SayfaBasligi.astro';
 import Bolum from '@/components/Bolum.astro';
 import ProgramKarti from '@/components/ProgramKarti.astro';
+import Gorsel from '@/components/Gorsel.astro';
 import Buton from '@/components/Buton.astro';
 import { cta, waLink, telLink, instagramUrl, yasCatilari } from '@/data/site';
 import { subedekiProgramlar, programYolu } from '@/lib/programlar';
@@ -81,6 +82,29 @@ const jsonLd = {
         <p class="mt-6 border-l-2 border-accent pl-5 text-kucuk leading-relaxed text-muted">
           Harita bağlantısı yayın öncesinde eklenecek.
         </p>
+      )
+    }
+  </Bolum>
+
+  <Bolum bosluk="normal" etiketleyen="mekan">
+    <h2 id="mekan" class="u-eyebrow mb-6">Mekan</h2>
+    <Gorsel
+      oran="21/9"
+      src={d.gorsel}
+      alt={d.gorselAlt ?? `${d.ad} binası`}
+      cekimNotu={`${d.kisaAd} şubesi — dış cephe veya ana çalışma alanı`}
+      karakter="Mekan atmosferi; sakin, güvenilir, çağdaş kültür kurumu"
+      yukleme="eager"
+    />
+    {
+      d.mekanGorselleri.length > 0 && (
+        <ul class="mt-4 grid gap-4 sm:grid-cols-3">
+          {d.mekanGorselleri.map((g) => (
+            <li>
+              <Gorsel oran="3/2" src={g.src} alt={g.alt} />
+            </li>
+          ))}
+        </ul>
       )
     }
   </Bolum>

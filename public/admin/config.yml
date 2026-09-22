@@ -286,6 +286,15 @@ collections:
         fields:
           - { name: ad, label: 'Ad soyad', widget: string }
           - { name: unvan, label: 'Unvan', widget: string }
+      - { name: gorsel, label: 'Şube kapak görseli', widget: image, required: false }
+      - { name: gorselAlt, label: 'Kapak görseli alt metni', widget: string, required: false }
+      - name: mekanGorselleri
+        label: 'Mekan görselleri (dış cephe, giriş, çalışma alanları)'
+        widget: list
+        required: false
+        fields:
+          - { name: src, label: 'Görsel', widget: image }
+          - { name: alt, label: 'Alt metni', widget: string }
       - { name: seo, label: 'SEO', widget: object, fields: *seo }
 
   # ── Ürettiklerimiz ────────────────────────────────────────────

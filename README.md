@@ -89,7 +89,7 @@ Her `main` push'unda GitHub Actions siteyi derleyip GitHub Pages'e dağıtır:
   @gaziantepcocuktiyatrosu, @kafkakostum) indirildi. Ayrıntı: `docs/gorsel-kaynaklari.md`.
   **Yayın öncesi iki şey gerekli:** (1) §30 uyarınca çocukların web sitesinde
   gösterilmesi için ayrı izin teyidi, (2) hero videosu ve geniş banner'lar için gerçek
-  çekim — Instagram kareleri bu slotlara yetmiyor. Liste: `docs/cekim-listesi.md`.
+  çekim — Instagram kareleri bu slotlara yetmiyor. **Tam çekim listesi: `docs/cekim-listesi.md`** — 15 çekim oturumu ve sitedeki her görsel alanının dökümü.
 - **Yasal metinler yer tutucu.** KVKK, gizlilik, çerez ve fotoğraf/video izin sayfaları
   `noindex` ve site haritası dışında; nihai metin hukuki kontrolden geçmeden yayına çıkmaz.
 - **Ürettiklerimiz'de 6 örnek kayıt var.** Sayfanın gerçek kayıtlarla nasıl görüneceğini

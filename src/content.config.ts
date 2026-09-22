@@ -95,6 +95,10 @@ const subeler = defineCollection({
     instagram: z.string(),
     ekInstagram: z.array(z.object({ etiket: z.string(), hesap: z.string() })).default([]),
     sorumlu: z.object({ ad: z.string(), unvan: z.string() }),
+    gorsel: z.string().optional(),
+    gorselAlt: z.string().optional(),
+    /** §32: dış cephe, giriş, ana çalışma alanları, mekan atmosferi. */
+    mekanGorselleri: z.array(z.object({ src: z.string(), alt: z.string() })).default([]),
     seo,
   }),
 });
