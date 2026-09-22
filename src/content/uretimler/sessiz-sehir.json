@@ -17,7 +17,7 @@
     "Sanat yönetimi",
     "Oyunculuk"
   ],
-  "gorselAlt": "Sessiz Şehir çekimlerinde kamera arkası",
+  "gorselAlt": "Sessiz Şehir çekimlerinde kamera karşısında bir oyuncu",
   "fragmanUrl": "",
   "ogrenciSozu": {
     "metin": "Kamerayı ilk aldığımda elim titriyordu. Üçüncü çekim gününde yönetmenle nerede duracağımızı tartışıyordum.",
@@ -26,5 +26,6 @@
   "seo": {
     "title": "Sessiz Şehir | Kısa Film | Ürettiklerimiz | Kafka",
     "description": "GGT Lab öğrencilerinin fikir, senaryo, çekim ve kurgusunu üstlendiği kısa film."
-  }
+  },
+  "gorsel": "/gorseller/foto/genc-portre.jpg"
 }

@@ -7,6 +7,13 @@
     "toplu-siparis",
     "ozel-siparis"
   ],
-  "gorselAlt": "Temalı Çocuk Sahne Kıyafetleri — kostüm detayı",
-  "sira": 5
+  "gorselAlt": "Temalı çocuk sahne kıyafeti",
+  "sira": 5,
+  "gorsel": "/gorseller/kostum/tematik-01.jpg",
+  "galeri": [
+    {
+      "src": "/gorseller/kostum/tematik-02.jpg",
+      "alt": "Temalı çocuk sahne kıyafeti — 1"
+    }
+  ]
 }

@@ -58,6 +58,15 @@ const adimlar = [
                 </li>
               ))}
             </ul>
+            {u.data.galeri.length > 0 && (
+              <ul class="mt-1 grid grid-cols-4 gap-2">
+                {u.data.galeri.slice(0, 8).map((g) => (
+                  <li>
+                    <Gorsel oran="4/5" src={g.src} alt={g.alt} />
+                  </li>
+                ))}
+              </ul>
+            )}
           </li>
         ))
       }

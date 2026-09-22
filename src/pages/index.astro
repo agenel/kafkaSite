@@ -75,13 +75,27 @@ const ilkeSorulari = [
           <Buton href="/basvuru" etiket={cta.basvuru} tur="ikincil" boyut="buyuk" />
         </div>
       </div>
-      <Gorsel
-        oran="4/5"
-        yukleme="eager"
-        cekimNotu="Hero videosu: 8–12 saniye yatay, sessiz. En az 6 farklı an — düşünme, yazı, hareket, kamera, prova, sahne."
-        karakter="Gerçek Kafka görüntüleri kullanılır; stok fotoğraf kullanılmaz."
-        alt="Kafka Sanat Akademisi çalışmalarından anlar"
-      />
+      <div class="grid grid-cols-2 gap-3">
+        <Gorsel
+          oran="4/5"
+          src="/gorseller/foto/doga-atolyesi.jpg"
+          alt="Doğada kurulan atölyede birlikte üreten grup"
+          yukleme="eager"
+          class="col-span-2"
+        />
+        <Gorsel
+          oran="1/1"
+          src="/gorseller/foto/sahne-uretim.jpg"
+          alt="Sahnede kendi metinlerini sunan öğrenciler"
+          yukleme="eager"
+        />
+        <Gorsel
+          oran="1/1"
+          src="/gorseller/foto/yaratici-kesifler.jpg"
+          alt="Yaratıcı Keşifler çalışmasında malzemelerle üretim"
+          yukleme="eager"
+        />
+      </div>
     </div>
   </section>
 

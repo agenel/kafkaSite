@@ -16,7 +16,7 @@
   "girisMetni": "Kafka Akademi Tiyatrosu, yetişkinlerin tiyatroyla yalnız seyirci olarak değil; eğitim, topluluk ve üretim yoluyla ilişki kurabilecekleri ayrı bir tiyatro oluşumudur.",
   "ctaTipi": "basvuru",
   "gorselKarakteri": "Olgun, tiyatral, yetişkin, topluluk",
-  "gorselAlt": "Kafka Akademi Tiyatrosu ekibi prova sırasında",
+  "gorselAlt": "Kafka Akademi Tiyatrosu topluluğu masa başı çalışmasında",
   "teklifler": [
     {
       "sube": "gaziantep",
@@ -86,5 +86,6 @@
   "seo": {
     "title": "Kafka Akademi Tiyatrosu | Yetişkin Tiyatro Programı",
     "description": "Yetişkinler için düzenli eğitim, topluluk ve sahne üretimini bir araya getiren Kafka Akademi Tiyatrosu."
-  }
+  },
+  "gorsel": "/gorseller/foto/yetiskin-toplulugu.jpg"
 }

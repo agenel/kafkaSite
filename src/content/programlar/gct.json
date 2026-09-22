@@ -16,7 +16,7 @@
   "girisMetni": "GÇT, yaratıcı dramadan tiyatroya, felsefeden yazarlığa, sesten bedene uzanan farklı alanları tek bir gelişim yolculuğunda birleştiren çocuk tiyatrosu modelidir.",
   "ctaTipi": "basvuru",
   "gorselKarakteri": "Canlı, yaratıcı, düşünce + grup + sahne",
-  "gorselAlt": "GÇT grubunda öğrenciler bir sahne çalışması üzerinde birlikte çalışıyor",
+  "gorselAlt": "GÇT prodüksiyonunda kostümüyle sahnede bir öğrenci",
   "teklifler": [
     {
       "sube": "gaziantep",
@@ -232,5 +232,6 @@
   "seo": {
     "title": "Çocuk Tiyatrosu | GÇT | Kafka Sanat Akademisi",
     "description": "İlkokul ve ortaokul öğrencileri için yaratıcı drama, felsefe, yazarlık, ses, beden ve tiyatroyu birleştiren çocuk tiyatrosu modeli."
-  }
+  },
+  "gorsel": "/gorseller/foto/cocuk-tiyatrosu-sahne.jpg"
 }

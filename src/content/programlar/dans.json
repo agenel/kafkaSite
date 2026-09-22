@@ -21,7 +21,7 @@
   "girisMetni": "Beden, ritim, koordinasyon ve hareket dili üzerine dönemsel çalışmalar.",
   "ctaTipi": "basvuru",
   "gorselKarakteri": "Kafka kurumsal · sakin, güvenilir, çağdaş kültür kurumu",
-  "gorselAlt": "Dans çalışmasından bir an",
+  "gorselAlt": "Dans çalışmasında sahnede dizilen grup",
   "teklifler": [
     {
       "sube": "gaziantep",
@@ -46,5 +46,6 @@
   "seo": {
     "title": "Dans | Kafka Sanat Akademisi",
     "description": "Beden, ritim, koordinasyon ve hareket dili üzerine dönemsel dans çalışmaları."
-  }
+  },
+  "gorsel": "/gorseller/foto/karanlik-sahne.jpg"
 }

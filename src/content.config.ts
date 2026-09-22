@@ -172,6 +172,7 @@ const kostum = defineCollection({
     hizmetler: z.array(z.enum(['kiralama', 'toplu-siparis', 'ozel-siparis'])).default([]),
     gorsel: z.string().optional(),
     gorselAlt: z.string().optional(),
+    galeri: z.array(z.object({ src: z.string(), alt: z.string() })).default([]),
     sira: z.number().default(50),
   }),
 });

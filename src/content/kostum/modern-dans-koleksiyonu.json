@@ -7,6 +7,29 @@
     "toplu-siparis",
     "ozel-siparis"
   ],
-  "gorselAlt": "Modern Dans Koleksiyonu — kostüm detayı",
-  "sira": 2
+  "gorselAlt": "Modern dans gösterisi için çocuk sahne kıyafeti",
+  "sira": 2,
+  "gorsel": "/gorseller/kostum/modern-dans-01.jpg",
+  "galeri": [
+    {
+      "src": "/gorseller/kostum/modern-dans-02.jpg",
+      "alt": "Modern dans gösterisi için çocuk sahne kıyafeti — 1"
+    },
+    {
+      "src": "/gorseller/kostum/modern-dans-03.jpg",
+      "alt": "Modern dans gösterisi için çocuk sahne kıyafeti — 2"
+    },
+    {
+      "src": "/gorseller/kostum/modern-dans-04.jpg",
+      "alt": "Modern dans gösterisi için çocuk sahne kıyafeti — 3"
+    },
+    {
+      "src": "/gorseller/kostum/modern-dans-05.jpg",
+      "alt": "Modern dans gösterisi için çocuk sahne kıyafeti — 4"
+    },
+    {
+      "src": "/gorseller/kostum/modern-dans-06.jpg",
+      "alt": "Modern dans gösterisi için çocuk sahne kıyafeti — 5"
+    }
+  ]
 }

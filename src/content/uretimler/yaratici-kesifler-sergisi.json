@@ -13,9 +13,10 @@
     "Serginin kurulumu",
     "Velilere anlatım"
   ],
-  "gorselAlt": "Yaratıcı Keşifler sergisinde öğrenci işleri",
+  "gorselAlt": "Yaratıcı Keşifler çalışmasında malzemelerle üretim",
   "seo": {
     "title": "Yaratıcı Keşifler Sergisi | Ürettiklerimiz | Kafka",
     "description": "GÇT Eğitim Yılı İlkokul grubunun Yaratıcı Keşifler çalışmalarından çıkan sınıf içi sergi."
-  }
+  },
+  "gorsel": "/gorseller/foto/yaratici-kesifler.jpg"
 }

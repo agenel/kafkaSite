@@ -13,7 +13,7 @@
   "girisMetni": "Yaratıcı Drama; oyun, rol, doğaçlama ve grup deneyimi üzerinden ifade, iletişim ve yaratıcı düşünme alanları açan dönemlik bir programdır.",
   "ctaTipi": "basvuru",
   "gorselKarakteri": "Canlı, yaratıcı, düşünce + grup",
-  "gorselAlt": "Yaratıcı Drama çalışmasında çocuklar çember kurmuş doğaçlama yapıyor",
+  "gorselAlt": "Doğada kurulan yaratıcı drama atölyesinde grup çalışması",
   "teklifler": [
     {
       "sube": "gaziantep",
@@ -49,5 +49,6 @@
   "seo": {
     "title": "Yaratıcı Drama | Kafka Sanat Akademisi",
     "description": "Oyun, rol, doğaçlama ve grup deneyimi üzerinden ifade ve yaratıcı düşünme alanı açan dönemlik Yaratıcı Drama programı."
-  }
+  },
+  "gorsel": "/gorseller/foto/doga-atolyesi.jpg"
 }

@@ -82,8 +82,12 @@ Her `main` push'unda GitHub Actions siteyi derleyip GitHub Pages'e dağıtır:
 
 ## Bilinen eksikler
 
-- **Gerçek fotoğraf ve video yok.** Tüm görsel alanları, oraya hangi çekimin geleceğini
-  yazan yer tutucularla duruyor. Liste: `docs/cekim-listesi.md`.
+- **Görseller Instagram'dan alındı, çekim hâlâ gerekli.** `public/gorseller/` altındaki
+  35 görsel, kurumun kendi Instagram hesaplarından (@kafkasanatakademisi,
+  @gaziantepcocuktiyatrosu, @kafkakostum) indirildi. Ayrıntı: `docs/gorsel-kaynaklari.md`.
+  **Yayın öncesi iki şey gerekli:** (1) §30 uyarınca çocukların web sitesinde
+  gösterilmesi için ayrı izin teyidi, (2) hero videosu ve geniş banner'lar için gerçek
+  çekim — Instagram kareleri bu slotlara yetmiyor. Liste: `docs/cekim-listesi.md`.
 - **Yasal metinler yer tutucu.** KVKK, gizlilik, çerez ve fotoğraf/video izin sayfaları
   `noindex` ve site haritası dışında; nihai metin hukuki kontrolden geçmeden yayına çıkmaz.
 - **Ürettiklerimiz'de 6 örnek kayıt var.** Sayfanın gerçek kayıtlarla nasıl görüneceğini

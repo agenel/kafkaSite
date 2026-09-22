@@ -12,7 +12,7 @@
   "kisaTanim": "Okuma, düşünme ve tartışma etrafında bir araya gelen yetişkin topluluğu.",
   "girisMetni": "Okuma, düşünme ve tartışma etrafında bir araya gelen yetişkin topluluğu.",
   "ctaTipi": "basvuru",
-  "gorselAlt": "Kafka Kitap Kulübü buluşmasında katılımcılar tartışıyor",
+  "gorselAlt": "Kafka Kitap Kulübü buluşmasında katılımcılar",
   "teklifler": [
     {
       "sube": "gaziantep",
@@ -50,5 +50,6 @@
   "seo": {
     "title": "Kafka Kitap Kulübü | Yetişkinler",
     "description": "Okuma, düşünme ve tartışma etrafında bir araya gelen yetişkin topluluğu."
-  }
+  },
+  "gorsel": "/gorseller/foto/yetiskin-toplulugu.jpg"
 }

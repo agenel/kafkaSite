@@ -6,6 +6,17 @@
     "toplu-siparis",
     "ozel-siparis"
   ],
-  "gorselAlt": "Okul Gösterilerine Özel Tasarımlar — kostüm detayı",
-  "sira": 6
+  "gorselAlt": "Okul gösterisi için çocuk sahne kıyafeti",
+  "sira": 6,
+  "gorsel": "/gorseller/kostum/okul-gosterisi-01.jpg",
+  "galeri": [
+    {
+      "src": "/gorseller/kostum/okul-gosterisi-02.jpg",
+      "alt": "Okul gösterisi için çocuk sahne kıyafeti — 1"
+    },
+    {
+      "src": "/gorseller/kostum/okul-gosterisi-03.jpg",
+      "alt": "Okul gösterisi için çocuk sahne kıyafeti — 2"
+    }
+  ]
 }

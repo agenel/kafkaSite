@@ -11,9 +11,10 @@
     "Düzelti",
     "Birbirine geri bildirim"
   ],
-  "gorselAlt": "Yaratıcı Yazarlık çalışmasında öğrenci defterleri",
+  "gorselAlt": "Öğrenci metinlerinden çıkan sahne çalışması",
   "seo": {
     "title": "Başka Türlü | Öğrenci Yazıları | Kafka Sanat Akademisi",
     "description": "GÇT Yaratıcı Yazarlık çalışmalarından çıkan öğrenci hikayeleri ve metinleri seçkisi."
-  }
+  },
+  "gorsel": "/gorseller/foto/sahne-uretim.jpg"
 }

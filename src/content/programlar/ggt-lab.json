@@ -16,7 +16,7 @@
   "girisMetni": "GGT Lab, lise öğrencilerini tiyatro, düşünsel içerik ve dijital prodüksiyonun kesişiminde buluşturan bir üretim laboratuvarıdır.",
   "ctaTipi": "basvuru",
   "gorselKarakteri": "Genç, dijital, sinematik, dinamik",
-  "gorselAlt": "GGT Lab ekibi kamera ve ışık kurulumu üzerinde çalışıyor",
+  "gorselAlt": "GGT Lab çekiminde kamera karşısında bir öğrenci",
   "teklifler": [
     {
       "sube": "gaziantep",
@@ -149,5 +149,6 @@
   "seo": {
     "title": "GGT Lab | Gençlik Üretim Laboratuvarı | Kafka",
     "description": "Lise öğrencileri için Performans, İçerik ve Prodüksiyonu bir araya getiren üretim laboratuvarı."
-  }
+  },
+  "gorsel": "/gorseller/foto/genc-portre.jpg"
 }

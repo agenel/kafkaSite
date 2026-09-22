@@ -7,6 +7,45 @@
     "toplu-siparis",
     "ozel-siparis"
   ],
-  "gorselAlt": "Halk Oyunları Koleksiyonu — kostüm detayı",
-  "sira": 1
+  "gorselAlt": "Anadolu yörelerinden esinlenen çocuk halk oyunları kostümü",
+  "sira": 1,
+  "gorsel": "/gorseller/kostum/halk-oyunlari-01.jpg",
+  "galeri": [
+    {
+      "src": "/gorseller/kostum/halk-oyunlari-02.jpg",
+      "alt": "Anadolu yörelerinden esinlenen çocuk halk oyunları kostümü — 1"
+    },
+    {
+      "src": "/gorseller/kostum/halk-oyunlari-03.jpg",
+      "alt": "Anadolu yörelerinden esinlenen çocuk halk oyunları kostümü — 2"
+    },
+    {
+      "src": "/gorseller/kostum/halk-oyunlari-04.jpg",
+      "alt": "Anadolu yörelerinden esinlenen çocuk halk oyunları kostümü — 3"
+    },
+    {
+      "src": "/gorseller/kostum/halk-oyunlari-05.jpg",
+      "alt": "Anadolu yörelerinden esinlenen çocuk halk oyunları kostümü — 4"
+    },
+    {
+      "src": "/gorseller/kostum/halk-oyunlari-06.jpg",
+      "alt": "Anadolu yörelerinden esinlenen çocuk halk oyunları kostümü — 5"
+    },
+    {
+      "src": "/gorseller/kostum/halk-oyunlari-07.jpg",
+      "alt": "Anadolu yörelerinden esinlenen çocuk halk oyunları kostümü — 6"
+    },
+    {
+      "src": "/gorseller/kostum/halk-oyunlari-08.jpg",
+      "alt": "Anadolu yörelerinden esinlenen çocuk halk oyunları kostümü — 7"
+    },
+    {
+      "src": "/gorseller/kostum/halk-oyunlari-09.jpg",
+      "alt": "Anadolu yörelerinden esinlenen çocuk halk oyunları kostümü — 8"
+    },
+    {
+      "src": "/gorseller/kostum/halk-oyunlari-10.jpg",
+      "alt": "Anadolu yörelerinden esinlenen çocuk halk oyunları kostümü — 9"
+    }
+  ]
 }

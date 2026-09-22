@@ -13,7 +13,7 @@
   "girisMetni": "Çocuk Koroları, çocukların seslerini tek başına öne çıkarmaktan çok bir topluluğun parçası olarak dinlemeyi, uyum sağlamayı ve birlikte müzik üretmeyi deneyimledikleri program ailesidir.",
   "ctaTipi": "basvuru",
   "gorselKarakteri": "Toplu nefes, toplu ses, birlikte çalışma",
-  "gorselAlt": "Çocuk Korosu provasında çocuklar birlikte söylüyor",
+  "gorselAlt": "Çocuk Korosu sahnede birlikte söylerken",
   "teklifler": [
     {
       "sube": "gaziantep",
@@ -54,5 +54,6 @@
   "seo": {
     "title": "Çocuk Korosu | Kafka Sanat Akademisi",
     "description": "Çocukların birlikte dinlemeyi, uyum sağlamayı ve topluluk olarak müzik üretmeyi deneyimledikleri çocuk koroları."
-  }
+  },
+  "gorsel": "/gorseller/foto/sahne-topluluk.jpg"
 }

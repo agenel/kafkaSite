@@ -14,9 +14,10 @@
     "Sahne düzeni",
     "Işık kumandası"
   ],
-  "gorselAlt": "Tirat Geceleri'nde bir öğrencinin bireysel performansı",
+  "gorselAlt": "Tirat Geceleri'nde bireysel performans",
   "seo": {
     "title": "Tirat Geceleri 2025 | Ürettiklerimiz | Kafka Sanat Akademisi",
     "description": "GÇT Üretim Yılı öğrencilerinin bireysel performanslarından oluşan Tirat Geceleri programı."
-  }
+  },
+  "gorsel": "/gorseller/foto/tirat-sahne.jpg"
 }

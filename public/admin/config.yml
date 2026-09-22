@@ -435,8 +435,15 @@ collections:
           - { label: 'Kiralama', value: kiralama }
           - { label: 'Toplu sipariş', value: toplu-siparis }
           - { label: 'Özel sipariş', value: ozel-siparis }
-      - { name: gorsel, label: 'Görsel', widget: image, required: false }
-      - { name: gorselAlt, label: 'Görsel alt metni', widget: string, required: false }
+      - { name: gorsel, label: 'Kapak görseli', widget: image, required: false }
+      - { name: gorselAlt, label: 'Kapak görseli alt metni', widget: string, required: false }
+      - name: galeri
+        label: 'Koleksiyon görselleri'
+        widget: list
+        required: false
+        fields:
+          - { name: src, label: 'Görsel', widget: image }
+          - { name: alt, label: 'Alt metni', widget: string }
       - { name: sira, label: 'Sıra', widget: number, value_type: int, default: 50 }
 
   # ── Sosyal sorumluluk ─────────────────────────────────────────

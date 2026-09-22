@@ -26,13 +26,23 @@ const bilgiler = [
   />
 
   <Bolum bosluk="dar">
-    <Gorsel
-      oran="21/9"
-      cekimNotu="Kostüm detayları, kumaş, hareket halinde kostüm, farklı koleksiyonlar, sahne ışığında görünüm."
-      karakter="Doku, kumaş, hareket, çocuk sahnesi, detay, kültür ve performans"
-      alt="Kafka Kostüm koleksiyonundan sahne kostümleri"
-      yukleme="eager"
-    />
+    <ul class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+      {
+        [
+          'halk-oyunlari-01', 'halk-oyunlari-03', 'bale-01',
+          'modern-dans-01', 'tematik-01', 'okul-gosterisi-01',
+        ].map((ad) => (
+          <li>
+            <Gorsel
+              oran="4/5"
+              src={`/gorseller/kostum/${ad}.jpg`}
+              alt="Kafka Kostüm koleksiyonundan çocuk sahne kostümü"
+              yukleme="eager"
+            />
+          </li>
+        ))
+      }
+    </ul>
   </Bolum>
 
   <Bolum bosluk="genis">

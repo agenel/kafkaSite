@@ -6,6 +6,17 @@
     "kiralama",
     "ozel-siparis"
   ],
-  "gorselAlt": "Bale ve Gösteri Kostümleri — kostüm detayı",
-  "sira": 3
+  "gorselAlt": "Bale ve gösteri için çocuk kostümü",
+  "sira": 3,
+  "gorsel": "/gorseller/kostum/bale-01.jpg",
+  "galeri": [
+    {
+      "src": "/gorseller/kostum/bale-02.jpg",
+      "alt": "Bale ve gösteri için çocuk kostümü — 1"
+    },
+    {
+      "src": "/gorseller/kostum/bale-03.jpg",
+      "alt": "Bale ve gösteri için çocuk kostümü — 2"
+    }
+  ]
 }

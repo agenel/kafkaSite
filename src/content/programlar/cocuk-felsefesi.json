@@ -13,7 +13,7 @@
   "girisMetni": "Soru sorma, gerekçelendirme ve farklı bakış açılarını dinleme becerilerini destekleyen çalışmalar.",
   "ctaTipi": "basvuru",
   "gorselKarakteri": "Kafka kurumsal · sakin, güvenilir, çağdaş kültür kurumu",
-  "gorselAlt": "Çocuk Felsefesi çalışmasından bir an",
+  "gorselAlt": "Çocuk Felsefesi çalışmasında birbirini dinleyen iki öğrenci",
   "teklifler": [
     {
       "sube": "gaziantep",
@@ -38,5 +38,6 @@
   "seo": {
     "title": "Çocuk Felsefesi | Kafka Sanat Akademisi",
     "description": "Soru sorma, gerekçelendirme ve farklı bakış açılarını dinlemeyi destekleyen çocuk felsefesi çalışmaları."
-  }
+  },
+  "gorsel": "/gorseller/foto/iki-cocuk.jpg"
 }
