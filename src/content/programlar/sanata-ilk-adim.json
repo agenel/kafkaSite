@@ -15,7 +15,7 @@
   "girisMetni": "Sanata İlk Adım, okul öncesi 4–6 yaş çocuklarının sanatla güvenli, meraklı ve baskısız bir ilişki kurmaları için tasarlanmış Yaratıcı Drama merkezli bir programdır.",
   "ctaTipi": "basvuru",
   "gorselKarakteri": "Yumuşak, sıcak, oyun ve hareket",
-  "gorselAlt": "Sanata İlk Adım atölyesinde önlüklü bir çocuk",
+  "gorselAlt": "Okul öncesi çalışmasında boyama yapan bir çocuk",
   "teklifler": [
     {
       "sube": "gaziantep",
@@ -105,5 +105,5 @@
     "title": "Sanata İlk Adım | 4–6 Yaş Yaratıcı Drama Programı",
     "description": "Okul öncesi 4–6 yaş için Yaratıcı Drama merkezli oyun, hareket, hikaye ve ifade programı."
   },
-  "gorsel": "/gorseller/foto/atolye-cocuk.jpg"
+  "gorsel": "/gorseller/foto/okul-oncesi-boyama.jpg"
 }

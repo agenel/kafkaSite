@@ -21,7 +21,7 @@
   "girisMetni": "Yaşa ve programa göre değişen ses, ritim, enstrüman veya toplu müzik çalışmaları.",
   "ctaTipi": "basvuru",
   "gorselKarakteri": "Kafka kurumsal · sakin, güvenilir, çağdaş kültür kurumu",
-  "gorselAlt": "Müzik çalışmasından bir an",
+  "gorselAlt": "Sahne ve salon — müzik çalışmalarının paylaşıldığı alan",
   "teklifler": [
     {
       "sube": "gaziantep",
@@ -46,5 +46,6 @@
   "seo": {
     "title": "Müzik | Kafka Sanat Akademisi",
     "description": "Yaşa ve programa göre değişen ses, ritim, enstrüman ve toplu müzik çalışmaları."
-  }
+  },
+  "gorsel": "/gorseller/foto/salon-sahne.jpg"
 }

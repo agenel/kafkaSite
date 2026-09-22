@@ -21,7 +21,7 @@
   "girisMetni": "Hikaye, karakter, diyalog ve farklı yazılı anlatı biçimleri üzerinden üretim.",
   "ctaTipi": "basvuru",
   "gorselKarakteri": "Kafka kurumsal · sakin, güvenilir, çağdaş kültür kurumu",
-  "gorselAlt": "Yaratıcı Yazarlık çalışmasından bir an",
+  "gorselAlt": "Yaratıcı Yazarlık çalışmasında metin üzerinde çalışan eller",
   "teklifler": [
     {
       "sube": "gaziantep",
@@ -46,5 +46,6 @@
   "seo": {
     "title": "Yaratıcı Yazarlık | Kafka Sanat Akademisi",
     "description": "Hikaye, karakter, diyalog ve farklı yazılı anlatı biçimleri üzerinden üretim programı."
-  }
+  },
+  "gorsel": "/gorseller/foto/yazi-gazete.jpg"
 }

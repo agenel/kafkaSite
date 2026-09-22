@@ -6,7 +6,7 @@ indirildi. Üretilmiş veya stok görsel yoktur (§31).
 | Klasör | Adet | Kaynak hesap | Kullanıldığı yer |
 |---|---|---|---|
 | `gorseller/kostum/` | 24 | @kafkakostum | Kafka Kostüm kataloğu ve ana sayfası |
-| `gorseller/foto/` | 11 | @kafkasanatakademisi, @gaziantepcocuktiyatrosu | Ana sayfa, program sayfaları, üretim kayıtları |
+| `gorseller/foto/` | 20 | @kafkasanatakademisi, @gaziantepcocuktiyatrosu, @katiyatro, @gaziantep.gencliktiyatrosu | Ana sayfa, 17 program sayfası, üretim kayıtları |
 
 ## Yayın öncesi yapılması gerekenler
 
@@ -34,8 +34,8 @@ Instagram kareleri şu slotlar için **yeterli değil**:
 - **21:9 geniş program banner'ları** — Instagram kaynakları en fazla 1400 px
 - **Kafka International** — uluslararası program görüntüsü yok
 - **Sosyal sorumluluk** — proje görüntüsü yok
-- **Müzik, Resim, Yoga, Yaratıcı Yazarlık, Ahşap Oyma, kulüpler** — bu programlara
-  ait belgesel fotoğraf bulunamadı
+- **Yoga ve Ahşap Oyma Atölyesi** — bu programlara ait fotoğraf bulunamadı
+- **Kostüm kataloğunda "Tiyatro" kategorisi** — ayrı çekim yok
 
 Bu slotlar bilinçli olarak yer tutucuda bırakıldı; her yer tutucu oraya hangi
 çekimin geleceğini yazıyor. Gerçek çekim listesi: `cekim-listesi.md`.

@@ -76,8 +76,10 @@ Her `main` push'unda GitHub Actions siteyi derleyip GitHub Pages'e dağıtır:
    npx wrangler secret put TURNSTILE_SECRET    # opsiyonel, spam koruması
    ```
    Worker rotasını `kafkasanatakademisi.com/api/basvuru` olarak bağlayın.
-4. **CMS**: `public/admin/config.yml` içindeki `repo` ve `base_url` değerlerini doldurun;
-   GitHub OAuth için `sveltia-cms-auth` Worker'ını kurun.
+4. **CMS**: `repo` alanı `agenel/kafkaSite` olarak dolu. Giriş için GitHub'dan bir
+   fine-grained PAT yeterlidir (Contents: read/write) — ayrı OAuth uygulaması veya
+   Worker **gerekmez**. Yerelde çalışmak için `localhost:4321/admin/index.html` →
+   “Work with Local Repository”. Ayrıntı: `docs/cms-kullanim.md`.
 5. **Domain**: DNS'i Cloudflare'e yönlendirin.
 
 ## Bilinen eksikler

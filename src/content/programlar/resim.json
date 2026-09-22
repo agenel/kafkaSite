@@ -21,7 +21,7 @@
   "girisMetni": "Görsel ifade, malzeme ve üretim deneyimi etrafında dönemsel resim çalışmaları.",
   "ctaTipi": "basvuru",
   "gorselKarakteri": "Kafka kurumsal · sakin, güvenilir, çağdaş kültür kurumu",
-  "gorselAlt": "Resim çalışmasından bir an",
+  "gorselAlt": "Resim çalışmasında çizim yapan bir öğrenci",
   "teklifler": [
     {
       "sube": "gaziantep",
@@ -46,5 +46,6 @@
   "seo": {
     "title": "Resim | Kafka Sanat Akademisi",
     "description": "Görsel ifade, malzeme ve üretim deneyimi etrafında dönemsel resim çalışmaları."
-  }
+  },
+  "gorsel": "/gorseller/foto/cizim.jpg"
 }

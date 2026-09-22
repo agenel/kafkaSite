@@ -16,7 +16,7 @@
   "kisaTanim": "Konuşma pratiğini, etkileşimi ve günlük iletişimi merkeze alan dönemsel İngilizce konuşma kulübü.",
   "girisMetni": "Konuşma pratiğini, etkileşimi ve günlük iletişimi merkeze alan dönemsel İngilizce konuşma kulübü.",
   "ctaTipi": "basvuru",
-  "gorselAlt": "İngilizce Konuşma Kulübü buluşmasında öğrenciler sohbet ediyor",
+  "gorselAlt": "İngilizce Konuşma Kulübü buluşmasında iki öğrenci",
   "teklifler": [
     {
       "sube": "gaziantep",
@@ -46,5 +46,6 @@
   "seo": {
     "title": "İngilizce Konuşma Kulübü | Kafka Sanat Akademisi",
     "description": "İlkokul, ortaokul ve lise grupları için konuşma pratiği ve günlük iletişim odaklı dönemsel İngilizce konuşma kulübü."
-  }
+  },
+  "gorsel": "/gorseller/foto/genc-ikili.jpg"
 }

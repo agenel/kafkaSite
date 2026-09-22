@@ -1,11 +1,30 @@
 # İçerik Yönetimi (CMS) Kullanım Kılavuzu
 
-Adres: **https://kafkasanatakademisi.com/admin**
+Yaptığınız her değişiklik git'e kaydedilir, site otomatik yeniden yayınlanır ve
+yaklaşık **1 dakika içinde** canlıya çıkar. Her değişiklik geçmişe işlenir;
+yanlış bir şey yaparsanız geri alınabilir.
 
-GitHub hesabınızla giriş yaparsınız. Yaptığınız her değişiklik kaydedilir,
-site otomatik olarak yeniden yayınlanır ve yaklaşık **1 dakika içinde** canlıya çıkar.
+## Panele üç şekilde girilir
 
-> Her değişiklik geçmişe kaydedilir. Yanlış bir şey yaparsanız geri alınabilir.
+| Nerede | Adres | Ne görürsünüz |
+|---|---|---|
+| **Yerelde** (bilgisayarınızda) | `npm run dev` → `localhost:4321/admin/index.html` → **“Work with Local Repository”** | Gerçek içeriğin tamamı. Giriş gerekmez. Değişiklikler doğrudan dosyalara yazılır; git'e siz commit edersiniz. **Chrome veya Edge gerekir.** |
+| **Yayındaki sitede** | `kafkasanatakademisi.com/admin` → **“Sign In with GitHub Using PAT”** | Gerçek içerik. GitHub'dan alacağınız bir erişim anahtarıyla (PAT) girilir; değişiklikler doğrudan git'e yazılır. |
+| **Önizleme sitesinde** | `agenel.github.io/kafkaSite/admin/` | **Boş.** Demo arka ucunda çalışır; sitedeki içeriği okumaz. Yalnız panelin nasıl göründüğünü denemek içindir. |
+
+> **Önizlemedeki panel neden boş?**
+> Demo arka ucu (test-repo) hiçbir depoya bağlı değildir ve tasarımı gereği boş başlar.
+> Sitedeki 16 program, şubeler ve SSS orada görünmez — eksik değil, o panel içeriği
+> okumuyor. Gerçek içerik için yukarıdaki ilk iki satırı kullanın.
+
+### PAT ile giriş (yayındaki site için)
+
+1. GitHub → Settings → Developer settings → Personal access tokens → **Fine-grained tokens**
+2. Yalnız `agenel/kafkaSite` deposuna erişim verin
+3. İzin: **Contents → Read and write**
+4. Oluşan anahtarı kopyalayın, `/admin` sayfasında “Sign In with GitHub Using PAT” deyip yapıştırın
+
+Ayrı bir OAuth uygulaması veya sunucu kurmanız **gerekmez**.
 
 ---
 

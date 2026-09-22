@@ -12,7 +12,7 @@
   "kisaTanim": "Film izleme, sinema dili ve ortak tartışma etrafında bir araya gelen yetişkin topluluğu.",
   "girisMetni": "Film izleme, sinema dili ve ortak tartışma etrafında bir araya gelen yetişkin topluluğu.",
   "ctaTipi": "basvuru",
-  "gorselAlt": "Kafka Sinema Kulübü gösterimi sonrası tartışma",
+  "gorselAlt": "Kafka Sinema Kulübü gösteriminde salon",
   "teklifler": [
     {
       "sube": "gaziantep",
@@ -50,5 +50,6 @@
   "seo": {
     "title": "Kafka Sinema Kulübü | Yetişkinler",
     "description": "Film izleme, sinema dili ve ortak tartışma etrafında bir araya gelen yetişkin topluluğu."
-  }
+  },
+  "gorsel": "/gorseller/foto/seyirci.jpg"
 }

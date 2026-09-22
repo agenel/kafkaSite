@@ -81,9 +81,11 @@ if (existsSync(adminYolu)) {
   const adminHtml = 'dist/admin/index.html';
   if (existsSync(adminHtml)) {
     const afis = `<div style="position:fixed;inset:auto 0 0 0;z-index:9999;background:#de1f26;color:#fff;
-font:500 13px/1.5 system-ui,sans-serif;padding:10px 16px;text-align:center">
-Önizleme kipi — değişiklikler yalnız bu tarayıcıda kalır, siteye kaydedilmez.
-Gerçek yönetim için GitHub arka ucu ve OAuth kurulumu gerekir.</div>`;
+font:500 13px/1.6 system-ui,sans-serif;padding:12px 16px;text-align:center">
+<b>Önizleme kipi — koleksiyonlar bu yüzden boş görünüyor.</b><br>
+Bu panel demo arka ucunda çalışıyor; sitedeki gerçek içeriği okumuyor ve hiçbir yere yazmıyor.
+Gerçek içeriği görmek için: <code>npm run dev</code> → <code>localhost:4321/admin/index.html</code>
+→ “Work with Local Repository”.</div>`;
     writeFileSync(adminHtml, readFileSync(adminHtml, 'utf8').replace('</body>', afis + '</body>'));
     console.log('admin/index.html önizleme afişi eklendi.');
   }
