@@ -53,6 +53,17 @@ src/lib/         Şema ve sorgu yardımcıları
 worker/          Cloudflare Worker + testleri
 ```
 
+## Önizleme
+
+Her `main` push'unda GitHub Actions siteyi derleyip GitHub Pages'e dağıtır:
+**https://agenel.github.io/kafkaSite/**
+
+Önizlemeye özgü üç fark (yalnız çıktıya uygulanır, kaynak kod etkilenmez):
+- Site `/kafkaSite/` alt yolunda durduğu için bağlantılara önek eklenir
+- `/admin` kimlik doğrulaması olmayan `test-repo` arka ucunda açılır (değişiklikler
+  yalnız tarayıcıda kalır)
+- `robots.txt` arama motorlarına kapalıdır; kanonik etiketler gerçek alan adını gösterir
+
 ## Kurulum (yayına alma)
 
 1. **GitHub**: repoyu oluşturup `main` dalına gönderin.
@@ -75,6 +86,8 @@ worker/          Cloudflare Worker + testleri
   yazan yer tutucularla duruyor. Liste: `docs/cekim-listesi.md`.
 - **Yasal metinler yer tutucu.** KVKK, gizlilik, çerez ve fotoğraf/video izin sayfaları
   `noindex` ve site haritası dışında; nihai metin hukuki kontrolden geçmeden yayına çıkmaz.
-- **Ürettiklerimiz boş.** Koleksiyon ve sayfa hazır; ilk kayıtlar fotoğraf arşivi
-  tamamlandığında girilecek.
+- **Ürettiklerimiz'de 6 örnek kayıt var.** Sayfanın gerçek kayıtlarla nasıl görüneceğini
+  göstermek için eklendi. Her biri `ornek: true` taşır, sitede "Örnek kayıt" olarak
+  etiketlenir ve `npm run test:yayin` bunlar silinene kadar **başarısız olur** — yani
+  yanlışlıkla yayına çıkamazlar.
 - **Harita bağlantıları eksik.** Şube kayıtlarındaki `haritaUrl` alanı doldurulmalı.

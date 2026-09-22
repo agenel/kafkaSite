@@ -41,9 +41,10 @@ jobs:
         run: npm run build
 
       - name: Yayın öncesi kontrol listesi (§36)
-        run: npm run test:yayin
+        # Önizleme kipi: örnek kayıtlar dağıtımı düşürmez, uyarı olarak raporlanır.
+        run: node scripts/yayin-kontrol.mjs --onizleme
 
-      - name: Alt yol önekini uygula
+      - name: Önizleme çıktısını hazırla (alt yol öneki + demo admin + robots)
         run: node scripts/gh-pages-onek.mjs /${{ github.event.repository.name }}
 
       - uses: actions/configure-pages@v5

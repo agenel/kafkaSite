@@ -6,6 +6,7 @@ import SayfaBasligi from '@/components/SayfaBasligi.astro';
 import Bolum from '@/components/Bolum.astro';
 import Gorsel from '@/components/Gorsel.astro';
 import Buton from '@/components/Buton.astro';
+import OrnekRozeti from '@/components/OrnekRozeti.astro';
 import { cta } from '@/data/site';
 
 export const getStaticPaths = (async () => {
@@ -39,6 +40,20 @@ const satirlar = [
     baslik={d.ad}
     girisMetni={d.neUretildi}
   />
+
+  {
+    d.ornek && (
+      <Bolum bosluk="dar">
+        <div class="border-l-4 border-ink-400 bg-paper-sunken p-6">
+          <OrnekRozeti class="mb-3" />
+          <p class="u-measure-wide text-govde leading-relaxed text-muted">
+            Bu, gerçek bir üretim kaydı değildir. Sayfanın nasıl görüneceğini göstermek
+            için eklenmiş bir örnektir.
+          </p>
+        </div>
+      </Bolum>
+    )
+  }
 
   <Bolum bosluk="dar">
     <Gorsel oran="16/9" src={d.gorsel} alt={d.gorselAlt ?? d.ad} yukleme="eager" />

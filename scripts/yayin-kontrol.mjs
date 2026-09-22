@@ -2,7 +2,11 @@
  * §36 Yayın Öncesi Kontrol Listesi — otomatik doğrulanabilen maddeler.
  * dist/ üzerinden çalışır. Önce `npm run build`.
  */
-import { readFileSync, existsSync } from 'node:fs';
+import { readFileSync, existsSync, readdirSync } from 'node:fs';
+
+// --onizleme: önizleme dağıtımında örnek kayıtlar kabul edilir (uyarı olarak
+// raporlanır, dağıtımı düşürmez). Gerçek yayın kontrolünde bayrak kullanılmaz.
+const ONIZLEME = process.argv.includes('--onizleme');
 
 const oku = (y) => (existsSync(y) ? readFileSync(y, 'utf8') : '');
 const sonuclar = [];
@@ -120,12 +124,28 @@ kontrol('Yasal sayfalar noindex ve site haritasında değil',
   oku('dist/yasal/kvkk/index.html').includes('noindex') &&
   !oku('dist/sitemap-0.xml').includes('/yasal/'));
 
+// Örnek (gerçek olmayan) kayıtlar yayına çıkamaz.
+const ornekler = existsSync('src/content/uretimler')
+  ? readdirSync('src/content/uretimler')
+      .filter((f) => f.endsWith('.json'))
+      .filter((f) => JSON.parse(readFileSync(`src/content/uretimler/${f}`, 'utf8')).ornek)
+  : [];
+if (!ONIZLEME) {
+  kontrol('Sitede örnek (gerçek olmayan) kayıt yok',
+    ornekler.length === 0, `${ornekler.length} örnek kayıt: ${ornekler.join(', ')}`);
+}
+
 // ── Çıktı ──────────────────────────────────────────────────────
 const gecen = sonuclar.filter((s) => s.gecti).length;
 console.log(`§36 otomatik kontroller: ${gecen}/${sonuclar.length}\n`);
 for (const s of sonuclar) {
   console.log(`  ${s.gecti ? '☑' : '☐'} ${s.ad}${s.detay && !s.gecti ? '  → ' + s.detay : ''}`);
 }
+if (ONIZLEME && ornekler.length > 0) {
+  console.log(`\n⚠ Önizleme kipi: ${ornekler.length} örnek kayıt var — gerçek yayında bu kontrol düşer.`);
+  ornekler.forEach((f) => console.log('    ' + f));
+}
+
 console.log('\nElle doğrulanacaklar:');
 for (const m of [
   'Gerçek Kafka fotoğraf ve videoları kullanılıyor (§31)',

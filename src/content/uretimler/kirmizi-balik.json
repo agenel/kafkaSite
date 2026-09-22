@@ -1,0 +1,24 @@
+{
+  "ornek": true,
+  "ad": "Kırmızı Balık",
+  "yil": 2025,
+  "kategori": "sahne",
+  "program": "GÇT — Üretim Yılı, Ortaokul grubu",
+  "sube": "gaziantep",
+  "mekan": "Gaziantep şube sahnesi",
+  "neUretildi": "Üretim Yılı grubunun bir dönem boyunca birlikte kurduğu, kendi yazdıkları metinden çıkan tam uzunlukta bir çocuk tiyatrosu prodüksiyonu.",
+  "nasilCalisildi": "Çalışma masa başında başladı: grup önce Çocuk Felsefesi saatlerinde \"görmek\" ve \"görmezden gelmek\" üzerine konuştu. Yaratıcı Yazarlık'ta bu tartışmadan karakterler çıktı. Metin dört kez yeniden yazıldı; oyuncular kendi replikleri üzerinde söz sahibi oldu. Sahne arkası, ışık ve kostüm görevlerini de aynı grup üstlendi.",
+  "ogrenciRolleri": [
+    "Oyunculuk",
+    "Metin yazımı",
+    "Sahne arkası",
+    "Işık",
+    "Kostüm asistanlığı",
+    "Afiş tasarımı"
+  ],
+  "gorselAlt": "Kırmızı Balık prodüksiyonunda sahne anı",
+  "seo": {
+    "title": "Kırmızı Balık | Ürettiklerimiz | Kafka Sanat Akademisi",
+    "description": "GÇT Üretim Yılı Ortaokul grubunun kendi yazdığı metinden çıkan çocuk tiyatrosu prodüksiyonu."
+  }
+}

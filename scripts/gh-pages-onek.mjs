@@ -7,8 +7,13 @@
  *
  * Gerçek hedef Cloudflare Pages'tir; orada site kök alan adında durur ve bu
  * betik hiç çalışmaz. Bu yüzden önek kaynak koda değil, yalnız çıktıya uygulanır.
+ *
+ * Ayrıca çıktıda:
+ *  - /admin CMS'i, kimlik doğrulaması gerektirmeyen "test-repo" arka ucuna alır
+ *    (Sveltia'nın demo kipi; tarayıcıda çalışır, hiçbir yere yazmaz)
+ *  - robots.txt'yi arama motorlarına kapatır
  */
-import { readdirSync, statSync, readFileSync, writeFileSync } from 'node:fs';
+import { readdirSync, statSync, readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 
 const ONEK = process.argv[2];
@@ -51,6 +56,36 @@ for (const dosya of dosyalar('dist')) {
   if (icerik !== orij) {
     writeFileSync(dosya, icerik);
     degisen++;
+  }
+}
+
+// ── /admin: kimlik doğrulaması olmayan demo kipi ────────────────
+// Gerçek yapılandırma GitHub arka ucunu kullanır ve OAuth Worker'ı ister.
+// Önizlemede o yok; "test-repo" arka ucu tarayıcıda çalışır, hiçbir yere yazmaz.
+const adminYolu = 'dist/admin/config.yml';
+if (existsSync(adminYolu)) {
+  const cfg = readFileSync(adminYolu, 'utf8');
+  let demo = cfg.replace(
+    /backend:\n(?:[ \t]+.*\n)+/,
+    'backend:\n  name: test-repo   # ÖNİZLEME: kimlik doğrulaması yok, değişiklikler kaydedilmez\n'
+  );
+  // YAML içindeki kök göreli yollar (HTML desenlerine uymaz, elle öneklenir)
+  demo = demo
+    .replace(/^(logo_url:\s*)\/(?!\/)/m, `$1${ONEK}/`)
+    .replace(/^(public_folder:\s*)\/(?!\/)/m, `$1${ONEK}/`)
+    .replace(/^(site_url:\s*).*$/m, `$1${ONEK}/`);
+  writeFileSync(adminYolu, demo);
+  console.log('admin/config.yml önizleme için test-repo arka ucuna alındı.');
+
+  // Önizlemede olduğunu panelin üstünde açıkça yaz.
+  const adminHtml = 'dist/admin/index.html';
+  if (existsSync(adminHtml)) {
+    const afis = `<div style="position:fixed;inset:auto 0 0 0;z-index:9999;background:#de1f26;color:#fff;
+font:500 13px/1.5 system-ui,sans-serif;padding:10px 16px;text-align:center">
+Önizleme kipi — değişiklikler yalnız bu tarayıcıda kalır, siteye kaydedilmez.
+Gerçek yönetim için GitHub arka ucu ve OAuth kurulumu gerekir.</div>`;
+    writeFileSync(adminHtml, readFileSync(adminHtml, 'utf8').replace('</body>', afis + '</body>'));
+    console.log('admin/index.html önizleme afişi eklendi.');
   }
 }
 

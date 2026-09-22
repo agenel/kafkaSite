@@ -102,6 +102,12 @@ const subeler = defineCollection({
 const uretimler = defineCollection({
   loader: glob({ base: './src/content/uretimler', pattern: '**/*.json' }),
   schema: z.object({
+    /**
+     * Gerçek üretim kaydı değil, sayfanın nasıl görüneceğini gösteren örnek.
+     * Sitede açıkça etiketlenir ve `npm run test:yayin` örnek kayıt varken
+     * başarısız olur — yani yanlışlıkla yayına çıkamaz.
+     */
+    ornek: z.boolean().default(false),
     ad: z.string(),
     yil: z.number(),
     kategori: z.enum([

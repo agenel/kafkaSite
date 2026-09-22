@@ -4,7 +4,7 @@
 
 backend:
   name: github
-  repo: KULLANICI/kafkaSite        # ← GitHub kullanıcı/repo adıyla değiştirin
+  repo: agenel/kafkaSite
   branch: main
   base_url: https://kafka-cms-auth.workers.dev   # ← OAuth Worker adresi
   auth_endpoint: oauth
@@ -301,6 +301,13 @@ collections:
     summary: '{{ad}} ({{yil}})'
     sortable_fields: [yil, ad]
     fields:
+      - name: ornek
+        label: 'Örnek kayıt (gerçek değil)'
+        widget: boolean
+        default: false
+        hint: >-
+          Yalnız sayfanın nasıl görüneceğini göstermek için eklenen kayıtlarda
+          işaretlenir. Sitede açıkça etiketlenir ve yayın kontrolünü düşürür.
       - { name: ad, label: 'Üretimin adı', widget: string }
       - { name: yil, label: 'Yıl', widget: number, value_type: int, min: 2017 }
       - name: kategori

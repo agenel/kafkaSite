@@ -1,0 +1,21 @@
+{
+  "ornek": true,
+  "ad": "Yaratıcı Keşifler Sergisi",
+  "yil": 2024,
+  "kategori": "yaratici-kesifler",
+  "program": "GÇT — Eğitim Yılı, İlkokul grubu",
+  "sube": "izmir",
+  "mekan": "Güzelbahçe şube çalışma alanı",
+  "neUretildi": "Birinci yıl grubunun Yaratıcı Keşifler çalışmalarından çıkan nesne, maske ve küçük yapılardan oluşan sınıf içi sergi.",
+  "nasilCalisildi": "Eğitim Yılı'nda büyük prodüksiyon hedeflenmez. Bunun yerine grup, dönem boyunca ürettiği işleri bir araya getirdi. Sergi bir gösteri değil, sürecin görünür hâliydi; veliler çocukların anlatımıyla gezdi.",
+  "ogrenciRolleri": [
+    "Üretim",
+    "Serginin kurulumu",
+    "Velilere anlatım"
+  ],
+  "gorselAlt": "Yaratıcı Keşifler sergisinde öğrenci işleri",
+  "seo": {
+    "title": "Yaratıcı Keşifler Sergisi | Ürettiklerimiz | Kafka",
+    "description": "GÇT Eğitim Yılı İlkokul grubunun Yaratıcı Keşifler çalışmalarından çıkan sınıf içi sergi."
+  }
+}

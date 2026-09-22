@@ -1,0 +1,17 @@
+---
+/**
+ * Örnek (gerçek olmayan) kayıtları sitede açıkça işaretler.
+ * `npm run test:yayin` örnek kayıt varken başarısız olur; yani bu rozet
+ * görünen hiçbir içerik yanlışlıkla yayına çıkamaz.
+ */
+interface Props { class?: string }
+const { class: ekSinif = '' } = Astro.props;
+---
+<span
+  class={`inline-flex items-center gap-1.5 border border-dashed border-ink-400 px-3 py-1 font-display text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-ink-400 ${ekSinif}`}
+>
+  <svg aria-hidden="true" viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+    <path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" />
+  </svg>
+  Örnek kayıt
+</span>

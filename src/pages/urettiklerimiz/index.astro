@@ -4,8 +4,10 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import SayfaBasligi from '@/components/SayfaBasligi.astro';
 import Bolum from '@/components/Bolum.astro';
 import Gorsel from '@/components/Gorsel.astro';
+import OrnekRozeti from '@/components/OrnekRozeti.astro';
 
 const uretimler = (await getCollection('uretimler')).sort((a, b) => b.data.yil - a.data.yil);
+const ornekVar = uretimler.some((u) => u.data.ornek);
 
 const kategoriEtiketi = {
   sahne: 'Sahne',
@@ -29,6 +31,21 @@ const kategoriler = Object.entries(kategoriEtiketi);
     acilisAlintisi="Sonucu göstermek kolay. Biz süreci de göstermek istiyoruz."
     girisMetni="Bir oyunun arkasında aylar, bir metnin arkasında onlarca deneme, bir videonun arkasında fikir, senaryo, çekim ve kurgu vardır. Bu bölüm yalnız final görselini değil, o sonucun nasıl ortaya çıktığını da gösterir."
   />
+
+  {
+    ornekVar && (
+      <Bolum bosluk="dar">
+        <div class="border-l-4 border-ink-400 bg-paper-sunken p-6">
+          <p class="u-eyebrow mb-2">Bu sayfadaki kayıtlar örnektir</p>
+          <p class="u-measure-wide text-govde leading-relaxed text-muted">
+            Aşağıdaki üretimler, sayfanın gerçek kayıtlarla nasıl görüneceğini göstermek
+            için eklenmiş örneklerdir. Gerçek üretim kayıtları, fotoğraf ve video arşivi
+            tamamlandığında CMS üzerinden girilecek ve bu örnekler silinecektir.
+          </p>
+        </div>
+      </Bolum>
+    )
+  }
 
   <Bolum bosluk="genis" etiketleyen="kategoriler">
     <h2 id="kategoriler" class="u-eyebrow">Kategoriler</h2>
@@ -78,6 +95,7 @@ const kategoriler = Object.entries(kategoriEtiketi);
               <p class="u-eyebrow">
                 {kategoriEtiketi[u.data.kategori]} · {u.data.yil}
               </p>
+              {u.data.ornek && <OrnekRozeti class="self-start" />}
               <h3 class="font-display text-buyuk font-bold tracking-tight text-ink">
                 <a href={`/urettiklerimiz/${u.id}`} class="after:absolute after:inset-0 group-hover:text-accent">
                   {u.data.ad}

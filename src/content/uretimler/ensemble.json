@@ -1,0 +1,23 @@
+{
+  "ornek": true,
+  "ad": "Ensemble",
+  "yil": 2024,
+  "kategori": "sahne",
+  "program": "Kafka Akademi Tiyatrosu",
+  "sube": "izmir",
+  "mekan": "Güzelbahçe şube sahnesi",
+  "neUretildi": "KAT'ın yetişkin topluluğuyla kurduğu, topluluk çalışmasını merkeze alan sahne üretimi.",
+  "nasilCalisildi": "Prova ritmi sabit değildi: masa başı dönemi haftada iki gün sürdü, prodüksiyona yaklaşırken neredeyse her gün prova yapıldı. Metin topluluğun kendi doğaçlamalarından damıtıldı. Sahnede kimin ne kadar göründüğü değil, ekibin birlikte ne çıkardığı konuşuldu.",
+  "ogrenciRolleri": [
+    "Oyunculuk",
+    "Doğaçlama ve metin geliştirme",
+    "Sahne tasarımı",
+    "Teknik",
+    "Prodüksiyon koordinasyonu"
+  ],
+  "gorselAlt": "Ensemble prodüksiyonunda topluluk sahnesi",
+  "seo": {
+    "title": "Ensemble | Kafka Akademi Tiyatrosu | Ürettiklerimiz",
+    "description": "Kafka Akademi Tiyatrosu'nun topluluk çalışmasını merkeze alan yetişkin sahne üretimi."
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "ornek": true,
+  "ad": "Tirat Geceleri 2025",
+  "yil": 2025,
+  "kategori": "tirat",
+  "program": "GÇT — Üretim Yılı",
+  "sube": "izmir",
+  "mekan": "Güzelbahçe şube sahnesi",
+  "neUretildi": "Öğrencilerin tek başına sorumluluk aldığı bireysel performanslardan oluşan iki gecelik program.",
+  "nasilCalisildi": "Her öğrenci kendi metnini seçti veya yazdı. Eğitmen yönlendirdi ama seçimi öğrenci yaptı. Provalar bireysel yürüdü; grup birbirinin çalışmasını izleyip geri bildirim verdi. Amaç en iyi performansı bulmak değil, her öğrencinin tek başına sahnede durabilmesiydi.",
+  "ogrenciRolleri": [
+    "Bireysel performans",
+    "Metin seçimi ve uyarlama",
+    "Sahne düzeni",
+    "Işık kumandası"
+  ],
+  "gorselAlt": "Tirat Geceleri'nde bir öğrencinin bireysel performansı",
+  "seo": {
+    "title": "Tirat Geceleri 2025 | Ürettiklerimiz | Kafka Sanat Akademisi",
+    "description": "GÇT Üretim Yılı öğrencilerinin bireysel performanslarından oluşan Tirat Geceleri programı."
+  }
+}

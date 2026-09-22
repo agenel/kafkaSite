@@ -1,0 +1,30 @@
+{
+  "ornek": true,
+  "ad": "Sessiz Şehir",
+  "yil": 2025,
+  "kategori": "dijital",
+  "program": "GGT Lab — Prodüksiyon ekseni",
+  "sube": "gaziantep",
+  "mekan": "Şehir içi çekimler ve şube stüdyosu",
+  "neUretildi": "Lise öğrencilerinin fikir, senaryo, çekim ve kurgusunu üstlendiği 11 dakikalık kısa film.",
+  "nasilCalisildi": "Fikir, İçerik ekseninde yapılan bir metin tartışmasından çıktı. Senaryo üç öğrenci tarafından yazıldı. Çekim iki hafta sonuna yayıldı; yönetmenlik, kamera, ses ve kurgu görevleri dönüşümlü paylaşıldı. İlk kurgu izlendikten sonra iki sahne yeniden çekildi — bu da sürecin parçasıydı.",
+  "ogrenciRolleri": [
+    "Senaryo",
+    "Yönetmenlik",
+    "Kamera",
+    "Ses",
+    "Kurgu",
+    "Sanat yönetimi",
+    "Oyunculuk"
+  ],
+  "gorselAlt": "Sessiz Şehir çekimlerinde kamera arkası",
+  "fragmanUrl": "",
+  "ogrenciSozu": {
+    "metin": "Kamerayı ilk aldığımda elim titriyordu. Üçüncü çekim gününde yönetmenle nerede duracağımızı tartışıyordum.",
+    "kaynak": "Deniz · 16 yaş · GGT Lab"
+  },
+  "seo": {
+    "title": "Sessiz Şehir | Kısa Film | Ürettiklerimiz | Kafka",
+    "description": "GGT Lab öğrencilerinin fikir, senaryo, çekim ve kurgusunu üstlendiği kısa film."
+  }
+}

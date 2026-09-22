@@ -1,0 +1,19 @@
+{
+  "ornek": true,
+  "ad": "Başka Türlü — Öğrenci Yazıları Seçkisi",
+  "yil": 2025,
+  "kategori": "yazi",
+  "program": "GÇT — Yaratıcı Yazarlık",
+  "neUretildi": "İki şubeden GÇT öğrencilerinin dönem boyunca yazdığı hikaye, diyalog ve kısa metinlerden oluşan seçki.",
+  "nasilCalisildi": "Yazılar Çocuk Felsefesi çalışmalarında açılan sorulardan doğdu. Her metin en az iki kez yeniden yazıldı; öğrenciler birbirlerinin metinlerini okuyup geri bildirim verdi. Seçki, \"en iyi\" metinlerden değil, sürecin farklı aşamalarını gösteren örneklerden oluşuyor.",
+  "ogrenciRolleri": [
+    "Yazı",
+    "Düzelti",
+    "Birbirine geri bildirim"
+  ],
+  "gorselAlt": "Yaratıcı Yazarlık çalışmasında öğrenci defterleri",
+  "seo": {
+    "title": "Başka Türlü | Öğrenci Yazıları | Kafka Sanat Akademisi",
+    "description": "GÇT Yaratıcı Yazarlık çalışmalarından çıkan öğrenci hikayeleri ve metinleri seçkisi."
+  }
+}
