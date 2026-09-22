@@ -1,0 +1,58 @@
+{
+  "ad": "Çocuk Korosu",
+  "yerlesim": [
+    {
+      "yasCatisi": "cocuklar",
+      "sira": 9
+    }
+  ],
+  "format": "topluluk",
+  "amiral": false,
+  "anaSayfaGorunurluk": "liste",
+  "kisaTanim": "Çocukların bir topluluğun parçası olarak dinlemeyi, uyum sağlamayı ve birlikte müzik üretmeyi deneyimledikleri program ailesi.",
+  "girisMetni": "Çocuk Koroları, çocukların seslerini tek başına öne çıkarmaktan çok bir topluluğun parçası olarak dinlemeyi, uyum sağlamayı ve birlikte müzik üretmeyi deneyimledikleri program ailesidir.",
+  "ctaTipi": "basvuru",
+  "gorselKarakteri": "Toplu nefes, toplu ses, birlikte çalışma",
+  "gorselAlt": "Çocuk Korosu provasında çocuklar birlikte söylüyor",
+  "teklifler": [
+    {
+      "sube": "gaziantep",
+      "durum": "basvurular-acik",
+      "yasSinif": "Yaş / sınıf yapısı dönemsel olarak oluşturulur",
+      "saat": "Dönemsel olarak belirlenir"
+    },
+    {
+      "sube": "izmir",
+      "durum": "basvurular-acik",
+      "yasSinif": "Yaş / sınıf yapısı dönemsel olarak oluşturulur",
+      "saat": "Dönemsel olarak belirlenir"
+    }
+  ],
+  "bolumler": [
+    {
+      "tip": "alinti",
+      "metin": "BİRLİKTE NEFES. BİRLİKTE SES.",
+      "altMetin": "Çocuk Koroları, çocukların seslerini tek başına öne çıkarmaktan çok bir topluluğun parçası olarak dinlemeyi, uyum sağlamayı ve birlikte müzik üretmeyi deneyimledikleri program ailesidir."
+    },
+    {
+      "tip": "liste",
+      "baslik": "Çalışma alanları",
+      "maddeler": [
+        "Yaşa uygun ses kullanımı",
+        "Ritim",
+        "Dinleme",
+        "Ortak repertuvar",
+        "Topluluk bilinci"
+      ]
+    },
+    {
+      "tip": "not",
+      "baslik": "Grup yapısı",
+      "metin": "Gaziantep ve Güzelbahçe'de yaş / sınıf yapısı baştan sabitlenmez; başvuru sayısı ve öğrenci profiline göre dönemsel olarak oluşturulur."
+    }
+  ],
+  "seo": {
+    "title": "Çocuk Korosu | Kafka Sanat Akademisi",
+    "description": "Çocukların birlikte dinlemeyi, uyum sağlamayı ve topluluk olarak müzik üretmeyi deneyimledikleri çocuk koroları."
+  }
+}

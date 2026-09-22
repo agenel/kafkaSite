@@ -1,0 +1,95 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SayfaBasligi from '@/components/SayfaBasligi.astro';
+import Bolum from '@/components/Bolum.astro';
+import Gorsel from '@/components/Gorsel.astro';
+import Buton from '@/components/Buton.astro';
+import { cta, waLink, yapiSorumlusu } from '@/data/site';
+
+export const getStaticPaths = (async () => {
+  const programlar = await getCollection('international');
+  return programlar.map((p) => ({ params: { slug: p.id }, props: { program: p } }));
+}) satisfies GetStaticPaths;
+
+const { program } = Astro.props;
+const d = program.data;
+
+const satirlar = [
+  { etiket: 'Ülke / şehir', deger: `${d.sehir} · ${d.ulke}` },
+  { etiket: 'Hedef yaş / grup', deger: d.hedefGrup },
+  { etiket: 'Tarihler', deger: d.tarihler },
+  { etiket: 'Program ücreti', deger: d.ucret },
+  { etiket: 'Kafka öğrencisi indirimi', deger: d.ogrenciIndirimi },
+  ...d.dogrulanmisBilgiler,
+].filter((s) => s.deger);
+
+const waMesaj = `Merhaba, ${d.ad} programı hakkında bilgi almak istiyorum.`;
+---
+
+<BaseLayout title={d.seo.title} description={d.seo.description}>
+  <SayfaBasligi
+    ustBaslik={`Kafka International · ${d.sehir}`}
+    baslik={d.ad}
+    girisMetni={d.amac}
+  />
+
+  <Bolum bosluk="dar">
+    <Gorsel
+      oran="21/9"
+      src={d.gorsel}
+      alt={d.gorselAlt ?? d.ad}
+      cekimNotu={`${d.ad} — program görseli`}
+      yukleme="eager"
+    />
+  </Bolum>
+
+  <Bolum zemin="cukur" bosluk="normal" etiketleyen="program-bilgileri">
+    <h2 id="program-bilgileri" class="u-eyebrow">Program bilgileri</h2>
+    <dl class="u-measure-wide mt-6 flex flex-col">
+      {
+        satirlar.map((s) => (
+          <div class="grid gap-1 border-t border-line py-4 last:border-b sm:grid-cols-[minmax(0,14rem)_1fr] sm:gap-6">
+            <dt class="u-eyebrow pt-1">{s.etiket}</dt>
+            <dd class="text-govde leading-relaxed text-body">{s.deger}</dd>
+          </div>
+        ))
+      }
+    </dl>
+    {
+      !d.ucret && (
+        <p class="mt-6 border-l-2 border-accent pl-5 text-kucuk leading-relaxed text-muted">
+          Güncel program ücreti ve koşulları WhatsApp üzerinden paylaşılır.
+        </p>
+      )
+    }
+  </Bolum>
+
+  {
+    d.icerikBasliklari.length > 0 && (
+      <Bolum bosluk="genis" etiketleyen="icerik">
+        <h2 id="icerik" class="font-display text-baslik-lg font-bold tracking-[-0.025em] text-ink">
+          İçerik ve deneyim başlıkları
+        </h2>
+        <ul class="u-measure-wide mt-8 flex flex-col">
+          {d.icerikBasliklari.map((b) => (
+            <li class="flex gap-4 border-t border-line py-4 text-govde leading-relaxed text-body last:border-b">
+              <span class="shrink-0 pt-[0.15em] font-display text-[0.8rem] font-bold text-accent-text" aria-hidden="true">—</span>
+              <span>{b}</span>
+            </li>
+          ))}
+        </ul>
+      </Bolum>
+    )
+  }
+
+  <Bolum zemin="murekkep" bosluk="normal">
+    <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+      <p class="u-measure font-display text-baslik font-bold leading-tight text-on-ink">
+        Program hakkında konuşalım.
+      </p>
+      <Buton href={waLink(yapiSorumlusu.telefon, waMesaj)} etiket={cta.whatsappBilgi} boyut="buyuk" disBaglanti />
+    </div>
+  </Bolum>
+</BaseLayout>

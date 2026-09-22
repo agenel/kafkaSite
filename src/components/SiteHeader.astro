@@ -1,0 +1,145 @@
+---
+import { navigasyon, cta } from '@/data/site';
+import Buton from './Buton.astro';
+import Logo from './Logo.astro';
+
+const yol = Astro.url.pathname;
+const aktifMi = (href: string) =>
+  href === '/' ? yol === '/' : yol === href || yol.startsWith(`${href}/`);
+---
+
+<header class="sticky top-0 z-50 border-b border-line bg-paper/95 backdrop-blur-sm">
+  <a
+    href="#icerik"
+    class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-ink focus:px-4 focus:py-2 focus:text-on-ink"
+  >
+    İçeriğe geç
+  </a>
+
+  <div class="u-wrap flex items-center justify-between gap-6 py-3">
+    <a href="/" class="flex shrink-0 items-center gap-3" aria-label="Kafka Sanat Akademisi ana sayfa">
+      <Logo class="h-11 w-11" />
+      <span class="hidden font-display text-[0.95rem] font-bold leading-[1.15] tracking-tight text-ink sm:block">
+        Kafka Sanat<br />Akademisi
+      </span>
+    </a>
+
+    <nav class="hidden items-center gap-1 lg:flex" aria-label="Ana menü">
+      {
+        navigasyon.map((oge) =>
+          'alt' in oge && oge.alt ? (
+            <div class="group relative">
+              <a
+                href={oge.href}
+                aria-current={aktifMi(oge.href) ? 'page' : undefined}
+                class:list={[
+                  'flex min-h-11 items-center gap-1 px-3 font-display text-[0.92rem] font-medium tracking-tight transition-colors',
+                  aktifMi(oge.href)
+                    ? 'text-accent'
+                    : 'text-ink-600 hover:text-ink',
+                ]}
+              >
+                {oge.etiket}
+                <svg aria-hidden="true" viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+              </a>
+              <div class="invisible absolute left-0 top-full min-w-56 border border-line bg-paper-raised py-2 opacity-0 shadow-lg transition-[opacity,visibility] duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                {oge.alt.map((altOge) => (
+                  <a
+                    href={altOge.href}
+                    aria-current={aktifMi(altOge.href) ? 'page' : undefined}
+                    class:list={[
+                      'flex min-h-11 items-center px-5 font-display text-[0.92rem] transition-colors',
+                      aktifMi(altOge.href)
+                        ? 'text-accent'
+                        : 'text-ink-600 hover:bg-paper-sunken hover:text-ink',
+                    ]}
+                  >
+                    {altOge.etiket}
+                  </a>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <a
+              href={oge.href}
+              aria-current={aktifMi(oge.href) ? 'page' : undefined}
+              class:list={[
+                'flex min-h-11 items-center px-3 font-display text-[0.92rem] font-medium tracking-tight transition-colors',
+                aktifMi(oge.href)
+                  ? 'text-accent'
+                  : 'text-ink-600 hover:text-ink',
+              ]}
+            >
+              {oge.etiket}
+            </a>
+          )
+        )
+      }
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <Buton href="/basvuru" etiket={cta.basvuru} class="hidden sm:inline-flex" />
+      <button
+        type="button"
+        id="menu-ac"
+        class="flex h-12 w-12 cursor-pointer items-center justify-center border border-line-strong text-ink lg:hidden"
+        aria-label="Menüyü aç"
+        aria-expanded="false"
+        aria-controls="mobil-menu"
+      >
+        <svg aria-hidden="true" viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobil-menu" hidden class="border-t border-line bg-paper-raised lg:hidden">
+    <nav class="u-wrap flex flex-col py-4" aria-label="Mobil menü">
+      {
+        navigasyon.map((oge) => (
+          <>
+            <a
+              href={oge.href}
+              class="flex min-h-12 items-center border-b border-line font-display text-buyuk font-semibold tracking-tight text-ink"
+            >
+              {oge.etiket}
+            </a>
+            {'alt' in oge && oge.alt && (
+              <div class="flex flex-col border-b border-line py-1 pl-4">
+                {oge.alt.map((altOge) => (
+                  <a
+                    href={altOge.href}
+                    class="flex min-h-11 items-center font-display text-[0.95rem] text-ink-600"
+                  >
+                    {altOge.etiket}
+                  </a>
+                ))}
+              </div>
+            )}
+          </>
+        ))
+      }
+      <Buton href="/basvuru" etiket={cta.basvuru} boyut="buyuk" class="mt-6" />
+    </nav>
+  </div>
+</header>
+
+<script>
+  const dugme = document.getElementById('menu-ac');
+  const menu = document.getElementById('mobil-menu');
+  if (dugme && menu) {
+    dugme.addEventListener('click', () => {
+      const acik = dugme.getAttribute('aria-expanded') === 'true';
+      dugme.setAttribute('aria-expanded', String(!acik));
+      dugme.setAttribute('aria-label', acik ? 'Menüyü aç' : 'Menüyü kapat');
+      menu.hidden = acik;
+    });
+    // Escape ile kapat; odak tetikleyiciye geri döner
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !menu.hidden) {
+        dugme.setAttribute('aria-expanded', 'false');
+        menu.hidden = true;
+        dugme.focus();
+      }
+    });
+  }
+</script>

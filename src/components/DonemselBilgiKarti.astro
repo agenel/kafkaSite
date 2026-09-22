@@ -1,0 +1,77 @@
+---
+import DurumRozeti from './DurumRozeti.astro';
+import { programDurumEtiketi } from '@/data/site';
+
+interface Teklif {
+  sube: 'gaziantep' | 'izmir';
+  durum: keyof typeof programDurumEtiketi;
+  gun?: string;
+  saat?: string;
+  yasSinif?: string;
+  haftalikSure?: string;
+  programSuresi?: string;
+  kontenjan?: string;
+  egitmen?: string;
+  not?: string;
+}
+interface Props {
+  teklifler: Teklif[];
+  subeAdlari: Record<string, string>;
+}
+const { teklifler, subeAdlari } = Astro.props;
+
+const alanlar: { anahtar: keyof Teklif; etiket: string }[] = [
+  { anahtar: 'gun', etiket: 'Gün' },
+  { anahtar: 'saat', etiket: 'Saat' },
+  { anahtar: 'yasSinif', etiket: 'Yaş / sınıf' },
+  { anahtar: 'haftalikSure', etiket: 'Haftalık süre' },
+  { anahtar: 'programSuresi', etiket: 'Program süresi' },
+  { anahtar: 'kontenjan', etiket: 'Kontenjan' },
+  { anahtar: 'egitmen', etiket: 'Eğitmen' },
+];
+---
+
+<div class="grid gap-px bg-line sm:grid-cols-2">
+  {
+    teklifler.map((t) => (
+      <article class="bg-paper p-6 md:p-8">
+        <header class="flex flex-wrap items-center justify-between gap-3 border-b border-line pb-5">
+          <h3 class="font-display text-buyuk font-bold tracking-tight text-ink">
+            {subeAdlari[t.sube] ?? t.sube}
+          </h3>
+          <DurumRozeti durum={t.durum} />
+        </header>
+
+        {t.durum === 'bu-subede-acik-degil' ? (
+          <p class="pt-5 text-govde leading-relaxed text-muted">
+            Bu program şu anda bu şubede açık değil. Diğer şubedeki grubu veya benzer
+            programları inceleyebilirsiniz.
+          </p>
+        ) : (
+          <dl class="flex flex-col pt-1">
+            {alanlar
+              .filter((a) => t[a.anahtar])
+              .map((a) => (
+                <div class="grid gap-0.5 border-b border-line py-3 last:border-b-0 sm:grid-cols-[8.5rem_1fr] sm:gap-4">
+                  <dt class="u-eyebrow pt-1">{a.etiket}</dt>
+                  <dd class="text-govde leading-relaxed text-body">
+                    {t[a.anahtar]}
+                  </dd>
+                </div>
+              ))}
+          </dl>
+        )}
+
+        {t.not && (
+          <p class="mt-4 border-l-2 border-accent pl-4 text-kucuk leading-relaxed text-muted">
+            {t.not}
+          </p>
+        )}
+      </article>
+    ))
+  }
+</div>
+
+<p class="mt-5 text-kucuk leading-relaxed text-muted">
+  Gün, saat, eğitmen ve kontenjan dönemsel bilgilerdir; her eğitim yılı başında güncellenir.
+</p>

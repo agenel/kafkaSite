@@ -1,0 +1,53 @@
+{
+  "ad": "Yaratıcı Drama",
+  "yerlesim": [
+    {
+      "yasCatisi": "cocuklar",
+      "sira": 2
+    }
+  ],
+  "format": "atolye",
+  "amiral": false,
+  "anaSayfaGorunurluk": "liste",
+  "kisaTanim": "Oyun, rol, doğaçlama ve grup deneyimi üzerinden ifade, iletişim ve yaratıcı düşünme alanı açan dönemlik program.",
+  "girisMetni": "Yaratıcı Drama; oyun, rol, doğaçlama ve grup deneyimi üzerinden ifade, iletişim ve yaratıcı düşünme alanları açan dönemlik bir programdır.",
+  "ctaTipi": "basvuru",
+  "gorselKarakteri": "Canlı, yaratıcı, düşünce + grup",
+  "gorselAlt": "Yaratıcı Drama çalışmasında çocuklar çember kurmuş doğaçlama yapıyor",
+  "teklifler": [
+    {
+      "sube": "gaziantep",
+      "durum": "basvurular-acik",
+      "yasSinif": "İlkokul ve Ortaokul grupları ayrı açılır",
+      "programSuresi": "Yaklaşık 5 ay · haftada 1 gün · yaklaşık 2 saat",
+      "saat": "Kesin gün ve saat dönemsel olarak netleşir"
+    },
+    {
+      "sube": "izmir",
+      "durum": "basvurular-acik",
+      "yasSinif": "İlkokul ve Ortaokul grupları ayrı açılır",
+      "programSuresi": "Yaklaşık 5 ay · haftada 1 gün · yaklaşık 2 saat",
+      "saat": "Kesin gün ve saat dönemsel olarak netleşir"
+    }
+  ],
+  "bolumler": [
+    {
+      "tip": "liste",
+      "baslik": "Grup yapısı",
+      "maddeler": [
+        "İlkokul ve Ortaokul grupları ayrı açılır.",
+        "Lise için bağımsız Yaratıcı Drama grubu açılmaz.",
+        "1. sınıf öğrencileri özellikle İlkokul Yaratıcı Drama grubuna yönlendirilebilir."
+      ]
+    },
+    {
+      "tip": "not",
+      "baslik": "2026–27 model",
+      "metin": "Yaklaşık 5 ay · haftada 1 gün · yaklaşık 2 saat. Kesin gün ve saat dönemsel olarak yönetilir."
+    }
+  ],
+  "seo": {
+    "title": "Yaratıcı Drama | Kafka Sanat Akademisi",
+    "description": "Oyun, rol, doğaçlama ve grup deneyimi üzerinden ifade ve yaratıcı düşünme alanı açan dönemlik Yaratıcı Drama programı."
+  }
+}

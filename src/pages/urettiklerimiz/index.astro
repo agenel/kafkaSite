@@ -1,0 +1,106 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SayfaBasligi from '@/components/SayfaBasligi.astro';
+import Bolum from '@/components/Bolum.astro';
+import Gorsel from '@/components/Gorsel.astro';
+
+const uretimler = (await getCollection('uretimler')).sort((a, b) => b.data.yil - a.data.yil);
+
+const kategoriEtiketi = {
+  sahne: 'Sahne',
+  tirat: 'Tirat Geceleri / Bireysel Performanslar',
+  yazi: 'Yazı',
+  dijital: 'Dijital Üretimler',
+  'yaratici-kesifler': 'Yaratıcı Keşifler',
+  'kamera-arkasi': 'Seçilmiş Kamera Arkası',
+} as const;
+
+const kategoriler = Object.entries(kategoriEtiketi);
+---
+
+<BaseLayout
+  title="Ürettiklerimiz | Kafka Sanat Akademisi"
+  description="Oyunlar, tiratlar, öğrenci yazıları, dijital üretimler ve seçilmiş süreç arşivi."
+>
+  <SayfaBasligi
+    ustBaslik="23 · Kafka"
+    baslik="Ürettiklerimiz"
+    acilisAlintisi="Sonucu göstermek kolay. Biz süreci de göstermek istiyoruz."
+    girisMetni="Bir oyunun arkasında aylar, bir metnin arkasında onlarca deneme, bir videonun arkasında fikir, senaryo, çekim ve kurgu vardır. Bu bölüm yalnız final görselini değil, o sonucun nasıl ortaya çıktığını da gösterir."
+  />
+
+  <Bolum bosluk="genis" etiketleyen="kategoriler">
+    <h2 id="kategoriler" class="u-eyebrow">Kategoriler</h2>
+    <ul class="mt-6 flex flex-wrap gap-3">
+      {
+        kategoriler.map(([kod, etiket]) => (
+          <li class="inline-flex min-h-11 items-center border border-line-strong px-5 font-display text-[0.9rem] font-medium text-ink-600">
+            {etiket}
+            <span class="ml-2 tabular-nums text-ink-400">
+              {uretimler.filter((u) => u.data.kategori === kod).length}
+            </span>
+          </li>
+        ))
+      }
+    </ul>
+
+    {
+      uretimler.length === 0 ? (
+        <div class="mt-14 grid gap-10 lg:grid-cols-[1fr_0.8fr] lg:items-center">
+          <div class="border-l-2 border-accent pl-6">
+            <p class="u-eyebrow mb-3">Üretim hafızası hazırlanıyor</p>
+            <p class="u-measure text-buyuk leading-relaxed text-body">
+              Her üretim sayfasında üretimin adı, yılı, programı, mekanı, ne üretildiği,
+              nasıl çalışıldığı, öğrencilerin rolleri, süreç görselleri ve uygunsa izinli
+              öğrenci sözü yer alır.
+            </p>
+            <p class="u-measure mt-5 text-govde leading-relaxed text-muted">
+              İlk üretim kayıtları, fotoğraf ve video arşivi tamamlandığında yayınlanacak.
+            </p>
+          </div>
+          <Gorsel
+            oran="4/3"
+            cekimNotu="GÇT Üretim Yılı: masa başı, prova, tirat, sahne arkası, teknik süreç, final."
+            alt="Üretim sürecinden anlar"
+          />
+        </div>
+      ) : (
+        <ul class="mt-12 grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+          {uretimler.map((u) => (
+            <li class="group relative flex flex-col gap-4">
+              <Gorsel
+                oran="3/2"
+                src={u.data.gorsel}
+                alt={u.data.gorselAlt ?? u.data.ad}
+                cekimNotu={`${u.data.ad} — üretim görseli`}
+              />
+              <p class="u-eyebrow">
+                {kategoriEtiketi[u.data.kategori]} · {u.data.yil}
+              </p>
+              <h3 class="font-display text-buyuk font-bold tracking-tight text-ink">
+                <a href={`/urettiklerimiz/${u.id}`} class="after:absolute after:inset-0 group-hover:text-accent">
+                  {u.data.ad}
+                </a>
+              </h3>
+              <p class="text-govde leading-relaxed text-muted">
+                {u.data.neUretildi}
+              </p>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </Bolum>
+
+  <Bolum zemin="cukur" bosluk="normal">
+    <div class="u-measure-wide border-l-2 border-accent pl-6">
+      <p class="u-eyebrow mb-2">Video yaklaşımı</p>
+      <p class="text-govde leading-relaxed text-muted">
+        GGT Lab gibi programlarda sitede kısa fragman veya seçki kullanılabilir; tam video
+        harici platformda yayınlanabilir. Kamera arkası her program için zorunlu kategori
+        değildir; önemli prodüksiyonlarda kullanılır.
+      </p>
+    </div>
+  </Bolum>
+</BaseLayout>

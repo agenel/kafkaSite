@@ -1,0 +1,26 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SayfaBasligi from '@/components/SayfaBasligi.astro';
+import Bolum from '@/components/Bolum.astro';
+import Bloklar from '@/components/Bloklar.astro';
+
+interface Props {
+  sayfa: CollectionEntry<'sayfalar'>;
+}
+const { sayfa } = Astro.props;
+const d = sayfa.data;
+---
+
+<BaseLayout title={d.seo.title} description={d.seo.description}>
+  <SayfaBasligi
+    ustBaslik={d.ustBaslik}
+    baslik={d.baslik}
+    acilisAlintisi={d.acilisAlintisi}
+    girisMetni={d.girisMetni}
+  />
+  <Bolum bosluk="genis">
+    <Bloklar bloklar={d.bolumler} />
+    <slot />
+  </Bolum>
+</BaseLayout>

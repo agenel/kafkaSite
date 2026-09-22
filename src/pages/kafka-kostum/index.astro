@@ -1,0 +1,111 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SayfaBasligi from '@/components/SayfaBasligi.astro';
+import Bolum from '@/components/Bolum.astro';
+import KafkaAlinti from '@/components/KafkaAlinti.astro';
+import Gorsel from '@/components/Gorsel.astro';
+import Buton from '@/components/Buton.astro';
+import { cta, waLink, telLink, yapiSorumlusu, site, instagramUrl, sosyal } from '@/data/site';
+
+const waMesaj = 'Merhaba, Kafka Kostüm hakkında bilgi almak istiyorum.';
+const bilgiler = [
+  { etiket: 'Sorumlu', deger: yapiSorumlusu.ad },
+  { etiket: 'Hizmet', deger: 'Koleksiyon · kiralama · toplu sipariş · özel sipariş' },
+  { etiket: 'Erişim', deger: 'Güzelbahçe operasyon merkezli; farklı şehirlere kargo / teslimat desteği' },
+];
+---
+
+<BaseLayout
+  title="Kafka Kostüm | Çocuk Sahne Kostümleri"
+  description="Yöresel dans, modern dans, bale, tiyatro ve okul gösterileri için çocuk sahne kostümleri, kiralama ve özel sipariş seçenekleri."
+>
+  <SayfaBasligi
+    ustBaslik="Kafka Kostüm"
+    baslik="Çocuk sahne kostümleri markası"
+    girisMetni="Kafka Kostüm, Kafka Sanat Akademisi bünyesinde çocukların sahne deneyimini güçlendirmek amacıyla kurulmuş özel bir kostüm markasıdır."
+  />
+
+  <Bolum bosluk="dar">
+    <Gorsel
+      oran="21/9"
+      cekimNotu="Kostüm detayları, kumaş, hareket halinde kostüm, farklı koleksiyonlar, sahne ışığında görünüm."
+      karakter="Doku, kumaş, hareket, çocuk sahnesi, detay, kültür ve performans"
+      alt="Kafka Kostüm koleksiyonundan sahne kostümleri"
+      yukleme="eager"
+    />
+  </Bolum>
+
+  <Bolum bosluk="genis">
+    <div class="u-measure-wide flex flex-col gap-5 text-govde leading-[1.7] text-body">
+      <p>
+        Markamız; yöresel danslar, modern dans gösterileri, okul etkinlikleri, yıl sonu
+        performansları, tiyatro oyunları ve özel sahne projeleri için çocuklara uygun kostüm
+        seçenekleri sunar. Her tasarımda yalnızca görselliği değil; çocuğun sahnede rahat
+        hareket edebilmesini, kostümün sahne ışığında güçlü görünmesini ve uzun süreli
+        kullanıma uygun olmasını önemseriz.
+      </p>
+      <p>
+        Kafka Sanat Akademisi'nin tiyatro, yaratıcı drama, dans ve sahne sanatları
+        alanındaki deneyiminden beslenen Kafka Kostüm; çocuk kostümünü yalnızca bir kıyafet
+        olarak değil, sahnedeki karakterin, kültürün ve performansın tamamlayıcı bir parçası
+        olarak görür.
+      </p>
+      <p>
+        Koleksiyonumuzda Anadolu'nun farklı yörelerinden ilham alan halk oyunları
+        kostümleri, modern dans kıyafetleri, bale ve gösteri kostümleri, temalı çocuk sahne
+        kıyafetleri ve okul gösterilerine özel tasarımlar yer almaktadır.
+      </p>
+      <p>
+        Okullar, sanat akademileri, dans kursları, belediye kursları, halk oyunları ekipleri
+        ve bireysel gösteriler için toplu ve özel sipariş seçenekleriyle hizmet veriyoruz.
+      </p>
+    </div>
+  </Bolum>
+
+  <Bolum zemin="murekkep" bosluk="genis" sarmala={false}>
+    <KafkaAlinti
+      metin="Kafka Kostüm; çocukların sahnedeki duruşunu, hareketini ve hayal gücünü görünür kılar."
+      zemin="murekkep"
+    />
+  </Bolum>
+
+  <Bolum zemin="cukur" bosluk="normal" etiketleyen="kostum-bilgi">
+    <h2 id="kostum-bilgi" class="u-eyebrow">Marka bilgileri</h2>
+    <dl class="mt-7 grid gap-x-10 gap-y-6 sm:grid-cols-3">
+      {
+        bilgiler.map((b) => (
+          <div>
+            <dt class="u-eyebrow">{b.etiket}</dt>
+            <dd class="mt-2 text-govde leading-relaxed text-body">{b.deger}</dd>
+          </div>
+        ))
+      }
+    </dl>
+    <div class="mt-9 flex flex-wrap gap-4">
+      <Buton href="/kafka-kostum/katalog" etiket={cta.katalogIncele} boyut="buyuk" />
+      <Buton href={waLink(yapiSorumlusu.telefon, waMesaj)} etiket={cta.whatsappSor} tur="ikincil" boyut="buyuk" disBaglanti />
+    </div>
+    <dl class="mt-10 flex flex-wrap gap-x-10 gap-y-4">
+      <div>
+        <dt class="u-eyebrow">Telefon / WhatsApp</dt>
+        <dd class="mt-1">
+          <a href={telLink(yapiSorumlusu.telefon)} class="inline-flex min-h-11 items-center font-display text-buyuk font-semibold text-ink hover:text-accent">
+            {yapiSorumlusu.telefon}
+          </a>
+        </dd>
+      </div>
+      <div>
+        <dt class="u-eyebrow">E-posta</dt>
+        <dd class="mt-1">
+          <a href={`mailto:${site.eposta}`} class="inline-flex min-h-11 items-center font-display text-govde font-semibold text-ink hover:text-accent">{site.eposta}</a>
+        </dd>
+      </div>
+      <div>
+        <dt class="u-eyebrow">Instagram</dt>
+        <dd class="mt-1">
+          <a href={instagramUrl(sosyal.kostum)} target="_blank" rel="noopener noreferrer" class="inline-flex min-h-11 items-center font-display text-govde font-semibold text-ink hover:text-accent">@{sosyal.kostum}</a>
+        </dd>
+      </div>
+    </dl>
+  </Bolum>
+</BaseLayout>

@@ -1,0 +1,219 @@
+---
+import type { Blok } from '@/lib/blok-semasi';
+import KafkaAlinti from './KafkaAlinti.astro';
+import Buton from './Buton.astro';
+
+interface Props {
+  bloklar: Blok[];
+  koyu?: boolean;
+}
+const { bloklar, koyu = false } = Astro.props;
+
+const baslikSinifi = `font-display text-baslik font-bold tracking-[-0.025em] ${
+  koyu ? 'text-on-ink' : 'text-ink'
+}`;
+const metinSinifi = koyu ? 'text-on-ink-muted' : 'text-body';
+const soluk = koyu ? 'text-on-ink-muted' : 'text-muted';
+const cizgi = koyu ? 'border-line-on-ink' : 'border-line';
+---
+
+<div class="flex flex-col gap-14 md:gap-20">
+  {
+    bloklar.map((blok) => {
+      switch (blok.tip) {
+        case 'metin':
+          return (
+            <div class="u-measure-wide">
+              {blok.baslik && <h3 class={baslikSinifi}>{blok.baslik}</h3>}
+              <div class:list={['flex flex-col gap-5', blok.baslik && 'mt-6', metinSinifi]}>
+                {blok.paragraflar.map((p) => (
+                  <p class="text-govde leading-[1.7]">{p}</p>
+                ))}
+              </div>
+            </div>
+          );
+
+        case 'alinti':
+          return (
+            <div class="-mx-5 md:-mx-10">
+              <KafkaAlinti
+                metin={blok.metin}
+                altMetin={blok.altMetin}
+                zemin={koyu ? 'murekkep' : 'kagit'}
+              />
+            </div>
+          );
+
+        case 'liste': {
+          const Etiket = blok.sirali ? 'ol' : 'ul';
+          return (
+            <div class="u-measure-wide">
+              {blok.baslik && <h3 class={baslikSinifi}>{blok.baslik}</h3>}
+              {blok.giris && (
+                <p class:list={['mt-5 text-govde leading-[1.7]', metinSinifi]}>
+                  {blok.giris}
+                </p>
+              )}
+              <Etiket class:list={['mt-7 flex flex-col', blok.sirali && 'counter-reset-none']}>
+                {blok.maddeler.map((madde, i) => (
+                  <li
+                    class:list={[
+                      'flex gap-4 border-t py-4 text-govde leading-relaxed last:border-b',
+                      cizgi,
+                      metinSinifi,
+                    ]}
+                  >
+                    <span
+                      class:list={[
+                        'shrink-0 pt-[0.15em] font-display text-[0.8rem] font-bold tabular-nums',
+                        koyu ? 'text-accent-on-dark' : 'text-accent-text',
+                      ]}
+                      aria-hidden="true"
+                    >
+                      {blok.sirali ? String(i + 1).padStart(2, '0') : '—'}
+                    </span>
+                    <span>{madde}</span>
+                  </li>
+                ))}
+              </Etiket>
+              {blok.kapanis && (
+                <p class:list={['mt-7 text-govde leading-[1.7]', metinSinifi]}>
+                  {blok.kapanis}
+                </p>
+              )}
+            </div>
+          );
+        }
+
+        case 'kartlar':
+          return (
+            <div>
+              {blok.baslik && <h3 class={`${baslikSinifi} u-measure-wide`}>{blok.baslik}</h3>}
+              {blok.giris && (
+                <p class:list={['u-measure-wide mt-5 text-govde leading-[1.7]', metinSinifi]}>
+                  {blok.giris}
+                </p>
+              )}
+              <ul class="mt-9 grid gap-x-10 gap-y-9 sm:grid-cols-2 lg:grid-cols-3">
+                {blok.kartlar.map((kart) => (
+                  <li class:list={['border-t pt-5', cizgi]}>
+                    <h4
+                      class:list={[
+                        'font-display text-buyuk font-bold tracking-tight',
+                        koyu ? 'text-on-ink' : 'text-ink',
+                      ]}
+                    >
+                      {kart.baslik}
+                    </h4>
+                    <p class:list={['mt-3 text-govde leading-relaxed', soluk]}>
+                      {kart.metin}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+              {blok.kapanis && (
+                <p class:list={['u-measure-wide mt-9 text-govde leading-[1.7]', metinSinifi]}>
+                  {blok.kapanis}
+                </p>
+              )}
+            </div>
+          );
+
+        case 'adimlar':
+          return (
+            <div>
+              {blok.baslik && <h3 class={`${baslikSinifi} u-measure-wide`}>{blok.baslik}</h3>}
+              {blok.giris && (
+                <p class:list={['u-measure-wide mt-5 text-govde leading-[1.7]', metinSinifi]}>
+                  {blok.giris}
+                </p>
+              )}
+              <ol class:list={['mt-9 grid gap-px sm:grid-cols-2 lg:grid-cols-5', koyu ? 'bg-line-on-ink' : 'bg-line']}>
+                {blok.adimlar.map((adim, i) => (
+                  <li
+                    class:list={[
+                      'flex flex-col gap-3 p-6',
+                      koyu ? 'bg-ink' : 'bg-paper',
+                    ]}
+                  >
+                    <span
+                      class:list={[
+                        'font-display text-[0.8rem] font-bold tabular-nums tracking-[0.12em]',
+                        koyu ? 'text-accent-on-dark' : 'text-accent-text',
+                      ]}
+                    >
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
+                    <h4
+                      class:list={[
+                        'font-display text-buyuk font-bold tracking-tight',
+                        koyu ? 'text-on-ink' : 'text-ink',
+                      ]}
+                    >
+                      {adim.baslik}
+                    </h4>
+                    <p class:list={['text-kucuk leading-relaxed', soluk]}>{adim.metin}</p>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          );
+
+        case 'bilgi':
+          return (
+            <div class="u-measure-wide">
+              {blok.baslik && <h3 class={baslikSinifi}>{blok.baslik}</h3>}
+              <dl class:list={['mt-6 flex flex-col']}>
+                {blok.satirlar.map((satir) => (
+                  <div
+                    class:list={[
+                      'grid gap-1 border-t py-4 last:border-b sm:grid-cols-[minmax(0,14rem)_1fr] sm:gap-6',
+                      cizgi,
+                    ]}
+                  >
+                    <dt class:list={['u-eyebrow pt-1', koyu && 'text-on-ink-muted']}>
+                      {satir.etiket}
+                    </dt>
+                    <dd class:list={['text-govde leading-relaxed', metinSinifi]}>
+                      {satir.deger}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          );
+
+        case 'not':
+          return (
+            <aside
+              class:list={[
+                'u-measure-wide border-l-2 border-accent py-1 pl-6',
+              ]}
+            >
+              {blok.baslik && (
+                <p class:list={['u-eyebrow mb-2', koyu && 'text-on-ink-muted']}>
+                  {blok.baslik}
+                </p>
+              )}
+              <p class:list={['text-govde leading-relaxed', soluk]}>{blok.metin}</p>
+            </aside>
+          );
+
+        case 'cta':
+          return (
+            <div class="flex flex-wrap gap-4">
+              <Buton href={blok.birincil.href} etiket={blok.birincil.etiket} tur="birincil" boyut="buyuk" />
+              {blok.ikincil && (
+                <Buton
+                  href={blok.ikincil.href}
+                  etiket={blok.ikincil.etiket}
+                  tur={koyu ? 'beyaz' : 'ikincil'}
+                  boyut="buyuk"
+                />
+              )}
+            </div>
+          );
+      }
+    })
+  }
+</div>

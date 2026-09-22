@@ -1,0 +1,63 @@
+---
+interface Props {
+  href: string;
+  etiket: string;
+  tur?: 'birincil' | 'ikincil' | 'sade' | 'beyaz';
+  boyut?: 'normal' | 'buyuk';
+  disBaglanti?: boolean;
+  class?: string;
+}
+const {
+  href,
+  etiket,
+  tur = 'birincil',
+  boyut = 'normal',
+  disBaglanti = false,
+  class: ekSinif = '',
+} = Astro.props;
+
+// min-h-12 / min-w-11 → 44px'lik dokunma hedefi alt sınırı
+const temel =
+  'inline-flex items-center justify-center gap-2 font-display font-semibold tracking-tight ' +
+  'cursor-pointer transition-colors duration-200 ease-[var(--ease-out-soft)] ' +
+  'min-h-12 rounded-[2px] text-center';
+
+const boyutlar = {
+  normal: 'px-6 py-3 text-govde',
+  buyuk: 'px-8 py-4 text-buyuk',
+}[boyut];
+
+const turler = {
+  birincil: 'bg-accent text-white hover:bg-accent-dark',
+  ikincil:
+    'border border-ink text-ink hover:bg-ink hover:text-on-ink',
+  beyaz:
+    'border border-on-ink-muted text-on-ink hover:bg-on-ink hover:text-ink',
+  sade:
+    'px-0 underline decoration-accent decoration-2 underline-offset-[6px] text-ink hover:text-accent',
+}[tur];
+
+const disOzellikler = disBaglanti
+  ? { target: '_blank', rel: 'noopener noreferrer' }
+  : {};
+---
+
+<a href={href} class={`${temel} ${boyutlar} ${turler} ${ekSinif}`} {...disOzellikler}>
+  {etiket}
+  {
+    disBaglanti && (
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 24 24"
+        class="h-4 w-4 shrink-0"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M7 17 17 7M9 7h8v8" />
+      </svg>
+    )
+  }
+</a>

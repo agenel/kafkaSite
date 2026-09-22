@@ -1,0 +1,31 @@
+{
+  "name": "kafka-sanat-akademisi",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "test:worker": "node worker/basvuru-worker.test.mjs",
+    "test:cms": "node scripts/cms-sema-kontrol.mjs",
+    "test:responsive": "node scripts/responsive-check.mjs http://localhost:4322",
+    "test": "npm run test:worker && npm run test:cms",
+    "test:yayin": "node scripts/yayin-kontrol.mjs"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^8.0.1",
+    "@astrojs/sitemap": "^3.7.4",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.3.3",
+    "sharp": "^0.35.4",
+    "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "puppeteer-core": "^25.11.0",
+    "typescript": "^6.0.3",
+    "yaml": "^2.9.1"
+  }
+}

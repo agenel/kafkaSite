@@ -1,0 +1,65 @@
+{
+  "baslik": "Hikayemiz",
+  "ustBaslik": "18 · Kafka",
+  "acilisAlintisi": "2017'DEN BERİ AYNI SORUNUN PEŞİNDEYİZ: SANAT BİR İNSANIN HAYATINDA GERÇEKTEN NEYİ DEĞİŞTİREBİLİR?",
+  "girisMetni": "Kafka Sanat Akademisi, Haluk Uluçay ve Erkut Aytekin tarafından 2017 yılında Gaziantep'te kuruldu.",
+  "bolumler": [
+    {
+      "tip": "metin",
+      "paragraflar": [
+        "Başlangıçta kurucuların ana işleri yanında geliştirdikleri bir sanat girişimiydi. Zaman içinde büyüdü, kurucuların temel çalışma alanına dönüştü, kendi pedagojisini ve program sistemlerini geliştirdi ve ikinci şubesini Güzelbahçe / İzmir'de açtı."
+      ]
+    },
+    {
+      "tip": "metin",
+      "baslik": "Kurstan programa, programdan sisteme",
+      "paragraflar": [
+        "İlk yıllarda \"hangi dersleri veriyoruz?\" sorusu daha görünürdü. Zamanla daha önemli bir soru ortaya çıktı: \"Bir öğrencinin gelişim yolculuğunu nasıl tasarlıyoruz?\" Bugünkü Sanata İlk Adım, GÇT, GGT Lab, Kafka Akademi Tiyatrosu ve diğer programlar bu dönüşümün farklı sonuçlarıdır."
+      ]
+    },
+    {
+      "tip": "kartlar",
+      "baslik": "Kurucu ortaklar",
+      "giris": "Kafka hiçbir zaman tek kişinin hikayesi olmadı. Kurucu ortaklık; farklı düşünceleri tartışabilmek, sorumluluğu paylaşmak ve kurum kararlarını kişisel zevkten daha uzun ömürlü bir sisteme dönüştürmek açısından Kafka'nın kurumsal karakterinin parçasıdır.",
+      "kartlar": [
+        { "baslik": "Haluk Uluçay", "metin": "Kurucu Ortak · Eğitim Direktörü. Kafka Sanat Akademisi Gaziantep Şube Sorumlusu. Kafka'nın eğitim yaklaşımı, program sistemleri ve Gaziantep şubesinin yürütülmesinde ağırlıklı sorumluluk üstlenir." },
+        { "baslik": "Erkut Aytekin", "metin": "Kurucu Ortak · Genel Sanat Yönetmeni. Kafka Sanat Akademisi Güzelbahçe Şube Sorumlusu. Kafka'nın genel sanatsal yönü, sahne üretimleri ve Güzelbahçe şubesinin yürütülmesinde ağırlıklı sorumluluk üstlenir." }
+      ]
+    },
+    {
+      "tip": "metin",
+      "baslik": "Kurucu anlatısı",
+      "paragraflar": [
+        "Kafka Sanat Akademisi, 2017 yılında Haluk Uluçay ve Erkut Aytekin tarafından Gaziantep'te kuruldu. Başlangıçta kurucuların ana işlerinin yanında geliştirdikleri bir sanat girişimi olan Kafka, zaman içinde büyüyerek kurucuların temel çalışma alanına dönüştü. Kurum daha sonra ikinci şubesini Güzelbahçe / İzmir'de açtı. Bugün iki kurucu ortak Kafka'nın genel yönünü birlikte belirlerken Haluk Uluçay eğitim sistemleri ve Gaziantep şubesinin yürütülmesinde, Erkut Aytekin sanatsal yön ve Güzelbahçe şubesinin yürütülmesinde ağırlıklı sorumluluk üstlenmektedir."
+      ]
+    },
+    {
+      "tip": "alinti",
+      "metin": "HER ŞEY BAŞKA TÜRLÜ DE DÜŞÜNÜLEBİLİR.",
+      "altMetin": "Bu cümle Kafka'nın düşünsel hafızasında özel bir yer taşır. Hazır cevapları sorgulamayı, başka ihtimaller görmeyi ve gerektiğinde kendi yöntemlerimizi de yeniden düşünmeyi hatırlatır."
+    },
+    {
+      "tip": "metin",
+      "baslik": "Gaziantep'ten İzmir'e",
+      "paragraflar": [
+        "Bugün Kafka Sanat Akademisi Gaziantep ve İzmir'de çalışıyor. Temel pedagoji ve marka sistemi ortak. Yerel şubeler kendi topluluk dilini, etkinliklerini ve bölgesel projelerini geliştirebilir."
+      ]
+    },
+    {
+      "tip": "metin",
+      "baslik": "Gelecek",
+      "paragraflar": [
+        "Hedef yalnız daha fazla şube açmak değildir. Asıl mesele büyürken eğitim anlayışını, kurum kültürünü, öğrenciyi merkeze alan ilkeleri ve üretim niteliğini koruyabilmektir. Kafka büyüdüğünde de Kafka olarak kalmalıdır."
+      ]
+    },
+    {
+      "tip": "cta",
+      "birincil": { "etiket": "Programları Keşfet", "href": "/programlar" },
+      "ikincil": { "etiket": "Yaklaşımımızı Oku", "href": "/yaklasimimiz" }
+    }
+  ],
+  "seo": {
+    "title": "Hikayemiz | 2017'den Bugüne | Kafka Sanat Akademisi",
+    "description": "Kafka Sanat Akademisi'nin 2017'de Gaziantep'te başlayan, kurstan programa ve programdan sisteme uzanan hikayesi."
+  }
+}

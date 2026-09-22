@@ -1,0 +1,42 @@
+{
+  "ad": "Çocuk Felsefesi",
+  "yerlesim": [
+    {
+      "yasCatisi": "cocuklar",
+      "sira": 7
+    }
+  ],
+  "format": "atolye",
+  "amiral": false,
+  "anaSayfaGorunurluk": "liste",
+  "kisaTanim": "Soru sorma, gerekçelendirme ve farklı bakış açılarını dinleme becerilerini destekleyen çalışmalar.",
+  "girisMetni": "Soru sorma, gerekçelendirme ve farklı bakış açılarını dinleme becerilerini destekleyen çalışmalar.",
+  "ctaTipi": "basvuru",
+  "gorselKarakteri": "Kafka kurumsal · sakin, güvenilir, çağdaş kültür kurumu",
+  "gorselAlt": "Çocuk Felsefesi çalışmasından bir an",
+  "teklifler": [
+    {
+      "sube": "gaziantep",
+      "durum": "basvurular-acik",
+      "programSuresi": "Yaklaşık 5 ay · haftada 1 gün · yaklaşık 2 saat",
+      "saat": "Kesin gün ve saat dönemsel olarak netleşir"
+    },
+    {
+      "sube": "izmir",
+      "durum": "basvurular-acik",
+      "programSuresi": "Yaklaşık 5 ay · haftada 1 gün · yaklaşık 2 saat",
+      "saat": "Kesin gün ve saat dönemsel olarak netleşir"
+    }
+  ],
+  "bolumler": [
+    {
+      "tip": "not",
+      "baslik": "Dönemsel yapı",
+      "metin": "Bağımsız programların yaş grupları sabit değildir. Her dönem açılan grubun profiline göre Çocuklar, Gençler veya Yetişkinler sayfasında gösterilir. Kesin gün, saat ve yaş grubu dönemsel olarak yönetilir."
+    }
+  ],
+  "seo": {
+    "title": "Çocuk Felsefesi | Kafka Sanat Akademisi",
+    "description": "Soru sorma, gerekçelendirme ve farklı bakış açılarını dinlemeyi destekleyen çocuk felsefesi çalışmaları."
+  }
+}

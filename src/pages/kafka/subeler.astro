@@ -1,0 +1,76 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SayfaBasligi from '@/components/SayfaBasligi.astro';
+import Bolum from '@/components/Bolum.astro';
+import Buton from '@/components/Buton.astro';
+import { cta, waLink, telLink, instagramUrl } from '@/data/site';
+
+const subeler = (await getCollection('subeler')).sort((a, b) => a.data.sira - b.data.sira);
+---
+
+<BaseLayout
+  title="Şubeler | Gaziantep ve İzmir | Kafka Sanat Akademisi"
+  description="Aynı Kafka, iki şehir. Gaziantep ve Güzelbahçe / İzmir şubelerinin adres, iletişim ve program bilgileri."
+>
+  <SayfaBasligi
+    ustBaslik="19 · Kafka"
+    baslik="Şubeler"
+    acilisAlintisi="Aynı Kafka. İki şehir."
+    girisMetni="Ana site Gaziantep'in veya İzmir'in sitesi değil; ikisinin üstündeki Kafka Sanat Akademisi kurumsal çatısıdır. Temel pedagoji ve marka sistemi ortaktır; her şube kendi topluluk karakterine alan açar."
+  />
+
+  <Bolum bosluk="genis">
+    <ul class="grid gap-px bg-line-strong lg:grid-cols-2">
+      {
+        subeler.map((s) => (
+          <li class="flex flex-col gap-6 bg-paper p-8 md:p-10">
+            <div>
+              <h2 class="font-display text-baslik-lg font-bold tracking-[-0.025em] text-ink">
+                {s.data.ad}
+              </h2>
+              <p class="mt-3 text-govde leading-relaxed text-muted">
+                {s.data.tanim}
+              </p>
+            </div>
+            <dl class="flex flex-col">
+              <div class="grid gap-0.5 border-t border-line py-4 sm:grid-cols-[7.5rem_1fr] sm:gap-4">
+                <dt class="u-eyebrow pt-1">Telefon</dt>
+                <dd>
+                  <a href={telLink(s.data.telefon)} class="inline-flex min-h-11 items-center font-display font-semibold text-ink hover:text-accent">
+                    {s.data.telefon}
+                  </a>
+                </dd>
+              </div>
+              <div class="grid gap-0.5 border-t border-line py-4 sm:grid-cols-[7.5rem_1fr] sm:gap-4">
+                <dt class="u-eyebrow pt-1">Adres</dt>
+                <dd class="leading-relaxed text-body">{s.data.adres}</dd>
+              </div>
+              <div class="grid gap-0.5 border-y border-line py-4 sm:grid-cols-[7.5rem_1fr] sm:gap-4">
+                <dt class="u-eyebrow pt-1">Instagram</dt>
+                <dd>
+                  <a href={instagramUrl(s.data.instagram)} target="_blank" rel="noopener noreferrer" class="inline-flex min-h-11 items-center font-display font-semibold text-ink hover:text-accent">
+                    @{s.data.instagram}
+                  </a>
+                </dd>
+              </div>
+            </dl>
+            <div class="mt-auto flex flex-wrap gap-3">
+              <Buton href={`/${s.data.kod}`} etiket="Şube Sayfası" />
+              <Buton href={waLink(s.data.telefon)} etiket={cta.whatsappSor} tur="ikincil" disBaglanti />
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </Bolum>
+
+  <Bolum zemin="murekkep" bosluk="normal">
+    <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+      <p class="u-measure font-display text-baslik font-bold leading-tight text-on-ink">
+        Önce başvurun. Sonra tanışalım.
+      </p>
+      <Buton href="/basvuru" etiket={cta.basvuru} boyut="buyuk" />
+    </div>
+  </Bolum>
+</BaseLayout>

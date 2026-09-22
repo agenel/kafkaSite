@@ -1,0 +1,118 @@
+{
+  "sorular": [
+    {
+      "id": "kafka-yalniz-tiyatro-mu",
+      "soru": "Kafka yalnızca tiyatro eğitimi mi veriyor?",
+      "cevap": "Hayır. Tiyatro Kafka'nın güçlü alanlarından biri; ancak okul öncesinden yetişkinlere uzanan farklı sanat programlarımız, GGT Lab, çocuk koroları, bağımsız sanat programları, yetişkin atölyeleri, Kafka International ve Kafka Kostüm gibi farklı yapılarımız da bulunuyor.",
+      "kategori": "genel"
+    },
+    {
+      "id": "dogrudan-kayit",
+      "soru": "Programların hepsine doğrudan kayıt olabilir miyim?",
+      "cevap": "Kafka Sanat Akademisi'nin eğitim programlarında kesin kayıt öncesinde tanışma yapıyoruz. Amacımız sınamak değil; öğrencinin veya katılımcının doğru programla buluşmasını sağlamak.",
+      "kategori": "kayit"
+    },
+    {
+      "id": "tanisma-sinav-mi",
+      "soru": "Tanışma bir sınav mı?",
+      "cevap": "Hayır. Amaç sınamak değil tanımaktır. Tanışma biçimi yaşa ve programa göre değişebilir.",
+      "kategori": "kayit"
+    },
+    {
+      "id": "ucretler-neden-yok",
+      "soru": "Ücretleri neden sitede göremiyorum?",
+      "cevap": "Kafka Sanat Akademisi eğitim programlarının güncel ücret ve ödeme koşullarını, ilk görüşmede program uygunluğu kabaca netleştikten sonra paylaşıyoruz. Kafka International'ın belirli programlarında güncel ücret ilgili program sayfasında yayınlanabilir.",
+      "kategori": "ucret"
+    },
+    {
+      "id": "sia-kac-yas",
+      "soru": "Sanata İlk Adım kaç yaş için?",
+      "cevap": "Okul öncesi 4–6 yaş için tasarlanmıştır.",
+      "kategori": "okul-oncesi"
+    },
+    {
+      "id": "sia-sahne",
+      "soru": "Sanata İlk Adım'da sahne var mı?",
+      "cevap": "Programın amacı sahne değil; oyun, ifade, hayal gücü, grup deneyimi ve gelişimdir. Dönemsel paylaşım biçimleri grubun yapısına göre planlanabilir.",
+      "kategori": "okul-oncesi"
+    },
+    {
+      "id": "gct-kimler-icin",
+      "soru": "GÇT kimler için?",
+      "cevap": "İlkokul ve ortaokul öğrencileri için. 2026–27 güncel yapıda İlkokul 2.–4. sınıf, Ortaokul 5.–8. sınıf grupları bulunur. 1. sınıflar öncelikle Yaratıcı Drama'ya yönlendirilir.",
+      "kategori": "cocuklar"
+    },
+    {
+      "id": "gct-birinci-yil-oyun",
+      "soru": "GÇT'nin birinci yılında oyun çıkarılıyor mu?",
+      "cevap": "Birinci yıl Eğitim Yılı'dır. Büyük prodüksiyon hedeflenmez. Açık ders ve kısa sınıf içi paylaşımlar yapılabilir.",
+      "kategori": "cocuklar"
+    },
+    {
+      "id": "uretim-yili-herkes-oyuncu",
+      "soru": "Üretim Yılı'nda herkes oyuncu mu?",
+      "cevap": "Her öğrenci prodüksiyonun parçasıdır; katkısı oyunculuk, yazı, sahne arkası veya başka bir üretim görevi olabilir.",
+      "kategori": "cocuklar"
+    },
+    {
+      "id": "tirat-geceleri",
+      "soru": "Tirat Geceleri nedir?",
+      "cevap": "Üretim Yılı'nda öğrencinin tek başına sorumluluk aldığı Bireysel Performanslar alanıdır.",
+      "kategori": "cocuklar"
+    },
+    {
+      "id": "ggt-lab-kimler-icin",
+      "soru": "GGT Lab kimler için?",
+      "cevap": "Lise öğrencileri için tasarlanmış Performans, İçerik ve Prodüksiyon odaklı üretim laboratuvarıdır.",
+      "kategori": "gencler"
+    },
+    {
+      "id": "ggt-lab-herkes-oyuncu-mu",
+      "soru": "GGT Lab'de herkes oyuncu olmak zorunda mı?",
+      "cevap": "Hayır. Yazı, yönetim, kamera, kurgu, prodüksiyon ve sahne gibi farklı roller vardır.",
+      "kategori": "gencler"
+    },
+    {
+      "id": "sahne-modu-nedir",
+      "soru": "Sahne Modu nedir?",
+      "cevap": "Sahne Modu, GGT Lab içinden oluşan ve yoğun tiyatro prodüksiyonu isteyen katılımcılar için isteğe bağlı sahne hattıdır.",
+      "kategori": "gencler"
+    },
+    {
+      "id": "sahne-modu-zorunlu-mu",
+      "soru": "GGT Lab'e katılan herkes Sahne Modu'na katılmak zorunda mı?",
+      "cevap": "Hayır.",
+      "kategori": "gencler"
+    },
+    {
+      "id": "kat-nedir",
+      "soru": "KAT nedir?",
+      "cevap": "Kafka Akademi Tiyatrosu, yetişkinler için eğitim, topluluk ve sahne üretimini bir araya getiren; Kafka bünyesinde kendi yönetim yapısına sahip tiyatro oluşumudur.",
+      "kategori": "yetiskinler"
+    },
+    {
+      "id": "international-kimlere-acik",
+      "soru": "Kafka International yalnız Kafka öğrencilerine mi açık?",
+      "cevap": "Hayır. Programlar herkese açıktır. Kafka öğrencilerine özel indirim uygulanır.",
+      "kategori": "international"
+    },
+    {
+      "id": "international-yalniz-cocuk-mu",
+      "soru": "Kafka International yalnız çocuklara mı yönelik?",
+      "cevap": "Hayır. Programın yapısına göre çocuklar, gençler ve yetişkinler için uluslararası programlar düzenlenebilir.",
+      "kategori": "international"
+    },
+    {
+      "id": "kostum-hizmet-alani",
+      "soru": "Kafka Kostüm yalnız İzmir'e mi hizmet veriyor?",
+      "cevap": "Hayır. Operasyon merkezi Güzelbahçe'de olsa da farklı şehirlerden gelen taleplere kargo dahil uygun teslimat çözümleriyle yardımcı olunabilir.",
+      "kategori": "kostum"
+    },
+    {
+      "id": "kostum-fiyat",
+      "soru": "Kafka Kostüm'de fiyatlar neden katalogda yok?",
+      "cevap": "Ürün, adet, kiralama veya özel sipariş türüne göre koşullar değişebildiği için güncel fiyat bilgisi WhatsApp üzerinden paylaşılır.",
+      "kategori": "kostum"
+    }
+  ]
+}

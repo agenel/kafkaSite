@@ -1,0 +1,73 @@
+---
+import DurumRozeti from './DurumRozeti.astro';
+import type { programDurumEtiketi } from '@/data/site';
+
+interface Props {
+  href: string;
+  ad: string;
+  ustBaslik?: string;
+  kisaTanim: string;
+  amiral?: boolean;
+  durumlar?: (keyof typeof programDurumEtiketi)[];
+  numara?: number;
+}
+const { href, ad, ustBaslik, kisaTanim, amiral = false, durumlar = [], numara } =
+  Astro.props;
+
+// En iyi durum gösterilir: bir şubede açıksa kart "açık" görünür.
+const oncelik: (keyof typeof programDurumEtiketi)[] = [
+  'basvurular-acik',
+  'bekleme-listesi',
+  'yakinda',
+  'dolu',
+  'bu-subede-acik-degil',
+];
+const gosterilecek = oncelik.find((d) => durumlar.includes(d));
+---
+
+<article
+  class:list={[
+    'group relative flex flex-col border-t transition-colors',
+    amiral
+      ? 'border-t-2 border-ink pt-6'
+      : 'border-line pt-5',
+  ]}
+>
+  <div class="flex items-start justify-between gap-4">
+    <div class="flex items-baseline gap-3">
+      {
+        numara !== undefined && (
+          <span class="font-display text-[0.8rem] font-bold tabular-nums text-accent-text">
+            {String(numara).padStart(2, '0')}
+          </span>
+        )
+      }
+      <div>
+        {ustBaslik && <p class="u-eyebrow mb-1.5">{ustBaslik}</p>}
+        <h3
+          class:list={[
+            'font-display font-bold tracking-[-0.025em] text-ink',
+            amiral ? 'text-baslik' : 'text-buyuk',
+          ]}
+        >
+          <a href={href} class="after:absolute after:inset-0 hover:text-accent">
+            {ad}
+          </a>
+        </h3>
+      </div>
+    </div>
+    {gosterilecek && <DurumRozeti durum={gosterilecek} />}
+  </div>
+
+  <p class="mt-3 max-w-[48ch] text-govde leading-relaxed text-muted">
+    {kisaTanim}
+  </p>
+
+  <span
+    class="mt-5 inline-flex items-center gap-1.5 font-display text-[0.9rem] font-semibold text-ink transition-colors group-hover:text-accent"
+    aria-hidden="true"
+  >
+    Programı İncele
+    <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+  </span>
+</article>

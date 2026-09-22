@@ -1,0 +1,10 @@
+dist/
+node_modules/
+.astro/
+.DS_Store
+.env
+.env.production
+npm-debug.log*
+.wrangler/
+/tmp/
+*.tmp.mjs

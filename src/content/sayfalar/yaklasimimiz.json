@@ -1,0 +1,110 @@
+{
+  "baslik": "Yaklaşımımız",
+  "ustBaslik": "05 · Kafka",
+  "acilisAlintisi": "DÜŞÜN. İFADE ET. ÜRET.",
+  "girisMetni": "Kafka'da sanat yalnızca öğrenilen bir teknik değil; insanın kendisini, başkalarını ve dünyayı anlaması için açılan bir çalışma alanıdır.",
+  "bolumler": [
+    {
+      "tip": "liste",
+      "baslik": "Biz sanatçı yetiştirmeden önce insan yetiştiriyoruz.",
+      "giris": "Bir öğrencinin rolünden, tekniğinden veya sahnedeki görünürlüğünden önce insan olarak nasıl geliştiğine bakıyoruz.",
+      "maddeler": [
+        "Fikrini söyleyebiliyor mu?",
+        "Başkasının fikrini dinleyebiliyor mu?",
+        "Hata yaptığında yeniden deneyebiliyor mu?",
+        "Bir grubun içinde sorumluluk alabiliyor mu?"
+      ],
+      "kapanis": "Sanat eğitiminin gerçek değeri, yalnızca final ürününde değil; bu soruların zaman içinde değişen cevaplarında görünür."
+    },
+    {
+      "tip": "metin",
+      "baslik": "Hazır cevaplardan çok iyi sorular",
+      "paragraflar": [
+        "Çocuk Felsefesi, metin çalışmaları, yaratıcı yazarlık ve sanatla karşılaşmalar öğrencinin tek bir doğru cevabı tekrarlaması yerine kendi fikrini kurmasına alan açar. Eğitmenin görevi her zaman cevabı söylemek değildir. Bazen öğrencinin kendi cevabına ulaşabileceği doğru soruyu bulmaktır."
+      ]
+    },
+    {
+      "tip": "liste",
+      "baslik": "Güven olmadan yaratıcılık olmaz",
+      "giris": "Yanlış yapmaktan korkan bir öğrenci yaratıcı risk alamaz. Alay edilmekten çekinen bir çocuk sıra dışı fikrini söylemez. Bu nedenle Kafka'da güvenli grup kültürü teknik eğitimden önce gelir.",
+      "maddeler": [
+        "Korku ve utandırma pedagojik araç değildir.",
+        "Hata yapma hakkı vardır.",
+        "Öğrenci tek bir kalıba zorlanmaz.",
+        "Grubun güvenliği ve sınırları özgür üretimin koşuludur."
+      ]
+    },
+    {
+      "tip": "metin",
+      "baslik": "Süreç üründen önce gelir",
+      "paragraflar": [
+        "Bir oyun çıkarmak, video çekmek veya güzel bir sergi hazırlamak tek başına iyi eğitimin kanıtı değildir. Biz ürün ortaya çıkarken öğrencinin ne yaşadığına bakarız: fikir üretti mi, bir problemi çözmeye çalıştı mı, ekiple çatıştığında devam edebildi mi, başladığı işi tamamlamak için emek verdi mi?"
+      ]
+    },
+    {
+      "tip": "liste",
+      "baslik": "Sahne her yaşta aynı yerde durmaz",
+      "maddeler": [
+        "Okul öncesinde sahne programın merkezi değildir.",
+        "GÇT Eğitim Yılı'nda büyük prodüksiyon yoktur.",
+        "GÇT Üretim Yılı'nda sahne gerçek sorumluluk alanına dönüşür.",
+        "GGT Lab'de sahne tek başarı yolu değildir.",
+        "Sahne Modu, yoğun tiyatro prodüksiyonu isteyen GGT Lab katılımcıları için ayrı bir üretim hattıdır."
+      ]
+    },
+    {
+      "tip": "metin",
+      "baslik": "Rekabetten çok birlikte üretmek",
+      "paragraflar": [
+        "Tiyatro ve üretim süreçleri bize \"en iyi kim?\" sorusundan daha değerli bir soru verir: \"Birlikte ne çıkarabiliriz?\" Başarı bazen öne çıkmak, bazen grubun ihtiyacı olan yerde sorumluluk almak, bazen başkasının işini güçlendirmektir."
+      ]
+    },
+    {
+      "tip": "metin",
+      "baslik": "Gelişimi görünür kılmak",
+      "paragraflar": [
+        "Öğrenciyi başka öğrencilerle kıyaslamak yerine kendi başlangıç noktasıyla karşılaştırırız. \"Özgüveni arttı\" gibi soyut bir yargı yerine gözlenebilir değişimi konuşuruz. Örneğin: \"İlk haftalarda doğaçlamaya gönüllü değildi; dönem sonunda kendi isteğiyle sahneye çıktı.\""
+      ]
+    },
+    {
+      "tip": "metin",
+      "baslik": "Doğru zamanda devam etmek, doğru zamanda ayrılmak",
+      "paragraflar": [
+        "Kafka'nın amacı öğrenciyi mümkün olduğunca uzun süre kurumda tutmak değildir. Bir program tamamlandığında yeni bir programa geçmek, uygun devam yapılarına katılmak veya kendi yoluna gitmek mümkündür. Doğru zamanda mezuniyet de iyi bir eğitim sonucudur."
+      ]
+    },
+    {
+      "tip": "metin",
+      "baslik": "Büyürken Kafka olarak kalmak",
+      "paragraflar": [
+        "Şehir, eğitmen ve program değişebilir. Temel ilkeler değişmemelidir. Kafka'nın kurumsallaşma hedefi, kalitenin yalnız kişilere değil; aktarılabilir bir eğitim sistemine dayanmasıdır."
+      ]
+    },
+    {
+      "tip": "liste",
+      "baslik": "Değişmez ilkeler",
+      "maddeler": [
+        "Öğrenci ve insan merkezlilik",
+        "Süreç, üründen önce gelir",
+        "Kalite, kitlesellikten önce gelir",
+        "Sahne yalnız alkış için kurulmaz",
+        "Korku, utandırma ve baskı pedagojik araç değildir",
+        "Rekabetten çok birlikte üretim",
+        "Çocuğun ve gencin fikrine alan açma",
+        "Hata yapma ve yeniden deneme hakkı",
+        "Her öğrenciyi kendi başlangıç noktasıyla değerlendirme",
+        "Doğru zamanda mezuniyetin de başarı olduğunu kabul etme",
+        "Kurum kalitesini kişilere değil, aktarılabilir sisteme dayandırma"
+      ]
+    },
+    {
+      "tip": "cta",
+      "birincil": { "etiket": "Programları Keşfet", "href": "/programlar" },
+      "ikincil": { "etiket": "Başvuru Yap", "href": "/basvuru" }
+    }
+  ],
+  "seo": {
+    "title": "Kafka Eğitim Yaklaşımı | Kafka Sanat Akademisi",
+    "description": "Düşünme, ifade etme, üretim, güvenli grup, süreç ve sahne yaklaşımımızı keşfedin."
+  }
+}

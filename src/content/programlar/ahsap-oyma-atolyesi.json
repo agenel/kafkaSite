@@ -1,0 +1,40 @@
+{
+  "ad": "Ahşap Oyma Atölyesi",
+  "yerlesim": [
+    {
+      "yasCatisi": "yetiskinler",
+      "sira": 6
+    }
+  ],
+  "format": "atolye",
+  "amiral": false,
+  "anaSayfaGorunurluk": "liste",
+  "kisaTanim": "Ahşap malzemeyle el işçiliği, desen, oyma ve üretim deneyimi etrafında şekillenen dönemsel atölye.",
+  "girisMetni": "Güzelbahçe / İzmir'de yetişkinlere yönelik; ahşap malzemeyle el işçiliği, desen, oyma ve üretim deneyimi etrafında şekillenen dönemsel atölye.",
+  "ctaTipi": "basvuru",
+  "gorselKarakteri": "Doku, el, malzeme, detay",
+  "gorselAlt": "Ahşap Oyma Atölyesi'nde bir katılımcının elleri ve ahşap yüzey",
+  "teklifler": [
+    {
+      "sube": "izmir",
+      "durum": "basvurular-acik",
+      "yasSinif": "Yetişkinler",
+      "saat": "Kesin gün ve saat dönemsel olarak netleşir"
+    },
+    {
+      "sube": "gaziantep",
+      "durum": "bu-subede-acik-degil"
+    }
+  ],
+  "bolumler": [
+    {
+      "tip": "not",
+      "baslik": "Büyüyen alan",
+      "metin": "Yetişkinler bölümü yıl içinde yeni atölyeler eklenebilecek büyüyebilir bir alan olarak tasarlanır."
+    }
+  ],
+  "seo": {
+    "title": "Ahşap Oyma Atölyesi | Güzelbahçe | Kafka Sanat Akademisi",
+    "description": "Güzelbahçe / İzmir'de yetişkinlere yönelik ahşap el işçiliği, desen ve oyma atölyesi."
+  }
+}

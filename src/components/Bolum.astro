@@ -1,0 +1,35 @@
+---
+interface Props {
+  zemin?: 'kagit' | 'yukseltilmis' | 'cukur' | 'murekkep';
+  bosluk?: 'normal' | 'genis' | 'dar';
+  id?: string;
+  class?: string;
+  sarmala?: boolean;
+  etiketleyen?: string;
+}
+const {
+  zemin = 'kagit',
+  bosluk = 'normal',
+  id,
+  class: ekSinif = '',
+  sarmala = true,
+  etiketleyen,
+} = Astro.props;
+
+const zeminler = {
+  kagit: 'bg-paper text-body',
+  yukseltilmis: 'bg-paper-raised text-body',
+  cukur: 'bg-paper-sunken text-body',
+  murekkep: 'bg-ink text-on-ink',
+}[zemin];
+
+const bosluklar = {
+  dar: 'py-12 md:py-16',
+  normal: 'py-16 md:py-24',
+  genis: 'py-20 md:py-32',
+}[bosluk];
+---
+
+<section id={id} aria-labelledby={etiketleyen} class={`${zeminler} ${bosluklar} ${ekSinif}`}>
+  {sarmala ? <div class="u-wrap"><slot /></div> : <slot />}
+</section>

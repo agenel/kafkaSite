@@ -1,0 +1,130 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SayfaBasligi from '@/components/SayfaBasligi.astro';
+import Bolum from '@/components/Bolum.astro';
+import Gorsel from '@/components/Gorsel.astro';
+import Buton from '@/components/Buton.astro';
+import { cta } from '@/data/site';
+
+export const getStaticPaths = (async () => {
+  const uretimler = await getCollection('uretimler');
+  return uretimler.map((u) => ({ params: { slug: u.id }, props: { uretim: u } }));
+}) satisfies GetStaticPaths;
+
+const { uretim } = Astro.props;
+const d = uretim.data;
+
+const kategoriEtiketi: Record<string, string> = {
+  sahne: 'Sahne',
+  tirat: 'Tirat Geceleri / Bireysel Performanslar',
+  yazi: 'Yazı',
+  dijital: 'Dijital Üretimler',
+  'yaratici-kesifler': 'Yaratıcı Keşifler',
+  'kamera-arkasi': 'Seçilmiş Kamera Arkası',
+};
+
+const satirlar = [
+  { etiket: 'Yıl', deger: String(d.yil) },
+  { etiket: 'Program / grup', deger: d.program },
+  { etiket: 'Mekan', deger: d.mekan },
+  { etiket: 'Kategori', deger: kategoriEtiketi[d.kategori] },
+].filter((s) => s.deger);
+---
+
+<BaseLayout title={d.seo.title} description={d.seo.description}>
+  <SayfaBasligi
+    ustBaslik={`Ürettiklerimiz · ${kategoriEtiketi[d.kategori]}`}
+    baslik={d.ad}
+    girisMetni={d.neUretildi}
+  />
+
+  <Bolum bosluk="dar">
+    <Gorsel oran="16/9" src={d.gorsel} alt={d.gorselAlt ?? d.ad} yukleme="eager" />
+  </Bolum>
+
+  <Bolum zemin="cukur" bosluk="normal" etiketleyen="uretim-bilgileri">
+    <h2 id="uretim-bilgileri" class="u-eyebrow">Üretim bilgileri</h2>
+    <dl class="u-measure-wide mt-6 flex flex-col">
+      {
+        satirlar.map((s) => (
+          <div class="grid gap-1 border-t border-line py-4 last:border-b sm:grid-cols-[minmax(0,12rem)_1fr] sm:gap-6">
+            <dt class="u-eyebrow pt-1">{s.etiket}</dt>
+            <dd class="text-govde leading-relaxed text-body">{s.deger}</dd>
+          </div>
+        ))
+      }
+    </dl>
+  </Bolum>
+
+  <Bolum bosluk="genis">
+    <div class="u-measure-wide flex flex-col gap-10">
+      {
+        d.nasilCalisildi && (
+          <div>
+            <h2 class="font-display text-baslik font-bold tracking-[-0.025em] text-ink">
+              Nasıl çalışıldı?
+            </h2>
+            <p class="mt-5 text-govde leading-[1.7] text-body">
+              {d.nasilCalisildi}
+            </p>
+          </div>
+        )
+      }
+      {
+        d.ogrenciRolleri.length > 0 && (
+          <div>
+            <h2 class="font-display text-baslik font-bold tracking-[-0.025em] text-ink">
+              Öğrencilerin rolleri
+            </h2>
+            <ul class="mt-6 flex flex-col">
+              {d.ogrenciRolleri.map((r) => (
+                <li class="flex gap-4 border-t border-line py-4 text-govde leading-relaxed text-body last:border-b">
+                  <span class="shrink-0 pt-[0.15em] font-display text-[0.8rem] font-bold text-accent-text" aria-hidden="true">—</span>
+                  <span>{r}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )
+      }
+      {
+        d.ogrenciSozu && (
+          <figure class="border-l-4 border-accent pl-6">
+            <blockquote class="font-display text-baslik font-bold leading-tight tracking-[-0.02em] text-ink">
+              {d.ogrenciSozu.metin}
+            </blockquote>
+            <figcaption class="mt-4 text-kucuk text-muted">
+              {d.ogrenciSozu.kaynak}
+            </figcaption>
+          </figure>
+        )
+      }
+    </div>
+
+    {
+      d.surecGorselleri.length > 0 && (
+        <div class="mt-14">
+          <h2 class="u-eyebrow">Süreç görselleri</h2>
+          <ul class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {d.surecGorselleri.map((g) => (
+              <li>
+                <Gorsel oran="3/2" src={g.src} alt={g.alt} />
+              </li>
+            ))}
+          </ul>
+        </div>
+      )
+    }
+  </Bolum>
+
+  <Bolum zemin="murekkep" bosluk="normal">
+    <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+      <p class="u-measure font-display text-baslik font-bold leading-tight text-on-ink">
+        Diğer üretimleri de inceleyin.
+      </p>
+      <Buton href="/urettiklerimiz" etiket={cta.uretimleriKesfet} tur="beyaz" boyut="buyuk" />
+    </div>
+  </Bolum>
+</BaseLayout>

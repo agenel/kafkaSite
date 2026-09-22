@@ -1,0 +1,90 @@
+{
+  "ad": "Kafka Akademi Tiyatrosu",
+  "uzunAd": "Kafka Akademi Tiyatrosu",
+  "kisaltma": "KAT",
+  "ustBaslik": "Yetişkin Tiyatro Programı",
+  "yerlesim": [
+    {
+      "yasCatisi": "yetiskinler",
+      "sira": 1
+    }
+  ],
+  "format": "topluluk",
+  "amiral": true,
+  "anaSayfaGorunurluk": "amiral",
+  "kisaTanim": "Yetişkinler için eğitim, topluluk ve sahne üretimini bir araya getiren, kendi iç yönetim yapısına sahip tiyatro oluşumu.",
+  "girisMetni": "Kafka Akademi Tiyatrosu, yetişkinlerin tiyatroyla yalnız seyirci olarak değil; eğitim, topluluk ve üretim yoluyla ilişki kurabilecekleri ayrı bir tiyatro oluşumudur.",
+  "ctaTipi": "basvuru",
+  "gorselKarakteri": "Olgun, tiyatral, yetişkin, topluluk",
+  "gorselAlt": "Kafka Akademi Tiyatrosu ekibi prova sırasında",
+  "teklifler": [
+    {
+      "sube": "gaziantep",
+      "durum": "basvurular-acik",
+      "gun": "Haftada 2 gün",
+      "saat": "Eğitim grupları düzenli çalışır; prova ritmi yapımın ihtiyacına göre değişir",
+      "yasSinif": "Yetişkin"
+    },
+    {
+      "sube": "izmir",
+      "durum": "basvurular-acik",
+      "gun": "Haftada 2 gün",
+      "saat": "Eğitim grupları düzenli çalışır; prova ritmi yapımın ihtiyacına göre değişir",
+      "yasSinif": "Yetişkin"
+    }
+  ],
+  "bolumler": [
+    {
+      "tip": "alinti",
+      "metin": "TİYATROYA BAŞLAMAK İÇİN GEÇ KALMIŞ DEĞİLSİNİZ.",
+      "altMetin": "Kafka Akademi Tiyatrosu, yetişkinlerin tiyatroyla yalnız seyirci olarak değil; eğitim, topluluk ve üretim yoluyla ilişki kurabilecekleri ayrı bir tiyatro oluşumudur."
+    },
+    {
+      "tip": "metin",
+      "baslik": "KAT'ı farklı yapan ne?",
+      "paragraflar": [
+        "KAT, çocuk ve gençlik programlarının devam basamağı değildir. Kafka bünyesinde kendi yönetim yapısına, bütçesine, eğitim gruplarına, prodüksiyon süreçlerine ve topluluk kimliğine sahip başlı başına bir oluşumdur.",
+        "Hem Gaziantep hem Güzelbahçe / İzmir'de aktiftir. Her şubenin kendi KAT yönetim kurulu bulunur. Yönetim kurulu isimleri web sitesinde yayınlanmaz; yapı kendi yönetimiyle çalışır."
+      ]
+    },
+    {
+      "tip": "liste",
+      "baslik": "Tiyatro bir yetişkine ne açabilir?",
+      "maddeler": [
+        "Başka bir karakterin yerine geçmek",
+        "Bedeni ve sesi yeniden fark etmek",
+        "Bir metnin içine girmek",
+        "Günlük rollerin dışına çıkmak",
+        "Bir topluluğun sorumluluğunu taşımak"
+      ],
+      "kapanis": "Yetişkin tiyatrosunda hedef yalnızca sahnede görünmek değil; birlikte çalışan bir ekibin içinde üretmektir."
+    },
+    {
+      "tip": "bilgi",
+      "baslik": "Çalışma ritmi",
+      "satirlar": [
+        {
+          "etiket": "Eğitim grupları",
+          "deger": "Haftada 2 gün düzenli çalışır."
+        },
+        {
+          "etiket": "Prodüksiyon ve prova",
+          "deger": "Sabit haftalık ritme bağlı değildir. Yapımın ihtiyacına göre bazı dönemler çok sık, hatta her gün prova olabilir; bazı dönemlerde ise hiç prova olmayabilir."
+        },
+        {
+          "etiket": "Sahne",
+          "deger": "Sahne üretimi KAT'ın temel hedeflerinden biridir. Ancak her dönem tek ve değişmez bir final formatına bağlanmaz."
+        }
+      ]
+    },
+    {
+      "tip": "not",
+      "baslik": "Sayfa yapısı",
+      "metin": "KAT, Yetişkinler çatısı içinde yer alır; ancak küçük bir yetişkin atölyesi kartına indirgenmez. Yetişkinler sayfasında ana yapı olarak güçlü biçimde görünür ve kendi detay sayfasına sahiptir."
+    }
+  ],
+  "seo": {
+    "title": "Kafka Akademi Tiyatrosu | Yetişkin Tiyatro Programı",
+    "description": "Yetişkinler için düzenli eğitim, topluluk ve sahne üretimini bir araya getiren Kafka Akademi Tiyatrosu."
+  }
+}

@@ -1,0 +1,88 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SayfaBasligi from '@/components/SayfaBasligi.astro';
+import Bolum from '@/components/Bolum.astro';
+import ProgramKarti from '@/components/ProgramKarti.astro';
+import Buton from '@/components/Buton.astro';
+import { cta, yasCatilari } from '@/data/site';
+import { catidakiProgramlar, durumlar, programYolu, type YasCatisi } from '@/lib/programlar';
+
+interface Props {
+  cati: YasCatisi;
+  baslik: string;
+  girisMetni: string;
+  acilisAlintisi?: string;
+  seo: { title: string; description: string };
+  kapanisNotu?: string;
+}
+const { cati, baslik, girisMetni, acilisAlintisi, seo, kapanisNotu } = Astro.props;
+
+const programlar = await catidakiProgramlar(cati);
+const digerCatilar = yasCatilari.filter((c) => c.kod !== cati);
+---
+
+<BaseLayout title={seo.title} description={seo.description}>
+  <SayfaBasligi
+    ustBaslik="Programlar"
+    baslik={baslik}
+    girisMetni={girisMetni}
+    acilisAlintisi={acilisAlintisi}
+  />
+
+  <Bolum bosluk="genis" etiketleyen="program-listesi">
+    <h2 id="program-listesi" class="u-eyebrow">
+      {programlar.length} program
+    </h2>
+    <ul class="mt-9 flex flex-col gap-10">
+      {
+        programlar.map((p, i) => (
+          <li>
+            <ProgramKarti
+              href={programYolu(p.id)}
+              ad={p.data.ad}
+              ustBaslik={p.data.ustBaslik}
+              kisaTanim={p.data.kisaTanim}
+              amiral={p.data.amiral}
+              durumlar={durumlar(p)}
+              numara={i + 1}
+            />
+          </li>
+        ))
+      }
+    </ul>
+    {
+      kapanisNotu && (
+        <p class="u-measure-wide mt-14 border-l-2 border-accent pl-6 text-govde leading-relaxed text-muted">
+          {kapanisNotu}
+        </p>
+      )
+    }
+  </Bolum>
+
+  <Bolum zemin="cukur" bosluk="normal" etiketleyen="diger-yas">
+    <h2 id="diger-yas" class="u-eyebrow">Diğer yaş grupları</h2>
+    <ul class="mt-6 flex flex-wrap gap-3">
+      {
+        digerCatilar.map((c) => (
+          <li>
+            <a
+              href={c.href}
+              class="inline-flex min-h-12 items-center border border-line-strong bg-paper px-6 font-display text-govde font-semibold text-ink transition-colors hover:border-ink hover:bg-ink hover:text-on-ink"
+            >
+              {c.etiket}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </Bolum>
+
+  <Bolum zemin="murekkep" bosluk="normal">
+    <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+      <p class="u-measure font-display text-baslik font-bold leading-tight tracking-[-0.02em] text-on-ink">
+        Önce başvurun. Sonra tanışalım.
+      </p>
+      <Buton href="/basvuru" etiket={cta.basvuru} boyut="buyuk" />
+    </div>
+  </Bolum>
+</BaseLayout>

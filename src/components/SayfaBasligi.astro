@@ -1,0 +1,33 @@
+---
+interface Props {
+  ustBaslik?: string;
+  baslik: string;
+  girisMetni?: string;
+  acilisAlintisi?: string;
+}
+const { ustBaslik, baslik, girisMetni, acilisAlintisi } = Astro.props;
+---
+
+<section class="border-b border-line bg-paper">
+  <div class="u-wrap py-14 md:py-20">
+    {ustBaslik && <p class="u-eyebrow">{ustBaslik}</p>}
+    <h1 class="mt-4 font-display text-devasa font-extrabold leading-[1.02] tracking-[-0.03em] text-ink">
+      {baslik}
+    </h1>
+    {
+      acilisAlintisi && (
+        <p class="mt-8 max-w-[24ch] border-l-4 border-accent pl-6 font-display text-baslik-lg font-bold uppercase leading-[1.06] tracking-[-0.025em] text-ink">
+          {acilisAlintisi}
+        </p>
+      )
+    }
+    {
+      girisMetni && (
+        <p class="u-measure-wide mt-8 text-buyuk leading-relaxed text-muted">
+          {girisMetni}
+        </p>
+      )
+    }
+    <slot />
+  </div>
+</section>

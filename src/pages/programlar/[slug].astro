@@ -1,0 +1,109 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SayfaBasligi from '@/components/SayfaBasligi.astro';
+import Bolum from '@/components/Bolum.astro';
+import Bloklar from '@/components/Bloklar.astro';
+import Gorsel from '@/components/Gorsel.astro';
+import Buton from '@/components/Buton.astro';
+import DonemselBilgiKarti from '@/components/DonemselBilgiKarti.astro';
+import { cta, yasCatilari, waLink, yapiSorumlusu } from '@/data/site';
+
+export const getStaticPaths = (async () => {
+  const programlar = await getCollection('programlar');
+  return programlar.map((p) => ({ params: { slug: p.id }, props: { program: p } }));
+}) satisfies GetStaticPaths;
+
+const { program } = Astro.props;
+const d = program.data;
+
+const subeler = await getCollection('subeler');
+const subeAdlari = Object.fromEntries(subeler.map((s) => [s.data.kod, s.data.ad]));
+
+const catiEtiketi = (kod: string) =>
+  yasCatilari.find((c) => c.kod === kod)?.etiket ?? kod;
+
+const ctaHedefi =
+  d.ctaTipi === 'whatsapp'
+    ? {
+        href: waLink(yapiSorumlusu.telefon, `Merhaba, ${d.ad} hakkında bilgi almak istiyorum.`),
+        etiket: cta.whatsappBilgi,
+      }
+    : { href: '/basvuru', etiket: cta.basvuru };
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Course',
+  name: d.uzunAd ?? d.ad,
+  description: d.kisaTanim,
+  provider: { '@type': 'EducationalOrganization', name: 'Kafka Sanat Akademisi' },
+  hasCourseInstance: d.teklifler
+    .filter((t) => t.durum !== 'bu-subede-acik-degil')
+    .map((t) => ({
+      '@type': 'CourseInstance',
+      courseMode: 'onsite',
+      location: { '@type': 'Place', name: subeAdlari[t.sube] ?? t.sube },
+    })),
+};
+---
+
+<BaseLayout title={d.seo.title} description={d.seo.description} jsonLd={jsonLd}>
+  <SayfaBasligi
+    ustBaslik={d.ustBaslik ?? catiEtiketi(d.yerlesim[0]!.yasCatisi)}
+    baslik={d.uzunAd && d.kisaltma && d.uzunAd !== d.ad ? `${d.uzunAd} (${d.kisaltma})` : d.ad}
+    girisMetni={d.girisMetni ?? d.kisaTanim}
+  >
+    <nav aria-label="Yaş çatısı" class="mt-8 flex flex-wrap gap-2">
+      {
+        d.yerlesim.map((y) => (
+          <a
+            href={yasCatilari.find((c) => c.kod === y.yasCatisi)?.href ?? '/programlar'}
+            class="inline-flex min-h-11 items-center border border-line-strong px-4 font-display text-[0.85rem] font-medium text-ink-600 transition-colors hover:border-ink hover:text-ink"
+          >
+            {catiEtiketi(y.yasCatisi)}
+          </a>
+        ))
+      }
+    </nav>
+  </SayfaBasligi>
+
+  <Bolum bosluk="dar">
+    <Gorsel
+      oran="21/9"
+      src={d.gorsel}
+      alt={d.gorselAlt ?? d.ad}
+      cekimNotu={`${d.ad} — program görseli`}
+      karakter={d.gorselKarakteri}
+      yukleme="eager"
+    />
+  </Bolum>
+
+  {
+    d.teklifler.length > 0 && (
+      <Bolum zemin="cukur" bosluk="normal" etiketleyen={`bilgi-${program.id}`}>
+        <h2 id={`bilgi-${program.id}`} class="u-eyebrow mb-7">
+          Dönemsel program bilgileri
+        </h2>
+        <DonemselBilgiKarti teklifler={d.teklifler} subeAdlari={subeAdlari} />
+      </Bolum>
+    )
+  }
+
+  {
+    d.bolumler.length > 0 && (
+      <Bolum bosluk="genis">
+        <Bloklar bloklar={d.bolumler} />
+      </Bolum>
+    )
+  }
+
+  <Bolum zemin="murekkep" bosluk="normal">
+    <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+      <p class="u-measure font-display text-baslik font-bold leading-tight tracking-[-0.02em] text-on-ink">
+        Hangi programın doğru olduğundan emin olmak zorunda değilsiniz.
+      </p>
+      <Buton href={ctaHedefi.href} etiket={ctaHedefi.etiket} boyut="buyuk" />
+    </div>
+  </Bolum>
+</BaseLayout>

@@ -1,0 +1,61 @@
+{
+  "baslik": "Veliler İçin",
+  "ustBaslik": "22 · Kafka",
+  "acilisAlintisi": "ÇOCUĞUNUZUN GELİŞİMİNİ YALNIZCA YIL SONUNDA GÖRMEYİN.",
+  "girisMetni": "Sanat eğitiminde en önemli değişimlerin bazıları sahnede görünmez. İlk haftalarda söz almak istemeyen bir öğrencinin zamanla gönüllü olması; fikri kabul edilmediğinde süreci bırakan bir çocuğun başka önerilerle çalışmayı öğrenmesi; grup içinde sorumluluk almaya başlaması...",
+  "bolumler": [
+    {
+      "tip": "metin",
+      "baslik": "Veli müşteri değil, paydaştır",
+      "paragraflar": [
+        "Bu, velinin dersin içine sürekli müdahale etmesi anlamına gelmez. Öğrenci deneyimler ve üretir. Eğitmen süreci yönetir ve gözlemler. Aile destekler. Kurum bu ilişkinin sağlıklı yürüyeceği sistemi kurar."
+      ]
+    },
+    {
+      "tip": "metin",
+      "baslik": "Gelişimi nasıl konuşuyoruz?",
+      "paragraflar": [
+        "\"Çok başarılı\", \"özgüveni arttı\" gibi genel sıfatlar yerine mümkün olduğunca gözlenebilir değişimlerden konuşuruz. Öğrenciyi başka öğrencilerle kıyaslamayız."
+      ]
+    },
+    {
+      "tip": "liste",
+      "baslik": "Gelişim Özeti",
+      "giris": "Çocuk ve gençlik programlarında her dönem sonunda 1 Gelişim Özeti verilir. Bir not karnesi değildir.",
+      "maddeler": [
+        "Güçlü yönler",
+        "Dönem içi gelişimler",
+        "Desteklenebilecek alanlar",
+        "Sonraki dönem için öneriler"
+      ]
+    },
+    {
+      "tip": "bilgi",
+      "baslik": "Dönemsel iletişim",
+      "satirlar": [
+        { "etiket": "Veli görüşmesi", "deger": "Her dönem 1 bireysel veli görüşmesi yapılır. İhtiyaç olduğunda ek görüşme yapılabilir." },
+        { "etiket": "Kafka Bülteni", "deger": "Aylık zorunlu yayın değildir. Anlamlı içerik biriktiğinde dönemsel olarak yayınlanır." },
+        { "etiket": "Sahne ve rol konusunda", "deger": "Rol büyüklüğü çocuğun değerinin ölçüsü değildir. Öğrencinin gelişimi kaç dakika sahnede kaldığıyla ölçülmez." }
+      ]
+    },
+    {
+      "tip": "bilgi",
+      "baslik": "Velinin sorabileceği daha iyi sorular",
+      "satirlar": [
+        { "etiket": "\"Bugün iyi oynadın mı?\" yerine", "deger": "\"Bugün seni şaşırtan ne oldu?\"" },
+        { "etiket": "\"Başrol sen misin?\" yerine", "deger": "\"Bu üretimde senin sorumluluğun ne?\"" },
+        { "etiket": "\"Niye yapamadın?\" yerine", "deger": "\"Nerede zorlandın?\"" },
+        { "etiket": "\"Öğretmenin seni beğendi mi?\" yerine", "deger": "\"Sen bugün yaptığın iş hakkında ne düşünüyorsun?\"" }
+      ]
+    },
+    {
+      "tip": "cta",
+      "birincil": { "etiket": "Başvuru Yap", "href": "/basvuru" },
+      "ikincil": { "etiket": "Öğrenci Yolculuğunu Gör", "href": "/ogrenci-yolculugu" }
+    }
+  ],
+  "seo": {
+    "title": "Veliler İçin | Gelişimi Görünür Kılan İletişim | Kafka Sanat Akademisi",
+    "description": "Gelişim Özeti, dönemsel veli görüşmesi ve çocuğunuzun gelişimini yıl sonunu beklemeden izlemenin yolları."
+  }
+}

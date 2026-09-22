@@ -1,0 +1,76 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SayfaBasligi from '@/components/SayfaBasligi.astro';
+import Bolum from '@/components/Bolum.astro';
+import Bloklar from '@/components/Bloklar.astro';
+import Gorsel from '@/components/Gorsel.astro';
+
+const sayfa = await getEntry('sayfalar', 'sosyal-sorumluluk');
+if (!sayfa) throw new Error('İçerik bulunamadı: sosyal-sorumluluk');
+const d = sayfa.data;
+
+const projeler = (await getCollection('sosyalProjeler')).sort((a, b) => a.data.sira - b.data.sira);
+
+const statuEtiketi = {
+  aktif: 'Aktif',
+  donemsel: 'Dönemsel',
+  tamamlandi: 'Tamamlandı',
+  arsiv: 'Arşiv',
+} as const;
+---
+
+<BaseLayout title={d.seo.title} description={d.seo.description}>
+  <SayfaBasligi
+    ustBaslik={d.ustBaslik}
+    baslik={d.baslik}
+    acilisAlintisi={d.acilisAlintisi}
+    girisMetni={d.girisMetni}
+  />
+
+  <Bolum bosluk="genis" etiketleyen="projeler">
+    <h2 id="projeler" class="u-eyebrow">Projeler</h2>
+    <ul class="mt-9 grid gap-x-12 gap-y-12 md:grid-cols-2">
+      {
+        projeler.map((p) => (
+          <li class="flex flex-col gap-5">
+            <Gorsel
+              oran="3/2"
+              src={p.data.gorsel}
+              alt={p.data.gorselAlt ?? p.data.ad}
+              cekimNotu={`${p.data.ad} — proje görseli`}
+            />
+            <div class="flex flex-wrap items-center gap-3">
+              <span class="inline-flex items-center border border-line-strong px-3 py-1 font-display text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-ink-600">
+                {statuEtiketi[p.data.statu]}
+              </span>
+              {p.data.partner && (
+                <span class="text-kucuk text-muted">
+                  İş birliği: {p.data.partner}
+                </span>
+              )}
+            </div>
+            <h3 class="font-display text-baslik font-bold tracking-[-0.025em] text-ink">
+              {p.data.ad}
+            </h3>
+            <p class="text-govde leading-relaxed text-body">
+              {p.data.aciklama}
+            </p>
+            <p class="border-l-2 border-accent pl-5 text-kucuk leading-relaxed text-muted">
+              Yaklaşım: {p.data.yaklasim}
+            </p>
+            {!p.data.dogrulandi && (
+              <p class="text-kucuk leading-relaxed text-ink-400">
+                Proje tarihi, kapsamı ve partner tanımı yayın öncesinde doğrulanacak.
+              </p>
+            )}
+          </li>
+        ))
+      }
+    </ul>
+  </Bolum>
+
+  <Bolum zemin="cukur" bosluk="normal">
+    <Bloklar bloklar={d.bolumler} />
+  </Bolum>
+</BaseLayout>

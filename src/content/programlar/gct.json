@@ -1,0 +1,236 @@
+{
+  "ad": "GÇT",
+  "uzunAd": "Gaziantep / Güzelbahçe Çocuk Tiyatrosu",
+  "kisaltma": "GÇT",
+  "ustBaslik": "İlkokul ve ortaokul öğrencileri için disiplinlerarası çocuk tiyatrosu modeli",
+  "yerlesim": [
+    {
+      "yasCatisi": "cocuklar",
+      "sira": 1
+    }
+  ],
+  "format": "ana-program",
+  "amiral": true,
+  "anaSayfaGorunurluk": "amiral",
+  "kisaTanim": "İlkokul ve ortaokul öğrencileri için disiplinlerarası çocuk tiyatrosu modeli.",
+  "girisMetni": "GÇT, yaratıcı dramadan tiyatroya, felsefeden yazarlığa, sesten bedene uzanan farklı alanları tek bir gelişim yolculuğunda birleştiren çocuk tiyatrosu modelidir.",
+  "ctaTipi": "basvuru",
+  "gorselKarakteri": "Canlı, yaratıcı, düşünce + grup + sahne",
+  "gorselAlt": "GÇT grubunda öğrenciler bir sahne çalışması üzerinde birlikte çalışıyor",
+  "teklifler": [
+    {
+      "sube": "gaziantep",
+      "durum": "basvurular-acik",
+      "gun": "Cumartesi",
+      "saat": "İlkokul öğleden önce · Ortaokul öğleden sonra",
+      "yasSinif": "İlkokul 2.–4. sınıf · Ortaokul 5.–8. sınıf",
+      "haftalikSure": "Haftada 1 gün · yaklaşık 3 saat",
+      "programSuresi": "36 hafta · 108 ders",
+      "not": "Üretim Yılı grubu Pazar günü, öğle saatleri civarında çalışır."
+    },
+    {
+      "sube": "izmir",
+      "durum": "basvurular-acik",
+      "gun": "Cumartesi",
+      "saat": "İlkokul öğleden önce · Ortaokul öğleden sonra",
+      "yasSinif": "İlkokul 2.–4. sınıf · Ortaokul 5.–8. sınıf",
+      "haftalikSure": "Haftada 1 gün · yaklaşık 3 saat",
+      "programSuresi": "36 hafta · 108 ders",
+      "not": "Üretim Yılı grubu Pazar günü, öğle saatleri civarında çalışır."
+    }
+  ],
+  "bolumler": [
+    {
+      "tip": "alinti",
+      "metin": "BİR OYUN ÇIKARMAKTAN DAHA BÜYÜK BİR ŞEY KURMAK.",
+      "altMetin": "GÇT, yaratıcı dramadan tiyatroya, felsefeden yazarlığa, sesten bedene uzanan farklı alanları tek bir gelişim yolculuğunda birleştiren çocuk tiyatrosu modelidir."
+    },
+    {
+      "tip": "liste",
+      "baslik": "Yedi disiplin",
+      "maddeler": [
+        "Yaratıcı Drama",
+        "Çocuk Felsefesi",
+        "Yaratıcı Yazarlık",
+        "Yaratıcı Keşifler",
+        "Şan",
+        "Dans",
+        "Tiyatro"
+      ]
+    },
+    {
+      "tip": "alinti",
+      "metin": "YEDİ AYRI DERS DEĞİL. TEK SİSTEM.",
+      "altMetin": "Yaratıcı Drama, Çocuk Felsefesi, Yaratıcı Yazarlık, Yaratıcı Keşifler, Şan, Dans ve Tiyatro öğrenciyi düşünceden yazıya, yazıdan farklı ifade biçimlerine ve sahneye taşıyan tek sistem içinde çalışır."
+    },
+    {
+      "tip": "liste",
+      "baslik": "2026–27 güncel grup yapısı",
+      "maddeler": [
+        "İlkokul grubu: 2.–4. sınıf",
+        "Ortaokul grubu: 5.–8. sınıf",
+        "1. sınıf öğrencileri öncelikle Yaratıcı Drama İlkokul grubuna yönlendirilir."
+      ]
+    },
+    {
+      "tip": "liste",
+      "baslik": "2026–27 gün planı",
+      "maddeler": [
+        "İki şubede de Cumartesi",
+        "İlkokul: öğleden önce",
+        "Ortaokul: öğleden sonra",
+        "Kesin saatler dönemsel bilgi kartında gösterilir."
+      ]
+    },
+    {
+      "tip": "not",
+      "baslik": "Ana program modeli",
+      "metin": "36 hafta · haftada 1 gün · yaklaşık 3 saat · 108 ders. Bu değerler güncel program bilgi kartında gösterilebilir."
+    },
+    {
+      "tip": "alinti",
+      "metin": "ÖNCE GRUP KURULUR. SONRA DÜŞÜNÜLÜR. SONRA ÜRETİLİR.",
+      "altMetin": "Birinci yılın amacı büyük bir oyun çıkarmak değil; öğrencinin sağlam bir eğitim zemini oluşturmasıdır."
+    },
+    {
+      "tip": "metin",
+      "baslik": "1. Yıl: Eğitim Yılı — ilk altı hafta",
+      "paragraflar": [
+        "Yaratıcı Drama ilk altı hafta tek başına çalışır ve yıl boyunca programın omurgasında kalır. Çünkü güvenmeden denemek, grup olmadan tiyatro yapmak zordur."
+      ]
+    },
+    {
+      "tip": "metin",
+      "baslik": "Sonra düşünce ve yazı",
+      "paragraflar": [
+        "Çocuk Felsefesi öğrencinin soru sormasını, gerekçe üretmesini ve farklı görüşlerle karşılaşmasını destekler. Yaratıcı Yazarlık bu düşünceyi karaktere, hikayeye, diyaloğa ve metne dönüştürür."
+      ]
+    },
+    {
+      "tip": "metin",
+      "baslik": "Beden, ses ve sahne",
+      "paragraflar": [
+        "Şan, Dans, Tiyatro ve Yaratıcı Keşifler; öğrencinin düşünce ve yazı üretimini farklı ifade kanallarıyla besler. Amaç alanları birbirinden koparmak değil, öğrencinin çoklu sanatsal okuryazarlığını geliştirmektir."
+      ]
+    },
+    {
+      "tip": "metin",
+      "baslik": "Birinci yılda sahne",
+      "paragraflar": [
+        "Birinci yılda büyük prodüksiyon yoktur. Açık ders ve kısa sınıf içi paylaşımlar yapılabilir; ancak bunlar gösteri baskısına veya \"yıl sonunda mutlaka oyun\" fikrine dönüşmez."
+      ]
+    },
+    {
+      "tip": "metin",
+      "baslik": "Ev köprüsü ve veli görünürlüğü",
+      "paragraflar": [
+        "Programın aile ile bağ kuran küçük ev çalışmaları ve dönemsel gelişim iletişimi olabilir. Amaç veliyi dersin içine taşımak değil, çocuğun üretim ve düşünme sürecini evde de görünür kılmaktır."
+      ]
+    },
+    {
+      "tip": "metin",
+      "baslik": "2. Yıl: Üretim Yılı",
+      "paragraflar": [
+        "İkinci yılın sorusu değişir: \"Nasıl yapılır?\"dan \"Sen nasıl yapmak istiyorsun?\"a geçilir."
+      ]
+    },
+    {
+      "tip": "liste",
+      "baslik": "Ana üretim alanları",
+      "maddeler": [
+        "Büyük tiyatro prodüksiyonu",
+        "Tirat Geceleri — Bireysel Performanslar",
+        "Yazı ve sahne arkası görevleri",
+        "Dönemsel farklı üretimler"
+      ]
+    },
+    {
+      "tip": "metin",
+      "baslik": "Her öğrenci prodüksiyonun parçasıdır",
+      "paragraflar": [
+        "Katkı yalnız oyunculuk olmak zorunda değildir. Öğrenci oyunculuk, yazı, sahne arkası, teknik iş veya başka bir üretim görevi üstlenebilir."
+      ]
+    },
+    {
+      "tip": "metin",
+      "baslik": "Tirat Geceleri — Bireysel Performanslar",
+      "paragraflar": [
+        "Tirat Geceleri, öğrencinin tek başına sorumluluk aldığı bireysel performans alanıdır. En az iki bireysel performans program hedefidir; her öğrenci için katı sayı zorunluluğu gibi yazılmaz."
+      ]
+    },
+    {
+      "tip": "metin",
+      "baslik": "Geçiş ve kabul",
+      "paragraflar": [
+        "Birinci yılı tamamlayan öğrencinin genel olarak Üretim Yılı'na geçiş hakkı vardır. Ciddi devam sorunu veya belirgin uyumsuzluk bireysel değerlendirilir. Dışarıdan öğrenci özel değerlendirmeyle Üretim Yılı'na kabul edilebilir."
+      ]
+    },
+    {
+      "tip": "metin",
+      "baslik": "Başrol başarı ölçüsü değildir",
+      "paragraflar": [
+        "Rol büyüklüğü öğrencinin değerini göstermez. Disiplin, grup uyumu, hazırlık, yaratıcılık, sorumluluk ve süreçteki gelişim en az sahnedeki görünürlük kadar önemlidir."
+      ]
+    },
+    {
+      "tip": "liste",
+      "baslik": "Üretim Yılı 2026–27 gün planı",
+      "maddeler": [
+        "İki şubede de Pazar",
+        "Genellikle öğle saatleri civarı",
+        "Prova ve program ihtiyacına göre birkaç saat öne veya arkaya kayabilir"
+      ],
+      "kapanis": "Yaklaşık 36 hafta · haftada yaklaşık 2 saat. Kesin saat dinamik veri olarak tutulur."
+    },
+    {
+      "tip": "bilgi",
+      "baslik": "Gelişim takibi",
+      "satirlar": [
+        {
+          "etiket": "Gelişim Özeti ne değildir?",
+          "deger": "Not karnesi değildir; öğrenci sıralamaz."
+        },
+        {
+          "etiket": "Ne yapar?",
+          "deger": "Güçlü yönleri, dönem içi değişimi ve desteklenebilecek alanları görünür kılar."
+        },
+        {
+          "etiket": "Nasıl yazar?",
+          "deger": "Soyut sıfatlardan çok gözlenebilir davranışları kullanır."
+        },
+        {
+          "etiket": "Neye bakar?",
+          "deger": "Öğrencinin kendi başlangıç noktasına göre gelişimine."
+        }
+      ]
+    },
+    {
+      "tip": "metin",
+      "baslik": "Mezuniyet",
+      "paragraflar": [
+        "Çocuk ve gençlik programlarında her dönem sonunda 1 Gelişim Özeti verilir ve 1 bireysel veli görüşmesi yapılır.",
+        "İki yıllık ana yolculuğun sonunda mezuniyet vardır. Sertifika yolculuğun kendisi değil, tamamlanmasının ikincil bir göstergesidir."
+      ]
+    },
+    {
+      "tip": "liste",
+      "baslik": "Kafka Üretim Ekibi",
+      "giris": "GÇT yolculuğunu tamamlamış öğrencilerin becerilerini gerçek projeler içinde kullanabilecekleri gönüllü, esnek ve proje odaklı devam alanıdır.",
+      "maddeler": [
+        "Oyun",
+        "Tirat",
+        "Kısa film",
+        "Yazı",
+        "Festival / proje",
+        "Sahne arkası",
+        "Teknik üretim",
+        "Dönemin ihtiyacına göre başka somut işler"
+      ],
+      "kapanis": "Her eğitim yılı başında uygun eski öğrenciler ve velileriyle yeniden iletişime geçilir. Devam etmek isteyenlerle sabit ağır bir ders takviminden çok projenin ihtiyacına göre şekillenen esnek üretim modeli kurulur. Gün ve saat proje bazında belirlenir."
+    }
+  ],
+  "seo": {
+    "title": "Çocuk Tiyatrosu | GÇT | Kafka Sanat Akademisi",
+    "description": "İlkokul ve ortaokul öğrencileri için yaratıcı drama, felsefe, yazarlık, ses, beden ve tiyatroyu birleştiren çocuk tiyatrosu modeli."
+  }
+}

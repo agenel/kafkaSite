@@ -1,0 +1,12 @@
+---
+interface Props { class?: string }
+const { class: ekSinif = 'h-12 w-12' } = Astro.props;
+---
+<img
+  src="/logo.png"
+  alt=""
+  aria-hidden="true"
+  width="96"
+  height="96"
+  class={`${ekSinif} shrink-0 rounded-full object-contain`}
+/>

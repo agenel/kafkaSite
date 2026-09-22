@@ -1,0 +1,50 @@
+{
+  "ad": "Yoga",
+  "yerlesim": [
+    {
+      "yasCatisi": "cocuklar",
+      "sira": 8
+    },
+    {
+      "yasCatisi": "gencler",
+      "sira": 14
+    },
+    {
+      "yasCatisi": "yetiskinler",
+      "sira": 14
+    }
+  ],
+  "format": "atolye",
+  "amiral": false,
+  "anaSayfaGorunurluk": "liste",
+  "kisaTanim": "Dönemsel yaş / katılımcı grubuna göre beden ve farkındalık odaklı programlar.",
+  "girisMetni": "Dönemsel yaş / katılımcı grubuna göre beden ve farkındalık odaklı programlar.",
+  "ctaTipi": "basvuru",
+  "gorselKarakteri": "Kafka kurumsal · sakin, güvenilir, çağdaş kültür kurumu",
+  "gorselAlt": "Yoga çalışmasından bir an",
+  "teklifler": [
+    {
+      "sube": "gaziantep",
+      "durum": "basvurular-acik",
+      "programSuresi": "Yaklaşık 5 ay · haftada 1 gün · yaklaşık 2 saat",
+      "saat": "Kesin gün ve saat dönemsel olarak netleşir"
+    },
+    {
+      "sube": "izmir",
+      "durum": "basvurular-acik",
+      "programSuresi": "Yaklaşık 5 ay · haftada 1 gün · yaklaşık 2 saat",
+      "saat": "Kesin gün ve saat dönemsel olarak netleşir"
+    }
+  ],
+  "bolumler": [
+    {
+      "tip": "not",
+      "baslik": "Dönemsel yapı",
+      "metin": "Bağımsız programların yaş grupları sabit değildir. Her dönem açılan grubun profiline göre Çocuklar, Gençler veya Yetişkinler sayfasında gösterilir. Kesin gün, saat ve yaş grubu dönemsel olarak yönetilir."
+    }
+  ],
+  "seo": {
+    "title": "Yoga | Kafka Sanat Akademisi",
+    "description": "Beden ve farkındalık odaklı, dönemsel yaş ve katılımcı grubuna göre şekillenen yoga programları."
+  }
+}

@@ -1,0 +1,38 @@
+---
+interface Props {
+  ustBaslik?: string;
+  baslik: string;
+  giris?: string;
+  id?: string;
+  koyu?: boolean;
+  seviye?: 2 | 3;
+}
+const { ustBaslik, baslik, giris, id, koyu = false, seviye = 2 } = Astro.props;
+const Etiket = `h${seviye}` as 'h2' | 'h3';
+---
+
+<header class="u-measure-wide">
+  {ustBaslik && <p class:list={['u-eyebrow mb-4', koyu && 'text-on-ink-muted']}>{ustBaslik}</p>}
+  <Etiket
+    id={id}
+    class:list={[
+      'font-display font-bold tracking-[-0.025em]',
+      seviye === 2 ? 'text-baslik-lg' : 'text-baslik',
+      koyu && 'text-on-ink',
+    ]}
+  >
+    {baslik}
+  </Etiket>
+  {
+    giris && (
+      <p
+        class:list={[
+          'mt-5 text-buyuk leading-relaxed',
+          koyu ? 'text-on-ink-muted' : 'text-muted',
+        ]}
+      >
+        {giris}
+      </p>
+    )
+  }
+</header>

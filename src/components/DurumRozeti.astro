@@ -1,0 +1,34 @@
+---
+import { programDurumEtiketi } from '@/data/site';
+
+interface Props {
+  durum: keyof typeof programDurumEtiketi;
+  koyu?: boolean;
+}
+const { durum, koyu = false } = Astro.props;
+
+// Durum yalnız renkle değil, metinle de anlatılır (renk körlüğü / a11y).
+const stiller: Record<keyof typeof programDurumEtiketi, string> = {
+  'basvurular-acik': 'border-accent text-accent-text',
+  dolu: 'border-line-strong text-muted',
+  'bekleme-listesi': 'border-line-strong text-ink-600',
+  yakinda: 'border-line-strong text-ink-600',
+  'bu-subede-acik-degil': 'border-line text-ink-400',
+};
+const koyuStiller: Record<keyof typeof programDurumEtiketi, string> = {
+  'basvurular-acik': 'border-accent-on-dark text-accent-on-dark',
+  dolu: 'border-line-on-ink text-on-ink-muted',
+  'bekleme-listesi': 'border-line-on-ink text-on-ink-muted',
+  yakinda: 'border-line-on-ink text-on-ink-muted',
+  'bu-subede-acik-degil': 'border-line-on-ink text-on-ink-muted',
+};
+---
+
+<span
+  class:list={[
+    'inline-flex items-center border px-3 py-1 font-display text-[0.7rem] font-semibold uppercase tracking-[0.12em]',
+    koyu ? koyuStiller[durum] : stiller[durum],
+  ]}
+>
+  {programDurumEtiketi[durum]}
+</span>

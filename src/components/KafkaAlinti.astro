@@ -1,0 +1,47 @@
+---
+/**
+ * Docx'teki [QuoteKafka] stilinin site karşılığı.
+ * Sayfaların omurgasını kuran görsel motif: geniş, sessiz, tek vurgulu.
+ */
+interface Props {
+  metin: string;
+  altMetin?: string;
+  zemin?: 'kagit' | 'murekkep';
+  hizalama?: 'sol' | 'orta';
+}
+const { metin, altMetin, zemin = 'kagit', hizalama = 'sol' } = Astro.props;
+const koyu = zemin === 'murekkep';
+---
+
+<figure
+  class:list={[
+    'u-wrap',
+    hizalama === 'orta' && 'text-center',
+  ]}
+>
+  <blockquote
+    class:list={[
+      'font-display font-bold uppercase leading-[1.04] tracking-[-0.025em]',
+      'text-devasa',
+      hizalama === 'orta' ? 'mx-auto max-w-[22ch]' : 'max-w-[26ch]',
+      koyu ? 'text-on-ink' : 'text-ink',
+    ]}
+  >
+    <span class="block border-l-4 border-accent pl-6 md:pl-8" class:list={[hizalama === 'orta' && 'border-l-0 border-t-4 pt-6 pl-0 md:pl-0']}>
+      {metin}
+    </span>
+  </blockquote>
+  {
+    altMetin && (
+      <figcaption
+        class:list={[
+          'u-measure-wide mt-8 text-buyuk leading-relaxed',
+          hizalama === 'orta' && 'mx-auto',
+          koyu ? 'text-on-ink-muted' : 'text-muted',
+        ]}
+      >
+        {altMetin}
+      </figcaption>
+    )
+  }
+</figure>

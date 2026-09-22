@@ -1,0 +1,50 @@
+{
+  "ad": "Müzik",
+  "yerlesim": [
+    {
+      "yasCatisi": "cocuklar",
+      "sira": 4
+    },
+    {
+      "yasCatisi": "gencler",
+      "sira": 11
+    },
+    {
+      "yasCatisi": "yetiskinler",
+      "sira": 11
+    }
+  ],
+  "format": "atolye",
+  "amiral": false,
+  "anaSayfaGorunurluk": "liste",
+  "kisaTanim": "Yaşa ve programa göre değişen ses, ritim, enstrüman veya toplu müzik çalışmaları.",
+  "girisMetni": "Yaşa ve programa göre değişen ses, ritim, enstrüman veya toplu müzik çalışmaları.",
+  "ctaTipi": "basvuru",
+  "gorselKarakteri": "Kafka kurumsal · sakin, güvenilir, çağdaş kültür kurumu",
+  "gorselAlt": "Müzik çalışmasından bir an",
+  "teklifler": [
+    {
+      "sube": "gaziantep",
+      "durum": "basvurular-acik",
+      "programSuresi": "Yaklaşık 5 ay · haftada 1 gün · yaklaşık 2 saat",
+      "saat": "Kesin gün ve saat dönemsel olarak netleşir"
+    },
+    {
+      "sube": "izmir",
+      "durum": "basvurular-acik",
+      "programSuresi": "Yaklaşık 5 ay · haftada 1 gün · yaklaşık 2 saat",
+      "saat": "Kesin gün ve saat dönemsel olarak netleşir"
+    }
+  ],
+  "bolumler": [
+    {
+      "tip": "not",
+      "baslik": "Dönemsel yapı",
+      "metin": "Bağımsız programların yaş grupları sabit değildir. Her dönem açılan grubun profiline göre Çocuklar, Gençler veya Yetişkinler sayfasında gösterilir. Kesin gün, saat ve yaş grubu dönemsel olarak yönetilir."
+    }
+  ],
+  "seo": {
+    "title": "Müzik | Kafka Sanat Akademisi",
+    "description": "Yaşa ve programa göre değişen ses, ritim, enstrüman ve toplu müzik çalışmaları."
+  }
+}

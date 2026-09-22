@@ -1,0 +1,22 @@
+{
+  "ad": "London Global Stage",
+  "ulke": "Birleşik Krallık",
+  "sehir": "Londra",
+  "hedefGrup": "Çocuklar · Gençler · Yetişkinler (yaş ve grup özelliklerine göre yapılandırılır)",
+  "amac": "Katılımcıları Londra'nın güçlü sahne sanatları ve kültür ekosistemiyle buluşturmak; tiyatro ve performans deneyimlerini atölyeler, müzeler ve dünyanın önemli sanat kurumlarıyla birlikte tek bir gelişim yolculuğuna dönüştürmek.",
+  "icerikBasliklari": [
+    "Tiyatro ve performans deneyimleri",
+    "Atölyeler",
+    "Müzeler ve kültürel alanlar",
+    "Dünyanın önemli sanat kurumları etrafında şekillenen özel içerikler"
+  ],
+  "ogrenciIndirimi": "Kafka öğrencilerine özel indirim uygulanır. Güncel koşul için WhatsApp üzerinden bilgi alınabilir.",
+  "gorselKarakteri": "Dünya, şehir, sanat merkezi, hareket",
+  "gorselAlt": "London Global Stage katılımcıları bir sahne sanatları mekanında",
+  "durum": "aktif",
+  "sira": 1,
+  "seo": {
+    "title": "London Global Stage | Kafka International",
+    "description": "Londra'nın sahne sanatları ve kültür ekosistemi çevresinde yapılandırılan uluslararası gelişim programı."
+  }
+}

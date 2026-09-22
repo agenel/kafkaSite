@@ -1,0 +1,108 @@
+{
+  "ad": "Sanata İlk Adım",
+  "uzunAd": "Sanata İlk Adım",
+  "ustBaslik": "GÇT Okul Öncesi · 4–6 Yaş Sanat Programı",
+  "yerlesim": [
+    {
+      "yasCatisi": "okul-oncesi",
+      "sira": 1
+    }
+  ],
+  "format": "ana-program",
+  "amiral": true,
+  "anaSayfaGorunurluk": "amiral",
+  "kisaTanim": "Okul öncesi 4–6 yaş için Yaratıcı Drama merkezli sanat programı.",
+  "girisMetni": "Sanata İlk Adım, okul öncesi 4–6 yaş çocuklarının sanatla güvenli, meraklı ve baskısız bir ilişki kurmaları için tasarlanmış Yaratıcı Drama merkezli bir programdır.",
+  "ctaTipi": "basvuru",
+  "gorselKarakteri": "Yumuşak, sıcak, oyun ve hareket",
+  "gorselAlt": "Sanata İlk Adım grubunda çocuklar ve eğitmen birlikte oyun kuruyor",
+  "teklifler": [
+    {
+      "sube": "gaziantep",
+      "durum": "basvurular-acik",
+      "gun": "1 hafta içi grup + 1 hafta sonu grup",
+      "saat": "Kesin gün ve saatler dönemsel olarak netleşir",
+      "yasSinif": "4–6 yaş",
+      "haftalikSure": "Haftada 1 gün · yaklaşık 2 saat",
+      "programSuresi": "Yaklaşık 5 ay · 20 buluşma / 40 ders"
+    },
+    {
+      "sube": "izmir",
+      "durum": "basvurular-acik",
+      "gun": "1 hafta içi grup + 1 hafta sonu grup",
+      "saat": "Kesin gün ve saatler dönemsel olarak netleşir",
+      "yasSinif": "4–6 yaş",
+      "haftalikSure": "Haftada 1 gün · yaklaşık 2 saat",
+      "programSuresi": "Yaklaşık 5 ay · 20 buluşma / 40 ders"
+    }
+  ],
+  "bolumler": [
+    {
+      "tip": "alinti",
+      "metin": "SANATLA İLK İLİŞKİ, PERFORMANSLA BAŞLAMAK ZORUNDA DEĞİL. OYUNLA BAŞLAYABİLİR.",
+      "altMetin": "Sanata İlk Adım, okul öncesi 4–6 yaş çocuklarının sanatla güvenli, meraklı ve baskısız bir ilişki kurmaları için tasarlanmış Yaratıcı Drama merkezli bir programdır."
+    },
+    {
+      "tip": "metin",
+      "baslik": "Programın merkezinde Yaratıcı Drama var",
+      "paragraflar": [
+        "Bu yaşta tiyatroyu teknik bir oyunculuk dersi gibi değil; oyun, taklit, rol denemesi, hayal gücü ve grup etkileşimi üzerinden ele alıyoruz. Programın farklı buluşmalarında tiyatro oyunları, hareket ve dans, ritim, hikaye ve ifade, küçük canlandırmalar, hayal gücü çalışmaları ve grup oyunları Yaratıcı Drama'nın araçları olarak sürece katılır."
+      ]
+    },
+    {
+      "tip": "kartlar",
+      "baslik": "Neyi önemsiyoruz?",
+      "kartlar": [
+        {
+          "baslik": "Güven",
+          "metin": "Çocuğun gruba ve eğitmene alışması; bulunduğu alanda rahat hissetmesi."
+        },
+        {
+          "baslik": "Katılım",
+          "metin": "İlk günden görünür olmak değil; kendi hızında oyuna dahil olabilmek."
+        },
+        {
+          "baslik": "İfade",
+          "metin": "Söz, hareket, rol veya hikayeyle kendini anlatmaya çalışmak."
+        },
+        {
+          "baslik": "Hayal gücü",
+          "metin": "Nesneleri, karakterleri ve durumları başka türlü düşünebilmek."
+        },
+        {
+          "baslik": "Beden ve ritim",
+          "metin": "Hareket, koordinasyon ve müzikle ilişki kurmak."
+        },
+        {
+          "baslik": "Grup",
+          "metin": "Sıra beklemek, dinlemek, paylaşmak ve ortak oyuna katılmak."
+        }
+      ]
+    },
+    {
+      "tip": "metin",
+      "baslik": "Sahne var mı?",
+      "paragraflar": [
+        "Programın temel amacı sahne değildir. Amaç oyun, gelişim, ifade ve grup deneyimidir. Dönemsel paylaşım biçimleri grubun yapısına göre planlanabilir."
+      ]
+    },
+    {
+      "tip": "liste",
+      "baslik": "2026–27 grup planı",
+      "maddeler": [
+        "Gaziantep: 1 hafta içi grup + 1 hafta sonu grup",
+        "Güzelbahçe: 1 hafta içi grup + 1 hafta sonu grup",
+        "Kesin gün ve saatler dönemsel olarak netleşir"
+      ]
+    },
+    {
+      "tip": "not",
+      "baslik": "Güncel program modeli",
+      "metin": "4–6 yaş · yaklaşık 5 ay · haftada 1 gün · yaklaşık 2 saat · 20 buluşma / 40 ders. Bu veriler dönemsel bilgi kartında yönetilebilir."
+    }
+  ],
+  "seo": {
+    "title": "Sanata İlk Adım | 4–6 Yaş Yaratıcı Drama Programı",
+    "description": "Okul öncesi 4–6 yaş için Yaratıcı Drama merkezli oyun, hareket, hikaye ve ifade programı."
+  }
+}

@@ -1,0 +1,33 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Bolum from '@/components/Bolum.astro';
+import Buton from '@/components/Buton.astro';
+import { cta, yasCatilari } from '@/data/site';
+---
+
+<BaseLayout title="Sayfa bulunamadı | Kafka Sanat Akademisi" description="Aradığınız sayfa bulunamadı." noindex>
+  <Bolum bosluk="genis">
+    <p class="u-eyebrow">404</p>
+    <h1 class="mt-4 font-display text-devasa font-extrabold leading-[1.02] tracking-[-0.03em] text-ink">
+      Aradığınız sayfayı bulamadık.
+    </h1>
+    <p class="u-measure-wide mt-6 text-buyuk leading-relaxed text-muted">
+      Bağlantı değişmiş veya sayfa kaldırılmış olabilir. Buradan devam edebilirsiniz.
+    </p>
+    <div class="mt-10 flex flex-wrap gap-4">
+      <Buton href="/programlar" etiket={cta.programlariKesfet} boyut="buyuk" />
+      <Buton href="/" etiket="Ana Sayfa" tur="ikincil" boyut="buyuk" />
+    </div>
+    <ul class="mt-14 grid gap-px bg-line sm:grid-cols-2 lg:grid-cols-4">
+      {
+        yasCatilari.map((c) => (
+          <li class="bg-paper">
+            <a href={c.href} class="flex min-h-20 items-center p-6 font-display text-buyuk font-semibold text-ink transition-colors hover:bg-ink hover:text-on-ink">
+              {c.etiket}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </Bolum>
+</BaseLayout>

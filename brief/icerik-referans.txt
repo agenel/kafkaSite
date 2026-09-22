@@ -1,0 +1,1287 @@
+1286
+KAFKA SANAT AKADEMİSİ
+WEB SİTESİ
+NİHAİ İÇERİK VE UYGULAMA DOSYASI
+Düşün. İfade et. Üret.
+Final handoff · 04 Eylül 2026
+BELGE
+[Title] Bu dosya nasıl kullanılmalı?
+[Lead] Bu belge, Kafka Sanat Akademisi web sitesinin nihai içerik kaynağıdır. Siteyi tasarlayan ve geliştiren ekip, metinleri ve bilgi mimarisini bu dosyadan uygulayabilir.
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+Temel amaç
+Ziyaretçi Kafka’yı bir kurs kataloğu olarak değil; 2017’den beri büyüyen, iki şehirde çalışan, farklı yaşlara ayrı programlar tasarlayan ve eğitim, sahne, uluslararası deneyim ve kostüm alanlarında kendi yapıları bulunan çağdaş bir sanat kurumu olarak görmelidir.
+İÇERIK ILKESI
+Bu dosyada yalnızca bugün geçerli olan site yapısı ve içerikler bulunur. Site metinleri ile dönemsel operasyon bilgileri birbirinden ayrılmıştır. Gün, saat, kontenjan, eğitmen ve aktiflik gibi değişebilen bilgiler CMS üzerinden güncellenebilir; kurumsal ve pedagojik ana metinler daha kalıcıdır.
+ANA STRATEJIK CÜMLE
+[QuoteKafka] İlk izlenim “Burada çok kurs var.” değil, “Burada düşünülmüş, büyümüş ve kendi sistemini kurmuş bir kurum var.” olmalıdır.
+01
+[Title] Kafka Sanat Akademisi
+[Lead] Kurumsal kimlik, marka vaadi ve temel yaklaşım
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+Kurum adı
+Kafka Sanat Akademisi
+Kuruluş
+2017 · Gaziantep
+Kurucu ortaklar
+Haluk Uluçay · Erkut Aytekin
+Şehirler
+Gaziantep · İzmir / Güzelbahçe
+Ana slogan
+Düşün. İfade et. Üret.
+Pedagojik cümle
+Biz sanatçı yetiştirmeden önce insan yetiştiriyoruz.
+Düşünsel hafıza
+Her şey başka türlü de düşünülebilir.
+[Heading2] Kısa kurum tanımı
+[Lead] Kafka Sanat Akademisi; çocukların, gençlerin ve yetişkinlerin sanat yoluyla kendilerini keşfettikleri, düşündükleri ve ürettikleri disiplinlerarası bir eğitim kurumudur.
+[Heading2] Kafka ne yapar?
+Kafka yalnız tiyatro eğitimi veren bir kurum değildir. Sanatı insan gelişimi, düşünme, ifade, üretim, topluluk, sorumluluk ve kültürle ilişki kurma alanı olarak görür. Okul öncesinden yetişkinlere uzanan eğitim programlarının yanında Kafka Akademi Tiyatrosu, Kafka International ve Kafka Kostüm gibi kendi çalışma mantığına sahip yapılarla büyüyen bir kurumdur.
+[Heading2] Değişmez ilkeler
+[ListBullet] Öğrenci ve insan merkezlilik
+[ListBullet] Süreç, üründen önce gelir
+[ListBullet] Kalite, kitlesellikten önce gelir
+[ListBullet] Sahne yalnız alkış için kurulmaz
+[ListBullet] Korku, utandırma ve baskı pedagojik araç değildir
+[ListBullet] Rekabetten çok birlikte üretim
+[ListBullet] Çocuğun ve gencin fikrine alan açma
+[ListBullet] Hata yapma ve yeniden deneme hakkı
+[ListBullet] Her öğrenciyi kendi başlangıç noktasıyla değerlendirme
+[ListBullet] Doğru zamanda mezuniyetin de başarı olduğunu kabul etme
+[ListBullet] Kurum kalitesini kişilere değil, aktarılabilir sisteme dayandırma
+02
+[Title] Kurucular ve kurumsal sorumluluk
+[Lead] Kafka’nın kurucu ortaklık yapısı
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+[Heading2] Haluk Uluçay
+[Lead] Kurucu Ortak · Eğitim Direktörü
+Kafka Sanat Akademisi Gaziantep Şube Sorumlusu
+Kafka Sanat Akademisi’nin eğitim yaklaşımı, program sistemleri ve Gaziantep şubesinin yürütülmesinde ağırlıklı sorumluluk üstlenir.
+[Heading2] Erkut Aytekin
+[Lead] Kurucu Ortak · Genel Sanat Yönetmeni
+Kafka Sanat Akademisi Güzelbahçe Şube Sorumlusu
+Kafka Sanat Akademisi’nin genel sanatsal yönü, sahne üretimleri ve Güzelbahçe şubesinin yürütülmesinde ağırlıklı sorumluluk üstlenir.
+[Heading2] Kurucu anlatısı
+Kafka Sanat Akademisi, 2017 yılında Haluk Uluçay ve Erkut Aytekin tarafından Gaziantep’te kuruldu. Başlangıçta kurucuların ana işlerinin yanında geliştirdikleri bir sanat girişimi olan Kafka, zaman içinde büyüyerek kurucuların temel çalışma alanına dönüştü. Kurum daha sonra ikinci şubesini Güzelbahçe / İzmir’de açtı. Bugün iki kurucu ortak Kafka’nın genel yönünü birlikte belirlerken Haluk Uluçay eğitim sistemleri ve Gaziantep şubesinin yürütülmesinde, Erkut Aytekin sanatsal yön ve Güzelbahçe şubesinin yürütülmesinde ağırlıklı sorumluluk üstlenmektedir.
+Site yapısı
+Şimdilik ayrı bir “Ekibimiz” sayfası açılmaz. Eğitmen ve dönemsel sorumlu kadroları program bazında gerektiğinde gösterilebilir. Kurucular ise Kafka / Hikayemiz alanında görünür olur.
+03
+[Title] Site mimarisi
+[Lead] Ana navigasyon, yaş çatısı ve iki şubeli yapı
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+[Heading2] Ana program çatısı
+[ListBullet] Okul Öncesi
+[ListBullet] Çocuklar
+[ListBullet] Gençler
+[ListBullet] Yetişkinler
+Kulüp, atölye, kurs, laboratuvar ve topluluk gibi sözcükler ana navigasyon çatısı değil; programın formatını tanımlar. Kullanıcı önce kendisine uygun yaş / yaşam evresine girer, ardından programları görür.
+[Heading2] Ana navigasyon
+Programlar
+Okul Öncesi · Çocuklar · Gençler · Yetişkinler
+Kafka International
+Ayrı ana sayfa / yapı
+Kafka Kostüm
+Ayrı ana sayfa / yapı
+Ürettiklerimiz
+Sahne, yazı, dijital üretim ve süreç hafızası
+Kafka
+Yaklaşım · Hikaye · Şubeler · Sosyal sorumluluk
+İletişim
+Şube iletişimleri, harita, WhatsApp
+Ana CTA
+Başvuru Yap
+[Heading2] İki şubeli kurum yapısı
+Ana site, Gaziantep’in veya İzmir’in sitesi değil; ikisinin üstündeki Kafka Sanat Akademisi kurumsal çatısıdır. Kullanıcı ana siteden ilgili şubeye veya yaş grubuna geçer. Şube sayfalarında yerel programlar, güncel saatler, adres, telefon, sosyal medya ve başvuru bilgileri gösterilir.
+Önerilen URL mantığı
+kafkasanatakademisi.com/gaziantep  ·  kafkasanatakademisi.com/izmir
+[Heading2] Program adlandırma
+Program sayfalarında ilk kullanımda uzun ad + parantez içinde kısaltma kullanılır; sonraki kullanımlarda yalnız kısaltma yeterlidir.
+[ListBullet] Gaziantep Çocuk Tiyatrosu (GÇT)
+[ListBullet] Güzelbahçe Çocuk Tiyatrosu (GÇT)
+[ListBullet] Gaziantep Gençlik Tiyatrosu (GGT Lab)
+[ListBullet] Güzelbahçe Gençlik Tiyatrosu (GGT Lab)
+04
+[Title] Ana Sayfa
+[Lead] Tam içerik akışı
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+[Heading2] Hero
+[QuoteKafka] DÜŞÜN. İFADE ET. ÜRET.
+[Lead] Kafka Sanat Akademisi; çocukların, gençlerin ve yetişkinlerin sanat yoluyla kendilerini keşfettikleri, düşündükleri ve ürettikleri disiplinlerarası bir eğitim kurumudur.
+2017’den beri Gaziantep ve İzmir’de; oyundan sahneye, yazıdan kameraya uzanan farklı sanat ve üretim programları tasarlıyoruz.
+[Programları Keşfet]   [Başvuru Yap]
+Hero görseli
+Gerçek Kafka görüntülerinden kısa, sessiz bir video önerilir: düşünme / tartışma, yazı, yaratıcı drama, hareket, kamera, prova ve sahne. Stok fotoğraf kullanılmamalıdır.
+[Heading2] Kurumsal ilke
+[QuoteKafka] BİZ SANATÇI YETİŞTİRMEDEN ÖNCE İNSAN YETİŞTİRİYORUZ.
+Bir öğrencinin sahnede ne kadar iyi göründüğünden önce, o sahneye nasıl geldiğiyle ilgileniyoruz.
+[ListBullet] Kendini ifade edebiliyor mu?
+[ListBullet] Başka bir fikri dinleyebiliyor mu?
+[ListBullet] Yanıldığında yeniden deneyebiliyor mu?
+[ListBullet] Bir grubun içinde sorumluluk alabiliyor mu?
+Kafka’da sanat, yalnızca teknik öğrenilen bir alan değil; düşünmek, kendini anlatmak, başkasını anlamak ve birlikte üretmek için kullanılan bir araçtır.
+[Yaklaşımımızı Oku]
+[Heading2] Üç temel hareket
+DÜŞÜN
+Hazır cevabı almak yerine soru sor. Farklı ihtimalleri gör.
+İFADE ET
+Fikrini söz, yazı, beden, ses, sahne ve görüntüyle anlat.
+ÜRET
+Bir fikri somut işe dönüştür. Sorumluluk al ve tamamla.
+Bunların hiçbirini tek başına yapmak zorunda değilsin. Kafka’nın bütün programlarında grup, iş birliği ve birlikte üretim kültürü önemli bir yere sahiptir.
+[Heading2] Yaşa göre dört ana giriş
+[QuoteKafka] HER YAŞTA AYNI ŞEYİ YAPMIYORUZ.
+Dört yaşındaki bir çocukla on iki yaşındaki bir öğrencinin, lise çağındaki bir gençle yetişkin bir tiyatro katılımcısının ihtiyacı aynı değildir. Programlarımız aynı içeriğin küçültülmüş veya büyütülmüş versiyonları değil; farklı gelişim ve üretim dönemleri için ayrı ayrı tasarlanmış yapılardır.
+[ListBullet] OKUL ÖNCESİ
+[ListBullet] ÇOCUKLAR
+[ListBullet] GENÇLER
+[ListBullet] YETİŞKİNLER
+04
+[Title] Ana Sayfa — devam
+[Lead] Amiral programlar ve Kafka’nın farklı yapıları
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+[Heading2] Amiral programlar
+Sanata İlk Adım
+Okul öncesi 4–6 yaş için Yaratıcı Drama merkezli sanat programı.
+GÇT
+İlkokul ve ortaokul öğrencileri için disiplinlerarası çocuk tiyatrosu modeli.
+GGT Lab
+Lise öğrencileri için Performans · İçerik · Prodüksiyon ekseninde üretim laboratuvarı.
+Kafka Akademi Tiyatrosu
+Yetişkinler için eğitim, topluluk ve sahne üretimini bir araya getiren, kendi iç yönetim yapısına sahip tiyatro oluşumu.
+[Heading2] Ana sayfada ismi doğrudan görünmesi gereken yapılar
+Bu üç yapı soyut bir üst başlığın arkasına saklanmamalıdır. Kullanıcı ana sayfada isimlerini ve kısa tanımlarını doğrudan görmelidir.
+[Heading3] Kafka Akademi Tiyatrosu
+Kendi yönetim yapısı, eğitim grupları ve prodüksiyonlarıyla çalışan yetişkin tiyatro oluşumu.
+[Kafka Akademi Tiyatrosu]
+[Heading3] Kafka International
+Sanat, kültür ve uluslararası deneyimi bir araya getiren; çocuklar, gençler ve yetişkinler için uluslararası gelişim programları geliştiren yapı.
+[Kafka International]
+[Heading3] Kafka Kostüm
+Çocuk sahne kostümleri alanında çalışan; koleksiyon, kiralama, toplu ve özel sipariş çözümleri sunan Kafka markası.
+[Kafka Kostüm]
+[Heading2] GÇT modeli kısa giriş
+[QuoteKafka] YEDİ AYRI DERS DEĞİL. BİRBİRİNİ BESLEYEN TEK YOLCULUK.
+GÇT’de disiplinler yan yana duran bağımsız kurslar gibi çalışmaz. Önce grup ve güven kurulur. Ardından düşünce, yazı, beden, ses ve sahne giderek birbirine bağlanır. Bir çocuk Çocuk Felsefesi çalışmasında bir kavram üzerine düşünebilir; Yaratıcı Yazarlık’ta bu düşünceyi karaktere veya hikayeye dönüştürebilir; tiyatroda yazdığı dünyanın içine girebilir. Yaratıcı Keşifler, Şan ve Dans bu üretimin farklı katmanlarını besler.
+[GÇT Modelini Gör]
+[Heading2] GGT Lab kısa giriş
+[QuoteKafka] TÜKETMEK YERİNE ÜRETMEK.
+Kafka’nın üretim kültürünün en görünür olduğu alanlardan biri GGT Lab’dir. Gençler yalnızca sahnede oynamaz; fikir geliştirir, yazar, kamera kullanır, yönetir, kurgular ve üretim sürecinin farklı rollerini deneyimler. Her genç oyuncu olmak zorunda değildir. Bazen kendi sesini yazıda, bazen kameranın arkasında, bazen sahnede bulur.
+[GGT Lab’i Keşfet]
+04
+[Title] Ana Sayfa — kapanış bölümleri
+[Lead] Sahne, öğrenci yolculuğu, veliler, üretimler ve şubeler
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+[Heading2] Sahne yaklaşımı
+[QuoteKafka] SAHNE AMAÇ DEĞİL.
+Sahne bir sonuçtur. İyi eğitim ise o sonucun temelidir. Kafka’da sahne, öğrenciyi alkış için hızlıca görünür kılmanın değil; hazır olduğu noktada gerçek bir üretimin sorumluluğunu taşımasının aracıdır.
+[Heading2] Öğrenci yolculuğu
+[Lead] Başvuru → Tanışma → Doğru program → Güvenli grup → Deneme → Düşünme → Üretim → Gelişimin görünür olması → Paylaşım → Devam veya mezuniyet
+Kafka’da kayıt bir form doldurmakla bitmez. Kafka Sanat Akademisi’nin eğitim programlarında kesin kayıt öncesinde öğrenciyi veya katılımcıyı görür, tanışır ve programla uygunluğunu değerlendiririz.
+[Öğrenci Yolculuğunu Gör]
+[Heading2] Veliler için
+[QuoteKafka] ÇOCUĞUNUZUN NE YAPTIĞINI YALNIZCA YIL SONUNDA GÖRMEYİN.
+Çocuk ve gençlik programlarında gelişimi yalnız sahneyle değil; kendini ifade etme, grup içinde çalışma, sorumluluk, düşünme ve üretim sürecindeki değişim üzerinden izleriz.
+[ListBullet] Her dönem sonunda 1 Gelişim Özeti
+[ListBullet] Her dönem 1 bireysel veli görüşmesi
+Gelişim Özeti bir not karnesi değildir. Öğrencinin kendi başlangıç noktasından nereye geldiğini görünür kılmayı amaçlar.
+[Veliler İçin Kafka]
+[Heading2] Ürettiklerimiz
+[QuoteKafka] GALERİ DEĞİL; ÜRETİM HAFIZASI.
+Oyunları, tiratları, öğrenci yazılarını, dijital üretimleri ve seçilmiş kamera arkası süreçlerini yalnız sonuç olarak değil, nasıl ortaya çıktıklarıyla birlikte gösteririz.
+[Üretimleri Keşfet]
+[Heading2] 2017’den beri
+Kafka Sanat Akademisi, Haluk Uluçay ve Erkut Aytekin tarafından 2017 yılında Gaziantep’te kuruldu. Başlangıçta kurucuların ana işlerinin yanında büyüttüğü bir sanat girişimiyken zaman içinde kendi pedagojisini, program sistemlerini ve üretim kültürünü geliştiren, kurucuların temel işine dönüşen bir yapıya evrildi. Daha sonra ikinci şubesini Güzelbahçe / İzmir’de açtı.
+Bugün Kafka, iki şehirde aynı temel ilkeleri korurken her şubenin yerel topluluk karakterine de alan açıyor.
+[QuoteKafka] Her şey başka türlü de düşünülebilir.
+[Kafka’nın Hikayesi]
+[Heading2] Şubeler
+[QuoteKafka] AYNI KAFKA. İKİ ŞEHİR.
+[ListBullet] Kafka Sanat Akademisi Gaziantep
+[ListBullet] Kafka Sanat Akademisi İzmir
+[Heading2] Kapanış CTA
+[QuoteKafka] HANGİ PROGRAMIN DOĞRU OLDUĞUNDAN EMİN OLMAK ZORUNDA DEĞİLSİNİZ.
+Kısa başvurunuzu gönderin. Ekibimiz 1 iş günü içinde sizinle iletişime geçsin. Önce tanışalım, sonra doğru başlangıcı birlikte belirleyelim.
+[Başvuru Yap]
+05
+[Title] Yaklaşımımız
+[Lead] Ana kurumsal yaklaşım sayfası
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+[QuoteKafka] DÜŞÜN. İFADE ET. ÜRET.
+[Lead] Kafka’da sanat yalnızca öğrenilen bir teknik değil; insanın kendisini, başkalarını ve dünyayı anlaması için açılan bir çalışma alanıdır.
+[Heading2] Biz sanatçı yetiştirmeden önce insan yetiştiriyoruz.
+Bir öğrencinin rolünden, tekniğinden veya sahnedeki görünürlüğünden önce insan olarak nasıl geliştiğine bakıyoruz.
+[ListBullet] Fikrini söyleyebiliyor mu?
+[ListBullet] Başkasının fikrini dinleyebiliyor mu?
+[ListBullet] Hata yaptığında yeniden deneyebiliyor mu?
+[ListBullet] Bir grubun içinde sorumluluk alabiliyor mu?
+Sanat eğitiminin gerçek değeri, yalnızca final ürününde değil; bu soruların zaman içinde değişen cevaplarında görünür.
+[Heading2] Hazır cevaplardan çok iyi sorular
+Çocuk Felsefesi, metin çalışmaları, yaratıcı yazarlık ve sanatla karşılaşmalar öğrencinin tek bir doğru cevabı tekrarlaması yerine kendi fikrini kurmasına alan açar. Eğitmenin görevi her zaman cevabı söylemek değildir. Bazen öğrencinin kendi cevabına ulaşabileceği doğru soruyu bulmaktır.
+[Heading2] Güven olmadan yaratıcılık olmaz
+Yanlış yapmaktan korkan bir öğrenci yaratıcı risk alamaz. Alay edilmekten çekinen bir çocuk sıra dışı fikrini söylemez. Bu nedenle Kafka’da güvenli grup kültürü teknik eğitimden önce gelir.
+[ListBullet] Korku ve utandırma pedagojik araç değildir.
+[ListBullet] Hata yapma hakkı vardır.
+[ListBullet] Öğrenci tek bir kalıba zorlanmaz.
+[ListBullet] Grubun güvenliği ve sınırları özgür üretimin koşuludur.
+[Heading2] Süreç üründen önce gelir
+Bir oyun çıkarmak, video çekmek veya güzel bir sergi hazırlamak tek başına iyi eğitimin kanıtı değildir. Biz ürün ortaya çıkarken öğrencinin ne yaşadığına bakarız: fikir üretti mi, bir problemi çözmeye çalıştı mı, ekiple çatıştığında devam edebildi mi, başladığı işi tamamlamak için emek verdi mi?
+[Heading2] Sahne her yaşta aynı yerde durmaz
+[ListBullet] Okul öncesinde sahne programın merkezi değildir.
+[ListBullet] GÇT Eğitim Yılı’nda büyük prodüksiyon yoktur.
+[ListBullet] GÇT Üretim Yılı’nda sahne gerçek sorumluluk alanına dönüşür.
+[ListBullet] GGT Lab’de sahne tek başarı yolu değildir.
+[ListBullet] Sahne Modu, yoğun tiyatro prodüksiyonu isteyen GGT Lab katılımcıları için ayrı bir üretim hattıdır.
+[Heading2] Rekabetten çok birlikte üretmek
+Tiyatro ve üretim süreçleri bize “en iyi kim?” sorusundan daha değerli bir soru verir: “Birlikte ne çıkarabiliriz?” Başarı bazen öne çıkmak, bazen grubun ihtiyacı olan yerde sorumluluk almak, bazen başkasının işini güçlendirmektir.
+[Heading2] Gelişimi görünür kılmak
+Öğrenciyi başka öğrencilerle kıyaslamak yerine kendi başlangıç noktasıyla karşılaştırırız. “Özgüveni arttı” gibi soyut bir yargı yerine gözlenebilir değişimi konuşuruz. Örneğin: “İlk haftalarda doğaçlamaya gönüllü değildi; dönem sonunda kendi isteğiyle sahneye çıktı.”
+[Heading2] Doğru zamanda devam etmek, doğru zamanda ayrılmak
+Kafka’nın amacı öğrenciyi mümkün olduğunca uzun süre kurumda tutmak değildir. Bir program tamamlandığında yeni bir programa geçmek, uygun devam yapılarına katılmak veya kendi yoluna gitmek mümkündür. Doğru zamanda mezuniyet de iyi bir eğitim sonucudur.
+[Heading2] Büyürken Kafka olarak kalmak
+Şehir, eğitmen ve program değişebilir. Temel ilkeler değişmemelidir. Kafka’nın kurumsallaşma hedefi, kalitenin yalnız kişilere değil; aktarılabilir bir eğitim sistemine dayanmasıdır.
+[Programları Keşfet]   [Başvuru Yap]
+06
+[Title] Okul Öncesi
+[Lead] Ana program: Sanata İlk Adım
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+[Lead] Okul Öncesi sayfasında tek sabit ana program Sanata İlk Adım’dır. Kısa süreli diğer çalışmalar “Dönemsel Atölyeler” alanında gösterilir.
+[Heading2] Sanata İlk Adım
+GÇT Okul Öncesi · 4–6 Yaş Sanat Programı
+[QuoteKafka] SANATLA İLK İLİŞKİ, PERFORMANSLA BAŞLAMAK ZORUNDA DEĞİL. OYUNLA BAŞLAYABİLİR.
+Sanata İlk Adım, okul öncesi 4–6 yaş çocuklarının sanatla güvenli, meraklı ve baskısız bir ilişki kurmaları için tasarlanmış Yaratıcı Drama merkezli bir programdır.
+[Heading2] Programın merkezinde Yaratıcı Drama var
+Bu yaşta tiyatroyu teknik bir oyunculuk dersi gibi değil; oyun, taklit, rol denemesi, hayal gücü ve grup etkileşimi üzerinden ele alıyoruz. Programın farklı buluşmalarında tiyatro oyunları, hareket ve dans, ritim, hikaye ve ifade, küçük canlandırmalar, hayal gücü çalışmaları ve grup oyunları Yaratıcı Drama’nın araçları olarak sürece katılır.
+[Heading2] Neyi önemsiyoruz?
+Güven
+Çocuğun gruba ve eğitmene alışması; bulunduğu alanda rahat hissetmesi.
+Katılım
+İlk günden görünür olmak değil; kendi hızında oyuna dahil olabilmek.
+İfade
+Söz, hareket, rol veya hikayeyle kendini anlatmaya çalışmak.
+Hayal gücü
+Nesneleri, karakterleri ve durumları başka türlü düşünebilmek.
+Beden ve ritim
+Hareket, koordinasyon ve müzikle ilişki kurmak.
+Grup
+Sıra beklemek, dinlemek, paylaşmak ve ortak oyuna katılmak.
+[Heading2] Sahne var mı?
+Programın temel amacı sahne değildir. Amaç oyun, gelişim, ifade ve grup deneyimidir. Dönemsel paylaşım biçimleri grubun yapısına göre planlanabilir.
+[Heading2] 2026–27 grup planı
+[ListBullet] Gaziantep: 1 hafta içi grup + 1 hafta sonu grup
+[ListBullet] Güzelbahçe: 1 hafta içi grup + 1 hafta sonu grup
+[ListBullet] Kesin gün ve saatler dönemsel olarak netleşir
+Güncel program modeli
+4–6 yaş · yaklaşık 5 ay · haftada 1 gün · yaklaşık 2 saat · 20 buluşma / 40 ders. Bu veriler dönemsel bilgi kartında yönetilebilir.
+[Başvuru Yap]
+07
+[Title] Çocuklar
+[Lead] GÇT ana program; ardından bağımsız sanat programları ve kulüpler
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+[Lead] Çocuklar sayfasında ana program GÇT’dir. GÇT’nin ardından çocuklara açılan Yaratıcı Drama, Resim, Müzik, Dans, Yaratıcı Yazarlık, Çocuk Felsefesi, Yoga, Çocuk Korosu ve uygun kulüpler gösterilir.
+[Heading2] Çocuklar sayfası içerik sırası
+[ListNumber] GÇT
+[ListNumber] Yaratıcı Drama
+[ListNumber] Resim
+[ListNumber] Müzik
+[ListNumber] Dans
+[ListNumber] Yaratıcı Yazarlık
+[ListNumber] Çocuk Felsefesi
+[ListNumber] Yoga
+[ListNumber] Çocuk Korosu
+[ListNumber] İngilizce Konuşma Kulübü ve dönemsel çocuk programları
+08
+[Title] Gaziantep / Güzelbahçe Çocuk Tiyatrosu (GÇT)
+[Lead] İlkokul ve ortaokul öğrencileri için disiplinlerarası çocuk tiyatrosu modeli
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+[QuoteKafka] BİR OYUN ÇIKARMAKTAN DAHA BÜYÜK BİR ŞEY KURMAK.
+[Lead] GÇT, yaratıcı dramadan tiyatroya, felsefeden yazarlığa, sesten bedene uzanan farklı alanları tek bir gelişim yolculuğunda birleştiren çocuk tiyatrosu modelidir.
+[Heading2] Yedi disiplin
+[ListBullet] Yaratıcı Drama
+[ListBullet] Çocuk Felsefesi
+[ListBullet] Yaratıcı Yazarlık
+[ListBullet] Yaratıcı Keşifler
+[ListBullet] Şan
+[ListBullet] Dans
+[ListBullet] Tiyatro
+[QuoteKafka] YEDİ AYRI DERS DEĞİL. TEK SİSTEM.
+Yaratıcı Drama, Çocuk Felsefesi, Yaratıcı Yazarlık, Yaratıcı Keşifler, Şan, Dans ve Tiyatro öğrenciyi düşünceden yazıya, yazıdan farklı ifade biçimlerine ve sahneye taşıyan tek sistem içinde çalışır.
+[Heading2] 2026–27 güncel grup yapısı
+[ListBullet] İlkokul grubu: 2.–4. sınıf
+[ListBullet] Ortaokul grubu: 5.–8. sınıf
+[ListBullet] 1. sınıf öğrencileri öncelikle Yaratıcı Drama İlkokul grubuna yönlendirilir.
+[Heading2] 2026–27 gün planı
+[ListBullet] İki şubede de Cumartesi
+[ListBullet] İlkokul: öğleden önce
+[ListBullet] Ortaokul: öğleden sonra
+[ListBullet] Kesin saatler dönemsel bilgi kartında gösterilir.
+Ana program modeli
+36 hafta · haftada 1 gün · yaklaşık 3 saat · 108 ders. Bu değerler güncel program bilgi kartında gösterilebilir.
+08
+[Title] GÇT — 1. Yıl: Eğitim Yılı
+[Lead] Önce grup, sonra düşünce, sonra üretim
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+[QuoteKafka] ÖNCE GRUP KURULUR. SONRA DÜŞÜNÜLÜR. SONRA ÜRETİLİR.
+Birinci yılın amacı büyük bir oyun çıkarmak değil; öğrencinin sağlam bir eğitim zemini oluşturmasıdır.
+[Heading2] İlk altı hafta
+Yaratıcı Drama ilk altı hafta tek başına çalışır ve yıl boyunca programın omurgasında kalır. Çünkü güvenmeden denemek, grup olmadan tiyatro yapmak zordur.
+[Heading2] Sonra düşünce ve yazı
+Çocuk Felsefesi öğrencinin soru sormasını, gerekçe üretmesini ve farklı görüşlerle karşılaşmasını destekler. Yaratıcı Yazarlık bu düşünceyi karaktere, hikayeye, diyaloğa ve metne dönüştürür.
+[Heading2] Beden, ses ve sahne
+Şan, Dans, Tiyatro ve Yaratıcı Keşifler; öğrencinin düşünce ve yazı üretimini farklı ifade kanallarıyla besler. Amaç alanları birbirinden koparmak değil, öğrencinin çoklu sanatsal okuryazarlığını geliştirmektir.
+[Heading2] Birinci yılda sahne
+Birinci yılda büyük prodüksiyon yoktur. Açık ders ve kısa sınıf içi paylaşımlar yapılabilir; ancak bunlar gösteri baskısına veya “yıl sonunda mutlaka oyun” fikrine dönüşmez.
+[Heading2] Ev köprüsü ve veli görünürlüğü
+Programın aile ile bağ kuran küçük ev çalışmaları ve dönemsel gelişim iletişimi olabilir. Amaç veliyi dersin içine taşımak değil, çocuğun üretim ve düşünme sürecini evde de görünür kılmaktır.
+08
+[Title] GÇT — 2. Yıl: Üretim Yılı
+[Lead] Edinilen becerileri gerçek üretimin sorumluluğuna dönüştürmek
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+[Lead] İkinci yılın sorusu değişir: “Nasıl yapılır?”dan “Sen nasıl yapmak istiyorsun?”a geçilir.
+[Heading2] Ana üretim alanları
+[ListBullet] Büyük tiyatro prodüksiyonu
+[ListBullet] Tirat Geceleri — Bireysel Performanslar
+[ListBullet] Yazı ve sahne arkası görevleri
+[ListBullet] Dönemsel farklı üretimler
+[Heading2] Her öğrenci prodüksiyonun parçasıdır
+Katkı yalnız oyunculuk olmak zorunda değildir. Öğrenci oyunculuk, yazı, sahne arkası, teknik iş veya başka bir üretim görevi üstlenebilir.
+[Heading2] Tirat Geceleri — Bireysel Performanslar
+Tirat Geceleri, öğrencinin tek başına sorumluluk aldığı bireysel performans alanıdır. En az iki bireysel performans program hedefidir; her öğrenci için katı sayı zorunluluğu gibi yazılmaz.
+[Heading2] Geçiş ve kabul
+Birinci yılı tamamlayan öğrencinin genel olarak Üretim Yılı’na geçiş hakkı vardır. Ciddi devam sorunu veya belirgin uyumsuzluk bireysel değerlendirilir. Dışarıdan öğrenci özel değerlendirmeyle Üretim Yılı’na kabul edilebilir.
+[Heading2] Başrol başarı ölçüsü değildir
+Rol büyüklüğü öğrencinin değerini göstermez. Disiplin, grup uyumu, hazırlık, yaratıcılık, sorumluluk ve süreçteki gelişim en az sahnedeki görünürlük kadar önemlidir.
+[Heading2] 2026–27 gün planı
+[ListBullet] İki şubede de Pazar
+[ListBullet] Genellikle öğle saatleri civarı
+[ListBullet] Prova ve program ihtiyacına göre birkaç saat öne veya arkaya kayabilir
+Ana model
+Yaklaşık 36 hafta · haftada yaklaşık 2 saat. Kesin saat dinamik veri olarak tutulmalıdır.
+08
+[Title] GÇT — gelişim, mezuniyet ve devam
+[Lead] Gelişim Özeti, veli görüşmesi ve Kafka Üretim Ekibi
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+[Heading2] Gelişim takibi
+Çocuk ve gençlik programlarında her dönem sonunda 1 Gelişim Özeti verilir ve 1 bireysel veli görüşmesi yapılır.
+Gelişim Özeti ne değildir?
+Not karnesi değildir; öğrenci sıralamaz.
+Ne yapar?
+Güçlü yönleri, dönem içi değişimi ve desteklenebilecek alanları görünür kılar.
+Nasıl yazar?
+Soyut sıfatlardan çok gözlenebilir davranışları kullanır.
+Neye bakar?
+Öğrencinin kendi başlangıç noktasına göre gelişimine.
+[Heading2] Mezuniyet
+İki yıllık ana yolculuğun sonunda mezuniyet vardır. Sertifika yolculuğun kendisi değil, tamamlanmasının ikincil bir göstergesidir.
+[Heading2] Kafka Üretim Ekibi
+GÇT yolculuğunu tamamlamış öğrencilerin becerilerini gerçek projeler içinde kullanabilecekleri gönüllü, esnek ve proje odaklı devam alanıdır.
+[ListBullet] Oyun
+[ListBullet] Tirat
+[ListBullet] Kısa film
+[ListBullet] Yazı
+[ListBullet] Festival / proje
+[ListBullet] Sahne arkası
+[ListBullet] Teknik üretim
+[ListBullet] Dönemin ihtiyacına göre başka somut işler
+Her eğitim yılı başında uygun eski öğrenciler ve velileriyle yeniden iletişime geçilir. Devam etmek isteyenlerle sabit ağır bir ders takviminden çok projenin ihtiyacına göre şekillenen esnek üretim modeli kurulur. Gün ve saat proje bazında belirlenir.
+[Başvuru Yap]
+09
+[Title] Diğer çocuk ve genç programları
+[Lead] Yaratıcı Drama, Çocuk Korosu ve bağımsız sanat programları
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+[Heading2] Yaratıcı Drama
+Yaratıcı Drama; oyun, rol, doğaçlama ve grup deneyimi üzerinden ifade, iletişim ve yaratıcı düşünme alanları açan dönemlik bir programdır.
+[ListBullet] İlkokul ve Ortaokul grupları ayrı açılır.
+[ListBullet] Lise için bağımsız Yaratıcı Drama grubu açılmaz.
+[ListBullet] 1. sınıf öğrencileri özellikle İlkokul Yaratıcı Drama grubuna yönlendirilebilir.
+2026–27 model
+Yaklaşık 5 ay · haftada 1 gün · yaklaşık 2 saat. Kesin gün ve saat dönemsel olarak yönetilir.
+[Heading2] Çocuk Korosu
+[QuoteKafka] BİRLİKTE NEFES. BİRLİKTE SES.
+Çocuk Koroları, çocukların seslerini tek başına öne çıkarmaktan çok bir topluluğun parçası olarak dinlemeyi, uyum sağlamayı ve birlikte müzik üretmeyi deneyimledikleri program ailesidir.
+[ListBullet] Yaşa uygun ses kullanımı
+[ListBullet] Ritim
+[ListBullet] Dinleme
+[ListBullet] Ortak repertuvar
+[ListBullet] Topluluk bilinci
+Gaziantep ve Güzelbahçe’de yaş / sınıf yapısı baştan sabitlenmez; başvuru sayısı ve öğrenci profiline göre dönemsel olarak oluşturulur.
+[Heading2] Bağımsız sanat programları
+Resim, Müzik, Dans, Yaratıcı Yazarlık, Çocuk Felsefesi ve Yoga gibi bağımsız programların yaş grupları sabit değildir. Her dönem açılan grubun profiline göre Çocuklar, Gençler veya Yetişkinler sayfasında gösterilir. Genel anlatım “dönemlik program”dır; farklı süreli programlar ayrıca belirtilir.
+Resim
+Görsel ifade, malzeme ve üretim deneyimi etrafında dönemsel resim çalışmaları.
+Müzik
+Yaşa ve programa göre değişen ses, ritim, enstrüman veya toplu müzik çalışmaları.
+Dans
+Beden, ritim, koordinasyon ve hareket dili üzerine dönemsel çalışmalar.
+Yaratıcı Yazarlık
+Hikaye, karakter, diyalog ve farklı yazılı anlatı biçimleri üzerinden üretim.
+Çocuk Felsefesi
+Soru sorma, gerekçelendirme ve farklı bakış açılarını dinleme becerilerini destekleyen çalışmalar.
+Yoga
+Dönemsel yaş / katılımcı grubuna göre beden ve farkındalık odaklı programlar.
+10
+[Title] Gençler
+[Lead] Ana program: GGT Lab
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+[Lead] Gençler sayfasında GGT Lab ana / amiral program olarak ilk sırada yer alır. Ardından lise düzeyinde açılan bağımsız sanat programları ve İngilizce Konuşma Kulübü gösterilir.
+[ListNumber] GGT Lab
+[ListNumber] Lise düzeyindeki bağımsız sanat programları
+[ListNumber] İngilizce Konuşma Kulübü — Lise
+[ListNumber] Dönemsel gençlik atölyeleri / kulüpleri
+11
+[Title] Gaziantep / Güzelbahçe Gençlik Tiyatrosu (GGT Lab)
+[Lead] Performans · İçerik · Prodüksiyon
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+[QuoteKafka] TÜKETMEK YERİNE ÜRETMEK.
+[Lead] GGT Lab, lise öğrencilerini tiyatro, düşünsel içerik ve dijital prodüksiyonun kesişiminde buluşturan bir üretim laboratuvarıdır.
+[Heading2] Ekranın yalnızca karşısında kalma
+Bugün gençler video, film, sosyal medya ve dijital hikayelerle sürekli karşılaşıyor. Programın amacı teknolojiyi yasaklamak değil; gençlerin onun yalnızca tüketicisi olmaktan çıkıp üretim araçlarını da öğrenmesi.
+[Heading2] Üç ana eksen
+PERFORMANS
+Beden, sahne farkındalığı, oyunculuk, doğaçlama ve topluluk önünde ifade.
+İÇERİK
+Felsefi sorgulama, metin analizi, hikaye, senaryo ve yazılı üretim.
+PRODÜKSİYON
+Kamera, ışık, kurgu, set, dijital anlatı ve proje üretimi.
+Bu üç eksen programın sabit yapısıdır. Alan sorumluları dönemden döneme ve şubeden şubeye değişebilir; web yapısı kişi isimlerinden bağımsız kurulmalıdır.
+[Heading2] Tek bir yıldızlık biçimi yok
+Her genç sahnede olmak zorunda değildir. Bazısı yazarken, yönetirken, kameranın arkasında, kurguda veya sahnede kendini bulur. Teknik ve yaratıcı arka plan rolleri ikinci sınıf işler değildir; üretimin gerçek parçalarıdır.
+[Heading2] Güvenli üretim alanı
+Bir fikir ilk denemede iyi olmak zorunda değildir. Bir sahne çalışmayabilir. Bir senaryo değişebilir. Bir çekim tekrar yapılabilir. Hata yapmak programın dışında değil; üretimin içindedir.
+[Heading2] Somut Üretim Çıktıları
+Program öğrencilerin süreç boyunca gerçek işler üretmesini hedefler. Her öğrencinin çıktısı aynı olmak zorunda değildir.
+[Heading2] Üretim Portfolyosu
+GGT Lab kendi başına tamamlanan bir programdır. Program sonunda öğrencinin sürecini, görevlerini ve seçilmiş üretimlerini görünür kılan Üretim Portfolyosu oluşturulur.
+[Heading2] Telefon düşmanımız değil
+Performans veya içerik çalışmasında dikkat dağıtıcı olduğunda telefon sınırlandırılabilir. Prodüksiyon sırasında ise kamera, ses kayıt cihazı, araştırma veya üretim aracı haline gelebilir. Mesele teknolojiyle ilişkiyi kesmek değil; pasif kullanımdan aktif üretime çevirmektir.
+[Heading2] 2026–27 gün planı
+[ListBullet] İki şubede de Çarşamba
+[ListBullet] Okul çıkışı sonrası / akşam
+[ListBullet] Kesin saat ekip buluştuktan sonra belirlenir
+Program bilgisi
+GGT Lab’in dönem süresi, toplam ders saati, haftalık dakika ve kontenjanı dönemsel bilgi kartında yönetilir. Mevcut plan 20 hafta / 40 derslik yapı üzerinden ilerlemektedir.
+[Başvuru Yap]
+12
+[Title] Sahne Modu
+[Lead] GGT Lab içinden oluşan isteğe bağlı sahne ve prodüksiyon hattı
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+[QuoteKafka] BİR OYUNU GERÇEKTEN KURMAK İSTEYENLER İÇİN.
+[Lead] Sahne Modu, GGT Lab içinden oluşan ve tiyatro prodüksiyonuna daha yoğun girmek isteyen katılımcıların gerçek bir oyun üretme sürecine katıldığı isteğe bağlı sahne hattıdır.
+GGT Lab’e katılan herkesin Sahne Modu’na katılması gerekmez.
+[Heading2] Odak
+[ListBullet] Metin ve masa başı çalışmaları
+[ListBullet] Rol ve karakter
+[ListBullet] Blokaj ve mizansen
+[ListBullet] Yoğun prova
+[ListBullet] Teknik süreç
+[ListBullet] Final prodüksiyonu
+[Heading2] Devam disiplini
+Sahne Modu’nun devam disiplini GGT Lab’e göre daha sıkıdır. Çünkü gerçek prodüksiyon, ekip ve prova sürekliliği gerektirir.
+[Heading2] Gün / saat
+Gün ve saat önceden sabitlenmez. Grup GGT Lab içinden oluştuktan sonra katılımcı uygunluğu, prova ihtiyacı ve prodüksiyon planı üzerinden belirlenir.
+Site yerleşimi
+Sahne Modu, Gençler ana sayfasında ayrı bir ana program kartı olarak değil; GGT Lab detay sayfasının güçlü alt bölümü olarak gösterilir.
+13
+[Title] Yetişkinler
+[Lead] Ana yapı: Kafka Akademi Tiyatrosu
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+[Lead] Yetişkinler sayfasında ilk ve en güçlü yapı Kafka Akademi Tiyatrosu’dur. Ardından yetişkin atölyeleri, Kafka Kitap Kulübü, Kafka Sinema Kulübü ve dönemsel bağımsız programlar gelir.
+[ListNumber] Kafka Akademi Tiyatrosu
+[ListNumber] Yetişkin atölyeleri
+[ListNumber] Kafka Kitap Kulübü
+[ListNumber] Kafka Sinema Kulübü
+[ListNumber] Dönemsel bağımsız yetişkin sanat programları
+[ListNumber] Ahşap Oyma Atölyesi — Güzelbahçe
+[ListNumber] Yıl içinde eklenecek yeni yetişkin atölyeleri
+14
+[Title] Kafka Akademi Tiyatrosu
+[Lead] Yetişkin Tiyatro Programı
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+[QuoteKafka] TİYATROYA BAŞLAMAK İÇİN GEÇ KALMIŞ DEĞİLSİNİZ.
+[Lead] Kafka Akademi Tiyatrosu, yetişkinlerin tiyatroyla yalnız seyirci olarak değil; eğitim, topluluk ve üretim yoluyla ilişki kurabilecekleri ayrı bir tiyatro oluşumudur.
+[Heading2] KAT’ı farklı yapan ne?
+KAT, çocuk ve gençlik programlarının devam basamağı değildir. Kafka bünyesinde kendi yönetim yapısına, bütçesine, eğitim gruplarına, prodüksiyon süreçlerine ve topluluk kimliğine sahip başlı başına bir oluşumdur.
+Hem Gaziantep hem Güzelbahçe / İzmir’de aktiftir. Her şubenin kendi KAT yönetim kurulu bulunur. Yönetim kurulu isimleri web sitesinde yayınlanmaz; sitede yapının kendi yönetimiyle çalıştığı belirtilir.
+[Heading2] Tiyatro bir yetişkine ne açabilir?
+[ListBullet] Başka bir karakterin yerine geçmek
+[ListBullet] Bedeni ve sesi yeniden fark etmek
+[ListBullet] Bir metnin içine girmek
+[ListBullet] Günlük rollerin dışına çıkmak
+[ListBullet] Bir topluluğun sorumluluğunu taşımak
+Yetişkin tiyatrosunda hedef yalnızca sahnede görünmek değil; birlikte çalışan bir ekibin içinde üretmektir.
+[Heading2] Eğitim grupları
+Eğitim grupları haftada 2 gün düzenli çalışır.
+[Heading2] Prodüksiyon ve prova ritmi
+Prodüksiyon süreci sabit haftalık ritme bağlı değildir. Yapımın ihtiyacına göre bazı dönemler çok sık, hatta her gün prova olabilir; bazı dönemlerde ise hiç prova olmayabilir.
+[Heading2] Sahne
+Sahne üretimi KAT’nin temel hedeflerinden biridir. Ancak her dönem tek ve değişmez bir final formatına bağlanmaz.
+Sayfa yapısı
+KAT, Yetişkinler çatısı içinde yer alır; ancak küçük bir yetişkin atölyesi kartına indirgenmez. Yetişkinler sayfasında ana yapı olarak güçlü biçimde görünür ve kendi detay sayfasına sahiptir.
+[Başvuru Yap]
+15
+[Title] Kulüpler ve yetişkin atölyeleri
+[Lead] Yaş çatısı içinde program formatları
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+[Heading2] Kafka Kitap Kulübü
+Hedef kitle: Yetişkinler
+Okuma, düşünme ve tartışma etrafında bir araya gelen yetişkin topluluğu.
+Dönemsel alanlar
+Kitap seçkisi · buluşma takvimi · yürütücü · mekan · katılım modeli
+[SmallNote] Instagram: @kafka.kitapkulubu
+[Heading2] Kafka Sinema Kulübü
+Hedef kitle: Yetişkinler
+Film izleme, sinema dili ve ortak tartışma etrafında bir araya gelen yetişkin topluluğu.
+Dönemsel alanlar
+Film seçkisi · buluşma takvimi · yürütücü · mekan · katılım modeli
+[SmallNote] Instagram: @kafka.sinemakulubu
+[Heading2] İngilizce Konuşma Kulübü
+Konuşma pratiğini, etkileşimi ve günlük iletişimi merkeze alan dönemsel İngilizce konuşma kulübü.
+[ListBullet] İlkokul
+[ListBullet] Ortaokul
+[ListBullet] Lise
+İlkokul ve Ortaokul grupları Çocuklar, Lise grubu Gençler sayfasında gösterilir. Kesin gün, saat, yürütücü, süre ve kontenjan dönemsel bilgi kartında yer alır.
+[Heading2] Ahşap Oyma Atölyesi
+Güzelbahçe / İzmir’de yetişkinlere yönelik; ahşap malzemeyle el işçiliği, desen, oyma ve üretim deneyimi etrafında şekillenen dönemsel atölye.
+Yetişkinler bölümü yıl içinde yeni atölyeler eklenebilecek büyüyebilir bir alan olarak tasarlanır.
+16
+[Title] Kafka International
+[Lead] Türkiye’den Dünya Sahnelerine.
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+Sorumlu
+Özlem Demireli
+Telefon / WhatsApp
++90 536 433 43 08
+E-posta
+kafkaakademi@gmail.com
+Hedef kitle
+Çocuklar · Gençler · Yetişkinler
+Katılım
+Herkese açık; Kafka öğrencilerine özel indirim uygulanır
+[QuoteKafka] DÜNYAYA BAKIŞINI DEĞİŞTİR.
+[Lead] Türkiye’den Dünya Sahnelerine.
+Kafka International; çocukları, gençleri ve yetişkinleri sanat, kültür ve uluslararası deneyimler aracılığıyla dünyanın önemli sanat merkezleriyle buluşturmak amacıyla kuruldu.
+Bizim için uluslararası deneyim yalnızca başka bir ülkeye seyahat etmek değildir. Yeni bir kültürle karşılaşmak, dünya sahnelerini yerinde deneyimlemek, farklı sanat anlayışlarını ve üretim biçimlerini görmek; insanın hem kendisine hem de dünyaya bakışını değiştirebilecek güçlü bir öğrenme alanıdır.
+Bu nedenle Kafka International programlarını klasik gezi programları olarak değil; sanat, eğitim, kültür ve deneyimi bir araya getiren uluslararası gelişim yolculukları olarak tasarlıyoruz.
+Kafka Sanat Akademisi’nin sanat eğitimi ve sahne üretimi deneyiminden doğan Kafka International; farklı yaş ve deneyim düzeylerine yönelik programlar geliştirir. Çocuk gruplarının yanı sıra lise grupları ve yetişkin katılımcılar için de uluslararası sanat ve kültür programları düzenler.
+Amacımız yalnızca profesyonel sanatçı yetiştirmek değildir. Sanatçı olmayı seçsin ya da seçmesin, yolu Kafka International’dan geçen herkesin dünyaya bakışında kalıcı bir iz bırakmayı hedefliyoruz. Sanat alanında ilerlemek isteyen çocuklar, gençler ve yetişkinler için ise Türkiye’den başlayarak uluslararası sahnelere, eğitimlere ve sanat deneyimlerine uzanan yeni yollar oluşturuyoruz.
+İlk uluslararası programlarımızdan London Global Stage, katılımcıları Londra’nın güçlü sahne sanatları ve kültür ekosistemiyle buluşturuyor. Yaş ve grup özelliklerine göre yapılandırılan programlarda tiyatro ve performans deneyimleri, atölyeler, müzeler, kültürel alanlar ve dünyanın önemli sanat kurumları etrafında şekillenen özel içerikler yer alıyor. Böylece her program, katılımcının yaşına, deneyimine ve gelişim alanına göre farklı bir yolculuğa dönüşüyor.
+Kafka International’ın vizyonu ise Londra’nın çok ötesinde. Farklı ülkelerde gerçekleştirilecek sanat programları, uluslararası atölyeler, festivaller, kültürel değişim programları ve profesyonel gelişim olanaklarıyla her yaştan insanın sanat aracılığıyla dünyayla yeni bağlar kurabileceği uluslararası bir deneyim ekosistemi oluşturuyoruz.
+[QuoteKafka] Çünkü bazen tek bir şehir, tek bir sahne, tek bir karşılaşma ya da tek bir deneyim, insanın dünyaya bakışını değiştirebilir.
+16
+[Title] Kafka International — program sayfaları
+[Lead] Güncel uluslararası programların içerik yapısı
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+[Heading2] Genel sayfa
+Ana sayfada Kafka International güçlü bir başlık ve kısa kurumsal tanımla görünür. Güncel seyahatler ana Kafka ana sayfasına doldurulmaz; Kafka International’ın kendi detay sayfasında listelenir.
+[Heading2] Her güncel program için ayrı detay sayfası
+[ListBullet] Program adı
+[ListBullet] Ülke / şehir
+[ListBullet] Hedef yaş / grup
+[ListBullet] Tarihler
+[ListBullet] Programın amacı
+[ListBullet] İçerik ve deneyim başlıkları
+[ListBullet] Konaklama / ulaşım gibi doğrulanmış bilgiler
+[ListBullet] Program ücreti
+[ListBullet] Kafka öğrencisi indirimi için güncel koşul
+[ListBullet] WhatsApp CTA
+[Heading2] London Global Stage
+İlk uluslararası programlardan biri olarak, Londra’nın sahne sanatları ve kültür ekosistemi çevresinde yapılandırılır. İçerik yaş ve grup özelliklerine göre farklılaşır; tiyatro ve performans deneyimleri, atölyeler, müzeler, kültürel alanlar ve önemli sanat kurumları programın temel bileşenleridir.
+[Heading2] İletişim ve ücret
+Güncel program ücretleri yalnız ilgili Kafka International program detay sayfasında gösterilir. İlk temas ve programla ilgili devam eden iletişim WhatsApp üzerinden yürütülür.
+[WhatsApp’tan Bilgi Al]
+17
+[Title] Kafka Kostüm
+[Lead] Çocuk sahne kostümleri markası
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+Sorumlu
+Özlem Demireli
+Telefon / WhatsApp
++90 536 433 43 08
+E-posta
+kafkaakademi@gmail.com
+Hizmet
+Koleksiyon · kiralama · toplu sipariş · özel sipariş
+Erişim
+Güzelbahçe operasyon merkezli; farklı şehirlere kargo / teslimat desteği
+[Lead] Kafka Kostüm, Kafka Sanat Akademisi bünyesinde çocukların sahne deneyimini güçlendirmek amacıyla kurulmuş özel bir kostüm markasıdır.
+Markamız; yöresel danslar, modern dans gösterileri, okul etkinlikleri, yıl sonu performansları, tiyatro oyunları ve özel sahne projeleri için çocuklara uygun kostüm seçenekleri sunar. Her tasarımda yalnızca görselliği değil; çocuğun sahnede rahat hareket edebilmesini, kostümün sahne ışığında güçlü görünmesini ve uzun süreli kullanıma uygun olmasını önemseriz.
+Kafka Sanat Akademisi’nin tiyatro, yaratıcı drama, dans ve sahne sanatları alanındaki deneyiminden beslenen Kafka Kostüm; çocuk kostümünü yalnızca bir kıyafet olarak değil, sahnedeki karakterin, kültürün ve performansın tamamlayıcı bir parçası olarak görür.
+Koleksiyonumuzda Anadolu’nun farklı yörelerinden ilham alan halk oyunları kostümleri, modern dans kıyafetleri, bale ve gösteri kostümleri, temalı çocuk sahne kıyafetleri ve okul gösterilerine özel tasarımlar yer almaktadır.
+Okullar, sanat akademileri, dans kursları, belediye kursları, halk oyunları ekipleri ve bireysel gösteriler için toplu ve özel sipariş seçenekleriyle hizmet veriyoruz.
+[QuoteKafka] Kafka Kostüm; çocukların sahnedeki duruşunu, hareketini ve hayal gücünü görünür kılar.
+[Heading2] Ana sayfa kısa tanım
+Çocuk sahne kostümleri için koleksiyon, kiralama, toplu ve özel sipariş seçenekleri sunan Kafka markası.
+[Kafka Kostüm]
+17
+[Title] Kafka Kostüm — katalog ve iletişim akışı
+[Lead] Basit katalogdan WhatsApp’a
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+[Heading2] Katalog
+İlk aşamada basit bir görsel katalog yeterlidir. Envanter büyüdükçe kategori, tema, dönem, beden ve kostüm türü gibi filtreler eklenebilir.
+[Heading2] Kullanıcı akışı
+[ListNumber] Kullanıcı katalogdan ürün veya modeli inceler.
+[ListNumber] WhatsApp’a geçer.
+[ListNumber] Uygunluk, beden, adet, kiralama veya sipariş türü konuşulur.
+[ListNumber] Fiyat, ödeme, kargo ve teslimat ayrıntıları WhatsApp üzerinden netleşir.
+[Heading2] Fiyat ve koşullar
+Kostüm fiyatları katalogda yayınlanmaz. Ürün, adet, kiralama veya özel sipariş türüne göre koşullar değişebildiği için güncel fiyat bilgisi WhatsApp üzerinden paylaşılır.
+Kısa web notu: “Kiralama koşulları ürün, adet ve süreye göre değişebilir. Güncel koşullar için bizimle iletişime geçebilirsiniz.”
+[Heading2] Hizmet alanı
+Kafka Kostüm yalnız Güzelbahçe’ye hizmet veren bir yerel mağaza gibi anlatılmaz. Operasyon merkezi Güzelbahçe / İzmir’dedir; Gaziantep dahil farklı şehirlerden gelen taleplere katalog ve kargo üzerinden yardımcı olunabilir.
+[Heading2] Sosyal medya
+@kafkakostum
+[Kataloğu İncele]   [WhatsApp’tan Sor]
+18
+[Title] Kafka / Hikayemiz
+[Lead] 2017’den bugüne
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+[QuoteKafka] 2017’DEN BERİ AYNI SORUNUN PEŞİNDEYİZ: Sanat bir insanın hayatında gerçekten neyi değiştirebilir?
+Kafka Sanat Akademisi, Haluk Uluçay ve Erkut Aytekin tarafından 2017 yılında Gaziantep’te kuruldu.
+Başlangıçta kurucuların ana işleri yanında geliştirdikleri bir sanat girişimiydi. Zaman içinde büyüdü, kurucuların temel çalışma alanına dönüştü, kendi pedagojisini ve program sistemlerini geliştirdi ve ikinci şubesini Güzelbahçe / İzmir’de açtı.
+[Heading2] Kurstan programa, programdan sisteme
+İlk yıllarda “hangi dersleri veriyoruz?” sorusu daha görünürdü. Zamanla daha önemli bir soru ortaya çıktı: “Bir öğrencinin gelişim yolculuğunu nasıl tasarlıyoruz?” Bugünkü Sanata İlk Adım, GÇT, GGT Lab, Kafka Akademi Tiyatrosu ve diğer programlar bu dönüşümün farklı sonuçlarıdır.
+[Heading2] Kurucu ortaklık
+Kafka hiçbir zaman tek kişinin hikayesi olmadı. Kurucu ortaklık; farklı düşünceleri tartışabilmek, sorumluluğu paylaşmak ve kurum kararlarını kişisel zevkten daha uzun ömürlü bir sisteme dönüştürmek açısından Kafka’nın kurumsal karakterinin parçasıdır.
+[QuoteKafka] HER ŞEY BAŞKA TÜRLÜ DE DÜŞÜNÜLEBİLİR.
+Bu cümle Kafka’nın düşünsel hafızasında özel bir yer taşır. Hazır cevapları sorgulamayı, başka ihtimaller görmeyi ve gerektiğinde kendi yöntemlerimizi de yeniden düşünmeyi hatırlatır.
+[Heading2] Gaziantep’ten İzmir’e
+Bugün Kafka Sanat Akademisi Gaziantep ve İzmir’de çalışıyor. Temel pedagoji ve marka sistemi ortak. Yerel şubeler kendi topluluk dilini, etkinliklerini ve bölgesel projelerini geliştirebilir.
+[Heading2] Gelecek
+Hedef yalnız daha fazla şube açmak değildir. Asıl mesele büyürken eğitim anlayışını, kurum kültürünü, öğrenciyi merkeze alan ilkeleri ve üretim niteliğini koruyabilmektir. Kafka büyüdüğünde de Kafka olarak kalmalıdır.
+19
+[Title] Şubeler
+[Lead] Aynı Kafka. İki şehir.
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+[Heading2] Kafka Sanat Akademisi Gaziantep
+Kafka’nın 2017’de başlayan hikayesinin ilk merkezi.
+Telefon / WhatsApp
++90 505 614 47 67
+Adres
+Batıkent Mah., Adnan İnanıcı Cad., 09024 Nolu Sok., No: 10/D, Şehitkamil / Gaziantep
+Instagram
+@kafkasanatakademisi
+Şube sorumlusu
+Haluk Uluçay · Kurucu Ortak · Eğitim Direktörü
+[Heading3] Gaziantep sosyal hesapları
+[ListBullet] @gaziantepcocuktiyatrosu
+[ListBullet] @gaziantep.gencliktiyatrosu
+[ListBullet] @kafka.kitapkulubu
+[ListBullet] @kafka.sinemakulubu
+[ListBullet] @katiyatro
+[Heading2] Kafka Sanat Akademisi İzmir / Güzelbahçe
+Kafka’nın ikinci şehir yapılanması; fiziksel konum Güzelbahçe’dir.
+Telefon / WhatsApp
++90 537 240 17 73
+Adres
+Kafka Sanat Akademisi, Siteler Mah., Mithatpaşa Cad., 378. Sok., No: 5, Güzelbahçe / İzmir
+Instagram
+@kafkasanatakademisi.izmir
+Şube sorumlusu
+Erkut Aytekin · Kurucu Ortak · Genel Sanat Yönetmeni
+[Heading3] Güzelbahçe sosyal hesapları
+[ListBullet] @guzelbahcecocuktiyatrosu
+[ListBullet] @kafkasanat.atolyee
+[ListBullet] @kafkakostum
+Şube sayfalarında gösterilecekler
+Aktif programlar · güncel gün / saat · harita · telefon / WhatsApp · Instagram · seçilmiş üretimler · başvuru durumu
+20
+[Title] 2026–27 aktif program envanteri
+[Lead] Şube bazında güncel içerik matrisi
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+[Heading2] Gaziantep
+[ListBullet] Sanata İlk Adım
+[ListBullet] GÇT
+[ListBullet] GGT Lab
+[ListBullet] Kafka Akademi Tiyatrosu
+[ListBullet] Gaziantep Çocuk Korosu
+[ListBullet] Yaratıcı Drama
+[ListBullet] Resim
+[ListBullet] Müzik
+[ListBullet] Dans
+[ListBullet] Yaratıcı Yazarlık
+[ListBullet] Çocuk Felsefesi
+[ListBullet] Yoga
+[ListBullet] Kafka Kitap Kulübü
+[ListBullet] Kafka Sinema Kulübü
+[ListBullet] İngilizce Konuşma Kulübü — İlkokul
+[ListBullet] İngilizce Konuşma Kulübü — Ortaokul
+[ListBullet] İngilizce Konuşma Kulübü — Lise
+[Heading2] Güzelbahçe / İzmir
+[ListBullet] Sanata İlk Adım
+[ListBullet] GÇT
+[ListBullet] GGT Lab
+[ListBullet] Kafka Akademi Tiyatrosu
+[ListBullet] Güzelbahçe Çocuk Korosu
+[ListBullet] Yaratıcı Drama
+[ListBullet] Resim
+[ListBullet] Müzik
+[ListBullet] Dans
+[ListBullet] Yaratıcı Yazarlık
+[ListBullet] Çocuk Felsefesi
+[ListBullet] Yoga
+[ListBullet] Kafka Kitap Kulübü
+[ListBullet] Kafka Sinema Kulübü
+[ListBullet] İngilizce Konuşma Kulübü — İlkokul
+[ListBullet] İngilizce Konuşma Kulübü — Ortaokul
+[ListBullet] İngilizce Konuşma Kulübü — Lise
+[ListBullet] Ahşap Oyma Atölyesi
+Sahne Modu, GGT Lab içinden oluşur. Kafka International program bazında iki şehirde de faaliyet gösterebilir. Kafka Kostüm farklı şehirlerden taleplere hizmet verebilir.
+21
+[Title] Öğrenci Yolculuğu
+[Lead] Başvurudan mezuniyete
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+[QuoteKafka] KAFKA’DA YOLCULUK KAYITLA BAŞLAMAZ.
+[Lead] Önce öğrenciyi veya katılımcıyı tanımaya çalışırız. Çünkü iyi hazırlanmış bir program tek başına yetmez; doğru kişinin doğru zamanda doğru programla buluşması gerekir.
+[Heading3] 01 · Başvuru
+Kısa form.
+[Heading3] 02 · İlk görüşme
+Ekibimiz 1 iş günü içinde iletişime geçer.
+[Heading3] 03 · Tanışma
+Kafka Sanat Akademisi’nin eğitim programlarında kesin kayıt öncesinde tanışma esastır. Amaç sınamak değil tanımaktır.
+[Heading3] 04 · Doğru program
+Yaş, okul seviyesi, beklenti ve programın gerçek amacı birlikte değerlendirilir.
+[Heading3] 05 · Gruba katılım
+Özellikle çocuk ve gençlik programlarında önce aidiyet, güven ve grup zemini kurulur.
+[Heading3] 06 · Deneme ve düşünme
+Öğrenci hata yapar, yeniden dener, soru sorar ve farklı ifade biçimleriyle karşılaşır.
+[Heading3] 07 · Üretim
+Metin, sahne, video, tasarım, koro, bireysel performans veya programın doğasına uygun başka işler ortaya çıkar.
+[Heading3] 08 · Gelişim
+Çocuk ve gençlik programlarında Gelişim Özeti ve dönemsel veli görüşmeleriyle değişim görünür hale gelir.
+[Heading3] 09 · Paylaşım
+Yaşa ve programa göre açık ders, bireysel performans, prodüksiyon, Üretim Portfolyosu veya başka paylaşım biçimleri.
+[Heading3] 10 · Devam / mezuniyet
+Bir sonraki programa geçmek, uygun devam topluluklarında üretmek veya kendi yoluna gitmek mümkündür.
+[Heading2] Tanışma bir yetenek sınavı değildir
+Amaç “kazandı / kazanamadı” kararı vermek değil; öğrencinin veya katılımcının programın içinde nasıl hissedeceğini, beklentilerin uyuşup uyuşmadığını ve doğru başlangıç noktasını anlamaktır.
+22
+[Title] Veliler İçin
+[Lead] Gelişimi görünür kılan iletişim
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+[QuoteKafka] ÇOCUĞUNUZUN GELİŞİMİNİ YALNIZCA YIL SONUNDA GÖRMEYİN.
+Sanat eğitiminde en önemli değişimlerin bazıları sahnede görünmez. İlk haftalarda söz almak istemeyen bir öğrencinin zamanla gönüllü olması; fikri kabul edilmediğinde süreci bırakan bir çocuğun başka önerilerle çalışmayı öğrenmesi; grup içinde sorumluluk almaya başlaması...
+[Heading2] Veli müşteri değil, paydaştır
+Bu, velinin dersin içine sürekli müdahale etmesi anlamına gelmez. Öğrenci deneyimler ve üretir. Eğitmen süreci yönetir ve gözlemler. Aile destekler. Kurum bu ilişkinin sağlıklı yürüyeceği sistemi kurar.
+[Heading2] Gelişimi nasıl konuşuyoruz?
+“Çok başarılı”, “özgüveni arttı” gibi genel sıfatlar yerine mümkün olduğunca gözlenebilir değişimlerden konuşuruz. Öğrenciyi başka öğrencilerle kıyaslamayız.
+[Heading2] Gelişim Özeti
+Çocuk ve gençlik programlarında her dönem sonunda 1 Gelişim Özeti verilir. Bir not karnesi değildir.
+[ListBullet] Güçlü yönler
+[ListBullet] Dönem içi gelişimler
+[ListBullet] Desteklenebilecek alanlar
+[ListBullet] Sonraki dönem için öneriler
+[Heading2] Veli görüşmesi
+Her dönem 1 bireysel veli görüşmesi yapılır. İhtiyaç olduğunda ek görüşme yapılabilir.
+[Heading2] Kafka Bülteni
+Aylık zorunlu yayın değildir. Anlamlı içerik biriktiğinde dönemsel olarak yayınlanır.
+[Heading2] Sahne ve rol konusunda
+Rol büyüklüğü çocuğun değerinin ölçüsü değildir. Öğrencinin gelişimi kaç dakika sahnede kaldığıyla ölçülmez.
+[Heading2] Velinin sorabileceği daha iyi sorular
+“Bugün iyi oynadın mı?” yerine
+“Bugün seni şaşırtan ne oldu?”
+“Başrol sen misin?” yerine
+“Bu üretimde senin sorumluluğun ne?”
+“Niye yapamadın?” yerine
+“Nerede zorlandın?”
+“Öğretmenin seni beğendi mi?” yerine
+“Sen bugün yaptığın iş hakkında ne düşünüyorsun?”
+23
+[Title] Ürettiklerimiz
+[Lead] Galeri değil; üretim hafızası
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+[QuoteKafka] SONUCU GÖSTERMEK KOLAY. BİZ SÜRECİ DE GÖSTERMEK İSTİYORUZ.
+Bir oyunun arkasında aylar, bir metnin arkasında onlarca deneme, bir videonun arkasında fikir, senaryo, çekim ve kurgu vardır. Ürettiklerimiz bölümü yalnız final görselini değil, o sonucun nasıl ortaya çıktığını da gösterir.
+[Heading2] Kategoriler
+[ListBullet] Sahne
+[ListBullet] Tirat Geceleri / Bireysel Performanslar
+[ListBullet] Yazı
+[ListBullet] Dijital Üretimler
+[ListBullet] Yaratıcı Keşifler
+[ListBullet] Seçilmiş Kamera Arkası
+[Heading2] Her üretim sayfasında
+[ListBullet] Üretimin adı
+[ListBullet] Yıl
+[ListBullet] Program / grup
+[ListBullet] Mekan
+[ListBullet] Ne üretildi?
+[ListBullet] Nasıl çalışıldı?
+[ListBullet] Öğrencilerin rolleri
+[ListBullet] Süreç görselleri
+[ListBullet] Final ürün / fragman
+[ListBullet] Uygunsa izinli öğrenci sözü
+[Heading2] Video yaklaşımı
+GGT Lab gibi programlarda sitede kısa fragman veya seçki kullanılabilir; tam video harici platformda yayınlanabilir. Kamera arkası her program için zorunlu kategori değildir; önemli prodüksiyonlarda kullanılır.
+24
+[Title] Sosyal Sorumluluk
+[Lead] Sanatın kurum duvarlarının dışındaki karşılığı
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+[QuoteKafka] SANATIN SINIFIN DIŞINDA DA BİR KARŞILIĞI VAR.
+Kafka’nın sosyal sorumluluk çalışmaları, sanat ve grup deneyimini toplumsal ihtiyaçlarla buluşturan projeleri bir araya getirir.
+[Heading2] Proje kartları
+Her proje statüsüyle gösterilir: Aktif · Dönemsel · Tamamlandı · Arşiv
+[Heading2] Inner Power
+Kafka’nın Hassa’da depremden etkilenen çocuklara yönelik Human Appeal iş birliğiyle yürüttüğü Inner Power çalışması kurumun geçmiş proje hafızasında yer alabilir.
+Bu alanda kullanılacak yaklaşım: sanat temelli psikososyal destek çalışmaları.
+Yayın öncesi doğrulama
+Proje tarihi, kapsamı, sayı, partner tanımı ve proje statüsü yayın öncesinde doğrulanmalıdır.
+25
+[Title] Başvuru
+[Lead] Önce başvurun. Sonra tanışalım.
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+[Lead] Hangi programın doğru olduğundan emin olmak zorunda değilsiniz.
+Kısa formu gönderin; ekibimiz 1 iş günü içinde sizinle iletişime geçsin. Kafka Sanat Akademisi’nin eğitim programlarında kesin kayıt öncesinde tanışma yapılır.
+[Heading2] Ana CTA
+[QuoteKafka] Başvuru Yap
+[Heading2] Form alanları
+[ListBullet] Şehir: Gaziantep / İzmir / Diğer
+[ListBullet] Yaş / sınıf
+[ListBullet] İlgilenilen program
+[ListBullet] “Henüz bilmiyorum” seçeneği
+[ListBullet] Kısa beklenti
+[ListBullet] Ad soyad
+[ListBullet] Telefon
+Form kısa tutulur. Sağlık, acil durum, ayrıntılı aile bilgisi ve sözleşme verileri kesin kayıt aşamasına bırakılır.
+[Heading2] Form altı güven metni
+Başvuru kesin kayıt değildir. Ekibimiz önce sizinle iletişime geçer; programın amacı, beklentiniz ve tanışma süreci birlikte değerlendirilir.
+[Heading2] Başarılı gönderim
+Başvurunuzu aldık. Ekibimiz 1 iş günü içinde sizinle iletişime geçecek. Hangi programın uygun olduğundan emin değilseniz sorun değil; ilk görüşmede birlikte değerlendireceğiz.
+[Heading2] Mikro metinler
+Gönderiliyor
+Başvurunuz gönderiliyor...
+Başarılı
+Başvurunuzu aldık. Şimdi sıra bizde.
+Telefon hatası
+Telefon numaranızı kontrol eder misiniz?
+Zorunlu alan
+Bu alanı doldurmamız gerekiyor.
+Gönderim hatası
+Başvurunuzu şu anda gönderemedik. Lütfen tekrar deneyin veya iletişim kanalımızdan bize ulaşın.
+26
+[Title] Ücret, ödeme ve kayıt koşulları
+[Lead] Web sitesindeki yayın yaklaşımı
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+[Lead] Kafka Sanat Akademisi eğitim programlarının ücretleri, taksit seçenekleri, peşin ödeme veya kardeş indirimleri ana web sitesinde yayınlanmaz.
+[Heading2] Kullanılacak kısa ifade
+[QuoteKafka] “Güncel ücret ve ödeme seçenekleri için başvuru yapabilirsiniz.”
+Ücret bilgisi, ilk görüşmede program uygunluğu kabaca netleşince paylaşılabilir. Kayıt, iptal ve ödeme koşulları kesin kayıt aşamasında açıklanır.
+[Heading2] Telafi
+Hastalık, uzun süreli geçerli mazeret veya kurum kaynaklı iptal gibi belirli durumlarda telafi değerlendirilebilir. Genel ve sınırsız telafi vaadi verilmez.
+[Heading2] İstisnalar
+[ListBullet] Kafka International: güncel ücret yalnız ilgili programın detay sayfasında yayınlanabilir.
+[ListBullet] Kafka Kostüm: fiyat katalogda yayınlanmaz; WhatsApp üzerinden paylaşılır.
+27
+[Title] İletişim
+[Lead] Şube ve alt yapı iletişimleri
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+Genel e-posta
+kafkaakademi@gmail.com
+Gaziantep telefon / WhatsApp
++90 505 614 47 67
+İzmir / Güzelbahçe telefon / WhatsApp
++90 537 240 17 73
+Kafka International / Kafka Kostüm
+Özlem Demireli · +90 536 433 43 08
+[Heading2] Gaziantep adresi
+Batıkent Mah., Adnan İnanıcı Cad., 09024 Nolu Sok., No: 10/D, Şehitkamil / Gaziantep
+[Heading2] İzmir / Güzelbahçe adresi
+Kafka Sanat Akademisi, Siteler Mah., Mithatpaşa Cad., 378. Sok., No: 5, Güzelbahçe / İzmir
+[Heading2] Sosyal medya
+Web sitesinde Instagram öncelikli sosyal kanal olarak gösterilir.
+Gaziantep ana
+@kafkasanatakademisi
+İzmir ana
+@kafkasanatakademisi.izmir
+Gaziantep Çocuk Tiyatrosu
+@gaziantepcocuktiyatrosu
+Gaziantep Gençlik Tiyatrosu
+@gaziantep.gencliktiyatrosu
+Güzelbahçe Çocuk Tiyatrosu
+@guzelbahcecocuktiyatrosu
+Kitap Kulübü
+@kafka.kitapkulubu
+Sinema Kulübü
+@kafka.sinemakulubu
+KAT
+@katiyatro
+Güzelbahçe atölye hesabı
+@kafkasanat.atolyee
+Kafka Kostüm
+@kafkakostum
+28
+[Title] Sık Sorulan Sorular
+[Lead] Web sitesi için hazır SSS metinleri
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+[Heading3] Kafka yalnızca tiyatro eğitimi mi veriyor?
+Hayır. Tiyatro Kafka’nın güçlü alanlarından biri; ancak okul öncesinden yetişkinlere uzanan farklı sanat programlarımız, GGT Lab, çocuk koroları, bağımsız sanat programları, yetişkin atölyeleri, Kafka International ve Kafka Kostüm gibi farklı yapılarımız da bulunuyor.
+[Heading3] Programların hepsine doğrudan kayıt olabilir miyim?
+Kafka Sanat Akademisi’nin eğitim programlarında kesin kayıt öncesinde tanışma yapıyoruz. Amacımız sınamak değil; öğrencinin veya katılımcının doğru programla buluşmasını sağlamak.
+[Heading3] Tanışma bir sınav mı?
+Hayır. Amaç sınamak değil tanımaktır. Tanışma biçimi yaşa ve programa göre değişebilir.
+[Heading3] Ücretleri neden sitede göremiyorum?
+Kafka Sanat Akademisi eğitim programlarının güncel ücret ve ödeme koşullarını, ilk görüşmede program uygunluğu kabaca netleştikten sonra paylaşıyoruz. Kafka International’ın belirli programlarında güncel ücret ilgili program sayfasında yayınlanabilir.
+[Heading3] Sanata İlk Adım kaç yaş için?
+Okul öncesi 4–6 yaş için tasarlanmıştır.
+[Heading3] Sanata İlk Adım’da sahne var mı?
+Programın amacı sahne değil; oyun, ifade, hayal gücü, grup deneyimi ve gelişimdir. Dönemsel paylaşım biçimleri grubun yapısına göre planlanabilir.
+[Heading3] GÇT kimler için?
+İlkokul ve ortaokul öğrencileri için. 2026–27 güncel yapıda İlkokul 2.–4. sınıf, Ortaokul 5.–8. sınıf grupları bulunur. 1. sınıflar öncelikle Yaratıcı Drama’ya yönlendirilir.
+[Heading3] GÇT’nin birinci yılında oyun çıkarılıyor mu?
+Birinci yıl Eğitim Yılı’dır. Büyük prodüksiyon hedeflenmez. Açık ders ve kısa sınıf içi paylaşımlar yapılabilir.
+[Heading3] Üretim Yılı’nda herkes oyuncu mu?
+Her öğrenci prodüksiyonun parçasıdır; katkısı oyunculuk, yazı, sahne arkası veya başka bir üretim görevi olabilir.
+[Heading3] Tirat Geceleri nedir?
+Üretim Yılı’nda öğrencinin tek başına sorumluluk aldığı Bireysel Performanslar alanıdır.
+[Heading3] GGT Lab kimler için?
+Lise öğrencileri için tasarlanmış Performans, İçerik ve Prodüksiyon odaklı üretim laboratuvarıdır.
+[Heading3] GGT Lab’de herkes oyuncu olmak zorunda mı?
+Hayır. Yazı, yönetim, kamera, kurgu, prodüksiyon ve sahne gibi farklı roller vardır.
+[Heading3] Sahne Modu nedir?
+Sahne Modu, GGT Lab içinden oluşan ve yoğun tiyatro prodüksiyonu isteyen katılımcılar için isteğe bağlı sahne hattıdır.
+[Heading3] GGT Lab’e katılan herkes Sahne Modu’na katılmak zorunda mı?
+Hayır.
+[Heading3] KAT nedir?
+Kafka Akademi Tiyatrosu, yetişkinler için eğitim, topluluk ve sahne üretimini bir araya getiren; Kafka bünyesinde kendi yönetim yapısına sahip tiyatro oluşumudur.
+[Heading3] Kafka International yalnız Kafka öğrencilerine mi açık?
+Hayır. Programlar herkese açıktır. Kafka öğrencilerine özel indirim uygulanır.
+[Heading3] Kafka International yalnız çocuklara mı yönelik?
+Hayır. Programın yapısına göre çocuklar, gençler ve yetişkinler için uluslararası programlar düzenlenebilir.
+[Heading3] Kafka Kostüm yalnız İzmir’e mi hizmet veriyor?
+Hayır. Operasyon merkezi Güzelbahçe’de olsa da farklı şehirlerden gelen taleplere kargo dahil uygun teslimat çözümleriyle yardımcı olunabilir.
+[Heading3] Kafka Kostüm’de fiyatlar neden katalogda yok?
+Ürün, adet, kiralama veya özel sipariş türüne göre koşullar değişebildiği için güncel fiyat bilgisi WhatsApp üzerinden paylaşılır.
+29
+[Title] Footer ve yardımcı sayfalar
+[Lead] Alt menü, yasal bağlantılar ve CTA sistemi
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+[Heading2] Footer metni
+KAFKA SANAT AKADEMİSİDüşün. İfade et. Üret.
+Programlar
+Okul Öncesi · Çocuklar · Gençler · Yetişkinler
+Kafka
+Yaklaşımımız · Öğrenci Yolculuğu · Ürettiklerimiz · Hikayemiz · Şubeler · Sosyal Sorumluluk
+Diğer yapılar
+Kafka International · Kafka Kostüm
+Ulaşın
+Gaziantep · İzmir · İletişim · Başvuru Yap
+Yasal
+KVKK · Gizlilik · Çerez · Fotoğraf / Video İzin Politikaları
+E-posta
+kafkaakademi@gmail.com
+[Heading2] CTA sistemi
+Ana eğitim CTA
+Başvuru Yap
+Program keşfi
+Programı İncele · Programları Keşfet
+Derin içerik
+Yaklaşımımızı Oku · Öğrenci Yolculuğunu Gör
+Üretim
+Üretimleri Keşfet
+İletişim
+Bize Ulaşın
+Kafka International
+WhatsApp’tan Bilgi Al
+Kafka Kostüm
+WhatsApp’tan Sor · Kataloğu İncele
+[Heading2] Yasal yayın notu
+KVKK, gizlilik, çerez ve fotoğraf / video izin metinleri site yayına alınmadan önce kurumun güncel uygulamasına ve hukuki gerekliliklere göre ayrıca doğrulanmalıdır.
+30
+[Title] Fotoğraf, video ve öğrenci görünürlüğü
+[Lead] İzin ve yayın yaklaşımı
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+[ListBullet] Kayıt sırasında genel fotoğraf / video tercih izni alınır.
+[ListBullet] Öne çıkan, özel veya geniş kullanımlı yayınlarda ayrıca onay alınır.
+[ListBullet] Çocuk üretimlerinde izin varsa varsayılan görünürlük ad + yaş / program biçimindedir.
+[ListBullet] Soyad varsayılan olarak kullanılmaz.
+[ListBullet] Veli ve öğrenci yorumları yalnız gerçek, doğrulanmış ve izinli ise yayınlanır.
+[ListBullet] Öğrencilerin ağzına pazarlama cümlesi yazılmaz; gerçek ifadeler korunur.
+31
+[Title] Görsel kimlik ve tasarım brief’i
+[Lead] Çağdaş kültür-sanat kurumu hissi
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+[Heading2] Genel karakter
+[Lead] Çağdaş kültür-sanat kurumu. Çocukça değil; soğuk da değil.
+[Heading2] İstenen
+[ListBullet] Güçlü tipografi
+[ListBullet] Bol negatif alan
+[ListBullet] Gerçek fotoğraf
+[ListBullet] Sıcak ama rafine dil
+[ListBullet] Kurumsal güven
+[ListBullet] Kültür kurumu hissi
+[ListBullet] Programlar arasında kontrollü karakter farkı
+[Heading2] Fotoğraf yaklaşımı
+[ListBullet] Gerçek Kafka öğrencileri ve üretimleri
+[ListBullet] Doğal çalışma anları
+[ListBullet] Düşünme, yazma, prova, kamera, hareket ve sahne süreçleri
+[ListBullet] Programın ruhunu anlatan yakın ve orta planlar
+[Heading2] Program görsel karakterleri
+Sanata İlk Adım
+Yumuşak, sıcak, oyun ve hareket
+GÇT
+Canlı, yaratıcı, düşünce + grup + sahne
+GGT Lab
+Genç, dijital, sinematik, dinamik
+Sahne Modu
+Prova, sahne gerilimi, gerçek prodüksiyon
+KAT
+Olgun, tiyatral, yetişkin, topluluk
+Kafka International
+Dünya, şehir, sanat merkezi, hareket ve uluslararası deneyim
+Kafka Kostüm
+Doku, kumaş, hareket, çocuk sahnesi, detay, kültür ve performans
+Kafka kurumsal
+Sakin, güvenilir, çağdaş kültür kurumu
+[Heading2] Logo
+Mevcut Kafka logosunun ana kimliği korunur. Web için gerektiğinde sadeleştirilmiş / modernize edilmiş kullanım varyasyonu hazırlanabilir; marka başka bir kimliğe dönüştürülmez.
+32
+[Title] Fotoğraf / video çekim listesi
+[Lead] Site prodüksiyonu için önerilen içerik ihtiyaçları
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+[Heading3] Hero
+[ListBullet] 8–12 saniye yatay sessiz video
+[ListBullet] En az 6 farklı an: düşünme, yazı, hareket, kamera, prova, sahne
+[Heading3] Sanata İlk Adım
+[ListBullet] Doğal grup oyunu
+[ListBullet] Hareket
+[ListBullet] Hikaye
+[ListBullet] Eğitmenin çocukla aynı seviyede etkileşimi
+[ListBullet] 12–15 doğal fotoğraf
+[ListBullet] 3 kısa dikey video
+[Heading3] GÇT Eğitim Yılı
+[ListBullet] Yaratıcı drama
+[ListBullet] Felsefe çemberi
+[ListBullet] Yazı
+[ListBullet] Yaratıcı Keşifler
+[ListBullet] Şan
+[ListBullet] Dans
+[ListBullet] Tiyatro
+[Heading3] GÇT Üretim Yılı
+[ListBullet] Masa başı
+[ListBullet] Prova
+[ListBullet] Tirat
+[ListBullet] Sahne arkası
+[ListBullet] Teknik süreç
+[ListBullet] Final
+[Heading3] GGT Lab
+[ListBullet] Kamera
+[ListBullet] Işık
+[ListBullet] Senaryo
+[ListBullet] Yazı
+[ListBullet] Performans
+[ListBullet] Kurgu ekranı
+[ListBullet] Ekip çalışması
+[ListBullet] Set
+[Heading3] Sahne Modu
+[ListBullet] Masa başı
+[ListBullet] Blokaj
+[ListBullet] Farklı prova evreleri
+[ListBullet] Kulis
+[ListBullet] Teknik prova
+[ListBullet] Final oyun
+[Heading3] KAT
+[ListBullet] Eğitim grubu
+[ListBullet] Masa başı
+[ListBullet] Ensemble
+[ListBullet] Prova
+[ListBullet] Sahne
+[ListBullet] Kulis
+[ListBullet] Topluluk hissi
+[Heading3] Çocuk Korosu
+[ListBullet] Prova
+[ListBullet] Toplu nefes / ses
+[ListBullet] Birlikte çalışma
+[Heading3] Kurucular
+[ListBullet] Ayrı portreler
+[ListBullet] Birlikte doğal çalışma fotoğrafı
+[Heading3] Şubeler
+[ListBullet] Dış cephe
+[ListBullet] Giriş
+[ListBullet] Ana çalışma alanları
+[ListBullet] Mekan atmosferi
+[Heading3] Kafka International
+[ListBullet] Gerçek uluslararası program görüntüleri
+[ListBullet] Şehir / sanat kurumu / atölye / performans deneyimi
+[ListBullet] Turistik pozdan çok aktif deneyim
+[Heading3] Kafka Kostüm
+[ListBullet] Kostüm detayları
+[ListBullet] Kumaş
+[ListBullet] Hareket halinde kostüm
+[ListBullet] Farklı koleksiyonlar
+[ListBullet] Sahne ışığında görünüm
+[ListBullet] Katalog için temiz ürün çekimleri
+33
+[Title] SEO başlıkları ve meta açıklamalar
+[Lead] Sayfa bazında başlangıç seti
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+[Heading3] Ana Sayfa
+Title
+Kafka Sanat Akademisi | Gaziantep & İzmir
+Meta
+Sanat, düşünce ve üretimi bir araya getiren disiplinlerarası programlar. Okul öncesi, çocuklar, gençler ve yetişkinler için Kafka Sanat Akademisi.
+[Heading3] Yaklaşımımız
+Title
+Kafka Eğitim Yaklaşımı | Kafka Sanat Akademisi
+Meta
+Düşünme, ifade etme, üretim, güvenli grup, süreç ve sahne yaklaşımımızı keşfedin.
+[Heading3] Okul Öncesi
+Title
+Okul Öncesi Sanat Programları | Kafka Sanat Akademisi
+Meta
+4–6 yaş Sanata İlk Adım ve dönemsel okul öncesi sanat atölyeleri.
+[Heading3] Sanata İlk Adım
+Title
+Sanata İlk Adım | 4–6 Yaş Yaratıcı Drama Programı
+Meta
+Okul öncesi 4–6 yaş için Yaratıcı Drama merkezli oyun, hareket, hikaye ve ifade programı.
+[Heading3] GÇT
+Title
+Çocuk Tiyatrosu | GÇT | Kafka Sanat Akademisi
+Meta
+İlkokul ve ortaokul öğrencileri için yaratıcı drama, felsefe, yazarlık, ses, beden ve tiyatroyu birleştiren çocuk tiyatrosu modeli.
+[Heading3] GGT Lab
+Title
+GGT Lab | Gençlik Üretim Laboratuvarı | Kafka
+Meta
+Lise öğrencileri için Performans, İçerik ve Prodüksiyonu bir araya getiren üretim laboratuvarı.
+[Heading3] KAT
+Title
+Kafka Akademi Tiyatrosu | Yetişkin Tiyatro Programı
+Meta
+Yetişkinler için düzenli eğitim, topluluk ve sahne üretimini bir araya getiren Kafka Akademi Tiyatrosu.
+[Heading3] Yetişkinler
+Title
+Yetişkin Sanat Programları | Kafka Sanat Akademisi
+Meta
+Kafka Akademi Tiyatrosu, yetişkin atölyeleri, Kitap Kulübü, Sinema Kulübü ve dönemsel sanat programları.
+[Heading3] Kafka International
+Title
+Kafka International | Türkiye’den Dünya Sahnelerine
+Meta
+Çocuklar, gençler ve yetişkinler için sanat, kültür ve uluslararası deneyimi bir araya getiren uluslararası gelişim programları.
+[Heading3] Kafka Kostüm
+Title
+Kafka Kostüm | Çocuk Sahne Kostümleri
+Meta
+Yöresel dans, modern dans, bale, tiyatro ve okul gösterileri için çocuk sahne kostümleri, kiralama ve özel sipariş seçenekleri.
+[Heading3] Ürettiklerimiz
+Title
+Ürettiklerimiz | Kafka Sanat Akademisi
+Meta
+Oyunlar, tiratlar, öğrenci yazıları, dijital üretimler ve seçilmiş süreç arşivi.
+[Heading3] Başvuru
+Title
+Başvuru Yap | Kafka Sanat Akademisi
+Meta
+Kısa başvurunuzu gönderin; ekibimiz 1 iş günü içinde sizinle iletişime geçsin ve doğru programı birlikte değerlendirelim.
+34
+[Title] CMS ve dinamik içerik modeli
+[Lead] Siteyi her dönem yeniden yazmadan güncellemek için
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+[Lead] Gün, saat, eğitmen, kontenjan, aktiflik ve dönem gibi değişken bilgiler ana metnin içine gömülmemeli; program kayıtlarından yönetilmelidir.
+[Heading2] Her program kaydında önerilen alanlar
+[ListBullet] Program adı
+[ListBullet] Uzun ad
+[ListBullet] Kısa ad / kısaltma
+[ListBullet] Yaş çatısı
+[ListBullet] Şube
+[ListBullet] Durum
+[ListBullet] Yaş / sınıf
+[ListBullet] Gün
+[ListBullet] Saat
+[ListBullet] Haftalık süre
+[ListBullet] Program süresi
+[ListBullet] Kontenjan
+[ListBullet] Sorumlu / eğitmen
+[ListBullet] Kısa tanım
+[ListBullet] Ana sayfa görünürlük seviyesi
+[ListBullet] CTA tipi
+[ListBullet] Başvuru linki
+[ListBullet] Görsel
+[ListBullet] SEO title
+[ListBullet] Meta description
+[Heading2] Program durumları
+[ListBullet] Başvurular Açık
+[ListBullet] Dolu
+[ListBullet] Bekleme Listesi
+[ListBullet] Yakında
+[ListBullet] Bu Şubede Açık Değil
+[Heading2] Dinamik tutulması gereken başlıca alanlar
+[ListBullet] Kesin gün / saat
+[ListBullet] Dönemsel eğitmen
+[ListBullet] Kontenjan
+[ListBullet] Program aktifliği
+[ListBullet] Kesin sınıf sınırı gerektiğinde
+[ListBullet] Değişebilen program süresi
+[ListBullet] International program tarihleri
+[ListBullet] Yetişkin atölyeleri
+[ListBullet] Koro grup yapısı
+35
+[Title] 2026–27 güncel operasyon özeti
+[Lead] Site bilgi kartlarına girilebilecek mevcut plan
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+Sanata İlk Adım — Gaziantep
+1 hafta içi + 1 hafta sonu grup · kesin gün/saat dönemsel
+Sanata İlk Adım — Güzelbahçe
+1 hafta içi + 1 hafta sonu grup · kesin gün/saat dönemsel
+GÇT Eğitim Yılı
+Her iki şube Cumartesi · İlkokul öğleden önce · Ortaokul öğleden sonra
+GÇT Üretim Yılı
+Her iki şube Pazar · öğle saatleri civarı · prova ihtiyacına göre esnek
+GGT Lab
+Her iki şube Çarşamba · okul çıkışı sonrası / akşam · kesin saat ekip oluşunca
+Sahne Modu
+GGT Lab grubu içinden oluşturulur · gün/saat ekip ve prodüksiyon planına göre
+KAT eğitim grupları
+Haftada 2 gün
+KAT prodüksiyon provaları
+Yapım ihtiyacına göre esnek; dönemsel olarak çok sık veya seyrek olabilir
+Çocuk Korosu
+Yaş/sınıf ve grup yapısı başvuru profiline göre dönemsel
+Bağımsız programlar
+Genellikle dönemlik; kesin gün/saat ve yaş grubu dönemsel
+36
+[Title] Yayın öncesi kontrol listesi
+[Lead] Nihai uygulama doğrulaması
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+☐ Hero metni “Düşün. İfade et. Üret.” olarak görünür.
+☐ Ana CTA “Başvuru Yap”dır.
+☐ Programların ana çatısı Okul Öncesi / Çocuklar / Gençler / Yetişkinlerdir.
+☐ GÇT ve GGT Lab iki şubede aynı kısaltmalarla kullanılır; uzun ad ilk kullanımda şehir bağlamına göre yazılır.
+☐ Sanata İlk Adım Okul Öncesi sayfasının tek sabit ana programıdır.
+☐ Çocuklar sayfasında GÇT ilk sıradadır.
+☐ Gençler sayfasında GGT Lab ilk sıradadır.
+☐ Yetişkinler sayfasında Kafka Akademi Tiyatrosu ilk ve en güçlü yapıdır.
+☐ Sahne Modu, GGT Lab detay sayfasında isteğe bağlı prodüksiyon hattı olarak anlatılır.
+☐ Kafka International ana sayfada kendi adı ve kısa tanımıyla görünür.
+☐ Kafka Kostüm ana sayfada kendi adı ve kısa tanımıyla görünür.
+☐ Kafka International hedef kitlesi çocuklar, gençler ve yetişkinlerdir.
+☐ Kafka Kostüm koleksiyon, kiralama, toplu ve özel sipariş yapısını birlikte anlatır.
+☐ Kafka International ve Kafka Kostüm iletişimi Özlem Demireli / +90 536 433 43 08 üzerinden ilerler.
+☐ Genel e-posta kafkaakademi@gmail.com olarak görünür.
+☐ Gaziantep ve İzmir telefon / adres bilgileri doğru girilmiştir.
+☐ Kurucu unvanları doğru yazılmıştır.
+☐ Çocuk ve gençlik programlarında her dönem 1 Gelişim Özeti ve 1 veli görüşmesi bilgisi yer alır.
+☐ GGT Lab program sonu çıktısı Üretim Portfolyosu olarak yazılır.
+☐ KAT her iki şubede aktif ve haftada 2 gün eğitim grubu yapısıyla anlatılır.
+☐ Çocuk Korosu yaş grubu dönemsel olarak yönetilir.
+☐ Yaratıcı Drama İlkokul ve Ortaokul ayrı gruplar olarak gösterilir.
+☐ İngilizce Konuşma Kulübü İlkokul / Ortaokul / Lise olarak ayrılır.
+☐ Kitap ve Sinema Kulübü Yetişkinler altında yer alır.
+☐ Ahşap Oyma Atölyesi Güzelbahçe / Yetişkinler altında yer alır.
+☐ Kafka Sanat Akademisi eğitim programlarının ücretleri ana sitede yayınlanmaz.
+☐ 2017 kuruluş yılı ve iki şehir yapısı ana sayfanın ilk bölümlerinde anlaşılır.
+☐ Gerçek Kafka fotoğraf ve videoları kullanılır.
+☐ Başvuru formu, WhatsApp yönlendirmeleri ve harita bağlantıları mobilde test edilir.
+☐ KVKK, gizlilik, çerez ve fotoğraf/video izin metinleri yayın öncesi hukuki kontrolden geçer.
+37
+[Title] Son söz
+[Lead] Sitenin anlatması gereken Kafka
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+[Lead] Bu sitenin amacı Kafka’yı yalnız “hangi kurslar var?” sorusuna cevap veren bir kurs kataloğu olarak göstermek değildir.
+[ListBullet] Kafka’nın nasıl düşündüğünü
+[ListBullet] Çocuk ve genç gelişimine nasıl yaklaştığını
+[ListBullet] Farklı yaşlara neden farklı programlar tasarladığını
+[ListBullet] Eğitimden üretime nasıl ilerlediğini
+[ListBullet] İki şehirde nasıl aynı temel sistemi koruduğunu
+[ListBullet] Kafka Akademi Tiyatrosu, Kafka International ve Kafka Kostüm gibi ayrı yapılarla nasıl genişlediğini
+[ListBullet] Neyi neden yaptığını
+[Lead] İlk izlenim:
+[QuoteKafka] “Burada çok program var.” değil,
+[QuoteKafka] “Burada düşünülmüş, büyümüş ve kendi sistemini kurmuş bir kurum var.”

@@ -1,0 +1,153 @@
+{
+  "ad": "GGT Lab",
+  "uzunAd": "Gaziantep / Güzelbahçe Gençlik Tiyatrosu",
+  "kisaltma": "GGT Lab",
+  "ustBaslik": "Performans · İçerik · Prodüksiyon",
+  "yerlesim": [
+    {
+      "yasCatisi": "gencler",
+      "sira": 1
+    }
+  ],
+  "format": "laboratuvar",
+  "amiral": true,
+  "anaSayfaGorunurluk": "amiral",
+  "kisaTanim": "Lise öğrencileri için Performans · İçerik · Prodüksiyon ekseninde üretim laboratuvarı.",
+  "girisMetni": "GGT Lab, lise öğrencilerini tiyatro, düşünsel içerik ve dijital prodüksiyonun kesişiminde buluşturan bir üretim laboratuvarıdır.",
+  "ctaTipi": "basvuru",
+  "gorselKarakteri": "Genç, dijital, sinematik, dinamik",
+  "gorselAlt": "GGT Lab ekibi kamera ve ışık kurulumu üzerinde çalışıyor",
+  "teklifler": [
+    {
+      "sube": "gaziantep",
+      "durum": "basvurular-acik",
+      "gun": "Çarşamba",
+      "saat": "Okul çıkışı sonrası / akşam · kesin saat ekip buluştuktan sonra belirlenir",
+      "yasSinif": "Lise",
+      "programSuresi": "20 hafta / 40 ders"
+    },
+    {
+      "sube": "izmir",
+      "durum": "basvurular-acik",
+      "gun": "Çarşamba",
+      "saat": "Okul çıkışı sonrası / akşam · kesin saat ekip buluştuktan sonra belirlenir",
+      "yasSinif": "Lise",
+      "programSuresi": "20 hafta / 40 ders"
+    }
+  ],
+  "bolumler": [
+    {
+      "tip": "alinti",
+      "metin": "TÜKETMEK YERİNE ÜRETMEK.",
+      "altMetin": "GGT Lab, lise öğrencilerini tiyatro, düşünsel içerik ve dijital prodüksiyonun kesişiminde buluşturan bir üretim laboratuvarıdır."
+    },
+    {
+      "tip": "metin",
+      "baslik": "Ekranın yalnızca karşısında kalma",
+      "paragraflar": [
+        "Bugün gençler video, film, sosyal medya ve dijital hikayelerle sürekli karşılaşıyor. Programın amacı teknolojiyi yasaklamak değil; gençlerin onun yalnızca tüketicisi olmaktan çıkıp üretim araçlarını da öğrenmesi."
+      ]
+    },
+    {
+      "tip": "kartlar",
+      "baslik": "Üç ana eksen",
+      "kartlar": [
+        {
+          "baslik": "Performans",
+          "metin": "Beden, sahne farkındalığı, oyunculuk, doğaçlama ve topluluk önünde ifade."
+        },
+        {
+          "baslik": "İçerik",
+          "metin": "Felsefi sorgulama, metin analizi, hikaye, senaryo ve yazılı üretim."
+        },
+        {
+          "baslik": "Prodüksiyon",
+          "metin": "Kamera, ışık, kurgu, set, dijital anlatı ve proje üretimi."
+        }
+      ],
+      "kapanis": "Bu üç eksen programın sabit yapısıdır. Alan sorumluları dönemden döneme ve şubeden şubeye değişebilir; yapı kişi isimlerinden bağımsız kurulur."
+    },
+    {
+      "tip": "metin",
+      "baslik": "Tek bir yıldızlık biçimi yok",
+      "paragraflar": [
+        "Her genç sahnede olmak zorunda değildir. Bazısı yazarken, yönetirken, kameranın arkasında, kurguda veya sahnede kendini bulur. Teknik ve yaratıcı arka plan rolleri ikinci sınıf işler değildir; üretimin gerçek parçalarıdır."
+      ]
+    },
+    {
+      "tip": "metin",
+      "baslik": "Güvenli üretim alanı",
+      "paragraflar": [
+        "Bir fikir ilk denemede iyi olmak zorunda değildir. Bir sahne çalışmayabilir. Bir senaryo değişebilir. Bir çekim tekrar yapılabilir. Hata yapmak programın dışında değil; üretimin içindedir."
+      ]
+    },
+    {
+      "tip": "metin",
+      "baslik": "Somut Üretim Çıktıları",
+      "paragraflar": [
+        "Program öğrencilerin süreç boyunca gerçek işler üretmesini hedefler. Her öğrencinin çıktısı aynı olmak zorunda değildir."
+      ]
+    },
+    {
+      "tip": "metin",
+      "baslik": "Üretim Portfolyosu",
+      "paragraflar": [
+        "GGT Lab kendi başına tamamlanan bir programdır. Program sonunda öğrencinin sürecini, görevlerini ve seçilmiş üretimlerini görünür kılan Üretim Portfolyosu oluşturulur."
+      ]
+    },
+    {
+      "tip": "metin",
+      "baslik": "Telefon düşmanımız değil",
+      "paragraflar": [
+        "Performans veya içerik çalışmasında dikkat dağıtıcı olduğunda telefon sınırlandırılabilir. Prodüksiyon sırasında ise kamera, ses kayıt cihazı, araştırma veya üretim aracı haline gelebilir. Mesele teknolojiyle ilişkiyi kesmek değil; pasif kullanımdan aktif üretime çevirmektir."
+      ]
+    },
+    {
+      "tip": "liste",
+      "baslik": "2026–27 gün planı",
+      "maddeler": [
+        "İki şubede de Çarşamba",
+        "Okul çıkışı sonrası / akşam",
+        "Kesin saat ekip buluştuktan sonra belirlenir"
+      ]
+    },
+    {
+      "tip": "not",
+      "baslik": "Program bilgisi",
+      "metin": "GGT Lab'in dönem süresi, toplam ders saati, haftalık dakika ve kontenjanı dönemsel bilgi kartında yönetilir. Mevcut plan 20 hafta / 40 derslik yapı üzerinden ilerlemektedir."
+    },
+    {
+      "tip": "alinti",
+      "metin": "SAHNE MODU — BİR OYUNU GERÇEKTEN KURMAK İSTEYENLER İÇİN.",
+      "altMetin": "Sahne Modu, GGT Lab içinden oluşan ve tiyatro prodüksiyonuna daha yoğun girmek isteyen katılımcıların gerçek bir oyun üretme sürecine katıldığı isteğe bağlı sahne hattıdır. GGT Lab'e katılan herkesin Sahne Modu'na katılması gerekmez."
+    },
+    {
+      "tip": "liste",
+      "baslik": "Sahne Modu — odak",
+      "maddeler": [
+        "Metin ve masa başı çalışmaları",
+        "Rol ve karakter",
+        "Blokaj ve mizansen",
+        "Yoğun prova",
+        "Teknik süreç",
+        "Final prodüksiyonu"
+      ]
+    },
+    {
+      "tip": "metin",
+      "baslik": "Sahne Modu — devam disiplini",
+      "paragraflar": [
+        "Sahne Modu'nun devam disiplini GGT Lab'e göre daha sıkıdır. Çünkü gerçek prodüksiyon, ekip ve prova sürekliliği gerektirir."
+      ]
+    },
+    {
+      "tip": "not",
+      "baslik": "Sahne Modu — gün / saat",
+      "metin": "Gün ve saat önceden sabitlenmez. Grup GGT Lab içinden oluştuktan sonra katılımcı uygunluğu, prova ihtiyacı ve prodüksiyon planı üzerinden belirlenir."
+    }
+  ],
+  "seo": {
+    "title": "GGT Lab | Gençlik Üretim Laboratuvarı | Kafka",
+    "description": "Lise öğrencileri için Performans, İçerik ve Prodüksiyonu bir araya getiren üretim laboratuvarı."
+  }
+}

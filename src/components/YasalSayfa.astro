@@ -1,0 +1,55 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SayfaBasligi from '@/components/SayfaBasligi.astro';
+import Bolum from '@/components/Bolum.astro';
+import Buton from '@/components/Buton.astro';
+import { site, cta } from '@/data/site';
+
+interface Props {
+  baslik: string;
+  ozet: string;
+  kapsam: string[];
+  seo: { title: string; description: string };
+}
+const { baslik, ozet, kapsam, seo } = Astro.props;
+---
+
+<BaseLayout title={seo.title} description={seo.description} noindex>
+  <SayfaBasligi ustBaslik="Yasal" baslik={baslik} girisMetni={ozet} />
+
+  <Bolum bosluk="genis">
+    <div class="u-measure-wide">
+      <div class="border-l-4 border-accent pl-6">
+        <p class="u-eyebrow mb-3">Bu metin yayın öncesi hukuki kontrolden geçecek</p>
+        <p class="text-govde leading-relaxed text-body">
+          Bu sayfanın nihai metni, kurumun güncel uygulamasına ve yürürlükteki hukuki
+          gerekliliklere göre hazırlanıp onaylandıktan sonra yayınlanacaktır. Aşağıda
+          metnin kapsaması gereken başlıklar yer alıyor.
+        </p>
+      </div>
+
+      <h2 class="mt-14 font-display text-baslik font-bold tracking-[-0.025em] text-ink">
+        Metnin kapsaması gerekenler
+      </h2>
+      <ul class="mt-6 flex flex-col">
+        {
+          kapsam.map((k) => (
+            <li class="flex gap-4 border-t border-line py-4 text-govde leading-relaxed text-body last:border-b">
+              <span class="shrink-0 pt-[0.15em] font-display text-[0.8rem] font-bold text-accent-text" aria-hidden="true">—</span>
+              <span>{k}</span>
+            </li>
+          ))
+        }
+      </ul>
+
+      <p class="mt-10 text-govde leading-relaxed text-muted">
+        Bu konudaki sorularınız için
+        <a href={`mailto:${site.eposta}`} class="inline-flex min-h-11 items-center font-semibold text-ink underline decoration-accent decoration-2 underline-offset-4">
+          {site.eposta}
+        </a>
+        adresinden bize ulaşabilirsiniz.
+      </p>
+      <Buton href="/iletisim" etiket={cta.bizeUlasin} tur="ikincil" class="mt-8" />
+    </div>
+  </Bolum>
+</BaseLayout>

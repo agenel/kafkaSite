@@ -1,0 +1,141 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SayfaBasligi from '@/components/SayfaBasligi.astro';
+import Bolum from '@/components/Bolum.astro';
+import ProgramKarti from '@/components/ProgramKarti.astro';
+import Buton from '@/components/Buton.astro';
+import { cta, waLink, telLink, instagramUrl, yasCatilari } from '@/data/site';
+import { subedekiProgramlar, programYolu } from '@/lib/programlar';
+
+export const getStaticPaths = (async () => {
+  const subeler = await getCollection('subeler');
+  return subeler.map((s) => ({ params: { sube: s.data.kod }, props: { sube: s } }));
+}) satisfies GetStaticPaths;
+
+const { sube } = Astro.props;
+const d = sube.data;
+
+const programlar = await subedekiProgramlar(d.kod);
+
+// Programları yaş çatısına göre grupla — §20'deki envanterin sayfa karşılığı.
+const gruplar = yasCatilari
+  .map((c) => ({
+    ...c,
+    programlar: programlar.filter((p) => p.data.yerlesim.some((y) => y.yasCatisi === c.kod)),
+  }))
+  .filter((g) => g.programlar.length > 0);
+
+const subedekiDurum = (p: (typeof programlar)[number]) =>
+  p.data.teklifler.filter((t) => t.sube === d.kod).map((t) => t.durum);
+
+const waMesaj = `Merhaba, ${d.ad} programları hakkında bilgi almak istiyorum.`;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': `https://kafkasanatakademisi.com/${d.kod}`,
+  name: d.ad,
+  description: d.tanim,
+  telephone: d.telefon,
+  address: { '@type': 'PostalAddress', streetAddress: d.adres, addressCountry: 'TR' },
+  parentOrganization: { '@type': 'EducationalOrganization', name: 'Kafka Sanat Akademisi' },
+  sameAs: [instagramUrl(d.instagram)],
+};
+---
+
+<BaseLayout title={d.seo.title} description={d.seo.description} jsonLd={jsonLd}>
+  <SayfaBasligi ustBaslik="Şube" baslik={d.ad} girisMetni={d.tanim} />
+
+  <Bolum zemin="cukur" bosluk="normal" etiketleyen="iletisim-bilgileri">
+    <h2 id="iletisim-bilgileri" class="u-eyebrow">İletişim ve adres</h2>
+    <dl class="mt-7 grid gap-x-10 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <dt class="u-eyebrow">Telefon / WhatsApp</dt>
+        <dd class="mt-2">
+          <a href={telLink(d.telefon)} class="inline-flex min-h-11 items-center font-display text-buyuk font-semibold text-ink hover:text-accent">
+            {d.telefon}
+          </a>
+        </dd>
+      </div>
+      <div class="sm:col-span-2">
+        <dt class="u-eyebrow">Adres</dt>
+        <dd class="mt-2 text-govde leading-relaxed text-body">{d.adres}</dd>
+      </div>
+      <div>
+        <dt class="u-eyebrow">Şube sorumlusu</dt>
+        <dd class="mt-2 text-govde leading-relaxed text-body">
+          {d.sorumlu.ad}<br />
+          <span class="text-kucuk text-muted">{d.sorumlu.unvan}</span>
+        </dd>
+      </div>
+    </dl>
+    <div class="mt-9 flex flex-wrap gap-4">
+      <Buton href={waLink(d.telefon, waMesaj)} etiket={cta.whatsappBilgi} disBaglanti />
+      <Buton href="/basvuru" etiket={cta.basvuru} tur="ikincil" />
+      {d.haritaUrl && <Buton href={d.haritaUrl} etiket="Haritada Aç" tur="sade" disBaglanti />}
+    </div>
+    {
+      !d.haritaUrl && (
+        <p class="mt-6 border-l-2 border-accent pl-5 text-kucuk leading-relaxed text-muted">
+          Harita bağlantısı yayın öncesinde eklenecek.
+        </p>
+      )
+    }
+  </Bolum>
+
+  <Bolum bosluk="genis" etiketleyen="sube-programlari">
+    <h2 id="sube-programlari" class="font-display text-baslik-lg font-bold tracking-[-0.025em] text-ink">
+      Bu şubede açık programlar
+    </h2>
+    <p class="u-measure-wide mt-4 text-govde leading-relaxed text-muted">
+      Aktif programlar, güncel gün ve saatler dönemsel olarak güncellenir.
+    </p>
+    {
+      gruplar.map((g) => (
+        <div class="mt-14">
+          <h3 class="border-b-2 border-ink pb-4 font-display text-baslik font-bold uppercase tracking-[-0.02em] text-ink">
+            {g.etiket}
+          </h3>
+          <ul class="mt-8 grid gap-x-12 gap-y-9 md:grid-cols-2">
+            {g.programlar.map((p) => (
+              <li>
+                <ProgramKarti
+                  href={programYolu(p.id)}
+                  ad={p.data.ad}
+                  kisaTanim={p.data.kisaTanim}
+                  amiral={p.data.amiral}
+                  durumlar={subedekiDurum(p)}
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </Bolum>
+
+  <Bolum zemin="murekkep" bosluk="normal" etiketleyen="sube-sosyal">
+    <h2 id="sube-sosyal" class="u-eyebrow text-on-ink-muted">Sosyal hesaplar</h2>
+    <ul class="mt-6 flex flex-wrap gap-x-8 gap-y-3">
+      {
+        [{ etiket: 'Ana hesap', hesap: d.instagram }, ...d.ekInstagram].map((h) => (
+          <li>
+            <a
+              href={instagramUrl(h.hesap)}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex min-h-11 flex-col justify-center text-on-ink transition-colors hover:text-accent-on-dark"
+            >
+              <span class="text-[0.75rem] uppercase tracking-[0.12em] text-on-ink-muted">
+                {h.etiket}
+              </span>
+              <span class="font-display text-govde font-semibold">@{h.hesap}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </Bolum>
+</BaseLayout>

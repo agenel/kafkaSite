@@ -1,0 +1,498 @@
+# Kafka Sanat Akademisi — Sveltia CMS
+# Bu dosya src/content.config.ts şemasının aynasıdır.
+# Şemada bir alan değişirse burada da değişmelidir; aksi halde build hata verir.
+
+backend:
+  name: github
+  repo: KULLANICI/kafkaSite        # ← GitHub kullanıcı/repo adıyla değiştirin
+  branch: main
+  base_url: https://kafka-cms-auth.workers.dev   # ← OAuth Worker adresi
+  auth_endpoint: oauth
+
+publish_mode: simple
+media_folder: public/gorseller
+public_folder: /gorseller
+locale: tr
+site_url: https://kafkasanatakademisi.com
+logo_url: /logo.png
+
+# ── Yeniden kullanılan alan grupları ────────────────────────────
+seo_alanlari: &seo
+  - { name: title, label: 'SEO başlığı', widget: string }
+  - { name: description, label: 'Meta açıklama', widget: text }
+
+bloklar: &bloklar
+  name: bolumler
+  label: 'İçerik bölümleri'
+  label_singular: 'Bölüm'
+  widget: list
+  required: false
+  typeKey: tip
+  types:
+    - name: metin
+      label: 'Metin'
+      widget: object
+      summary: '{{fields.baslik}}'
+      fields:
+        - { name: baslik, label: 'Başlık', widget: string, required: false }
+        - name: paragraflar
+          label: 'Paragraflar'
+          widget: list
+          field: { name: p, label: 'Paragraf', widget: text }
+
+    - name: alinti
+      label: 'Kafka alıntısı (büyük vurgu)'
+      widget: object
+      summary: '{{fields.metin}}'
+      fields:
+        - { name: metin, label: 'Alıntı', widget: text }
+        - { name: altMetin, label: 'Alt metin', widget: text, required: false }
+
+    - name: liste
+      label: 'Liste'
+      widget: object
+      summary: '{{fields.baslik}}'
+      fields:
+        - { name: baslik, label: 'Başlık', widget: string, required: false }
+        - { name: giris, label: 'Giriş metni', widget: text, required: false }
+        - name: maddeler
+          label: 'Maddeler'
+          widget: list
+          field: { name: madde, label: 'Madde', widget: string }
+        - { name: sirali, label: 'Numaralı liste', widget: boolean, default: false, required: false }
+        - { name: kapanis, label: 'Kapanış metni', widget: text, required: false }
+
+    - name: kartlar
+      label: 'Kartlar (başlık + açıklama ızgarası)'
+      widget: object
+      summary: '{{fields.baslik}}'
+      fields:
+        - { name: baslik, label: 'Başlık', widget: string, required: false }
+        - { name: giris, label: 'Giriş metni', widget: text, required: false }
+        - name: kartlar
+          label: 'Kartlar'
+          widget: list
+          summary: '{{fields.baslik}}'
+          fields:
+            - { name: baslik, label: 'Kart başlığı', widget: string }
+            - { name: metin, label: 'Kart metni', widget: text }
+        - { name: kapanis, label: 'Kapanış metni', widget: text, required: false }
+
+    - name: adimlar
+      label: 'Numaralı adımlar'
+      widget: object
+      summary: '{{fields.baslik}}'
+      fields:
+        - { name: baslik, label: 'Başlık', widget: string, required: false }
+        - { name: giris, label: 'Giriş metni', widget: text, required: false }
+        - name: adimlar
+          label: 'Adımlar'
+          widget: list
+          summary: '{{fields.baslik}}'
+          fields:
+            - { name: baslik, label: 'Adım başlığı', widget: string }
+            - { name: metin, label: 'Adım metni', widget: text }
+
+    - name: bilgi
+      label: 'Bilgi satırları (etiket / değer)'
+      widget: object
+      summary: '{{fields.baslik}}'
+      fields:
+        - { name: baslik, label: 'Başlık', widget: string, required: false }
+        - name: satirlar
+          label: 'Satırlar'
+          widget: list
+          summary: '{{fields.etiket}}'
+          fields:
+            - { name: etiket, label: 'Etiket', widget: string }
+            - { name: deger, label: 'Değer', widget: text }
+
+    - name: not
+      label: 'Kenar notu'
+      widget: object
+      summary: '{{fields.baslik}}'
+      fields:
+        - { name: baslik, label: 'Not başlığı', widget: string, required: false }
+        - { name: metin, label: 'Not metni', widget: text }
+
+    - name: cta
+      label: 'Buton(lar)'
+      widget: object
+      fields:
+        - name: birincil
+          label: 'Birincil buton'
+          widget: object
+          fields:
+            - { name: etiket, label: 'Etiket', widget: string }
+            - { name: href, label: 'Bağlantı', widget: string }
+        - name: ikincil
+          label: 'İkincil buton'
+          widget: object
+          required: false
+          fields:
+            - { name: etiket, label: 'Etiket', widget: string }
+            - { name: href, label: 'Bağlantı', widget: string }
+
+collections:
+  # ── Programlar ────────────────────────────────────────────────
+  - name: programlar
+    label: 'Programlar'
+    label_singular: 'Program'
+    folder: src/content/programlar
+    extension: json
+    format: json
+    create: true
+    slug: '{{slug}}'
+    identifier_field: ad
+    summary: '{{ad}}'
+    sortable_fields: [ad, format]
+    description: >-
+      Gün, saat, eğitmen, kontenjan ve program durumu "Şube teklifleri" altında
+      yönetilir. Kurumsal ve pedagojik metinler daha kalıcıdır.
+    fields:
+      - { name: ad, label: 'Program adı', widget: string }
+      - { name: uzunAd, label: 'Uzun ad', widget: string, required: false }
+      - { name: kisaltma, label: 'Kısaltma', widget: string, required: false }
+      - { name: ustBaslik, label: 'Üst başlık', widget: string, required: false }
+      - name: yerlesim
+        label: 'Yaş çatısı ve sırası'
+        widget: list
+        summary: '{{fields.yasCatisi}} · sıra {{fields.sira}}'
+        fields:
+          - name: yasCatisi
+            label: 'Yaş çatısı'
+            widget: select
+            options:
+              - { label: 'Okul Öncesi', value: okul-oncesi }
+              - { label: 'Çocuklar', value: cocuklar }
+              - { label: 'Gençler', value: gencler }
+              - { label: 'Yetişkinler', value: yetiskinler }
+          - { name: sira, label: 'Bu sayfadaki sırası', widget: number, value_type: int, min: 1 }
+      - name: format
+        label: 'Program formatı'
+        widget: select
+        options:
+          - { label: 'Ana program', value: ana-program }
+          - { label: 'Laboratuvar', value: laboratuvar }
+          - { label: 'Atölye', value: atolye }
+          - { label: 'Kulüp', value: kulup }
+          - { label: 'Topluluk', value: topluluk }
+      - { name: amiral, label: 'Amiral program', widget: boolean, default: false, required: false }
+      - name: anaSayfaGorunurluk
+        label: 'Ana sayfada görünürlük'
+        widget: select
+        default: liste
+        options:
+          - { label: 'Amiral — adıyla öne çıkar', value: amiral }
+          - { label: 'Listede görünür', value: liste }
+          - { label: 'Ana sayfada gizli', value: gizli }
+      - { name: kisaTanim, label: 'Kısa tanım', widget: text }
+      - { name: girisMetni, label: 'Giriş metni', widget: text, required: false }
+      - name: ctaTipi
+        label: 'CTA tipi'
+        widget: select
+        default: basvuru
+        options: [basvuru, whatsapp, katalog, bilgi]
+      - { name: gorsel, label: 'Görsel', widget: image, required: false }
+      - { name: gorselAlt, label: 'Görsel alt metni', widget: string, required: false }
+      - { name: gorselKarakteri, label: 'Görsel karakteri (çekim notu)', widget: string, required: false }
+      - name: teklifler
+        label: 'Şube teklifleri (dönemsel bilgiler)'
+        label_singular: 'Şube'
+        widget: list
+        required: false
+        summary: '{{fields.sube}} — {{fields.durum}}'
+        fields:
+          - name: sube
+            label: 'Şube'
+            widget: select
+            options:
+              - { label: 'Gaziantep', value: gaziantep }
+              - { label: 'İzmir / Güzelbahçe', value: izmir }
+          - name: durum
+            label: 'Durum'
+            widget: select
+            default: basvurular-acik
+            options:
+              - { label: 'Başvurular Açık', value: basvurular-acik }
+              - { label: 'Dolu', value: dolu }
+              - { label: 'Bekleme Listesi', value: bekleme-listesi }
+              - { label: 'Yakında', value: yakinda }
+              - { label: 'Bu Şubede Açık Değil', value: bu-subede-acik-degil }
+          - { name: gun, label: 'Gün', widget: string, required: false }
+          - { name: saat, label: 'Saat', widget: string, required: false }
+          - { name: yasSinif, label: 'Yaş / sınıf', widget: string, required: false }
+          - { name: haftalikSure, label: 'Haftalık süre', widget: string, required: false }
+          - { name: programSuresi, label: 'Program süresi', widget: string, required: false }
+          - { name: kontenjan, label: 'Kontenjan', widget: string, required: false }
+          - { name: egitmen, label: 'Eğitmen', widget: string, required: false }
+          - { name: not, label: 'Ek not', widget: text, required: false }
+      - *bloklar
+      - { name: seo, label: 'SEO', widget: object, fields: *seo }
+
+  # ── Kurumsal sayfalar ─────────────────────────────────────────
+  - name: sayfalar
+    label: 'Kurumsal sayfalar'
+    label_singular: 'Sayfa'
+    folder: src/content/sayfalar
+    extension: json
+    format: json
+    create: false
+    slug: '{{slug}}'
+    identifier_field: baslik
+    summary: '{{baslik}}'
+    fields:
+      - { name: baslik, label: 'Başlık', widget: string }
+      - { name: ustBaslik, label: 'Üst başlık', widget: string, required: false }
+      - { name: acilisAlintisi, label: 'Açılış alıntısı', widget: text, required: false }
+      - { name: girisMetni, label: 'Giriş metni', widget: text, required: false }
+      - *bloklar
+      - { name: seo, label: 'SEO', widget: object, fields: *seo }
+
+  # ── Şubeler ───────────────────────────────────────────────────
+  - name: subeler
+    label: 'Şubeler'
+    label_singular: 'Şube'
+    folder: src/content/subeler
+    extension: json
+    format: json
+    create: false
+    identifier_field: ad
+    summary: '{{ad}}'
+    fields:
+      - name: kod
+        label: 'Şube kodu'
+        widget: select
+        options: [gaziantep, izmir]
+      - { name: ad, label: 'Tam ad', widget: string }
+      - { name: kisaAd, label: 'Kısa ad', widget: string }
+      - { name: tanim, label: 'Tanım', widget: text }
+      - { name: sira, label: 'Sıra', widget: number, value_type: int }
+      - { name: telefon, label: 'Telefon / WhatsApp', widget: string, hint: 'Örn. +90 505 614 47 67' }
+      - { name: adres, label: 'Adres', widget: text }
+      - { name: haritaUrl, label: 'Google Maps bağlantısı', widget: string, required: false }
+      - { name: instagram, label: 'Ana Instagram hesabı (@ olmadan)', widget: string }
+      - name: ekInstagram
+        label: 'Ek Instagram hesapları'
+        widget: list
+        required: false
+        summary: '{{fields.etiket}} — @{{fields.hesap}}'
+        fields:
+          - { name: etiket, label: 'Etiket', widget: string }
+          - { name: hesap, label: 'Hesap (@ olmadan)', widget: string }
+      - name: sorumlu
+        label: 'Şube sorumlusu'
+        widget: object
+        fields:
+          - { name: ad, label: 'Ad soyad', widget: string }
+          - { name: unvan, label: 'Unvan', widget: string }
+      - { name: seo, label: 'SEO', widget: object, fields: *seo }
+
+  # ── Ürettiklerimiz ────────────────────────────────────────────
+  - name: uretimler
+    label: 'Ürettiklerimiz'
+    label_singular: 'Üretim'
+    folder: src/content/uretimler
+    extension: json
+    format: json
+    create: true
+    slug: '{{slug}}'
+    identifier_field: ad
+    summary: '{{ad}} ({{yil}})'
+    sortable_fields: [yil, ad]
+    fields:
+      - { name: ad, label: 'Üretimin adı', widget: string }
+      - { name: yil, label: 'Yıl', widget: number, value_type: int, min: 2017 }
+      - name: kategori
+        label: 'Kategori'
+        widget: select
+        options:
+          - { label: 'Sahne', value: sahne }
+          - { label: 'Tirat Geceleri / Bireysel Performanslar', value: tirat }
+          - { label: 'Yazı', value: yazi }
+          - { label: 'Dijital Üretimler', value: dijital }
+          - { label: 'Yaratıcı Keşifler', value: yaratici-kesifler }
+          - { label: 'Seçilmiş Kamera Arkası', value: kamera-arkasi }
+      - { name: program, label: 'Program / grup', widget: string }
+      - name: sube
+        label: 'Şube'
+        widget: select
+        required: false
+        options: [gaziantep, izmir]
+      - { name: mekan, label: 'Mekan', widget: string, required: false }
+      - { name: neUretildi, label: 'Ne üretildi?', widget: text }
+      - { name: nasilCalisildi, label: 'Nasıl çalışıldı?', widget: text, required: false }
+      - name: ogrenciRolleri
+        label: 'Öğrencilerin rolleri'
+        widget: list
+        required: false
+        field: { name: rol, label: 'Rol', widget: string }
+      - { name: gorsel, label: 'Ana görsel', widget: image, required: false }
+      - { name: gorselAlt, label: 'Ana görsel alt metni', widget: string, required: false }
+      - name: surecGorselleri
+        label: 'Süreç görselleri'
+        widget: list
+        required: false
+        fields:
+          - { name: src, label: 'Görsel', widget: image }
+          - { name: alt, label: 'Alt metin', widget: string }
+      - { name: fragmanUrl, label: 'Fragman bağlantısı', widget: string, required: false }
+      - name: ogrenciSozu
+        label: 'İzinli öğrenci sözü'
+        widget: object
+        required: false
+        hint: 'Yalnız gerçek, doğrulanmış ve izinli sözler yayınlanır.'
+        fields:
+          - { name: metin, label: 'Söz', widget: text }
+          - { name: kaynak, label: 'Kaynak (ad + yaş / program)', widget: string }
+      - { name: seo, label: 'SEO', widget: object, fields: *seo }
+
+  # ── Kafka International ───────────────────────────────────────
+  - name: international
+    label: 'Kafka International programları'
+    label_singular: 'Uluslararası program'
+    folder: src/content/international
+    extension: json
+    format: json
+    create: true
+    slug: '{{slug}}'
+    identifier_field: ad
+    summary: '{{ad}} — {{sehir}}'
+    description: 'Ana sitenin aksine, güncel ücret YALNIZ burada yayınlanabilir.'
+    fields:
+      - { name: ad, label: 'Program adı', widget: string }
+      - { name: ulke, label: 'Ülke', widget: string }
+      - { name: sehir, label: 'Şehir', widget: string }
+      - { name: hedefGrup, label: 'Hedef yaş / grup', widget: string }
+      - { name: tarihler, label: 'Tarihler', widget: string, required: false }
+      - { name: amac, label: 'Programın amacı', widget: text }
+      - { name: ucret, label: 'Program ücreti', widget: string, required: false }
+      - { name: ogrenciIndirimi, label: 'Kafka öğrencisi indirimi', widget: text, required: false }
+      - name: icerikBasliklari
+        label: 'İçerik ve deneyim başlıkları'
+        widget: list
+        required: false
+        field: { name: baslik, label: 'Başlık', widget: string }
+      - name: dogrulanmisBilgiler
+        label: 'Doğrulanmış bilgiler (konaklama, ulaşım vb.)'
+        widget: list
+        required: false
+        summary: '{{fields.etiket}}'
+        fields:
+          - { name: etiket, label: 'Etiket', widget: string }
+          - { name: deger, label: 'Değer', widget: string }
+      - { name: gorsel, label: 'Görsel', widget: image, required: false }
+      - { name: gorselAlt, label: 'Görsel alt metni', widget: string, required: false }
+      - name: durum
+        label: 'Durum'
+        widget: select
+        default: aktif
+        options:
+          - { label: 'Aktif', value: aktif }
+          - { label: 'Yakında', value: yakinda }
+          - { label: 'Tamamlandı', value: tamamlandi }
+      - { name: sira, label: 'Sıra', widget: number, value_type: int, default: 50 }
+      - { name: seo, label: 'SEO', widget: object, fields: *seo }
+
+  # ── Kafka Kostüm ──────────────────────────────────────────────
+  - name: kostum
+    label: 'Kafka Kostüm kataloğu'
+    label_singular: 'Koleksiyon'
+    folder: src/content/kostum
+    extension: json
+    format: json
+    create: true
+    slug: '{{slug}}'
+    identifier_field: ad
+    summary: '{{ad}}'
+    description: 'Fiyat alanı bilerek yoktur; güncel fiyat WhatsApp üzerinden paylaşılır.'
+    fields:
+      - { name: ad, label: 'Koleksiyon adı', widget: string }
+      - name: kategori
+        label: 'Kategori'
+        widget: select
+        options:
+          - { label: 'Halk oyunları', value: halk-oyunlari }
+          - { label: 'Modern dans', value: modern-dans }
+          - { label: 'Bale', value: bale }
+          - { label: 'Tiyatro', value: tiyatro }
+          - { label: 'Temalı', value: tematik }
+          - { label: 'Okul gösterisi', value: okul-gosterisi }
+      - { name: aciklama, label: 'Açıklama', widget: text }
+      - name: hizmetler
+        label: 'Hizmetler'
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: 'Kiralama', value: kiralama }
+          - { label: 'Toplu sipariş', value: toplu-siparis }
+          - { label: 'Özel sipariş', value: ozel-siparis }
+      - { name: gorsel, label: 'Görsel', widget: image, required: false }
+      - { name: gorselAlt, label: 'Görsel alt metni', widget: string, required: false }
+      - { name: sira, label: 'Sıra', widget: number, value_type: int, default: 50 }
+
+  # ── Sosyal sorumluluk ─────────────────────────────────────────
+  - name: sosyalProjeler
+    label: 'Sosyal sorumluluk projeleri'
+    label_singular: 'Proje'
+    folder: src/content/sosyal-projeler
+    extension: json
+    format: json
+    create: true
+    slug: '{{slug}}'
+    identifier_field: ad
+    summary: '{{ad}} — {{statu}}'
+    fields:
+      - { name: ad, label: 'Proje adı', widget: string }
+      - name: statu
+        label: 'Statü'
+        widget: select
+        options:
+          - { label: 'Aktif', value: aktif }
+          - { label: 'Dönemsel', value: donemsel }
+          - { label: 'Tamamlandı', value: tamamlandi }
+          - { label: 'Arşiv', value: arsiv }
+      - { name: partner, label: 'İş birliği / partner', widget: string, required: false }
+      - { name: yer, label: 'Yer', widget: string, required: false }
+      - { name: yaklasim, label: 'Yaklaşım', widget: string }
+      - { name: aciklama, label: 'Açıklama', widget: text }
+      - name: dogrulandi
+        label: 'Yayın öncesi doğrulandı'
+        widget: boolean
+        default: false
+        hint: 'Tarih, kapsam ve partner tanımı doğrulanmadan işaretlemeyin.'
+      - { name: gorsel, label: 'Görsel', widget: image, required: false }
+      - { name: gorselAlt, label: 'Görsel alt metni', widget: string, required: false }
+      - { name: sira, label: 'Sıra', widget: number, value_type: int, default: 50 }
+
+  # ── SSS ───────────────────────────────────────────────────────
+  - name: sss
+    label: 'Sık Sorulan Sorular'
+    files:
+      - name: sss
+        label: 'SSS listesi'
+        file: src/content/sss.json
+        fields:
+          - name: sorular
+            label: 'Sorular'
+            label_singular: 'Soru'
+            widget: list
+            summary: '{{fields.soru}}'
+            fields:
+              - { name: id, label: 'Kimlik (kebab-case)', widget: string }
+              - { name: soru, label: 'Soru', widget: string }
+              - { name: cevap, label: 'Cevap', widget: text }
+              - name: kategori
+                label: 'Kategori'
+                widget: select
+                options:
+                  - { label: 'Genel', value: genel }
+                  - { label: 'Kayıt ve tanışma', value: kayit }
+                  - { label: 'Ücret', value: ucret }
+                  - { label: 'Okul Öncesi', value: okul-oncesi }
+                  - { label: 'Çocuklar', value: cocuklar }
+                  - { label: 'Gençler', value: gencler }
+                  - { label: 'Yetişkinler', value: yetiskinler }
+                  - { label: 'Kafka International', value: international }
+                  - { label: 'Kafka Kostüm', value: kostum }

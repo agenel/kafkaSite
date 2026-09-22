@@ -1,0 +1,292 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SayfaBasligi from '@/components/SayfaBasligi.astro';
+import Bolum from '@/components/Bolum.astro';
+import { yasCatilari } from '@/data/site';
+
+// Program listesi içerikten türetilir; yeni program eklenince form kendiliğinden güncellenir.
+const programlar = await getCollection('programlar');
+const catiSirasi = ['okul-oncesi', 'cocuklar', 'gencler', 'yetiskinler'] as const;
+const gruplu = catiSirasi.map((c) => ({
+  etiket: yasCatilari.find((y) => y.kod === c)!.etiket,
+  secenekler: programlar
+    .filter((p) => p.data.yerlesim.some((y) => y.yasCatisi === c))
+    .sort(
+      (a, b) =>
+        a.data.yerlesim.find((y) => y.yasCatisi === c)!.sira -
+        b.data.yerlesim.find((y) => y.yasCatisi === c)!.sira
+    )
+    .map((p) => ({ deger: p.id, etiket: p.data.ad })),
+}));
+
+const girisSinifi =
+  'w-full min-h-12 border border-line-strong bg-paper-raised px-4 py-3 ' +
+  'font-body text-govde text-body transition-colors ' +
+  'placeholder:text-ink-400 focus:border-ink';
+const etiketSinifi = 'u-eyebrow mb-2 block';
+---
+
+<BaseLayout
+  title="Başvuru Yap | Kafka Sanat Akademisi"
+  description="Kısa başvurunuzu gönderin; ekibimiz 1 iş günü içinde sizinle iletişime geçsin ve doğru programı birlikte değerlendirelim."
+>
+  <SayfaBasligi
+    ustBaslik="25 · Başvuru"
+    baslik="Önce başvurun. Sonra tanışalım."
+    acilisAlintisi="Hangi programın doğru olduğundan emin olmak zorunda değilsiniz."
+    girisMetni="Kısa formu gönderin; ekibimiz 1 iş günü içinde sizinle iletişime geçsin. Kafka Sanat Akademisi'nin eğitim programlarında kesin kayıt öncesinde tanışma yapılır."
+  />
+
+  <Bolum bosluk="genis">
+    <div class="grid gap-14 lg:grid-cols-[1fr_0.7fr] lg:gap-20">
+      <div>
+        <form id="basvuru-formu" class="flex flex-col gap-7" novalidate>
+          <!-- Bot tuzağı: gerçek kullanıcı bu alanı görmez ve doldurmaz -->
+          <div class="absolute h-px w-px overflow-hidden" aria-hidden="true">
+            <label for="sirket">Şirket</label>
+            <input id="sirket" name="sirket" type="text" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <div>
+            <label class={etiketSinifi} for="sehir">Şehir <span class="text-accent-text">*</span></label>
+            <select id="sehir" name="sehir" required class={girisSinifi}>
+              <option value="">Seçiniz</option>
+              <option value="Gaziantep">Gaziantep</option>
+              <option value="İzmir">İzmir</option>
+              <option value="Diğer">Diğer</option>
+            </select>
+            <p class="mt-2 hidden text-kucuk text-accent" data-hata-for="sehir"></p>
+          </div>
+
+          <div>
+            <label class={etiketSinifi} for="yas">Yaş / sınıf <span class="text-accent-text">*</span></label>
+            <input id="yas" name="yas" type="text" required class={girisSinifi} placeholder="Örn. 7 yaş / 2. sınıf" />
+            <p class="mt-2 hidden text-kucuk text-accent" data-hata-for="yas"></p>
+          </div>
+
+          <div>
+            <label class={etiketSinifi} for="program">İlgilenilen program</label>
+            <select id="program" name="program" class={girisSinifi}>
+              <option value="Henüz bilmiyorum">Henüz bilmiyorum</option>
+              {
+                gruplu.map((g) => (
+                  <optgroup label={g.etiket}>
+                    {g.secenekler.map((s) => (
+                      <option value={s.etiket}>{s.etiket}</option>
+                    ))}
+                  </optgroup>
+                ))
+              }
+            </select>
+            <p class="mt-2 text-kucuk text-muted">
+              Emin değilseniz "Henüz bilmiyorum" seçebilirsiniz. İlk görüşmede birlikte değerlendiririz.
+            </p>
+          </div>
+
+          <div>
+            <label class={etiketSinifi} for="beklenti">Kısa beklenti</label>
+            <textarea id="beklenti" name="beklenti" rows="4" class={girisSinifi} placeholder="Birkaç cümle yeterli."></textarea>
+          </div>
+
+          <div class="grid gap-7 sm:grid-cols-2">
+            <div>
+              <label class={etiketSinifi} for="ad">Ad soyad <span class="text-accent-text">*</span></label>
+              <input id="ad" name="ad" type="text" required autocomplete="name" class={girisSinifi} />
+              <p class="mt-2 hidden text-kucuk text-accent" data-hata-for="ad"></p>
+            </div>
+            <div>
+              <label class={etiketSinifi} for="telefon">Telefon <span class="text-accent-text">*</span></label>
+              <input id="telefon" name="telefon" type="tel" required autocomplete="tel" inputmode="tel" class={girisSinifi} placeholder="05XX XXX XX XX" />
+              <p class="mt-2 hidden text-kucuk text-accent" data-hata-for="telefon"></p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <input
+              id="onay"
+              name="onay"
+              type="checkbox"
+              required
+              class="mt-0.5 h-6 w-6 shrink-0 cursor-pointer accent-accent"
+            />
+            <label for="onay" class="text-kucuk leading-relaxed text-muted">
+              Başvuru bilgilerimin bana ulaşılması amacıyla işlenmesini kabul ediyorum.{' '}
+              <a href="/yasal/kvkk" class="underline decoration-accent decoration-2 underline-offset-2 hover:text-ink">
+                KVKK aydınlatma metni
+              </a>
+            </label>
+          </div>
+          <p class="hidden text-kucuk text-accent" data-hata-for="onay"></p>
+
+          <button
+            type="submit"
+            class="inline-flex min-h-14 cursor-pointer items-center justify-center bg-accent px-8 font-display text-buyuk font-semibold text-white transition-colors duration-200 hover:bg-accent-dark disabled:cursor-wait disabled:opacity-70"
+          >
+            Başvuru Yap
+          </button>
+
+          <p
+            id="form-durumu"
+            role="status"
+            aria-live="polite"
+            class="hidden border-l-2 border-accent pl-5 text-govde leading-relaxed"
+          ></p>
+        </form>
+
+        <div
+          id="basari"
+          hidden
+          class="border-l-4 border-accent pl-7"
+        >
+          <h2 class="font-display text-baslik-lg font-bold tracking-[-0.025em] text-ink">
+            Başvurunuzu aldık.
+          </h2>
+          <p class="u-measure mt-5 text-buyuk leading-relaxed text-body">
+            Ekibimiz 1 iş günü içinde sizinle iletişime geçecek. Hangi programın uygun
+            olduğundan emin değilseniz sorun değil; ilk görüşmede birlikte değerlendireceğiz.
+          </p>
+        </div>
+      </div>
+
+      <aside class="flex flex-col gap-8">
+        <div class="border-l-2 border-accent pl-6">
+          <p class="u-eyebrow mb-2">Başvuru kesin kayıt değildir</p>
+          <p class="text-govde leading-relaxed text-muted">
+            Ekibimiz önce sizinle iletişime geçer; programın amacı, beklentiniz ve tanışma
+            süreci birlikte değerlendirilir.
+          </p>
+        </div>
+        <div class="border-l-2 border-line-strong pl-6">
+          <p class="u-eyebrow mb-2">Form neden kısa?</p>
+          <p class="text-govde leading-relaxed text-muted">
+            Sağlık, acil durum, ayrıntılı aile bilgisi ve sözleşme verileri kesin kayıt
+            aşamasına bırakılır.
+          </p>
+        </div>
+        <div class="border-l-2 border-line-strong pl-6">
+          <p class="u-eyebrow mb-2">Ücretler</p>
+          <p class="text-govde leading-relaxed text-muted">
+            Güncel ücret ve ödeme seçenekleri için başvuru yapabilirsiniz. Ücret bilgisi,
+            ilk görüşmede program uygunluğu netleştiğinde paylaşılır.
+          </p>
+        </div>
+      </aside>
+    </div>
+  </Bolum>
+</BaseLayout>
+
+<script>
+  const form = document.getElementById('basvuru-formu') as HTMLFormElement | null;
+  const durum = document.getElementById('form-durumu');
+  const basari = document.getElementById('basari');
+  if (!form || !durum || !basari) throw new Error('Başvuru formu öğeleri bulunamadı');
+
+  const dugme = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+
+  const mikroMetin = {
+    gonderiliyor: 'Başvurunuz gönderiliyor...',
+    telefonHatasi: 'Telefon numaranızı kontrol eder misiniz?',
+    zorunluAlan: 'Bu alanı doldurmamız gerekiyor.',
+    onayGerekli: 'Devam edebilmemiz için bu onaya ihtiyacımız var.',
+    gonderimHatasi:
+      'Başvurunuzu şu anda gönderemedik. Lütfen tekrar deneyin veya iletişim kanalımızdan bize ulaşın.',
+  };
+
+  function hataGoster(alan: string, mesaj: string) {
+    const p = form!.querySelector(`[data-hata-for="${alan}"]`);
+    const girdi = form!.querySelector(`[name="${alan}"]`);
+    if (p) {
+      p.textContent = mesaj;
+      p.classList.remove('hidden');
+    }
+    girdi?.setAttribute('aria-invalid', 'true');
+  }
+
+  function hatalariTemizle() {
+    form!.querySelectorAll('[data-hata-for]').forEach((p) => {
+      p.textContent = '';
+      p.classList.add('hidden');
+    });
+    form!.querySelectorAll('[aria-invalid]').forEach((g) => g.removeAttribute('aria-invalid'));
+    durum!.classList.add('hidden');
+  }
+
+  // TR numarası: 0 veya +90 önekiyle ya da öneksiz 10 hane.
+  function telefonGecerli(ham: string): boolean {
+    const rakam = ham.replace(/\D/g, '');
+    if (rakam.length === 10) return rakam.startsWith('5') || /^[2-4]/.test(rakam);
+    if (rakam.length === 11) return rakam.startsWith('0');
+    if (rakam.length === 12) return rakam.startsWith('90');
+    return false;
+  }
+
+  // Kullanıcı düzeltmeye başlayınca ilgili alanın hatasını hemen kaldır.
+  form.querySelectorAll('[name]').forEach((girdi) => {
+    const temizleyici = () => {
+      const alan = girdi.getAttribute('name');
+      const p = form!.querySelector(`[data-hata-for="${alan}"]`);
+      if (p && !p.classList.contains('hidden')) {
+        p.textContent = '';
+        p.classList.add('hidden');
+      }
+      girdi.removeAttribute('aria-invalid');
+    };
+    girdi.addEventListener('input', temizleyici);
+    girdi.addEventListener('change', temizleyici);
+  });
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    hatalariTemizle();
+
+    const veri = new FormData(form!);
+    let gecerli = true;
+
+    for (const alan of ['sehir', 'yas', 'ad'] as const) {
+      if (!String(veri.get(alan) ?? '').trim()) {
+        hataGoster(alan, mikroMetin.zorunluAlan);
+        gecerli = false;
+      }
+    }
+    const tel = String(veri.get('telefon') ?? '').trim();
+    if (!tel) {
+      hataGoster('telefon', mikroMetin.zorunluAlan);
+      gecerli = false;
+    } else if (!telefonGecerli(tel)) {
+      hataGoster('telefon', mikroMetin.telefonHatasi);
+      gecerli = false;
+    }
+    if (!veri.get('onay')) {
+      hataGoster('onay', mikroMetin.onayGerekli);
+      gecerli = false;
+    }
+
+    if (!gecerli) {
+      (form!.querySelector('[aria-invalid="true"]') as HTMLElement | null)?.focus();
+      return;
+    }
+
+    dugme.disabled = true;
+    dugme.textContent = 'Gönderiliyor';
+    durum!.textContent = mikroMetin.gonderiliyor;
+    durum!.classList.remove('hidden');
+
+    try {
+      const yanit = await fetch('/api/basvuru', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(Object.fromEntries(veri.entries())),
+      });
+      if (!yanit.ok) throw new Error(`Sunucu ${yanit.status}`);
+      form!.hidden = true;
+      basari!.hidden = false;
+      basari!.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      (basari!.querySelector('h2') as HTMLElement | null)?.focus();
+    } catch {
+      durum!.textContent = mikroMetin.gonderimHatasi;
+      dugme.disabled = false;
+      dugme.textContent = 'Başvuru Yap';
+    }
+  });
+</script>

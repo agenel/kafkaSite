@@ -1,0 +1,62 @@
+---
+/**
+ * Tüm görsel alanları bu bileşenden geçer.
+ * Gerçek fotoğraf yoksa (§31 stok fotoğrafı yasaklıyor) yerini
+ * bilinçli olarak "geçici" görünen, çekim brief'ini taşıyan bir
+ * yer tutucu alır. Fotoğraf geldiğinde yalnız `src` doldurulur.
+ */
+interface Props {
+  src?: string;
+  alt?: string;
+  oran?: '16/9' | '4/3' | '3/2' | '1/1' | '4/5' | '21/9';
+  /** Fotoğraf yokken gösterilecek çekim notu (§32 listesinden). */
+  cekimNotu?: string;
+  karakter?: string;
+  class?: string;
+  yukleme?: 'lazy' | 'eager';
+}
+const {
+  src,
+  alt = '',
+  oran = '3/2',
+  cekimNotu,
+  karakter,
+  class: ekSinif = '',
+  yukleme = 'lazy',
+} = Astro.props;
+---
+
+<figure class={`relative overflow-hidden bg-paper-sunken ${ekSinif}`} style={`aspect-ratio:${oran}`}>
+  {
+    src ? (
+      <img
+        src={src}
+        alt={alt}
+        loading={yukleme}
+        decoding="async"
+        class="h-full w-full object-cover"
+      />
+    ) : (
+      <div
+        class="flex h-full w-full flex-col items-start justify-end gap-2 border border-dashed border-line-strong p-5 md:p-7"
+        role="img"
+        aria-label={alt || cekimNotu || 'Görsel hazırlanıyor'}
+      >
+        <span
+          class="pointer-events-none absolute inset-0 opacity-[0.07]"
+          style="background-image:repeating-linear-gradient(135deg,var(--color-ink) 0 1px,transparent 1px 11px)"
+          aria-hidden="true"
+        />
+        <span class="u-eyebrow relative text-ink-400">Görsel bekleniyor</span>
+        {cekimNotu && (
+          <span class="relative max-w-[42ch] font-display text-govde font-medium leading-snug text-ink-600">
+            {cekimNotu}
+          </span>
+        )}
+        {karakter && (
+          <span class="relative text-kucuk text-muted">{karakter}</span>
+        )}
+      </div>
+    )
+  }
+</figure>

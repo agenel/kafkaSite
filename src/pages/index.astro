@@ -1,0 +1,411 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Bolum from '@/components/Bolum.astro';
+import BolumBasligi from '@/components/BolumBasligi.astro';
+import KafkaAlinti from '@/components/KafkaAlinti.astro';
+import Buton from '@/components/Buton.astro';
+import Gorsel from '@/components/Gorsel.astro';
+import ProgramKarti from '@/components/ProgramKarti.astro';
+import { site, cta, yasCatilari } from '@/data/site';
+import { amiralProgramlar, durumlar, programYolu } from '@/lib/programlar';
+import { getCollection } from 'astro:content';
+
+const amiraller = await amiralProgramlar();
+const subeler = (await getCollection('subeler')).sort((a, b) => a.data.sira - b.data.sira);
+
+const ucHareket = [
+  { baslik: 'Düşün', metin: 'Hazır cevabı almak yerine soru sor. Farklı ihtimalleri gör.' },
+  { baslik: 'İfade et', metin: 'Fikrini söz, yazı, beden, ses, sahne ve görüntüyle anlat.' },
+  { baslik: 'Üret', metin: 'Bir fikri somut işe dönüştür. Sorumluluk al ve tamamla.' },
+];
+
+const digerYapilar = [
+  {
+    ad: 'Kafka Akademi Tiyatrosu',
+    tanim: 'Kendi yönetim yapısı, eğitim grupları ve prodüksiyonlarıyla çalışan yetişkin tiyatro oluşumu.',
+    href: '/programlar/kafka-akademi-tiyatrosu',
+  },
+  {
+    ad: 'Kafka International',
+    tanim: 'Sanat, kültür ve uluslararası deneyimi bir araya getiren; çocuklar, gençler ve yetişkinler için uluslararası gelişim programları geliştiren yapı.',
+    href: '/kafka-international',
+  },
+  {
+    ad: 'Kafka Kostüm',
+    tanim: 'Çocuk sahne kostümleri alanında çalışan; koleksiyon, kiralama, toplu ve özel sipariş çözümleri sunan Kafka markası.',
+    href: '/kafka-kostum',
+  },
+];
+
+const velilerMaddeleri = [
+  'Her dönem sonunda 1 Gelişim Özeti',
+  'Her dönem 1 bireysel veli görüşmesi',
+];
+
+const ilkeSorulari = [
+  'Kendini ifade edebiliyor mu?',
+  'Başka bir fikri dinleyebiliyor mu?',
+  'Yanıldığında yeniden deneyebiliyor mu?',
+  'Bir grubun içinde sorumluluk alabiliyor mu?',
+];
+---
+
+<BaseLayout
+  title="Kafka Sanat Akademisi | Gaziantep & İzmir"
+  description={site.varsayilanAciklama}
+>
+  <!-- ── Hero ───────────────────────────────────────────── -->
+  <section class="border-b border-line bg-paper">
+    <div class="u-wrap grid gap-12 py-16 md:py-24 lg:grid-cols-[1.05fr_1fr] lg:items-center lg:gap-16">
+      <div>
+        <h1 class="font-display text-hero font-extrabold uppercase leading-[0.95] tracking-[-0.035em] text-ink">
+          Düşün.<br />İfade et.<br /><span class="text-accent">Üret.</span>
+        </h1>
+        <p class="u-measure-wide mt-8 text-buyuk leading-relaxed text-body">
+          Kafka Sanat Akademisi; çocukların, gençlerin ve yetişkinlerin sanat yoluyla
+          kendilerini keşfettikleri, düşündükleri ve ürettikleri disiplinlerarası bir
+          eğitim kurumudur.
+        </p>
+        <p class="u-measure-wide mt-5 text-govde leading-relaxed text-muted">
+          2017'den beri Gaziantep ve İzmir'de; oyundan sahneye, yazıdan kameraya uzanan
+          farklı sanat ve üretim programları tasarlıyoruz.
+        </p>
+        <div class="mt-10 flex flex-wrap gap-4">
+          <Buton href="/programlar" etiket={cta.programlariKesfet} boyut="buyuk" />
+          <Buton href="/basvuru" etiket={cta.basvuru} tur="ikincil" boyut="buyuk" />
+        </div>
+      </div>
+      <Gorsel
+        oran="4/5"
+        yukleme="eager"
+        cekimNotu="Hero videosu: 8–12 saniye yatay, sessiz. En az 6 farklı an — düşünme, yazı, hareket, kamera, prova, sahne."
+        karakter="Gerçek Kafka görüntüleri kullanılır; stok fotoğraf kullanılmaz."
+        alt="Kafka Sanat Akademisi çalışmalarından anlar"
+      />
+    </div>
+  </section>
+
+  <!-- ── Kurumsal ilke ──────────────────────────────────── -->
+  <Bolum zemin="murekkep" bosluk="genis" sarmala={false}>
+    <KafkaAlinti
+      metin="Biz sanatçı yetiştirmeden önce insan yetiştiriyoruz."
+      zemin="murekkep"
+    />
+    <div class="u-wrap mt-12 grid gap-10 lg:grid-cols-2 lg:gap-16">
+      <p class="text-buyuk leading-relaxed text-on-ink">
+        Bir öğrencinin sahnede ne kadar iyi göründüğünden önce, o sahneye nasıl geldiğiyle
+        ilgileniyoruz.
+      </p>
+      <ul class="flex flex-col">
+        {
+          ilkeSorulari.map((soru) => (
+            <li class="border-t border-line-on-ink py-4 text-govde leading-relaxed text-on-ink-muted last:border-b">
+              {soru}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <div class="u-wrap mt-12">
+      <p class="u-measure-wide text-govde leading-relaxed text-on-ink-muted">
+        Kafka'da sanat, yalnızca teknik öğrenilen bir alan değil; düşünmek, kendini
+        anlatmak, başkasını anlamak ve birlikte üretmek için kullanılan bir araçtır.
+      </p>
+      <Buton href="/yaklasimimiz" etiket={cta.yaklasimiOku} tur="beyaz" class="mt-8" />
+    </div>
+  </Bolum>
+
+  <!-- ── Üç temel hareket ───────────────────────────────── -->
+  <Bolum etiketleyen="uc-hareket">
+    <BolumBasligi
+      id="uc-hareket"
+      ustBaslik="Üç temel hareket"
+      baslik="Düşün. İfade et. Üret."
+    />
+    <ul class="mt-12 grid gap-x-10 gap-y-8 md:grid-cols-3">
+      {
+        ucHareket.map((h, i) => (
+          <li class="border-t-2 border-ink pt-5">
+            <span class="font-display text-[0.8rem] font-bold tabular-nums text-accent-text">
+              {String(i + 1).padStart(2, '0')}
+            </span>
+            <h3 class="mt-2 font-display text-baslik font-bold uppercase tracking-tight text-ink">
+              {h.baslik}
+            </h3>
+            <p class="mt-3 text-govde leading-relaxed text-muted">
+              {h.metin}
+            </p>
+          </li>
+        ))
+      }
+    </ul>
+    <p class="u-measure-wide mt-12 text-govde leading-relaxed text-muted">
+      Bunların hiçbirini tek başına yapmak zorunda değilsin. Kafka'nın bütün
+      programlarında grup, iş birliği ve birlikte üretim kültürü önemli bir yere sahiptir.
+    </p>
+  </Bolum>
+
+  <!-- ── Yaşa göre dört ana giriş ───────────────────────── -->
+  <Bolum zemin="cukur" bosluk="genis" sarmala={false} etiketleyen="yas-girisleri">
+    <KafkaAlinti metin="Her yaşta aynı şeyi yapmıyoruz." />
+    <div class="u-wrap mt-10">
+      <p class="u-measure-wide text-govde leading-relaxed text-body">
+        Dört yaşındaki bir çocukla on iki yaşındaki bir öğrencinin, lise çağındaki bir
+        gençle yetişkin bir tiyatro katılımcısının ihtiyacı aynı değildir. Programlarımız
+        aynı içeriğin küçültülmüş veya büyütülmüş versiyonları değil; farklı gelişim ve
+        üretim dönemleri için ayrı ayrı tasarlanmış yapılardır.
+      </p>
+      <h2 id="yas-girisleri" class="sr-only">Yaşa göre programlar</h2>
+      <ul class="mt-12 grid gap-px bg-line-strong sm:grid-cols-2 lg:grid-cols-4">
+        {
+          yasCatilari.map((c, i) => (
+            <li class="group bg-paper-sunken transition-colors hover:bg-ink">
+              <a href={c.href} class="flex h-full flex-col justify-between gap-12 p-7">
+                <span class="font-display text-[0.8rem] font-bold tabular-nums text-accent-text">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <span class="font-display text-baslik font-bold uppercase leading-tight tracking-[-0.02em] text-ink transition-colors group-hover:text-on-ink">
+                  {c.etiket}
+                </span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </Bolum>
+
+  <!-- ── Amiral programlar ──────────────────────────────── -->
+  <Bolum bosluk="genis" etiketleyen="amiral-programlar">
+    <BolumBasligi
+      id="amiral-programlar"
+      ustBaslik="Amiral programlar"
+      baslik="Her yaş çatısının ana programı"
+      giris="Her yaş grubunun kendi gelişim mantığına göre tasarlanmış ana programı vardır."
+    />
+    <ul class="mt-12 grid gap-x-12 gap-y-10 md:grid-cols-2">
+      {
+        amiraller.map((p) => (
+          <li>
+            <ProgramKarti
+              href={programYolu(p.id)}
+              ad={p.data.ad}
+              ustBaslik={p.data.ustBaslik}
+              kisaTanim={p.data.kisaTanim}
+              amiral
+              durumlar={durumlar(p)}
+            />
+          </li>
+        ))
+      }
+    </ul>
+  </Bolum>
+
+  <!-- ── Kafka'nın diğer yapıları ───────────────────────── -->
+  <Bolum zemin="yukseltilmis" bosluk="genis" etiketleyen="diger-yapilar">
+    <BolumBasligi
+      id="diger-yapilar"
+      ustBaslik="Kafka'nın diğer yapıları"
+      baslik="Kendi çalışma mantığına sahip üç yapı"
+      giris="Bu üç yapı soyut bir üst başlığın arkasına saklanmaz. Her biri kendi adı, kendi işleyişi ve kendi sayfasıyla görünür."
+    />
+    <ul class="mt-12 grid gap-px bg-line lg:grid-cols-3">
+      {
+        digerYapilar.map((y) => (
+          <li class="group relative flex flex-col gap-4 bg-paper-raised p-7 md:p-9">
+            <h3 class="font-display text-baslik font-bold tracking-[-0.025em] text-ink">
+              <a href={y.href} class="after:absolute after:inset-0 group-hover:text-accent">
+                {y.ad}
+              </a>
+            </h3>
+            <p class="text-govde leading-relaxed text-muted">
+              {y.tanim}
+            </p>
+          </li>
+        ))
+      }
+    </ul>
+  </Bolum>
+
+  <!-- ── GÇT modeli ─────────────────────────────────────── -->
+  <Bolum bosluk="genis">
+    <div class="grid gap-12 lg:grid-cols-[1fr_0.85fr] lg:items-center lg:gap-16">
+      <div>
+        <p class="u-eyebrow">GÇT · Çocuk Tiyatrosu</p>
+        <h2 class="mt-4 font-display text-baslik-lg font-bold uppercase leading-[1.05] tracking-[-0.025em] text-ink">
+          Yedi ayrı ders değil.<br />Birbirini besleyen tek yolculuk.
+        </h2>
+        <p class="u-measure-wide mt-7 text-govde leading-relaxed text-body">
+          GÇT'de disiplinler yan yana duran bağımsız kurslar gibi çalışmaz. Önce grup ve
+          güven kurulur. Ardından düşünce, yazı, beden, ses ve sahne giderek birbirine
+          bağlanır. Bir çocuk Çocuk Felsefesi çalışmasında bir kavram üzerine
+          düşünebilir; Yaratıcı Yazarlık'ta bu düşünceyi karaktere veya hikayeye
+          dönüştürebilir; tiyatroda yazdığı dünyanın içine girebilir. Yaratıcı Keşifler,
+          Şan ve Dans bu üretimin farklı katmanlarını besler.
+        </p>
+        <Buton href="/programlar/gct" etiket={cta.gctModeliniGor} tur="ikincil" class="mt-9" />
+      </div>
+      <Gorsel
+        oran="4/5"
+        cekimNotu="GÇT Eğitim Yılı: yaratıcı drama, felsefe çemberi, yazı, Yaratıcı Keşifler, şan, dans, tiyatro."
+        alt="GÇT grubunda felsefe çemberi çalışması"
+      />
+    </div>
+  </Bolum>
+
+  <!-- ── GGT Lab ────────────────────────────────────────── -->
+  <Bolum zemin="murekkep" bosluk="genis">
+    <div class="grid gap-12 lg:grid-cols-[0.85fr_1fr] lg:items-center lg:gap-16">
+      <Gorsel
+        oran="4/5"
+        cekimNotu="GGT Lab: kamera, ışık, senaryo, yazı, performans, kurgu ekranı, ekip çalışması, set."
+        alt="GGT Lab ekibi set kurulumunda"
+        class="order-last lg:order-first"
+      />
+      <div>
+        <p class="u-eyebrow text-on-ink-muted">GGT Lab · Gençlik Tiyatrosu</p>
+        <h2 class="mt-4 font-display text-baslik-lg font-bold uppercase leading-[1.05] tracking-[-0.025em] text-on-ink">
+          Tüketmek yerine üretmek.
+        </h2>
+        <p class="u-measure-wide mt-7 text-govde leading-relaxed text-on-ink-muted">
+          Kafka'nın üretim kültürünün en görünür olduğu alanlardan biri GGT Lab'dir.
+          Gençler yalnızca sahnede oynamaz; fikir geliştirir, yazar, kamera kullanır,
+          yönetir, kurgular ve üretim sürecinin farklı rollerini deneyimler. Her genç
+          oyuncu olmak zorunda değildir. Bazen kendi sesini yazıda, bazen kameranın
+          arkasında, bazen sahnede bulur.
+        </p>
+        <Buton href="/programlar/ggt-lab" etiket={cta.ggtLabKesfet} tur="beyaz" class="mt-9" />
+      </div>
+    </div>
+  </Bolum>
+
+  <!-- ── Sahne yaklaşımı ────────────────────────────────── -->
+  <Bolum bosluk="genis" sarmala={false}>
+    <KafkaAlinti
+      metin="Sahne amaç değil."
+      altMetin="Sahne bir sonuçtur. İyi eğitim ise o sonucun temelidir. Kafka'da sahne, öğrenciyi alkış için hızlıca görünür kılmanın değil; hazır olduğu noktada gerçek bir üretimin sorumluluğunu taşımasının aracıdır."
+    />
+  </Bolum>
+
+  <!-- ── Öğrenci yolculuğu ──────────────────────────────── -->
+  <Bolum zemin="cukur" bosluk="genis" etiketleyen="yolculuk">
+    <BolumBasligi
+      id="yolculuk"
+      ustBaslik="Öğrenci yolculuğu"
+      baslik="Kafka'da kayıt bir form doldurmakla bitmez"
+      giris="Başvuru → Tanışma → Doğru program → Güvenli grup → Deneme → Düşünme → Üretim → Gelişimin görünür olması → Paylaşım → Devam veya mezuniyet"
+    />
+    <p class="u-measure-wide mt-7 text-govde leading-relaxed text-body">
+      Kafka Sanat Akademisi'nin eğitim programlarında kesin kayıt öncesinde öğrenciyi veya
+      katılımcıyı görür, tanışır ve programla uygunluğunu değerlendiririz.
+    </p>
+    <Buton href="/ogrenci-yolculugu" etiket={cta.yolculuguGor} tur="ikincil" class="mt-9" />
+  </Bolum>
+
+  <!-- ── Veliler için ───────────────────────────────────── -->
+  <Bolum bosluk="genis" sarmala={false}>
+    <KafkaAlinti metin="Çocuğunuzun ne yaptığını yalnızca yıl sonunda görmeyin." />
+    <div class="u-wrap mt-12 grid gap-10 lg:grid-cols-2 lg:gap-16">
+      <p class="text-govde leading-relaxed text-body">
+        Çocuk ve gençlik programlarında gelişimi yalnız sahneyle değil; kendini ifade etme,
+        grup içinde çalışma, sorumluluk, düşünme ve üretim sürecindeki değişim üzerinden
+        izleriz.
+      </p>
+      <div>
+        <ul class="flex flex-col">
+          {
+            velilerMaddeleri.map((m) => (
+              <li class="border-t border-line py-4 font-display text-buyuk font-semibold text-ink last:border-b">
+                {m}
+              </li>
+            ))
+          }
+        </ul>
+        <p class="mt-6 text-kucuk leading-relaxed text-muted">
+          Gelişim Özeti bir not karnesi değildir. Öğrencinin kendi başlangıç noktasından
+          nereye geldiğini görünür kılmayı amaçlar.
+        </p>
+        <Buton href="/veliler-icin" etiket={cta.velilerIcin} tur="ikincil" class="mt-8" />
+      </div>
+    </div>
+  </Bolum>
+
+  <!-- ── Ürettiklerimiz ─────────────────────────────────── -->
+  <Bolum zemin="murekkep" bosluk="genis" sarmala={false}>
+    <KafkaAlinti
+      metin="Galeri değil; üretim hafızası."
+      zemin="murekkep"
+      altMetin="Oyunları, tiratları, öğrenci yazılarını, dijital üretimleri ve seçilmiş kamera arkası süreçlerini yalnız sonuç olarak değil, nasıl ortaya çıktıklarıyla birlikte gösteririz."
+    />
+    <div class="u-wrap mt-10">
+      <Buton href="/urettiklerimiz" etiket={cta.uretimleriKesfet} tur="beyaz" />
+    </div>
+  </Bolum>
+
+  <!-- ── 2017'den beri ──────────────────────────────────── -->
+  <Bolum bosluk="genis" etiketleyen="hikaye">
+    <div class="grid gap-12 lg:grid-cols-[1fr_0.8fr] lg:gap-16">
+      <div>
+        <BolumBasligi id="hikaye" ustBaslik="2017'den beri" baslik="Kurstan programa, programdan sisteme" />
+        <div class="u-measure-wide mt-7 flex flex-col gap-5 text-govde leading-relaxed text-body">
+          <p>
+            Kafka Sanat Akademisi, Haluk Uluçay ve Erkut Aytekin tarafından 2017 yılında
+            Gaziantep'te kuruldu. Başlangıçta kurucuların ana işlerinin yanında büyüttüğü
+            bir sanat girişimiyken zaman içinde kendi pedagojisini, program sistemlerini ve
+            üretim kültürünü geliştiren, kurucuların temel işine dönüşen bir yapıya evrildi.
+            Daha sonra ikinci şubesini Güzelbahçe / İzmir'de açtı.
+          </p>
+          <p>
+            Bugün Kafka, iki şehirde aynı temel ilkeleri korurken her şubenin yerel topluluk
+            karakterine de alan açıyor.
+          </p>
+        </div>
+        <Buton href="/kafka/hikayemiz" etiket={cta.hikaye} tur="ikincil" class="mt-9" />
+      </div>
+      <aside class="flex items-center border-l-4 border-accent pl-8">
+        <p class="font-display text-baslik font-bold leading-tight tracking-[-0.02em] text-ink">
+          {site.dusunselHafiza}
+        </p>
+      </aside>
+    </div>
+  </Bolum>
+
+  <!-- ── Şubeler ────────────────────────────────────────── -->
+  <Bolum zemin="cukur" bosluk="genis" sarmala={false} etiketleyen="subeler">
+    <KafkaAlinti metin="Aynı Kafka. İki şehir." />
+    <div class="u-wrap mt-12">
+      <h2 id="subeler" class="sr-only">Şubeler</h2>
+      <ul class="grid gap-px bg-line-strong md:grid-cols-2">
+        {
+          subeler.map((s) => (
+            <li class="group relative flex flex-col gap-4 bg-paper-sunken p-7 md:p-9">
+              <h3 class="font-display text-baslik font-bold tracking-[-0.025em] text-ink">
+                <a href={`/${s.data.kod}`} class="after:absolute after:inset-0 group-hover:text-accent">
+                  {s.data.ad}
+                </a>
+              </h3>
+              <p class="text-govde leading-relaxed text-muted">
+                {s.data.tanim}
+              </p>
+              <p class="text-kucuk leading-relaxed text-muted">
+                {s.data.adres}
+              </p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </Bolum>
+
+  <!-- ── Kapanış CTA ────────────────────────────────────── -->
+  <Bolum zemin="murekkep" bosluk="genis" sarmala={false}>
+    <KafkaAlinti
+      metin="Hangi programın doğru olduğundan emin olmak zorunda değilsiniz."
+      zemin="murekkep"
+      altMetin="Kısa başvurunuzu gönderin. Ekibimiz 1 iş günü içinde sizinle iletişime geçsin. Önce tanışalım, sonra doğru başlangıcı birlikte belirleyelim."
+    />
+    <div class="u-wrap mt-10">
+      <Buton href="/basvuru" etiket={cta.basvuru} boyut="buyuk" />
+    </div>
+  </Bolum>
+</BaseLayout>

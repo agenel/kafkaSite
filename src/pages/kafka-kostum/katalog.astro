@@ -1,0 +1,106 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SayfaBasligi from '@/components/SayfaBasligi.astro';
+import Bolum from '@/components/Bolum.astro';
+import Gorsel from '@/components/Gorsel.astro';
+import Buton from '@/components/Buton.astro';
+import { cta, waLink, yapiSorumlusu } from '@/data/site';
+
+const urunler = (await getCollection('kostum')).sort((a, b) => a.data.sira - b.data.sira);
+
+const hizmetEtiketi = {
+  kiralama: 'Kiralama',
+  'toplu-siparis': 'Toplu sipariş',
+  'ozel-siparis': 'Özel sipariş',
+} as const;
+
+const adimlar = [
+  'Katalogdan ürün veya modeli inceleyin.',
+  "WhatsApp'a geçin.",
+  'Uygunluk, beden, adet, kiralama veya sipariş türünü birlikte konuşalım.',
+  "Fiyat, ödeme, kargo ve teslimat ayrıntıları WhatsApp üzerinden netleşsin.",
+];
+---
+
+<BaseLayout
+  title="Kafka Kostüm Kataloğu | Çocuk Sahne Kostümleri"
+  description="Halk oyunları, modern dans, bale, tiyatro ve okul gösterileri için çocuk sahne kostümü koleksiyonları."
+>
+  <SayfaBasligi
+    ustBaslik="Kafka Kostüm"
+    baslik="Katalog"
+    girisMetni="Koleksiyonlarımızı inceleyin, sonra WhatsApp üzerinden uygunluk, beden ve sipariş türünü birlikte konuşalım."
+  />
+
+  <Bolum bosluk="genis" etiketleyen="koleksiyonlar">
+    <h2 id="koleksiyonlar" class="u-eyebrow">{urunler.length} koleksiyon</h2>
+    <ul class="mt-9 grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        urunler.map((u) => (
+          <li class="flex flex-col gap-4">
+            <Gorsel
+              oran="4/5"
+              src={u.data.gorsel}
+              alt={u.data.gorselAlt ?? u.data.ad}
+              cekimNotu={`${u.data.ad} — katalog için temiz ürün çekimi`}
+            />
+            <h3 class="font-display text-buyuk font-bold tracking-tight text-ink">
+              {u.data.ad}
+            </h3>
+            <p class="text-govde leading-relaxed text-muted">
+              {u.data.aciklama}
+            </p>
+            <ul class="flex flex-wrap gap-2">
+              {u.data.hizmetler.map((h) => (
+                <li class="inline-flex items-center border border-line-strong px-3 py-1 font-display text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-ink-600">
+                  {hizmetEtiketi[h]}
+                </li>
+              ))}
+            </ul>
+          </li>
+        ))
+      }
+    </ul>
+  </Bolum>
+
+  <Bolum zemin="cukur" bosluk="normal" etiketleyen="akis">
+    <h2 id="akis" class="font-display text-baslik-lg font-bold tracking-[-0.025em] text-ink">
+      Nasıl ilerliyoruz?
+    </h2>
+    <ol class="mt-8 grid gap-px bg-line-strong sm:grid-cols-2 lg:grid-cols-4">
+      {
+        adimlar.map((a, i) => (
+          <li class="flex flex-col gap-3 bg-paper-sunken p-6">
+            <span class="font-display text-[0.8rem] font-bold tabular-nums text-accent-text">
+              {String(i + 1).padStart(2, '0')}
+            </span>
+            <p class="text-govde leading-relaxed text-body">{a}</p>
+          </li>
+        ))
+      }
+    </ol>
+    <div class="u-measure-wide mt-10 border-l-2 border-accent pl-6">
+      <p class="u-eyebrow mb-2">Fiyat ve koşullar</p>
+      <p class="text-govde leading-relaxed text-muted">
+        Kostüm fiyatları katalogda yayınlanmaz. Ürün, adet, kiralama veya özel sipariş
+        türüne göre koşullar değişebildiği için güncel fiyat bilgisi WhatsApp üzerinden
+        paylaşılır. Kiralama koşulları ürün, adet ve süreye göre değişebilir.
+      </p>
+    </div>
+  </Bolum>
+
+  <Bolum zemin="murekkep" bosluk="normal">
+    <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+      <p class="u-measure font-display text-baslik font-bold leading-tight text-on-ink">
+        Aradığınız kostümü birlikte bulalım.
+      </p>
+      <Buton
+        href={waLink(yapiSorumlusu.telefon, 'Merhaba, Kafka Kostüm kataloğu hakkında bilgi almak istiyorum.')}
+        etiket={cta.whatsappSor}
+        boyut="buyuk"
+        disBaglanti
+      />
+    </div>
+  </Bolum>
+</BaseLayout>

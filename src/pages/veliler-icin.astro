@@ -1,0 +1,7 @@
+---
+import { getEntry } from 'astro:content';
+import KurumsalSayfa from '@/components/KurumsalSayfa.astro';
+const sayfa = await getEntry('sayfalar', 'veliler-icin');
+if (!sayfa) throw new Error('İçerik bulunamadı: veliler-icin');
+---
+<KurumsalSayfa sayfa={sayfa} />

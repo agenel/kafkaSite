@@ -1,0 +1,4 @@
+# Başvuru formu Cloudflare Worker'a gider.
+# Worker rotası panelden kafkasanatakademisi.com/api/basvuru olarak da bağlanabilir;
+# bu satır Pages üzerinden proxy'lemek isterseniz kullanılır.
+# /api/basvuru  https://kafka-basvuru.<hesap>.workers.dev  200

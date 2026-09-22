@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /yasal/
+
+Sitemap: https://kafkasanatakademisi.com/sitemap-index.xml

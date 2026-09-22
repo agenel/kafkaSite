@@ -1,0 +1,54 @@
+{
+  "ad": "Kafka Sinema Kulübü",
+  "yerlesim": [
+    {
+      "yasCatisi": "yetiskinler",
+      "sira": 4
+    }
+  ],
+  "format": "kulup",
+  "amiral": false,
+  "anaSayfaGorunurluk": "liste",
+  "kisaTanim": "Film izleme, sinema dili ve ortak tartışma etrafında bir araya gelen yetişkin topluluğu.",
+  "girisMetni": "Film izleme, sinema dili ve ortak tartışma etrafında bir araya gelen yetişkin topluluğu.",
+  "ctaTipi": "basvuru",
+  "gorselAlt": "Kafka Sinema Kulübü gösterimi sonrası tartışma",
+  "teklifler": [
+    {
+      "sube": "gaziantep",
+      "durum": "basvurular-acik",
+      "yasSinif": "Yetişkinler",
+      "saat": "Buluşma takvimi dönemsel olarak belirlenir"
+    },
+    {
+      "sube": "izmir",
+      "durum": "basvurular-acik",
+      "yasSinif": "Yetişkinler",
+      "saat": "Buluşma takvimi dönemsel olarak belirlenir"
+    }
+  ],
+  "bolumler": [
+    {
+      "tip": "bilgi",
+      "baslik": "Dönemsel alanlar",
+      "satirlar": [
+        {
+          "etiket": "Hedef kitle",
+          "deger": "Yetişkinler"
+        },
+        {
+          "etiket": "Dönemsel olarak belirlenir",
+          "deger": "Film seçkisi · buluşma takvimi · yürütücü · mekan · katılım modeli"
+        },
+        {
+          "etiket": "Instagram",
+          "deger": "@kafka.sinemakulubu"
+        }
+      ]
+    }
+  ],
+  "seo": {
+    "title": "Kafka Sinema Kulübü | Yetişkinler",
+    "description": "Film izleme, sinema dili ve ortak tartışma etrafında bir araya gelen yetişkin topluluğu."
+  }
+}

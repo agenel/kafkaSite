@@ -1,0 +1,40 @@
+{
+  "baslik": "Öğrenci Yolculuğu",
+  "ustBaslik": "21 · Kafka",
+  "acilisAlintisi": "KAFKA'DA YOLCULUK KAYITLA BAŞLAMAZ.",
+  "girisMetni": "Önce öğrenciyi veya katılımcıyı tanımaya çalışırız. Çünkü iyi hazırlanmış bir program tek başına yetmez; doğru kişinin doğru zamanda doğru programla buluşması gerekir.",
+  "bolumler": [
+    {
+      "tip": "adimlar",
+      "baslik": "Başvurudan mezuniyete",
+      "adimlar": [
+        { "baslik": "Başvuru", "metin": "Kısa form." },
+        { "baslik": "İlk görüşme", "metin": "Ekibimiz 1 iş günü içinde iletişime geçer." },
+        { "baslik": "Tanışma", "metin": "Kafka Sanat Akademisi'nin eğitim programlarında kesin kayıt öncesinde tanışma esastır. Amaç sınamak değil tanımaktır." },
+        { "baslik": "Doğru program", "metin": "Yaş, okul seviyesi, beklenti ve programın gerçek amacı birlikte değerlendirilir." },
+        { "baslik": "Gruba katılım", "metin": "Özellikle çocuk ve gençlik programlarında önce aidiyet, güven ve grup zemini kurulur." },
+        { "baslik": "Deneme ve düşünme", "metin": "Öğrenci hata yapar, yeniden dener, soru sorar ve farklı ifade biçimleriyle karşılaşır." },
+        { "baslik": "Üretim", "metin": "Metin, sahne, video, tasarım, koro, bireysel performans veya programın doğasına uygun başka işler ortaya çıkar." },
+        { "baslik": "Gelişim", "metin": "Çocuk ve gençlik programlarında Gelişim Özeti ve dönemsel veli görüşmeleriyle değişim görünür hale gelir." },
+        { "baslik": "Paylaşım", "metin": "Yaşa ve programa göre açık ders, bireysel performans, prodüksiyon, Üretim Portfolyosu veya başka paylaşım biçimleri." },
+        { "baslik": "Devam / mezuniyet", "metin": "Bir sonraki programa geçmek, uygun devam topluluklarında üretmek veya kendi yoluna gitmek mümkündür." }
+      ]
+    },
+    {
+      "tip": "metin",
+      "baslik": "Tanışma bir yetenek sınavı değildir",
+      "paragraflar": [
+        "Amaç \"kazandı / kazanamadı\" kararı vermek değil; öğrencinin veya katılımcının programın içinde nasıl hissedeceğini, beklentilerin uyuşup uyuşmadığını ve doğru başlangıç noktasını anlamaktır."
+      ]
+    },
+    {
+      "tip": "cta",
+      "birincil": { "etiket": "Başvuru Yap", "href": "/basvuru" },
+      "ikincil": { "etiket": "Programları Keşfet", "href": "/programlar" }
+    }
+  ],
+  "seo": {
+    "title": "Öğrenci Yolculuğu | Başvurudan Mezuniyete | Kafka Sanat Akademisi",
+    "description": "Kafka'da yolculuk kayıtla başlamaz: başvuru, tanışma, doğru program, üretim, gelişim ve mezuniyete uzanan on adım."
+  }
+}

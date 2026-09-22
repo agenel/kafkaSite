@@ -1,0 +1,12 @@
+name = "kafka-basvuru"
+main = "basvuru-worker.js"
+compatibility_date = "2025-09-01"
+
+# Rotayı Cloudflare panelinden veya buradan bağlayın:
+# routes = [{ pattern = "kafkasanatakademisi.com/api/basvuru", zone_name = "kafkasanatakademisi.com" }]
+
+[vars]
+IZINLI_KAYNAK = "https://kafkasanatakademisi.com"
+
+# Gizli değerler `wrangler secret put <AD>` ile girilir:
+#   RESEND_API_KEY · ALICI_EPOSTA · GONDERICI_EPOSTA · TURNSTILE_SECRET

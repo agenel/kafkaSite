@@ -1,0 +1,17 @@
+{
+  "baslik": "Sosyal Sorumluluk",
+  "ustBaslik": "24 · Kafka",
+  "acilisAlintisi": "SANATIN SINIFIN DIŞINDA DA BİR KARŞILIĞI VAR.",
+  "girisMetni": "Kafka'nın sosyal sorumluluk çalışmaları, sanat ve grup deneyimini toplumsal ihtiyaçlarla buluşturan projeleri bir araya getirir.",
+  "bolumler": [
+    {
+      "tip": "not",
+      "baslik": "Proje kartları",
+      "metin": "Her proje statüsüyle gösterilir: Aktif · Dönemsel · Tamamlandı · Arşiv"
+    }
+  ],
+  "seo": {
+    "title": "Sosyal Sorumluluk | Kafka Sanat Akademisi",
+    "description": "Sanat ve grup deneyimini toplumsal ihtiyaçlarla buluşturan Kafka sosyal sorumluluk projeleri."
+  }
+}

@@ -1,0 +1,134 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SayfaBasligi from '@/components/SayfaBasligi.astro';
+import Bolum from '@/components/Bolum.astro';
+import KafkaAlinti from '@/components/KafkaAlinti.astro';
+import Buton from '@/components/Buton.astro';
+import Gorsel from '@/components/Gorsel.astro';
+import { cta, waLink, telLink, yapiSorumlusu, site } from '@/data/site';
+
+const programlar = (await getCollection('international')).sort((a, b) => a.data.sira - b.data.sira);
+const waMesaj = 'Merhaba, Kafka International programları hakkında bilgi almak istiyorum.';
+---
+
+<BaseLayout
+  title="Kafka International | Türkiye'den Dünya Sahnelerine"
+  description="Çocuklar, gençler ve yetişkinler için sanat, kültür ve uluslararası deneyimi bir araya getiren uluslararası gelişim programları."
+>
+  <SayfaBasligi
+    ustBaslik="Kafka International"
+    baslik="Türkiye'den Dünya Sahnelerine."
+    acilisAlintisi="Dünyaya bakışını değiştir."
+    girisMetni="Kafka International; çocukları, gençleri ve yetişkinleri sanat, kültür ve uluslararası deneyimler aracılığıyla dünyanın önemli sanat merkezleriyle buluşturmak amacıyla kuruldu."
+  />
+
+  <Bolum bosluk="normal">
+    <Gorsel
+      oran="21/9"
+      cekimNotu="Gerçek uluslararası program görüntüleri: şehir, sanat kurumu, atölye, performans deneyimi. Turistik pozdan çok aktif deneyim."
+      karakter="Dünya, şehir, sanat merkezi, hareket ve uluslararası deneyim"
+      alt="Kafka International programından bir an"
+      yukleme="eager"
+    />
+  </Bolum>
+
+  <Bolum bosluk="genis">
+    <div class="u-measure-wide flex flex-col gap-5 text-govde leading-[1.7] text-body">
+      <p>
+        Bizim için uluslararası deneyim yalnızca başka bir ülkeye seyahat etmek değildir.
+        Yeni bir kültürle karşılaşmak, dünya sahnelerini yerinde deneyimlemek, farklı sanat
+        anlayışlarını ve üretim biçimlerini görmek; insanın hem kendisine hem de dünyaya
+        bakışını değiştirebilecek güçlü bir öğrenme alanıdır.
+      </p>
+      <p>
+        Bu nedenle Kafka International programlarını klasik gezi programları olarak değil;
+        sanat, eğitim, kültür ve deneyimi bir araya getiren uluslararası gelişim
+        yolculukları olarak tasarlıyoruz.
+      </p>
+      <p>
+        Kafka Sanat Akademisi'nin sanat eğitimi ve sahne üretimi deneyiminden doğan Kafka
+        International; farklı yaş ve deneyim düzeylerine yönelik programlar geliştirir.
+        Çocuk gruplarının yanı sıra lise grupları ve yetişkin katılımcılar için de
+        uluslararası sanat ve kültür programları düzenler.
+      </p>
+      <p>
+        Amacımız yalnızca profesyonel sanatçı yetiştirmek değildir. Sanatçı olmayı seçsin ya
+        da seçmesin, yolu Kafka International'dan geçen herkesin dünyaya bakışında kalıcı
+        bir iz bırakmayı hedefliyoruz. Sanat alanında ilerlemek isteyen çocuklar, gençler ve
+        yetişkinler için ise Türkiye'den başlayarak uluslararası sahnelere, eğitimlere ve
+        sanat deneyimlerine uzanan yeni yollar oluşturuyoruz.
+      </p>
+      <p>
+        Kafka International'ın vizyonu Londra'nın çok ötesinde. Farklı ülkelerde
+        gerçekleştirilecek sanat programları, uluslararası atölyeler, festivaller, kültürel
+        değişim programları ve profesyonel gelişim olanaklarıyla her yaştan insanın sanat
+        aracılığıyla dünyayla yeni bağlar kurabileceği uluslararası bir deneyim ekosistemi
+        oluşturuyoruz.
+      </p>
+    </div>
+  </Bolum>
+
+  <Bolum zemin="murekkep" bosluk="genis" sarmala={false}>
+    <KafkaAlinti
+      metin="Çünkü bazen tek bir şehir, tek bir sahne, tek bir karşılaşma ya da tek bir deneyim, insanın dünyaya bakışını değiştirebilir."
+      zemin="murekkep"
+    />
+  </Bolum>
+
+  <Bolum zemin="cukur" bosluk="genis" etiketleyen="guncel-programlar">
+    <h2 id="guncel-programlar" class="font-display text-baslik-lg font-bold tracking-[-0.025em] text-ink">
+      Güncel programlar
+    </h2>
+    <ul class="mt-9 grid gap-x-12 gap-y-10 md:grid-cols-2">
+      {
+        programlar.map((p) => (
+          <li class="group relative flex flex-col gap-4 border-t-2 border-ink pt-6">
+            <p class="u-eyebrow">{p.data.sehir} · {p.data.ulke}</p>
+            <h3 class="font-display text-baslik font-bold tracking-[-0.025em] text-ink">
+              <a href={`/kafka-international/${p.id}`} class="after:absolute after:inset-0 group-hover:text-accent">
+                {p.data.ad}
+              </a>
+            </h3>
+            <p class="text-govde leading-relaxed text-muted">
+              {p.data.amac}
+            </p>
+            <p class="text-kucuk text-muted">{p.data.hedefGrup}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </Bolum>
+
+  <Bolum bosluk="normal" etiketleyen="int-iletisim">
+    <h2 id="int-iletisim" class="u-eyebrow">İletişim ve ücret</h2>
+    <p class="u-measure-wide mt-5 text-govde leading-relaxed text-body">
+      Güncel program ücretleri yalnız ilgili program detay sayfasında gösterilir. İlk temas
+      ve programla ilgili devam eden iletişim WhatsApp üzerinden yürütülür. Programlar
+      herkese açıktır; Kafka öğrencilerine özel indirim uygulanır.
+    </p>
+    <dl class="mt-8 grid gap-6 sm:grid-cols-3">
+      <div>
+        <dt class="u-eyebrow">Sorumlu</dt>
+        <dd class="mt-2 font-display text-buyuk font-semibold text-ink">{yapiSorumlusu.ad}</dd>
+      </div>
+      <div>
+        <dt class="u-eyebrow">Telefon / WhatsApp</dt>
+        <dd class="mt-2">
+          <a href={telLink(yapiSorumlusu.telefon)} class="inline-flex min-h-11 items-center font-display text-buyuk font-semibold text-ink hover:text-accent">
+            {yapiSorumlusu.telefon}
+          </a>
+        </dd>
+      </div>
+      <div>
+        <dt class="u-eyebrow">E-posta</dt>
+        <dd class="mt-2">
+          <a href={`mailto:${site.eposta}`} class="inline-flex min-h-11 items-center font-display text-govde font-semibold text-ink hover:text-accent">
+            {site.eposta}
+          </a>
+        </dd>
+      </div>
+    </dl>
+    <Buton href={waLink(yapiSorumlusu.telefon, waMesaj)} etiket={cta.whatsappBilgi} boyut="buyuk" class="mt-9" disBaglanti />
+  </Bolum>
+</BaseLayout>

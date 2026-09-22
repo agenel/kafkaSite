@@ -1,0 +1,50 @@
+{
+  "ad": "İngilizce Konuşma Kulübü",
+  "yerlesim": [
+    {
+      "yasCatisi": "cocuklar",
+      "sira": 10
+    },
+    {
+      "yasCatisi": "gencler",
+      "sira": 20
+    }
+  ],
+  "format": "kulup",
+  "amiral": false,
+  "anaSayfaGorunurluk": "liste",
+  "kisaTanim": "Konuşma pratiğini, etkileşimi ve günlük iletişimi merkeze alan dönemsel İngilizce konuşma kulübü.",
+  "girisMetni": "Konuşma pratiğini, etkileşimi ve günlük iletişimi merkeze alan dönemsel İngilizce konuşma kulübü.",
+  "ctaTipi": "basvuru",
+  "gorselAlt": "İngilizce Konuşma Kulübü buluşmasında öğrenciler sohbet ediyor",
+  "teklifler": [
+    {
+      "sube": "gaziantep",
+      "durum": "basvurular-acik",
+      "yasSinif": "İlkokul · Ortaokul · Lise grupları ayrı açılır",
+      "saat": "Kesin gün, saat, yürütücü, süre ve kontenjan dönemsel bilgi kartında yer alır"
+    },
+    {
+      "sube": "izmir",
+      "durum": "basvurular-acik",
+      "yasSinif": "İlkokul · Ortaokul · Lise grupları ayrı açılır",
+      "saat": "Kesin gün, saat, yürütücü, süre ve kontenjan dönemsel bilgi kartında yer alır"
+    }
+  ],
+  "bolumler": [
+    {
+      "tip": "liste",
+      "baslik": "Gruplar",
+      "maddeler": [
+        "İlkokul",
+        "Ortaokul",
+        "Lise"
+      ],
+      "kapanis": "İlkokul ve Ortaokul grupları Çocuklar, Lise grubu Gençler sayfasında gösterilir. Kesin gün, saat, yürütücü, süre ve kontenjan dönemsel bilgi kartında yer alır."
+    }
+  ],
+  "seo": {
+    "title": "İngilizce Konuşma Kulübü | Kafka Sanat Akademisi",
+    "description": "İlkokul, ortaokul ve lise grupları için konuşma pratiği ve günlük iletişim odaklı dönemsel İngilizce konuşma kulübü."
+  }
+}
