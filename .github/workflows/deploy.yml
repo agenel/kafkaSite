@@ -1,0 +1,62 @@
+# GitHub Pages önizleme dağıtımı.
+# Gerçek hedef Cloudflare Pages'tir (kök alan adı, /api/basvuru Worker'ı ile).
+# Burada site /kafkaSite/ alt yolunda durduğu için çıktıdaki bağlantılar
+# öneklenir ve robots.txt arama motorlarına kapatılır.
+name: GitHub Pages'e dağıt
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  derle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Tip kontrolü
+        run: npm run check
+
+      - name: Testler
+        run: npm test
+
+      - name: Siteyi derle
+        run: npm run build
+
+      - name: Yayın öncesi kontrol listesi (§36)
+        run: npm run test:yayin
+
+      - name: Alt yol önekini uygula
+        run: node scripts/gh-pages-onek.mjs /${{ github.event.repository.name }}
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  dagit:
+    needs: derle
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.dagitim.outputs.page_url }}
+    steps:
+      - id: dagitim
+        uses: actions/deploy-pages@v4
