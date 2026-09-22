@@ -58,9 +58,20 @@ export const cta = {
   hikaye: "Kafka'nın Hikayesi",
 } as const;
 
-/** Telefonu WhatsApp'ın beklediği biçime indirger: +90 505 614 47 67 → 905056144767 */
+/**
+ * Telefonu WhatsApp'ın beklediği uluslararası biçime indirger.
+ * Hem "+90 505 614 47 67" hem "0505 614 47 67" hem "505 614 47 67" kabul edilir;
+ * hepsi 905056144767 olur. Böylece CMS'e hangi biçimde girilirse girilsin
+ * WhatsApp ve arama bağlantıları bozulmaz.
+ */
 export function waNumber(telefon: string): string {
-  return telefon.replace(/\D/g, '');
+  let d = telefon.replace(/\D/g, '');
+  if (d.startsWith('00')) d = d.slice(2);
+  if (d.length === 10 && d.startsWith('5')) return `90${d}`;
+  if (d.length === 11 && d.startsWith('0')) return `90${d.slice(1)}`;
+  if (d.length === 12 && d.startsWith('90')) return d;
+  if (d.length === 13 && d.startsWith('090')) return `90${d.slice(3)}`;
+  return d;
 }
 
 /** Ön tanımlı mesajla WhatsApp derin bağlantısı üretir. */

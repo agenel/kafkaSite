@@ -5,16 +5,29 @@
   "tanim": "Kafka'nın ikinci şehir yapılanması; fiziksel konum Güzelbahçe'dir.",
   "sira": 2,
   "telefon": "+90 537 240 17 73",
-  "adres": "Kafka Sanat Akademisi, Siteler Mah., Mithatpaşa Cad., 378. Sok., No: 5, Güzelbahçe / İzmir",
+  "adres": "Siteler Mahallesi, Mithatpaşa Caddesi, 378. Sokak, 35310 Güzelbahçe / İzmir",
   "instagram": "kafkasanatakademisi.izmir",
   "ekInstagram": [
-    { "etiket": "Güzelbahçe Çocuk Tiyatrosu", "hesap": "guzelbahcecocuktiyatrosu" },
-    { "etiket": "Güzelbahçe Atölye", "hesap": "kafkasanat.atolyee" },
-    { "etiket": "Kafka Kostüm", "hesap": "kafkakostum" }
+    {
+      "etiket": "Güzelbahçe Çocuk Tiyatrosu",
+      "hesap": "guzelbahcecocuktiyatrosu"
+    },
+    {
+      "etiket": "Güzelbahçe Atölye",
+      "hesap": "kafkasanat.atolyee"
+    },
+    {
+      "etiket": "Kafka Kostüm",
+      "hesap": "kafkakostum"
+    }
   ],
-  "sorumlu": { "ad": "Erkut Aytekin", "unvan": "Kurucu Ortak · Genel Sanat Yönetmeni" },
+  "sorumlu": {
+    "ad": "Erkut Aytekin",
+    "unvan": "Kurucu Ortak · Genel Sanat Yönetmeni"
+  },
   "seo": {
     "title": "Kafka Sanat Akademisi İzmir / Güzelbahçe | Programlar ve İletişim",
     "description": "Güzelbahçe / İzmir'deki Kafka Sanat Akademisi şubesi: aktif programlar, güncel gün ve saatler, adres ve başvuru."
-  }
+  },
+  "haritaUrl": "https://www.google.com/maps/search/?api=1&query=Kafka+Sanat+Akademisi+G%C3%BCzelbah%C3%A7e+%C4%B0zmir"
 }

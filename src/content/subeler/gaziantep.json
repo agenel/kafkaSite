@@ -5,18 +5,37 @@
   "tanim": "Kafka'nın 2017'de başlayan hikayesinin ilk merkezi.",
   "sira": 1,
   "telefon": "+90 505 614 47 67",
-  "adres": "Batıkent Mah., Adnan İnanıcı Cad., 09024 Nolu Sok., No: 10/D, Şehitkamil / Gaziantep",
+  "adres": "Batıkent Mahallesi, Adnan İnanıcı Caddesi, 153060. Sokak, Şehitkamil / Gaziantep",
   "instagram": "kafkasanatakademisi",
   "ekInstagram": [
-    { "etiket": "Gaziantep Çocuk Tiyatrosu", "hesap": "gaziantepcocuktiyatrosu" },
-    { "etiket": "Gaziantep Gençlik Tiyatrosu", "hesap": "gaziantep.gencliktiyatrosu" },
-    { "etiket": "Kafka Kitap Kulübü", "hesap": "kafka.kitapkulubu" },
-    { "etiket": "Kafka Sinema Kulübü", "hesap": "kafka.sinemakulubu" },
-    { "etiket": "Kafka Akademi Tiyatrosu", "hesap": "katiyatro" }
+    {
+      "etiket": "Gaziantep Çocuk Tiyatrosu",
+      "hesap": "gaziantepcocuktiyatrosu"
+    },
+    {
+      "etiket": "Gaziantep Gençlik Tiyatrosu",
+      "hesap": "gaziantep.gencliktiyatrosu"
+    },
+    {
+      "etiket": "Kafka Kitap Kulübü",
+      "hesap": "kafka.kitapkulubu"
+    },
+    {
+      "etiket": "Kafka Sinema Kulübü",
+      "hesap": "kafka.sinemakulubu"
+    },
+    {
+      "etiket": "Kafka Akademi Tiyatrosu",
+      "hesap": "katiyatro"
+    }
   ],
-  "sorumlu": { "ad": "Haluk Uluçay", "unvan": "Kurucu Ortak · Eğitim Direktörü" },
+  "sorumlu": {
+    "ad": "Haluk Uluçay",
+    "unvan": "Kurucu Ortak · Eğitim Direktörü"
+  },
   "seo": {
     "title": "Kafka Sanat Akademisi Gaziantep | Programlar ve İletişim",
     "description": "Gaziantep Şehitkamil'deki Kafka Sanat Akademisi şubesi: aktif programlar, güncel gün ve saatler, adres ve başvuru."
-  }
+  },
+  "haritaUrl": "https://www.google.com/maps/search/?api=1&query=Kafka+Sanat+Akademisi+Gaziantep"
 }

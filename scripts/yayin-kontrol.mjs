@@ -66,9 +66,18 @@ kontrol('International ve Kostüm iletişimi Özlem Demireli / +90 536 433 43 08
 const iletisim = oku('dist/iletisim/index.html');
 kontrol('Genel e-posta kafkaakademi@gmail.com', iletisim.includes('kafkaakademi@gmail.com'));
 kontrol('Gaziantep telefon ve adresi doğru',
-  iletisim.includes('+90 505 614 47 67') && iletisim.includes('Adnan İnanıcı'));
+  iletisim.includes('+90 505 614 47 67') &&
+  iletisim.includes('Adnan İnanıcı') && iletisim.includes('153060. Sokak'));
 kontrol('İzmir telefon ve adresi doğru',
-  iletisim.includes('+90 537 240 17 73') && iletisim.includes('Mithatpaşa'));
+  iletisim.includes('+90 537 240 17 73') &&
+  iletisim.includes('Mithatpaşa') && iletisim.includes('35310 Güzelbahçe'));
+kontrol('Her iki şubenin harita bağlantısı var',
+  (iletisim.match(/maps\/search/g) || []).length >= 2 &&
+  oku('dist/gaziantep/index.html').includes('maps/search') &&
+  oku('dist/izmir/index.html').includes('maps/search'));
+// Harita adresleri takip parametresi taşımamalı
+kontrol('Harita bağlantılarında takip parametresi yok',
+  !iletisim.includes('utm_source'));
 
 const hikaye = oku('dist/kafka/hikayemiz/index.html');
 kontrol('Kurucu unvanları doğru',

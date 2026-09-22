@@ -44,7 +44,19 @@ const subeler = (await getCollection('subeler')).sort((a, b) => a.data.sira - b.
               </div>
               <div class="grid gap-0.5 border-t border-line py-4 sm:grid-cols-[7.5rem_1fr] sm:gap-4">
                 <dt class="u-eyebrow pt-1">Adres</dt>
-                <dd class="leading-relaxed text-body">{s.data.adres}</dd>
+                <dd class="leading-relaxed text-body">
+                  <span class="block">{s.data.adres}</span>
+                  {s.data.haritaUrl && (
+                    <a
+                      href={s.data.haritaUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="mt-1 inline-flex min-h-11 w-fit items-center font-display text-[0.9rem] font-semibold text-ink underline decoration-accent decoration-2 underline-offset-4 hover:text-accent"
+                    >
+                      Haritada Aç
+                    </a>
+                  )}
+                </dd>
               </div>
               <div class="grid gap-0.5 border-y border-line py-4 sm:grid-cols-[7.5rem_1fr] sm:gap-4">
                 <dt class="u-eyebrow pt-1">Instagram</dt>
