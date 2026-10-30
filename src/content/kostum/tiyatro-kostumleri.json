@@ -6,6 +6,7 @@
     "kiralama",
     "ozel-siparis"
   ],
-  "gorselAlt": "Tiyatro Kostümleri — kostüm detayı",
-  "sira": 4
+  "gorselAlt": "Tiyatro kostümleri — geçici marka görseli",
+  "sira": 4,
+  "gorsel": "/gorseller/gecici/kostum-tiyatro.jpg"
 }

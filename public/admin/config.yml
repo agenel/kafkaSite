@@ -193,7 +193,13 @@ collections:
         widget: select
         default: basvuru
         options: [basvuru, whatsapp, katalog, bilgi]
-      - { name: gorsel, label: 'Görsel', widget: image, required: false }
+      - name: gorsel
+        label: 'Görsel'
+        widget: image
+        required: false
+        hint: >-
+          Geçici marka görselini değiştirmek için buraya gerçek fotoğrafı yükleyin.
+          Önerilen: uzun kenar en az 2500 px, kırpılmamış JPEG.
       - { name: gorselAlt, label: 'Görsel alt metni', widget: string, required: false }
       - { name: gorselKarakteri, label: 'Görsel karakteri (çekim notu)', widget: string, required: false }
       - name: teklifler
@@ -286,7 +292,13 @@ collections:
         fields:
           - { name: ad, label: 'Ad soyad', widget: string }
           - { name: unvan, label: 'Unvan', widget: string }
-      - { name: gorsel, label: 'Şube kapak görseli', widget: image, required: false }
+      - name: gorsel
+        label: 'Şube kapak görseli'
+        widget: image
+        required: false
+        hint: >-
+          Şube dış cephesi veya ana çalışma alanı. Henüz yok — yer tutucu görünüyor.
+          Başka bir binanın fotoğrafı konmamalı.
       - { name: gorselAlt, label: 'Kapak görseli alt metni', widget: string, required: false }
       - name: mekanGorselleri
         label: 'Mekan görselleri (dış cephe, giriş, çalışma alanları)'
@@ -444,7 +456,13 @@ collections:
           - { label: 'Kiralama', value: kiralama }
           - { label: 'Toplu sipariş', value: toplu-siparis }
           - { label: 'Özel sipariş', value: ozel-siparis }
-      - { name: gorsel, label: 'Kapak görseli', widget: image, required: false }
+      - name: gorsel
+        label: 'Kapak görseli'
+        widget: image
+        required: false
+        hint: >-
+          Geçici marka görselini değiştirmek için buraya gerçek fotoğrafı yükleyin.
+          Önerilen: uzun kenar en az 2500 px, kırpılmamış JPEG.
       - { name: gorselAlt, label: 'Kapak görseli alt metni', widget: string, required: false }
       - name: galeri
         label: 'Koleksiyon görselleri'

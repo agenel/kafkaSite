@@ -12,11 +12,12 @@
   ],
   "ogrenciIndirimi": "Kafka öğrencilerine özel indirim uygulanır. Güncel koşul için WhatsApp üzerinden bilgi alınabilir.",
   "gorselKarakteri": "Dünya, şehir, sanat merkezi, hareket",
-  "gorselAlt": "London Global Stage katılımcıları bir sahne sanatları mekanında",
+  "gorselAlt": "London Global Stage — geçici marka görseli",
   "durum": "aktif",
   "sira": 1,
   "seo": {
     "title": "London Global Stage | Kafka International",
     "description": "Londra'nın sahne sanatları ve kültür ekosistemi çevresinde yapılandırılan uluslararası gelişim programı."
-  }
+  },
+  "gorsel": "/gorseller/gecici/london-global-stage.jpg"
 }

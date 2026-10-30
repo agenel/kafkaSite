@@ -8,3 +8,7 @@ npm-debug.log*
 .wrangler/
 /tmp/
 *.tmp.mjs
+
+# Proje klasöründe duran, siteye ait olmayan dosyalar
+*.dmg
+*.pkg

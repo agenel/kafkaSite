@@ -18,6 +18,7 @@ Cloudflare Worker →  /api/basvuru (başvuru formu → e-posta)
 | `npm run check` | TypeScript ve Astro tip kontrolü |
 | `npm test` | Worker testleri + CMS/şema senkron kontrolü |
 | `npm run test:yayin` | §36 yayın öncesi kontrol listesi (önce `build`) |
+| `npm run gorsel-durum` | Her görsel alanının durumu: gerçek / geçici / boş |
 | `npm run test:responsive` | 42 sayfa × 3 genişlik: taşma, dokunma hedefi, alt metni (önce `build` + `preview`) |
 
 ## Mimari

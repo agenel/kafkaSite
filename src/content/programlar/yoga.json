@@ -21,7 +21,7 @@
   "girisMetni": "Dönemsel yaş / katılımcı grubuna göre beden ve farkındalık odaklı programlar.",
   "ctaTipi": "basvuru",
   "gorselKarakteri": "Kafka kurumsal · sakin, güvenilir, çağdaş kültür kurumu",
-  "gorselAlt": "Yoga çalışmasından bir an",
+  "gorselAlt": "Yoga programı — geçici marka görseli",
   "teklifler": [
     {
       "sube": "gaziantep",
@@ -46,5 +46,6 @@
   "seo": {
     "title": "Yoga | Kafka Sanat Akademisi",
     "description": "Beden ve farkındalık odaklı, dönemsel yaş ve katılımcı grubuna göre şekillenen yoga programları."
-  }
+  },
+  "gorsel": "/gorseller/gecici/yoga.jpg"
 }

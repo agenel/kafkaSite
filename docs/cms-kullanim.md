@@ -85,6 +85,40 @@ Blokları sürükleyerek sıralarını değiştirebilirsiniz.
 
 ---
 
+## Geçici görselleri değiştirmek
+
+Sitede şu an **beş geçici marka görseli** var. Bunlar fotoğraf değil, Kafka'nın
+renk ve çizgi diliyle üretilmiş desenlerdir — telif sorunu taşımazlar, ama gerçek
+fotoğrafla değiştirilmek üzere konmuştur.
+
+Hangilerinin değişmesi gerektiğini görmek için:
+
+```bash
+npm run gorsel-durum
+```
+
+Çıktı her kaydı 🟢 gerçek / 🟠 geçici / 🔴 boş olarak gösterir ve her birinin
+CMS'te hangi koleksiyonda olduğunu yazar.
+
+**Değiştirme adımları:**
+
+1. `/admin` → ilgili koleksiyon → kayıt
+2. Görsel alanına tıklayıp gerçek fotoğrafı yükleyin
+3. Alt metnini güncelleyin ("— geçici marka görseli" ifadesini kaldırın)
+4. Kaydedin
+
+Yüklenen dosya `public/gorseller/` altına gider; `gecici/` klasörüne gitmediği için
+kayıt otomatik olarak "gerçek" sayılır. Ayrıca bir işaret kaldırmanız gerekmez.
+
+> **Yayın kilidi:** `npm run test:yayin` geçici görsel kaldığı sürece **başarısız olur**.
+> Yani bu beş görsel değişmeden site gerçek yayına alınamaz.
+
+### Şube fotoğrafları
+
+Gaziantep ve İzmir şube sayfaları bilerek **boş** bırakıldı. Bir şubenin yerine
+başka bir binanın fotoğrafını koymak ziyaretçiyi yanıltır. Gerçek çekim yapılana
+kadar yer tutucu kalır.
+
 ## Görsel eklemek
 
 Görsel alanlarına tıklayıp dosya yükleyin. Yüklenen görseller `public/gorseller/`

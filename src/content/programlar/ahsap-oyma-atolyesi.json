@@ -13,7 +13,7 @@
   "girisMetni": "Güzelbahçe / İzmir'de yetişkinlere yönelik; ahşap malzemeyle el işçiliği, desen, oyma ve üretim deneyimi etrafında şekillenen dönemsel atölye.",
   "ctaTipi": "basvuru",
   "gorselKarakteri": "Doku, el, malzeme, detay",
-  "gorselAlt": "Ahşap Oyma Atölyesi'nde bir katılımcının elleri ve ahşap yüzey",
+  "gorselAlt": "Ahşap Oyma Atölyesi — geçici marka görseli",
   "teklifler": [
     {
       "sube": "izmir",
@@ -36,5 +36,6 @@
   "seo": {
     "title": "Ahşap Oyma Atölyesi | Güzelbahçe | Kafka Sanat Akademisi",
     "description": "Güzelbahçe / İzmir'de yetişkinlere yönelik ahşap el işçiliği, desen ve oyma atölyesi."
-  }
+  },
+  "gorsel": "/gorseller/gecici/ahsap-oyma.jpg"
 }

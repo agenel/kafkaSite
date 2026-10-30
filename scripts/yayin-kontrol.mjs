@@ -133,6 +133,24 @@ kontrol('Yasal sayfalar noindex ve site haritasında değil',
   oku('dist/yasal/kvkk/index.html').includes('noindex') &&
   !oku('dist/sitemap-0.xml').includes('/yasal/'));
 
+// Geçici marka görselleri yayına çıkamaz — gerçek fotoğrafla değişmeli.
+const geciciKullanim = [];
+for (const d of ['programlar', 'uretimler', 'kostum', 'international', 'sosyal-projeler', 'subeler']) {
+  const yol = `src/content/${d}`;
+  if (!existsSync(yol)) continue;
+  for (const f of readdirSync(yol).filter((x) => x.endsWith('.json'))) {
+    const j = JSON.parse(readFileSync(`${yol}/${f}`, 'utf8'));
+    if (typeof j.gorsel === 'string' && j.gorsel.includes('/gorseller/gecici/')) {
+      geciciKullanim.push(`${d}/${f.replace('.json', '')}`);
+    }
+  }
+}
+if (!ONIZLEME) {
+  kontrol('Sitede geçici marka görseli kalmadı',
+    geciciKullanim.length === 0,
+    `${geciciKullanim.length} kayıt: ${geciciKullanim.join(', ')}`);
+}
+
 // Örnek (gerçek olmayan) kayıtlar yayına çıkamaz.
 const ornekler = existsSync('src/content/uretimler')
   ? readdirSync('src/content/uretimler')
@@ -150,6 +168,11 @@ console.log(`§36 otomatik kontroller: ${gecen}/${sonuclar.length}\n`);
 for (const s of sonuclar) {
   console.log(`  ${s.gecti ? '☑' : '☐'} ${s.ad}${s.detay && !s.gecti ? '  → ' + s.detay : ''}`);
 }
+if (ONIZLEME && geciciKullanim.length > 0) {
+  console.log(`\n⚠ Önizleme kipi: ${geciciKullanim.length} kayıt geçici marka görseli kullanıyor.`);
+  geciciKullanim.forEach((f) => console.log('    ' + f));
+}
+
 if (ONIZLEME && ornekler.length > 0) {
   console.log(`\n⚠ Önizleme kipi: ${ornekler.length} örnek kayıt var — gerçek yayında bu kontrol düşer.`);
   ornekler.forEach((f) => console.log('    ' + f));

@@ -25,7 +25,10 @@ kadrajda pay bırakın. **Dosya** sütunu, görselin siteye hangi adla konacağ�
 |---|---|
 | 🔴 | Şu an görsel **hiç yok**, sayfa yer tutucu gösteriyor |
 | 🟡 | Instagram'dan geçici kare var, değiştirilecek |
+| 🟠 | **Geçici marka deseni** var (fotoğraf değil), değiştirilecek |
 | ⭐ | Sitenin en görünür alanı, öncelik |
+
+> Güncel durumu her an `npm run gorsel-durum` ile görebilirsiniz.
 
 ---
 
