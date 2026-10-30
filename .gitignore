@@ -12,3 +12,6 @@ npm-debug.log*
 # Proje klasöründe duran, siteye ait olmayan dosyalar
 *.dmg
 *.pkg
+
+# Sunucudaki gerçek form ayarları (örneği depoda: basvuru-ayar.ornek.php)
+public/api/basvuru-ayar.php

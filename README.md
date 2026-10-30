@@ -3,9 +3,10 @@
 Statik site. İçerik kaynağı: `brief/KAFKA_WEB_SITE_FINAL.docx` (37 bölümlük nihai içerik dosyası).
 
 ```
-Astro 7 (static)  →  Cloudflare Pages
-Sveltia CMS       →  /admin (GitHub ile giriş)
-Cloudflare Worker →  /api/basvuru (başvuru formu → e-posta)
+Astro 7 (static)   →  FTP hosting (Apache + PHP)
+GitHub Actions     →  her push'ta derler, FTP ile yükler
+Sveltia CMS        →  /admin (GitHub ile giriş)
+PHP (/api/basvuru.php) →  başvuru formu → e-posta
 ```
 
 ## Komutlar
@@ -16,7 +17,8 @@ Cloudflare Worker →  /api/basvuru (başvuru formu → e-posta)
 | `npm run build` | `dist/` klasörüne statik site üretir |
 | `npm run preview` | Üretilmiş siteyi yerel olarak servis eder |
 | `npm run check` | TypeScript ve Astro tip kontrolü |
-| `npm test` | Worker testleri + CMS/şema senkron kontrolü |
+| `npm test` | Form mantığı + CMS/şema senkron kontrolü |
+| `npm run test:form` | Başvuru formunun PHP ile uçtan uca testi (PHP gerekir) |
 | `npm run test:yayin` | §36 yayın öncesi kontrol listesi (önce `build`) |
 | `npm run gorsel-durum` | Her görsel alanının durumu: gerçek / geçici / boş |
 | `npm run test:responsive` | 42 sayfa × 3 genişlik: taşma, dokunma hedefi, alt metni (önce `build` + `preview`) |
@@ -67,21 +69,22 @@ Her `main` push'unda GitHub Actions siteyi derleyip GitHub Pages'e dağıtır:
 
 ## Kurulum (yayına alma)
 
-1. **GitHub**: repoyu oluşturup `main` dalına gönderin.
-2. **Cloudflare Pages**: repoyu bağlayın · build komutu `npm run build` · çıktı `dist`.
-3. **Worker**: `cd worker && npx wrangler deploy`, ardından secret'ları girin:
-   ```
-   npx wrangler secret put RESEND_API_KEY
-   npx wrangler secret put ALICI_EPOSTA        # kafkaakademi@gmail.com
-   npx wrangler secret put GONDERICI_EPOSTA    # doğrulanmış gönderici adresi
-   npx wrangler secret put TURNSTILE_SECRET    # opsiyonel, spam koruması
-   ```
-   Worker rotasını `kafkasanatakademisi.com/api/basvuru` olarak bağlayın.
-4. **CMS**: `repo` alanı `agenel/kafkaSite` olarak dolu. Giriş için GitHub'dan bir
-   fine-grained PAT yeterlidir (Contents: read/write) — ayrı OAuth uygulaması veya
-   Worker **gerekmez**. Yerelde çalışmak için `localhost:4321/admin/index.html` →
-   “Work with Local Repository”. Ayrıntı: `docs/cms-kullanim.md`.
-5. **Domain**: DNS'i Cloudflare'e yönlendirin.
+Ayrıntılı adımlar: **`docs/hosting-kurulum.md`**
+
+1. **GitHub secret'ları** — Settings → Secrets and variables → Actions:
+   `FTP_SUNUCU`, `FTP_KULLANICI`, `FTP_PAROLA`, `FTP_DIZIN` (genelde `/public_html/`)
+2. **Sunucuda form ayarı** — `docs/basvuru-ayar.ornek.php` dosyasını sunucuda
+   `api/basvuru-ayar.php` adıyla oluşturup doldurun. Depoya girmez.
+3. **Gönderici e-posta** — hosting panelinden `basvuru@kafkasanatakademisi.com`
+   oluşturun; alan adıyla aynı olmayan gönderici spam'e düşer.
+4. **CMS** — `repo` alanı `agenel/kafkaSite` olarak dolu. Giriş için GitHub'dan
+   fine-grained PAT yeterlidir (Contents: read/write). Yerelde:
+   `localhost:4321/admin/index.html` → “Work with Local Repository”.
+5. **Domain** — DNS'i hosting sağlayıcısının sunucularına yöneltin.
+
+> CMS'ten yapılan her değişiklik git'e yazılır, GitHub Actions derleyip FTP ile
+> yükler. Secret'lar girilmeden bu zincir çalışmaz ve CMS güncellemeleri siteye
+> yansımaz.
 
 ## Bilinen eksikler
 

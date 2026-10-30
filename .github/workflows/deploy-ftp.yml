@@ -1,0 +1,68 @@
+# Üretim dağıtımı: derle ve FTP ile hosting'e yükle.
+# GitHub Pages iş akışı (deploy.yml) önizleme içindir ve ayrı çalışır.
+#
+# Gerekli secret'lar (Settings → Secrets and variables → Actions):
+#   FTP_SUNUCU    ftp.kafkasanatakademisi.com
+#   FTP_KULLANICI
+#   FTP_PAROLA
+#   FTP_DIZIN     /public_html/   (hosting'e göre /httpdocs/ olabilir)
+name: FTP ile yayına al
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: ftp-deploy
+  cancel-in-progress: false
+
+jobs:
+  yayinla:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: PHP sözdizimi kontrolü
+        run: |
+          for f in public/api/*.php; do
+            php -l "$f"
+          done
+
+      - name: Tip kontrolü
+        run: npm run check
+
+      - name: Testler
+        run: npm test
+
+      - name: Siteyi derle
+        run: npm run build
+
+      - name: Başvuru formu testleri
+        run: bash scripts/basvuru-php-test.sh
+
+      - name: Yayın öncesi kontrol listesi (§36)
+        # Geçici görseller ve örnek kayıtlar henüz duruyor; uyarı olarak raporlanır.
+        run: node scripts/yayin-kontrol.mjs --onizleme
+
+      - name: FTP ile yükle
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SUNUCU }}
+          username: ${{ secrets.FTP_KULLANICI }}
+          password: ${{ secrets.FTP_PAROLA }}
+          server-dir: ${{ secrets.FTP_DIZIN }}
+          local-dir: ./dist/
+          protocol: ftps
+          # Sunucuda elle oluşturulan ayar dosyası silinmesin
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/basvuru-ayar.php

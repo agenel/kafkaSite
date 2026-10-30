@@ -273,7 +273,7 @@ const etiketSinifi = 'u-eyebrow mb-2 block';
     durum!.classList.remove('hidden');
 
     try {
-      const yanit = await fetch('/api/basvuru', {
+      const yanit = await fetch('/api/basvuru.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(Object.fromEntries(veri.entries())),

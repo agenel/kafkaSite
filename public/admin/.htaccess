@@ -1,0 +1,6 @@
+# Yönetim paneli arama motorlarına kapalı.
+# Ana .htaccess'te <If> yönergesiyle yapılabilirdi ama o Apache 2.4 gerektiriyor;
+# ayrı dosya her sürümde çalışır.
+<IfModule mod_headers.c>
+  Header always set X-Robots-Tag "noindex, nofollow"
+</IfModule>

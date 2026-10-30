@@ -1,0 +1,108 @@
+# Kafka Sanat Akademisi — Apache yapılandırması
+# Paylaşımlı FTP hosting içindir. dist/ ile birlikte sunucuya yüklenir.
+
+# ── Temiz adresler ─────────────────────────────────────────────
+# Site "sondaki eğik çizgi yok" kuralıyla üretiliyor (/programlar/gct).
+# Apache varsayılanı /programlar/gct adresini /programlar/gct/ diye
+# yönlendirir; bu kanonik adresle çakışır. DirectorySlash kapatılıp
+# istek içeriden index.html'e yazılıyor.
+<IfModule mod_dir.c>
+  DirectorySlash Off
+  DirectoryIndex index.html
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # HTTPS'e yönlendir
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+  # www varsa kaldır (tek kanonik ana makine)
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+  # Sondaki eğik çizgiyi at (/programlar/gct/ → /programlar/gct)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+  # /yol → /yol/index.html (içeriden, adres değişmeden)
+  # ^(.+)$ : en az bir karakter. Kök adres (/) buraya düşmez, DirectoryIndex halleder.
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME}/index.html -f
+  RewriteRule ^(.+)$ /$1/index.html [L]
+</IfModule>
+
+# ── 404 ────────────────────────────────────────────────────────
+ErrorDocument 404 /404.html
+
+# ── Sıkıştırma ─────────────────────────────────────────────────
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml
+  AddOutputFilterByType DEFLATE application/javascript application/json
+  AddOutputFilterByType DEFLATE application/xml image/svg+xml
+</IfModule>
+
+# ── Önbellek ───────────────────────────────────────────────────
+<IfModule mod_expires.c>
+  ExpiresActive On
+  # İçerik parmak izi taşıyan varlıklar: uzun süre
+  ExpiresByType font/woff2               "access plus 1 year"
+  ExpiresByType image/jpeg               "access plus 6 months"
+  ExpiresByType image/png                "access plus 6 months"
+  ExpiresByType image/svg+xml            "access plus 6 months"
+  ExpiresByType text/css                 "access plus 1 year"
+  ExpiresByType application/javascript   "access plus 1 year"
+  # HTML her zaman tazelensin — içerik CMS'ten güncelleniyor
+  ExpiresByType text/html                "access plus 0 seconds"
+</IfModule>
+
+<IfModule mod_headers.c>
+  # Astro'nun parmak izli varlıkları değişmez
+  <FilesMatch "\.(woff2|jpg|jpeg|png|svg|webp)$">
+    Header set Cache-Control "public, max-age=15552000"
+  </FilesMatch>
+  <FilesMatch "^.*\.(css|js)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+
+  # ── Güvenlik başlıkları ──────────────────────────────────────
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "DENY"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+  Header always unset X-Powered-By
+</IfModule>
+
+# ── Karakter kodlaması ─────────────────────────────────────────
+AddDefaultCharset UTF-8
+<IfModule mod_mime.c>
+  AddType font/woff2 .woff2
+  AddType image/svg+xml .svg
+</IfModule>
+
+# ── Erişim kısıtları ───────────────────────────────────────────
+# Form ayar dosyası hiçbir şekilde okunamasın
+<FilesMatch "^basvuru-ayar.*\.php$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>
+
+# Nokta ile başlayan dosyalar gizli kalsın (.htaccess dahil)
+<FilesMatch "^\.">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+</FilesMatch>
+
+# Dizin listelemesi kapalı
+Options -Indexes

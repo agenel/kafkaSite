@@ -129,6 +129,15 @@ kontrol('2017 kuruluş yılı ve iki şehir ana sayfanın ilk bölümlerinde',
   ana.slice(0, 20000).includes('Gaziantep') &&
   ana.slice(0, 20000).includes('İzmir'));
 
+// FTP hosting: Apache yapılandırması ve form işleyicisi çıktıda olmalı
+kontrol('.htaccess dist çıktısında var', existsSync('dist/.htaccess'));
+kontrol('Başvuru formu işleyicisi dist çıktısında var',
+  existsSync('dist/api/basvuru.php'));
+kontrol('Form, PHP işleyicisine gönderiyor',
+  oku('dist/basvuru/index.html').includes('/api/basvuru.php'));
+kontrol('Sunucu ayar dosyası depoya sızmamış',
+  !existsSync('public/api/basvuru-ayar.php'));
+
 kontrol('Yasal sayfalar noindex ve site haritasında değil',
   oku('dist/yasal/kvkk/index.html').includes('noindex') &&
   !oku('dist/sitemap-0.xml').includes('/yasal/'));

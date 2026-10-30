@@ -23,7 +23,8 @@ function yollar(kok = 'dist', dizin = 'dist') {
   return cikti.sort();
 }
 
-const sayfalar = yollar();
+// /admin Sveltia CMS'in kendi arayüzü — bizim sayfamız değil, denetlenmez.
+const sayfalar = yollar().filter((y) => !y.startsWith('/admin'));
 const tarayici = await puppeteer.launch({ executablePath: CHROME, headless: true });
 const sayfa = await tarayici.newPage();
 
