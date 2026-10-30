@@ -52,7 +52,18 @@ jobs:
         # Geçici görseller ve örnek kayıtlar henüz duruyor; uyarı olarak raporlanır.
         run: node scripts/yayin-kontrol.mjs --onizleme
 
+      - name: FTP bilgileri girilmiş mi
+        id: ftp
+        run: |
+          if [ -n "${{ secrets.FTP_SUNUCU }}" ]; then
+            echo "hazir=evet" >> "$GITHUB_OUTPUT"
+          else
+            echo "hazir=hayir" >> "$GITHUB_OUTPUT"
+            echo "::notice::FTP secret'ları henüz girilmemiş — yükleme atlandı. Kurulum: docs/hosting-kurulum.md"
+          fi
+
       - name: FTP ile yükle
+        if: steps.ftp.outputs.hazir == 'evet'
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SUNUCU }}
